@@ -1,0 +1,216 @@
+agent:
+  system_template: |
+    You are a helpful assistant that can interact with a computer shell to solve programming tasks.
+  instance_template: |
+    <pr_description>
+    Consider the following PR description:
+    {{task}}
+    </pr_description>
+
+    
+    <instructions>
+    # Task Instructions
+
+    ## Overview
+
+    You are a software engineer responsible for generating regression
+    tests for the issue described in the PR description.
+
+    Your task is to create tests that expose the reported defect in the
+    current implementation and would pass when the defect is corrected.
+
+    Do not fix the defect or modify production source code.
+
+    <IMPORTANT>This is an interactive process where you will think and issue AT LEAST ONE command, see the result, then think and issue your next command(s).</IMPORTANT>
+
+    For each response:
+
+    1. Include a THOUGHT section explaining your reasoning and what you are trying to accomplish.
+    2. Provide one or more bash tool calls to execute.
+
+    ## Important Boundaries
+
+    - MODIFY: Test files in /testbed.
+    - DO NOT MODIFY: Production source code.
+    - DO NOT MODIFY: Configuration, dependency, packaging, or build files.
+    - DO NOT DISABLE: Existing tests.
+    - DO NOT WEAKEN: Existing assertions.
+    - DO NOT ACCESS: Reference fixes, reference tests, or evaluator-only artifacts.
+
+    You may inspect production source code and existing tests to understand
+    the issue, but your submitted patch must modify only test files.
+
+    ## Recommended Workflow
+
+    1. Read the issue description and identify the expected and actual behavior.
+    2. Locate the relevant production code and inspect existing tests.
+    3. Identify inputs and conditions that trigger the reported defect.
+    4. Write a focused regression test using the project's existing test framework.
+    5. Run the new test against the current buggy implementation when feasible.
+    6. Verify that any failure is caused by the reported defect, not an unrelated error.
+    7. Check nearby edge cases when relevant.
+    8. Review the final changes and ensure only test files are modified.
+
+    A test that fails because of an import error, syntax error, missing
+    dependency, or unrelated problem is not a valid reproduction.
+
+    A test passing on the buggy implementation does not demonstrate
+    the reported defect.
+
+    Do not attempt to apply or inspect the reference fix during generation.
+
+    ## Command Execution Rules
+
+    You are operating in an environment where:
+
+    1. You issue at least one command.
+    2. The system executes the command(s) in a subshell.
+    3. You see the result(s).
+    4. You write your next command(s).
+
+    Each response should include:
+
+    1. Reasoning text explaining your analysis and plan.
+    2. At least one bash tool call with your command.
+
+    CRITICAL REQUIREMENTS:
+
+    - Your response SHOULD include reasoning text explaining what you are doing.
+    - Your response MUST include AT LEAST ONE bash tool call.
+    - You can make MULTIPLE tool calls when commands are independent.
+    - Directory and environment variable changes are not persistent.
+    - Every action is executed in a new subshell.
+
+    ## Environment Details
+
+    - You have a full Linux shell environment.
+    - Always use non-interactive flags (-y, -f) for commands.
+    - Avoid interactive tools like vi or nano.
+    - You can use bash commands and available development tools.
+    - The working directory is /testbed.
+
+    ## Submission
+
+    When you have completed your work, submit your changes as a git patch.
+
+    Follow these steps IN ORDER, using SEPARATE commands:
+
+    Step 1: Create the patch file.
+
+    Run:
+    git diff -- path/to/test_file1 path/to/test_file2 > patch.txt
+
+    List only the test files you modified.
+
+    If you created new test files, stage only those new test files with
+    git add -N before creating the patch so that git diff includes them.
+
+    Do NOT commit your changes.
+
+    <IMPORTANT>
+    The patch must contain only test changes relevant to reproducing
+    the reported issue.
+
+    Do not submit:
+    - Production source code modifications.
+    - Configuration, dependency, packaging, or build file changes.
+    - Temporary reproduction scripts outside the project's test suite.
+    - Binary or compiled files.
+    - Unrelated changes to existing tests.
+    </IMPORTANT>
+
+    Step 2: Verify your patch.
+
+    Inspect patch.txt and confirm:
+    - It contains only intended test changes.
+    - Headers use --- a/ and +++ b/ paths.
+    - New test files are included when applicable.
+    - Existing assertions have not been weakened.
+
+    Step 3: Submit (EXACT command required).
+
+    You MUST use this EXACT command:
+
+    echo COMPLETE_TASK_AND_SUBMIT_FINAL_OUTPUT && cat patch.txt
+
+    If the command fails, it will not submit.
+
+    <CRITICAL>
+    - Creating/viewing the patch and submitting it MUST be separate commands.
+    - If you modify patch.txt after verification, verify it again.
+    - You CANNOT continue working on the task after submitting.
+    </CRITICAL>
+    </instructions>
+  
+  step_limit: 250
+  cost_limit: 3.
+
+environment:
+  cwd: "/testbed"
+  timeout: 60
+  interpreter: ["bash", "-c"]
+  env:
+    PAGER: cat
+    MANPAGER: cat
+    LESS: -R
+    PIP_PROGRESS_BAR: "off"
+    TQDM_DISABLE: "1"
+    # bash -c is non-login so it won't source ~/.bashrc; point BASH_ENV at it so the
+    # image's `conda activate testbed` runs (else commands use the base env, no testbed).
+    BASH_ENV: /root/.bashrc
+  environment_class: docker
+
+model:
+  observation_template: |
+    {% if output.exception_info -%}
+    <exception>{{output.exception_info}}</exception>
+    {% endif -%}
+    <returncode>{{output.returncode}}</returncode>
+    {% if output.output | length < 10000 -%}
+    <output>
+    {{ output.output -}}
+    </output>
+    {%- else -%}
+    <warning>
+    The output of your last command was too long.
+    Please try a different command that produces less output.
+    If you're looking at a file you can try use head, tail or sed to view a smaller number of lines selectively.
+    If you're using grep or find and it produced too much output, you can use a more selective search pattern.
+    If you really need to see something from the full command's output, you can redirect output to a file and then search in that file.
+    </warning>
+    {%- set elided_chars = output.output | length - 10000 -%}
+    <output_head>
+    {{ output.output[:5000] }}
+    </output_head>
+    <elided_chars>
+    {{ elided_chars }} characters elided
+    </elided_chars>
+    <output_tail>
+    {{ output.output[-5000:] }}
+    </output_tail>
+    {%- endif -%}
+  format_error_template: |
+    {% if finish_reason is defined and (finish_reason == "length" or (finish_reason == "tool_calls" and not has_tool_calls)) -%}
+    Your previous response reached the output token limit (finish_reason={{ finish_reason }}) before you produced a tool call, so it was cut off. Respond more concisely and finish with exactly one bash tool call. If you need to think more, do so briefly.
+    {%- else -%}
+    Tool call error:
+
+    <error>
+    {{error}}
+    </error>
+
+    Here is general guidance on how to submit correct toolcalls:
+
+    Every response needs to use the 'bash' tool at least once to execute commands.
+
+    Call the bash tool with your command as the argument:
+    - Tool: bash
+    - Arguments: {"command": "your_command_here"}
+
+    If you have completed your assignment, please consult the first message about how to
+    submit your solution (you will not be able to continue working on this task after that).
+    {%- endif %}
+  model_name: "anthropic/claude-sonnet-4-5-20250929"
+  model_kwargs:
+    drop_params: true
+    parallel_tool_calls: true

@@ -1,0 +1,16 @@
+# Large installer
+docker-desktop-amd64.deb
+
+
+# Original assignment guidelines repository
+SE443-333-final-project-guideline/
+
+# Python caches and environments
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+
+# Environment secrets
+.env
