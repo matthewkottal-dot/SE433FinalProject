@@ -179,7 +179,7 @@ The only intended differences between the generation configurations are the prom
 From the repository root, enter the SWT-Bench directory:
 
 ```bash
-cd SWTBench/swt-bench
+cd ../SWTBench/swt-bench
 ```
 
 Execute:
