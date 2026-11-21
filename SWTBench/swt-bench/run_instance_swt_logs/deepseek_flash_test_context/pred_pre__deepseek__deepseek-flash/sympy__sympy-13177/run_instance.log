@@ -1,0 +1,31 @@
+2026-11-19 15:42:25,261 - WARNING - Starting evaluation at 1795128145.2619777
+2026-11-19 15:42:25,369 - INFO - Creating container for sympy__sympy-13177...
+2026-11-19 15:42:25,397 - INFO - Container for sympy__sympy-13177 created: ddba47141e392e30ea6d62cbede6377563dab5a1378c4efbb07a4f0dabf0720d
+2026-11-19 15:42:25,509 - INFO - Container for sympy__sympy-13177 started: ddba47141e392e30ea6d62cbede6377563dab5a1378c4efbb07a4f0dabf0720d
+2026-11-19 15:42:25,920 - INFO - Git diff before:
+
+2026-11-19 15:42:25,923 - INFO - Eval script for sympy__sympy-13177 written to eval.sh, now applying to container...
+2026-11-19 15:42:30,505 - INFO - Test output for sympy__sympy-13177 written to run_instance_swt_logs/deepseek_flash_test_context/pred_pre__deepseek__deepseek-flash/sympy__sympy-13177/test_output.txt
+2026-11-19 15:42:30,543 - INFO - Git diff after:
+diff --git a/sympy/core/tests/test_arit.py b/sympy/core/tests/test_arit.py
+index 06d65203fb..1a9b4726f4 100644
+--- a/sympy/core/tests/test_arit.py
++++ b/sympy/core/tests/test_arit.py
+@@ -1607,6 +1607,12 @@ def test_Mod():
+     # issue 10963
+     assert (x**6000%400).args[1] == 400
+ 
++    # x**2 % x is only zero when x is an integer
++    assert Mod(x**2, x).subs(x, S(3)/2) == S(3)/4
++    assert Mod(x**2, x) != 0
++    xi = Symbol('xi', integer=True)
++    assert Mod(xi**2, xi) == 0
++
+ 
+ def test_Mod_is_integer():
+     p = Symbol('p', integer=True)
+2026-11-19 15:42:30,543 - INFO - Git diff changed after running eval script
+2026-11-19 15:42:30,544 - INFO - Attempting to stop container exec.eval.x86_64.deec2122407a414e380748.75ac9b2059330cbe6158ef.131896705815072...
+2026-11-19 15:42:45,729 - INFO - Attempting to remove container exec.eval.x86_64.deec2122407a414e380748.75ac9b2059330cbe6158ef.131896705815072...
+2026-11-19 15:42:45,783 - INFO - Container exec.eval.x86_64.deec2122407a414e380748.75ac9b2059330cbe6158ef.131896705815072 removed.
+2026-11-19 15:42:45,783 - WARNING - End of eval at 1795128165.7838035

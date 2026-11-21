@@ -1,0 +1,31 @@
+diff --git a/test_requests.py b/test_requests.py
+index 5f4f472..f4280c2 100755
+--- a/test_requests.py
++++ b/test_requests.py
+@@ -1655,6 +1655,26 @@ def test_urllib3_retries():
+     with pytest.raises(RetryError):
+         s.get(httpbin('status/500'))
+ 
++
++@pytest.mark.parametrize('exception', [
++    requests.packages.urllib3.exceptions.DecodeError('decode failed'),
++    requests.packages.urllib3.exceptions.TimeoutError('proxy timed out'),
++])
++def test_urllib3_exceptions_are_wrapped(exception):
++    """urllib3 exceptions should not escape from the Requests API."""
++    class FailingConnection(object):
++        def urlopen(self, *args, **kwargs):
++            raise exception
++
++    adapter = HTTPAdapter()
++    adapter.get_connection = lambda url, proxies=None: FailingConnection()
++    session = requests.Session()
++    session.mount('http://', adapter)
++
++    with pytest.raises(requests.exceptions.RequestException):
++        session.get('http://example.com/')
++
++
+ def test_vendor_aliases():
+     from requests.packages import urllib3
+     from requests.packages import chardet

@@ -1,0 +1,40 @@
+2026-11-19 15:40:44,249 - WARNING - Starting evaluation at 1795128044.249409
+2026-11-19 15:40:44,358 - INFO - Creating container for sympy__sympy-12454...
+2026-11-19 15:40:44,388 - INFO - Container for sympy__sympy-12454 created: c2a6f4ee843df6a614796a41c5376739a9af26fcd1a05d161d406c06d3f35745
+2026-11-19 15:40:44,495 - INFO - Container for sympy__sympy-12454 started: c2a6f4ee843df6a614796a41c5376739a9af26fcd1a05d161d406c06d3f35745
+2026-11-19 15:40:44,876 - INFO - Git diff before:
+
+2026-11-19 15:40:44,879 - INFO - Eval script for sympy__sympy-12454 written to eval.sh, now applying to container...
+2026-11-19 15:40:57,228 - INFO - Test output for sympy__sympy-12454 written to run_instance_swt_logs/deepseek_flash_test_context/pred_pre__deepseek__deepseek-flash/sympy__sympy-12454/test_output.txt
+2026-11-19 15:40:57,266 - INFO - Git diff after:
+diff --git a/sympy/matrices/tests/test_commonmatrix.py b/sympy/matrices/tests/test_commonmatrix.py
+index 7574671989..a745f99689 100644
+--- a/sympy/matrices/tests/test_commonmatrix.py
++++ b/sympy/matrices/tests/test_commonmatrix.py
+@@ -293,6 +293,8 @@ def test_is_upper():
+     assert a.is_upper is True
+     a = PropertiesOnlyMatrix([[1], [2], [3]])
+     assert a.is_upper is False
++    a = PropertiesOnlyMatrix(4, 2, lambda i, j: 0)
++    assert a.is_upper is True
+ 
+ 
+ def test_is_lower():
+diff --git a/sympy/matrices/tests/test_matrices.py b/sympy/matrices/tests/test_matrices.py
+index 03b1548fd9..33ab4bbb8e 100644
+--- a/sympy/matrices/tests/test_matrices.py
++++ b/sympy/matrices/tests/test_matrices.py
+@@ -1225,6 +1225,8 @@ def test_is_upper():
+     assert a.is_upper is True
+     a = Matrix([[1], [2], [3]])
+     assert a.is_upper is False
++    a = zeros(4, 2)
++    assert a.is_upper is True
+ 
+ 
+ def test_is_lower():
+2026-11-19 15:40:57,267 - INFO - Git diff changed after running eval script
+2026-11-19 15:40:57,268 - INFO - Attempting to stop container exec.eval.x86_64.deec2122407a414e380748.ab890e779fb3a983684ad0.131896705814592...
+2026-11-19 15:41:12,480 - INFO - Attempting to remove container exec.eval.x86_64.deec2122407a414e380748.ab890e779fb3a983684ad0.131896705814592...
+2026-11-19 15:41:12,511 - INFO - Container exec.eval.x86_64.deec2122407a414e380748.ab890e779fb3a983684ad0.131896705814592 removed.
+2026-11-19 15:41:12,512 - WARNING - End of eval at 1795128072.512301

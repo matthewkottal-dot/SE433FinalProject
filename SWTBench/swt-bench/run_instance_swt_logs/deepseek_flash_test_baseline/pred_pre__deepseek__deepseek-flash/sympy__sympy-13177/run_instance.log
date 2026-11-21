@@ -1,0 +1,39 @@
+2026-11-19 14:45:50,671 - WARNING - Starting evaluation at 1795124750.6710138
+2026-11-19 14:45:50,802 - INFO - Creating container for sympy__sympy-13177...
+2026-11-19 14:45:50,836 - INFO - Container for sympy__sympy-13177 created: 42b0f5de7aaf98efcb9258c1dd078f32f879028f2cfc5284c02f9244fa143950
+2026-11-19 14:45:50,964 - INFO - Container for sympy__sympy-13177 started: 42b0f5de7aaf98efcb9258c1dd078f32f879028f2cfc5284c02f9244fa143950
+2026-11-19 14:45:51,419 - INFO - Git diff before:
+
+2026-11-19 14:45:51,422 - INFO - Eval script for sympy__sympy-13177 written to eval.sh, now applying to container...
+2026-11-19 14:45:57,400 - INFO - Test output for sympy__sympy-13177 written to run_instance_swt_logs/deepseek_flash_test_baseline/pred_pre__deepseek__deepseek-flash/sympy__sympy-13177/test_output.txt
+2026-11-19 14:45:57,442 - INFO - Git diff after:
+diff --git a/sympy/core/tests/test_arit.py b/sympy/core/tests/test_arit.py
+index 06d65203fb..2504ab746e 100644
+--- a/sympy/core/tests/test_arit.py
++++ b/sympy/core/tests/test_arit.py
+@@ -1608,6 +1608,20 @@ def test_Mod():
+     assert (x**6000%400).args[1] == 400
+ 
+ 
++def test_Mod_noninteger_base():
++    # A power only reduces to zero modulo its base if the base is known
++    # to be an integer.  Otherwise the unevaluated expression must be kept
++    # so that substitution uses the actual value of the base.
++    assert Mod(x**2, x).func is Mod
++    assert Mod(x**2, x) != 0
++    assert Mod(x**2, x).subs(x, 1.5) == Mod(S(1.5)**2, S(1.5))
++    assert Mod(x**2, x).subs(x, 1.5) == S(3)/4
++
++    # The simplification remains valid for an integer base.
++    i = Symbol('i', integer=True)
++    assert Mod(i**2, i) == 0
++
++
+ def test_Mod_is_integer():
+     p = Symbol('p', integer=True)
+     q1 = Symbol('q1', integer=True)
+2026-11-19 14:45:57,442 - INFO - Git diff changed after running eval script
+2026-11-19 14:45:57,443 - INFO - Attempting to stop container exec.eval.x86_64.deec2122407a414e380748.75ac9b2059330cbe6158ef.125556472320544...
+2026-11-19 14:46:12,638 - INFO - Attempting to remove container exec.eval.x86_64.deec2122407a414e380748.75ac9b2059330cbe6158ef.125556472320544...
+2026-11-19 14:46:12,676 - INFO - Container exec.eval.x86_64.deec2122407a414e380748.75ac9b2059330cbe6158ef.125556472320544 removed.
+2026-11-19 14:46:12,677 - WARNING - End of eval at 1795124772.6770895

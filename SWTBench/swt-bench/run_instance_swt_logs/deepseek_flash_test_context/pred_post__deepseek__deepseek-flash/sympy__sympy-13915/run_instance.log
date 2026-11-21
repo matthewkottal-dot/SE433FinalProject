@@ -1,0 +1,47 @@
+2026-11-19 15:43:29,331 - WARNING - Starting evaluation at 1795128209.3318772
+2026-11-19 15:43:29,437 - INFO - Creating container for sympy__sympy-13915...
+2026-11-19 15:43:29,465 - INFO - Container for sympy__sympy-13915 created: 926819b80ba4d9ec1a8b3ff7373783ac20fcdcbe0fcf65e4667342ebce2847b0
+2026-11-19 15:43:29,591 - INFO - Container for sympy__sympy-13915 started: 926819b80ba4d9ec1a8b3ff7373783ac20fcdcbe0fcf65e4667342ebce2847b0
+2026-11-19 15:43:29,796 - INFO - Git diff before:
+
+2026-11-19 15:43:29,798 - INFO - Eval script for sympy__sympy-13915 written to eval.sh, now applying to container...
+2026-11-19 15:43:36,451 - INFO - Test output for sympy__sympy-13915 written to run_instance_swt_logs/deepseek_flash_test_context/pred_post__deepseek__deepseek-flash/sympy__sympy-13915/test_output.txt
+2026-11-19 15:43:36,488 - INFO - Git diff after:
+diff --git a/sympy/core/mul.py b/sympy/core/mul.py
+index 4f01eeedbd..29e6085ce3 100644
+--- a/sympy/core/mul.py
++++ b/sympy/core/mul.py
+@@ -423,6 +423,11 @@ def _gather(c_powers):
+             changed = False
+             for b, e in c_powers:
+                 if e.is_zero:
++                    # canceling out infinities yields NaN
++                    if (b.is_Add or b.is_Mul) and any(infty in b.args
++                        for infty in (S.ComplexInfinity, S.Infinity,
++                                      S.NegativeInfinity)):
++                        return [S.NaN], [], None
+                     continue
+                 if e is S.One:
+                     if b.is_Number:
+diff --git a/sympy/core/tests/test_subs.py b/sympy/core/tests/test_subs.py
+index 90abb9e374..f36b4423ae 100644
+--- a/sympy/core/tests/test_subs.py
++++ b/sympy/core/tests/test_subs.py
+@@ -779,3 +779,12 @@ def test_issue_12657():
+     reps = [(-oo, 2), (oo, 1)]
+     assert (x < oo).subs(reps) == (x < 1)
+     assert (x < oo).subs(list(reversed(reps))) == (x < 1)
++
++
++def test_undefined_result_after_substitution():
++    # Substituting b -> a makes individual terms undefined.  The result
++    # should therefore be nan rather than simplifying to 1 by cancelling
++    # two equal-looking undefined subexpressions.
++    a, b = symbols('a b')
++    r = (1/(a + b) + 1/(a - b))/(1/(a + b) - 1/(a - b))
++    assert r.subs(b, a) is S.NaN
+2026-11-19 15:43:36,488 - INFO - Git diff changed after running eval script
+2026-11-19 15:43:36,489 - INFO - Attempting to stop container exec.eval.x86_64.deec2122407a414e380748.ef0c45e0de59e417b0ce7b.131896705815312...
+2026-11-19 15:43:51,684 - INFO - Attempting to remove container exec.eval.x86_64.deec2122407a414e380748.ef0c45e0de59e417b0ce7b.131896705815312...
+2026-11-19 15:43:51,716 - INFO - Container exec.eval.x86_64.deec2122407a414e380748.ef0c45e0de59e417b0ce7b.131896705815312 removed.
+2026-11-19 15:43:51,716 - WARNING - End of eval at 1795128231.7167993

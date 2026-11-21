@@ -1,0 +1,39 @@
+2026-11-19 15:07:28,018 - WARNING - Starting evaluation at 1795126048.018075
+2026-11-19 15:07:28,146 - INFO - Creating container for psf__requests-2317...
+2026-11-19 15:07:28,183 - INFO - Container for psf__requests-2317 created: 01f5684011167652eacc734c26240918dcd48bce3df3099c81ca52d5bf0030fb
+2026-11-19 15:07:28,303 - INFO - Container for psf__requests-2317 started: 01f5684011167652eacc734c26240918dcd48bce3df3099c81ca52d5bf0030fb
+2026-11-19 15:07:28,389 - INFO - Git diff before:
+
+2026-11-19 15:07:28,392 - INFO - Eval script for psf__requests-2317 written to eval.sh, now applying to container...
+2026-11-19 15:15:02,805 - INFO - Test output for psf__requests-2317 written to run_instance_swt_logs/deepseek_flash_test_context/pred_pre__deepseek__deepseek-flash/psf__requests-2317/test_output.txt
+2026-11-19 15:15:02,846 - INFO - Git diff after:
+diff --git a/test_requests.py b/test_requests.py
+index 467c5bc6..bee1ecaf 100755
+--- a/test_requests.py
++++ b/test_requests.py
+@@ -523,6 +523,20 @@ class RequestsTestCase(unittest.TestCase):
+             method=u('POST'), url=httpbin('post'), files=files)
+         assert r.status_code == 200
+ 
++    def test_bytes_method_name(self):
++        session = requests.Session()
++        sent = []
++
++        def capture_send(request, **kwargs):
++            sent.append(request)
++            return requests.Response()
++
++        session.send = capture_send
++        session.request(method=b'GET', url='http://example.com/')
++
++        assert len(sent) == 1
++        assert sent[0].method == 'GET'
++
+     def test_custom_content_type(self):
+         r = requests.post(
+             httpbin('post'),
+2026-11-19 15:15:02,846 - INFO - Git diff changed after running eval script
+2026-11-19 15:15:02,847 - INFO - Attempting to stop container exec.eval.x86_64.3a9417a9d4b5c62087edb6.5f7d4c21322e5beca90b73.131896724485568...
+2026-11-19 15:15:18,056 - INFO - Attempting to remove container exec.eval.x86_64.3a9417a9d4b5c62087edb6.5f7d4c21322e5beca90b73.131896724485568...
+2026-11-19 15:15:18,091 - INFO - Container exec.eval.x86_64.3a9417a9d4b5c62087edb6.5f7d4c21322e5beca90b73.131896724485568 removed.
+2026-11-19 15:15:18,092 - WARNING - End of eval at 1795126518.0923634

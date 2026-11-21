@@ -1,0 +1,3017 @@
++ source /opt/miniconda3/bin/activate
+++ _CONDA_ROOT=/opt/miniconda3
+++ . /opt/miniconda3/etc/profile.d/conda.sh
++++ export CONDA_EXE=/opt/miniconda3/bin/conda
++++ CONDA_EXE=/opt/miniconda3/bin/conda
++++ export _CE_M=
++++ _CE_M=
++++ export _CE_CONDA=
++++ _CE_CONDA=
++++ export CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++++ CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++++ '[' -z '' ']'
++++ export CONDA_SHLVL=0
++++ CONDA_SHLVL=0
++++ '[' -n '' ']'
++++++ dirname /opt/miniconda3/bin/conda
+++++ dirname /opt/miniconda3/bin
++++ PATH=/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++++ export PATH
++++ '[' -z '' ']'
++++ PS1=
+++ conda activate
+++ local cmd=activate
+++ case "$cmd" in
+++ __conda_activate activate
+++ '[' -n '' ']'
+++ local ask_conda
++++ PS1=
++++ __conda_exe shell.posix activate
++++ /opt/miniconda3/bin/conda shell.posix activate
+++ ask_conda='PS1='\''(base) '\''
+export PATH='\''/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3'\''
+export CONDA_SHLVL='\''1'\''
+export CONDA_DEFAULT_ENV='\''base'\''
+export CONDA_PROMPT_MODIFIER='\''(base) '\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
+++ eval 'PS1='\''(base) '\''
+export PATH='\''/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3'\''
+export CONDA_SHLVL='\''1'\''
+export CONDA_DEFAULT_ENV='\''base'\''
+export CONDA_PROMPT_MODIFIER='\''(base) '\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
++++ PS1='(base) '
++++ export PATH=/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++++ PATH=/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++++ export CONDA_PREFIX=/opt/miniconda3
++++ CONDA_PREFIX=/opt/miniconda3
++++ export CONDA_SHLVL=1
++++ CONDA_SHLVL=1
++++ export CONDA_DEFAULT_ENV=base
++++ CONDA_DEFAULT_ENV=base
++++ export 'CONDA_PROMPT_MODIFIER=(base) '
++++ CONDA_PROMPT_MODIFIER='(base) '
++++ export CONDA_EXE=/opt/miniconda3/bin/conda
++++ CONDA_EXE=/opt/miniconda3/bin/conda
++++ export _CE_M=
++++ _CE_M=
++++ export _CE_CONDA=
++++ _CE_CONDA=
++++ export CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++++ CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
+++ __conda_hashr
+++ '[' -n '' ']'
+++ '[' -n '' ']'
+++ hash -r
++ conda activate testbed
++ local cmd=activate
++ case "$cmd" in
++ __conda_activate activate testbed
++ '[' -n '' ']'
++ local ask_conda
+++ PS1='(base) '
+++ __conda_exe shell.posix activate testbed
+++ /opt/miniconda3/bin/conda shell.posix activate testbed
++ ask_conda='PS1='\''(testbed) '\''
+export PATH='\''/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3/envs/testbed'\''
+export CONDA_SHLVL='\''2'\''
+export CONDA_DEFAULT_ENV='\''testbed'\''
+export CONDA_PROMPT_MODIFIER='\''(testbed) '\''
+export CONDA_PREFIX_1='\''/opt/miniconda3'\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
++ eval 'PS1='\''(testbed) '\''
+export PATH='\''/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3/envs/testbed'\''
+export CONDA_SHLVL='\''2'\''
+export CONDA_DEFAULT_ENV='\''testbed'\''
+export CONDA_PROMPT_MODIFIER='\''(testbed) '\''
+export CONDA_PREFIX_1='\''/opt/miniconda3'\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
+++ PS1='(testbed) '
+++ export PATH=/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ PATH=/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ export CONDA_PREFIX=/opt/miniconda3/envs/testbed
+++ CONDA_PREFIX=/opt/miniconda3/envs/testbed
+++ export CONDA_SHLVL=2
+++ CONDA_SHLVL=2
+++ export CONDA_DEFAULT_ENV=testbed
+++ CONDA_DEFAULT_ENV=testbed
+++ export 'CONDA_PROMPT_MODIFIER=(testbed) '
+++ CONDA_PROMPT_MODIFIER='(testbed) '
+++ export CONDA_PREFIX_1=/opt/miniconda3
+++ CONDA_PREFIX_1=/opt/miniconda3
+++ export CONDA_EXE=/opt/miniconda3/bin/conda
+++ CONDA_EXE=/opt/miniconda3/bin/conda
+++ export _CE_M=
+++ _CE_M=
+++ export _CE_CONDA=
+++ _CE_CONDA=
+++ export CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
+++ CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++ __conda_hashr
++ '[' -n '' ']'
++ '[' -n '' ']'
++ hash -r
++ cd /testbed
++ git diff HEAD d8c37f43724cd9fb0870f77877b7c4c7e38a19e0
++ git config --global --add safe.directory /testbed
++ cd /testbed
++ git status
+On branch main
+nothing to commit, working tree clean
++ git show
+commit d8c37f43724cd9fb0870f77877b7c4c7e38a19e0
+Merge: 6414df97 d5aadba4
+Author: David Lord <davidism@gmail.com>
+Date:   Thu May 13 13:35:12 2021 -0700
+
+    Merge pull request #4026 from greyli/improve-type-hints
+    
+    Improve type hints for send_file and send_from_directory
+
++ git diff d8c37f43724cd9fb0870f77877b7c4c7e38a19e0
++ source /opt/miniconda3/bin/activate
+++ _CONDA_ROOT=/opt/miniconda3
+++ . /opt/miniconda3/etc/profile.d/conda.sh
++++ export CONDA_EXE=/opt/miniconda3/bin/conda
++++ CONDA_EXE=/opt/miniconda3/bin/conda
++++ export _CE_M=
++++ _CE_M=
++++ export _CE_CONDA=
++++ _CE_CONDA=
++++ export CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++++ CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++++ '[' -z x ']'
+++ conda activate
+++ local cmd=activate
+++ case "$cmd" in
+++ __conda_activate activate
+++ '[' -n '' ']'
+++ local ask_conda
++++ PS1='(testbed) '
++++ __conda_exe shell.posix activate
++++ /opt/miniconda3/bin/conda shell.posix activate
+++ ask_conda='PS1='\''(base) '\''
+export PATH='\''/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3'\''
+export CONDA_SHLVL='\''3'\''
+export CONDA_DEFAULT_ENV='\''base'\''
+export CONDA_PROMPT_MODIFIER='\''(base) '\''
+export CONDA_PREFIX_2='\''/opt/miniconda3/envs/testbed'\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
+++ eval 'PS1='\''(base) '\''
+export PATH='\''/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3'\''
+export CONDA_SHLVL='\''3'\''
+export CONDA_DEFAULT_ENV='\''base'\''
+export CONDA_PROMPT_MODIFIER='\''(base) '\''
+export CONDA_PREFIX_2='\''/opt/miniconda3/envs/testbed'\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
++++ PS1='(base) '
++++ export PATH=/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++++ PATH=/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++++ export CONDA_PREFIX=/opt/miniconda3
++++ CONDA_PREFIX=/opt/miniconda3
++++ export CONDA_SHLVL=3
++++ CONDA_SHLVL=3
++++ export CONDA_DEFAULT_ENV=base
++++ CONDA_DEFAULT_ENV=base
++++ export 'CONDA_PROMPT_MODIFIER=(base) '
++++ CONDA_PROMPT_MODIFIER='(base) '
++++ export CONDA_PREFIX_2=/opt/miniconda3/envs/testbed
++++ CONDA_PREFIX_2=/opt/miniconda3/envs/testbed
++++ export CONDA_EXE=/opt/miniconda3/bin/conda
++++ CONDA_EXE=/opt/miniconda3/bin/conda
++++ export _CE_M=
++++ _CE_M=
++++ export _CE_CONDA=
++++ _CE_CONDA=
++++ export CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++++ CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
+++ __conda_hashr
+++ '[' -n '' ']'
+++ '[' -n '' ']'
+++ hash -r
++ conda activate testbed
++ local cmd=activate
++ case "$cmd" in
++ __conda_activate activate testbed
++ '[' -n '' ']'
++ local ask_conda
+++ PS1='(base) '
+++ __conda_exe shell.posix activate testbed
+++ /opt/miniconda3/bin/conda shell.posix activate testbed
++ ask_conda='PS1='\''(testbed) '\''
+export PATH='\''/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3/envs/testbed'\''
+export CONDA_SHLVL='\''4'\''
+export CONDA_DEFAULT_ENV='\''testbed'\''
+export CONDA_PROMPT_MODIFIER='\''(testbed) '\''
+export CONDA_PREFIX_3='\''/opt/miniconda3'\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
++ eval 'PS1='\''(testbed) '\''
+export PATH='\''/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3/envs/testbed'\''
+export CONDA_SHLVL='\''4'\''
+export CONDA_DEFAULT_ENV='\''testbed'\''
+export CONDA_PROMPT_MODIFIER='\''(testbed) '\''
+export CONDA_PREFIX_3='\''/opt/miniconda3'\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
+++ PS1='(testbed) '
+++ export PATH=/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ PATH=/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ export CONDA_PREFIX=/opt/miniconda3/envs/testbed
+++ CONDA_PREFIX=/opt/miniconda3/envs/testbed
+++ export CONDA_SHLVL=4
+++ CONDA_SHLVL=4
+++ export CONDA_DEFAULT_ENV=testbed
+++ CONDA_DEFAULT_ENV=testbed
+++ export 'CONDA_PROMPT_MODIFIER=(testbed) '
+++ CONDA_PROMPT_MODIFIER='(testbed) '
+++ export CONDA_PREFIX_3=/opt/miniconda3
+++ CONDA_PREFIX_3=/opt/miniconda3
+++ export CONDA_EXE=/opt/miniconda3/bin/conda
+++ CONDA_EXE=/opt/miniconda3/bin/conda
+++ export _CE_M=
+++ _CE_M=
+++ export _CE_CONDA=
+++ _CE_CONDA=
+++ export CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
+++ CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++ __conda_hashr
++ '[' -n '' ']'
++ '[' -n '' ']'
++ hash -r
++ python -m pip install -e .
+Obtaining file:///testbed
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: Werkzeug>=2.0 in /opt/miniconda3/envs/testbed/lib/python3.9/site-packages (from Flask==2.0.1.dev0) (2.3.7)
+Requirement already satisfied: Jinja2>=3.0 in /opt/miniconda3/envs/testbed/lib/python3.9/site-packages (from Flask==2.0.1.dev0) (3.0.1)
+Requirement already satisfied: itsdangerous>=2.0 in /opt/miniconda3/envs/testbed/lib/python3.9/site-packages (from Flask==2.0.1.dev0) (2.1.2)
+Requirement already satisfied: click>=7.1.2 in /opt/miniconda3/envs/testbed/lib/python3.9/site-packages (from Flask==2.0.1.dev0) (8.0.1)
+Requirement already satisfied: MarkupSafe>=2.0 in /opt/miniconda3/envs/testbed/lib/python3.9/site-packages (from Jinja2>=3.0->Flask==2.0.1.dev0) (2.1.3)
+Building wheels for collected packages: Flask
+  Building editable for Flask (pyproject.toml): started
+  Building editable for Flask (pyproject.toml): finished with status 'done'
+  Created wheel for Flask: filename=flask-2.0.1.dev0-0.editable-py3-none-any.whl size=3962 sha256=31e91fdf090423e86dea192361392084f8f7ac15e73b7fc65a06c1aa92b9afaa
+  Stored in directory: /tmp/pip-ephem-wheel-cache-avci54u6/wheels/7d/66/67/70d1ee2124ccf21d601c352e25cdca10f611f7c8b3f9ffb9e4
+Successfully built Flask
+Installing collected packages: Flask
+  Attempting uninstall: Flask
+    Found existing installation: Flask 2.0.1.dev0
+    Uninstalling Flask-2.0.1.dev0:
+      Successfully uninstalled Flask-2.0.1.dev0
+Successfully installed Flask-2.0.1.dev0
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
++ git apply -v -
+Checking patch src/flask/blueprints.py...
+Applied patch src/flask/blueprints.py cleanly.
++ git apply -v -
+Checking patch tests/test_blueprints.py...
+warning: tests/test_blueprints.py has type 100644, expected 100755
+Applied patch tests/test_blueprints.py cleanly.
++ python3 /root/trace.py --count -C coverage.cover --include-pattern '/testbed/(src/flask/blueprints\.py)' -m pytest --no-header -rA -p no:cacheprovider tests/test_blueprints.py
+['--count', '-C', 'coverage.cover', '--include-pattern', '/testbed/(src/flask/blueprints\\.py)']
+============================= test session starts ==============================
+collected 52 items
+
+tests/test_blueprints.py FFFFFFFFFFFFFFFFEFE....FFFFF....FFFFF....FFFFFF [ 90%]
+.FFFF                                                                    [100%]
+
+==================================== ERRORS ====================================
+_________________ ERROR at setup of test_templates_and_static __________________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x76ed036cb8b0>
+
+    @pytest.fixture
+    def test_apps(monkeypatch):
+>       monkeypatch.syspath_prepend(os.path.join(os.path.dirname(__file__), "test_apps"))
+
+tests/conftest.py:76: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    """
+    Package resource API
+    --------------------
+    
+    A resource is a logical file contained within a package, or a logical
+    subdirectory thereof.  The package resource API expects resource names
+    to have their path parts separated with ``/``, *not* whatever the local
+    path separator is.  Do not use os.path operations to manipulate resource
+    names being passed into the API.
+    
+    The package resource API is designed to work with normal filesystem packages,
+    .egg files, and unpacked .egg files.  It can also work in a limited way with
+    .zip files and with custom PEP 302 loaders that support the ``get_data()``
+    method.
+    
+    This module is deprecated. Users are directed to :mod:`importlib.resources`,
+    :mod:`importlib.metadata` and :pypi:`packaging` instead.
+    """
+    
+    import sys
+    
+    if sys.version_info < (3, 8):
+        raise RuntimeError("Python 3.8 or later is required")
+    
+    import os
+    import io
+    import time
+    import re
+    import types
+    from typing import (
+        TYPE_CHECKING,
+        List,
+        Protocol,
+        Callable,
+        Dict,
+        Iterable,
+        Optional,
+        TypeVar,
+    )
+    import zipfile
+    import zipimport
+    import warnings
+    import stat
+    import functools
+    import pkgutil
+    import operator
+    import platform
+    import collections
+    import plistlib
+    import email.parser
+    import errno
+    import tempfile
+    import textwrap
+    import inspect
+    import ntpath
+    import posixpath
+    import importlib
+    import importlib.machinery
+    from pkgutil import get_importer
+    
+    import _imp
+    
+    # capture these to bypass sandboxing
+    from os import utime
+    
+    try:
+        from os import mkdir, rename, unlink
+    
+        WRITE_SUPPORT = True
+    except ImportError:
+        # no write support, probably under GAE
+        WRITE_SUPPORT = False
+    
+    from os import open as os_open
+    from os.path import isdir, split
+    
+    from pkg_resources.extern.jaraco.text import (
+        yield_lines,
+        drop_comment,
+        join_continuation,
+    )
+    from pkg_resources.extern.packaging import markers as _packaging_markers
+    from pkg_resources.extern.packaging import requirements as _packaging_requirements
+    from pkg_resources.extern.packaging import utils as _packaging_utils
+    from pkg_resources.extern.packaging import version as _packaging_version
+    from pkg_resources.extern.platformdirs import user_cache_dir as _user_cache_dir
+    
+    
+>   warnings.warn(
+        "pkg_resources is deprecated as an API. "
+        "See https://setuptools.pypa.io/en/latest/pkg_resources.html",
+        DeprecationWarning,
+        stacklevel=2,
+    )
+E   DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/pkg_resources/__init__.py:89: DeprecationWarning
+____________________ ERROR at setup of test_templates_list _____________________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x76ed0506a3a0>
+
+    @pytest.fixture
+    def test_apps(monkeypatch):
+>       monkeypatch.syspath_prepend(os.path.join(os.path.dirname(__file__), "test_apps"))
+
+tests/conftest.py:76: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    """
+    Package resource API
+    --------------------
+    
+    A resource is a logical file contained within a package, or a logical
+    subdirectory thereof.  The package resource API expects resource names
+    to have their path parts separated with ``/``, *not* whatever the local
+    path separator is.  Do not use os.path operations to manipulate resource
+    names being passed into the API.
+    
+    The package resource API is designed to work with normal filesystem packages,
+    .egg files, and unpacked .egg files.  It can also work in a limited way with
+    .zip files and with custom PEP 302 loaders that support the ``get_data()``
+    method.
+    
+    This module is deprecated. Users are directed to :mod:`importlib.resources`,
+    :mod:`importlib.metadata` and :pypi:`packaging` instead.
+    """
+    
+    import sys
+    
+    if sys.version_info < (3, 8):
+        raise RuntimeError("Python 3.8 or later is required")
+    
+    import os
+    import io
+    import time
+    import re
+    import types
+    from typing import (
+        TYPE_CHECKING,
+        List,
+        Protocol,
+        Callable,
+        Dict,
+        Iterable,
+        Optional,
+        TypeVar,
+    )
+    import zipfile
+    import zipimport
+    import warnings
+    import stat
+    import functools
+    import pkgutil
+    import operator
+    import platform
+    import collections
+    import plistlib
+    import email.parser
+    import errno
+    import tempfile
+    import textwrap
+    import inspect
+    import ntpath
+    import posixpath
+    import importlib
+    import importlib.machinery
+    from pkgutil import get_importer
+    
+    import _imp
+    
+    # capture these to bypass sandboxing
+    from os import utime
+    
+    try:
+        from os import mkdir, rename, unlink
+    
+        WRITE_SUPPORT = True
+    except ImportError:
+        # no write support, probably under GAE
+        WRITE_SUPPORT = False
+    
+    from os import open as os_open
+    from os.path import isdir, split
+    
+    from pkg_resources.extern.jaraco.text import (
+        yield_lines,
+        drop_comment,
+        join_continuation,
+    )
+    from pkg_resources.extern.packaging import markers as _packaging_markers
+    from pkg_resources.extern.packaging import requirements as _packaging_requirements
+    from pkg_resources.extern.packaging import utils as _packaging_utils
+    from pkg_resources.extern.packaging import version as _packaging_version
+    from pkg_resources.extern.platformdirs import user_cache_dir as _user_cache_dir
+    
+    
+>   warnings.warn(
+        "pkg_resources is deprecated as an API. "
+        "See https://setuptools.pypa.io/en/latest/pkg_resources.html",
+        DeprecationWarning,
+        stacklevel=2,
+    )
+E   DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/pkg_resources/__init__.py:89: DeprecationWarning
+=================================== FAILURES ===================================
+____________________ test_blueprint_specific_error_handling ____________________
+
+app = <Flask 'flask_test'>, client = <FlaskClient <Flask 'flask_test'>>
+
+    def test_blueprint_specific_error_handling(app, client):
+        frontend = flask.Blueprint("frontend", __name__)
+        backend = flask.Blueprint("backend", __name__)
+        sideend = flask.Blueprint("sideend", __name__)
+    
+        @frontend.errorhandler(403)
+        def frontend_forbidden(e):
+            return "frontend says no", 403
+    
+        @frontend.route("/frontend-no")
+        def frontend_no():
+            flask.abort(403)
+    
+        @backend.errorhandler(403)
+        def backend_forbidden(e):
+            return "backend says no", 403
+    
+        @backend.route("/backend-no")
+        def backend_no():
+            flask.abort(403)
+    
+        @sideend.route("/what-is-a-sideend")
+        def sideend_no():
+            flask.abort(403)
+    
+        app.register_blueprint(frontend)
+        app.register_blueprint(backend)
+        app.register_blueprint(sideend)
+    
+        @app.errorhandler(403)
+        def app_forbidden(e):
+            return "application itself says no", 403
+    
+>       assert client.get("/frontend-no").data == b"frontend says no"
+
+tests/test_blueprints.py:43: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/test.py:1243: in get
+    return self.open(*args, **kw)
+src/flask/testing.py:209: in open
+    builder = EnvironBuilder(self.application, *args, **kwargs)
+src/flask/testing.py:70: in __init__
+    url = url_parse(path)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+url = '/frontend-no', scheme = None, allow_fragments = True
+
+    def url_parse(
+        url: str, scheme: str | None = None, allow_fragments: bool = True
+    ) -> BaseURL:
+        """Parses a URL from a string into a :class:`URL` tuple.  If the URL
+        is lacking a scheme it can be provided as second argument. Otherwise,
+        it is ignored.  Optionally fragments can be stripped from the URL
+        by setting `allow_fragments` to `False`.
+    
+        The inverse of this function is :func:`url_unparse`.
+    
+        :param url: the URL to parse.
+        :param scheme: the default schema to use if the URL is schemaless.
+        :param allow_fragments: if set to `False` a fragment will be removed
+                                from the URL.
+    
+        .. deprecated:: 2.3
+            Will be removed in Werkzeug 3.0. Use ``urllib.parse.urlsplit`` instead.
+        """
+>       warnings.warn(
+            "'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0."
+            " Use 'urllib.parse.urlsplit' instead.",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+E       DeprecationWarning: 'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0. Use 'urllib.parse.urlsplit' instead.
+
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/urls.py:505: DeprecationWarning
+_________________ test_blueprint_specific_user_error_handling __________________
+
+app = <Flask 'flask_test'>, client = <FlaskClient <Flask 'flask_test'>>
+
+    def test_blueprint_specific_user_error_handling(app, client):
+        class MyDecoratorException(Exception):
+            pass
+    
+        class MyFunctionException(Exception):
+            pass
+    
+        blue = flask.Blueprint("blue", __name__)
+    
+        @blue.errorhandler(MyDecoratorException)
+        def my_decorator_exception_handler(e):
+            assert isinstance(e, MyDecoratorException)
+            return "boom"
+    
+        def my_function_exception_handler(e):
+            assert isinstance(e, MyFunctionException)
+            return "bam"
+    
+        blue.register_error_handler(MyFunctionException, my_function_exception_handler)
+    
+        @blue.route("/decorator")
+        def blue_deco_test():
+            raise MyDecoratorException()
+    
+        @blue.route("/function")
+        def blue_func_test():
+            raise MyFunctionException()
+    
+        app.register_blueprint(blue)
+    
+>       assert client.get("/decorator").data == b"boom"
+
+tests/test_blueprints.py:78: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/test.py:1243: in get
+    return self.open(*args, **kw)
+src/flask/testing.py:209: in open
+    builder = EnvironBuilder(self.application, *args, **kwargs)
+src/flask/testing.py:70: in __init__
+    url = url_parse(path)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+url = '/decorator', scheme = None, allow_fragments = True
+
+    def url_parse(
+        url: str, scheme: str | None = None, allow_fragments: bool = True
+    ) -> BaseURL:
+        """Parses a URL from a string into a :class:`URL` tuple.  If the URL
+        is lacking a scheme it can be provided as second argument. Otherwise,
+        it is ignored.  Optionally fragments can be stripped from the URL
+        by setting `allow_fragments` to `False`.
+    
+        The inverse of this function is :func:`url_unparse`.
+    
+        :param url: the URL to parse.
+        :param scheme: the default schema to use if the URL is schemaless.
+        :param allow_fragments: if set to `False` a fragment will be removed
+                                from the URL.
+    
+        .. deprecated:: 2.3
+            Will be removed in Werkzeug 3.0. Use ``urllib.parse.urlsplit`` instead.
+        """
+>       warnings.warn(
+            "'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0."
+            " Use 'urllib.parse.urlsplit' instead.",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+E       DeprecationWarning: 'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0. Use 'urllib.parse.urlsplit' instead.
+
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/urls.py:505: DeprecationWarning
+______________________ test_blueprint_app_error_handling _______________________
+
+app = <Flask 'flask_test'>, client = <FlaskClient <Flask 'flask_test'>>
+
+    def test_blueprint_app_error_handling(app, client):
+        errors = flask.Blueprint("errors", __name__)
+    
+        @errors.app_errorhandler(403)
+        def forbidden_handler(e):
+            return "you shall not pass", 403
+    
+        @app.route("/forbidden")
+        def app_forbidden():
+            flask.abort(403)
+    
+        forbidden_bp = flask.Blueprint("forbidden_bp", __name__)
+    
+        @forbidden_bp.route("/nope")
+        def bp_forbidden():
+            flask.abort(403)
+    
+        app.register_blueprint(errors)
+        app.register_blueprint(forbidden_bp)
+    
+>       assert client.get("/forbidden").data == b"you shall not pass"
+
+tests/test_blueprints.py:102: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/test.py:1243: in get
+    return self.open(*args, **kw)
+src/flask/testing.py:209: in open
+    builder = EnvironBuilder(self.application, *args, **kwargs)
+src/flask/testing.py:70: in __init__
+    url = url_parse(path)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+url = '/forbidden', scheme = None, allow_fragments = True
+
+    def url_parse(
+        url: str, scheme: str | None = None, allow_fragments: bool = True
+    ) -> BaseURL:
+        """Parses a URL from a string into a :class:`URL` tuple.  If the URL
+        is lacking a scheme it can be provided as second argument. Otherwise,
+        it is ignored.  Optionally fragments can be stripped from the URL
+        by setting `allow_fragments` to `False`.
+    
+        The inverse of this function is :func:`url_unparse`.
+    
+        :param url: the URL to parse.
+        :param scheme: the default schema to use if the URL is schemaless.
+        :param allow_fragments: if set to `False` a fragment will be removed
+                                from the URL.
+    
+        .. deprecated:: 2.3
+            Will be removed in Werkzeug 3.0. Use ``urllib.parse.urlsplit`` instead.
+        """
+>       warnings.warn(
+            "'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0."
+            " Use 'urllib.parse.urlsplit' instead.",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+E       DeprecationWarning: 'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0. Use 'urllib.parse.urlsplit' instead.
+
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/urls.py:505: DeprecationWarning
+______________________ test_blueprint_prefix_slash[-/-/] _______________________
+
+app = <Flask 'flask_test'>, client = <FlaskClient <Flask 'flask_test'>>
+prefix = '', rule = '/', url = '/'
+
+    @pytest.mark.parametrize(
+        ("prefix", "rule", "url"),
+        (
+            ("", "/", "/"),
+            ("/", "", "/"),
+            ("/", "/", "/"),
+            ("/foo", "", "/foo"),
+            ("/foo/", "", "/foo/"),
+            ("", "/bar", "/bar"),
+            ("/foo/", "/bar", "/foo/bar"),
+            ("/foo/", "bar", "/foo/bar"),
+            ("/foo", "/bar", "/foo/bar"),
+            ("/foo/", "//bar", "/foo/bar"),
+            ("/foo//", "/bar", "/foo/bar"),
+        ),
+    )
+    def test_blueprint_prefix_slash(app, client, prefix, rule, url):
+        bp = flask.Blueprint("test", __name__, url_prefix=prefix)
+    
+        @bp.route(rule)
+        def index():
+            return "", 204
+    
+        app.register_blueprint(bp)
+>       assert client.get(url).status_code == 204
+
+tests/test_blueprints.py:130: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/test.py:1243: in get
+    return self.open(*args, **kw)
+src/flask/testing.py:209: in open
+    builder = EnvironBuilder(self.application, *args, **kwargs)
+src/flask/testing.py:70: in __init__
+    url = url_parse(path)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+url = '/', scheme = None, allow_fragments = True
+
+    def url_parse(
+        url: str, scheme: str | None = None, allow_fragments: bool = True
+    ) -> BaseURL:
+        """Parses a URL from a string into a :class:`URL` tuple.  If the URL
+        is lacking a scheme it can be provided as second argument. Otherwise,
+        it is ignored.  Optionally fragments can be stripped from the URL
+        by setting `allow_fragments` to `False`.
+    
+        The inverse of this function is :func:`url_unparse`.
+    
+        :param url: the URL to parse.
+        :param scheme: the default schema to use if the URL is schemaless.
+        :param allow_fragments: if set to `False` a fragment will be removed
+                                from the URL.
+    
+        .. deprecated:: 2.3
+            Will be removed in Werkzeug 3.0. Use ``urllib.parse.urlsplit`` instead.
+        """
+>       warnings.warn(
+            "'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0."
+            " Use 'urllib.parse.urlsplit' instead.",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+E       DeprecationWarning: 'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0. Use 'urllib.parse.urlsplit' instead.
+
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/urls.py:505: DeprecationWarning
+______________________ test_blueprint_prefix_slash[/--/] _______________________
+
+app = <Flask 'flask_test'>, client = <FlaskClient <Flask 'flask_test'>>
+prefix = '/', rule = '', url = '/'
+
+    @pytest.mark.parametrize(
+        ("prefix", "rule", "url"),
+        (
+            ("", "/", "/"),
+            ("/", "", "/"),
+            ("/", "/", "/"),
+            ("/foo", "", "/foo"),
+            ("/foo/", "", "/foo/"),
+            ("", "/bar", "/bar"),
+            ("/foo/", "/bar", "/foo/bar"),
+            ("/foo/", "bar", "/foo/bar"),
+            ("/foo", "/bar", "/foo/bar"),
+            ("/foo/", "//bar", "/foo/bar"),
+            ("/foo//", "/bar", "/foo/bar"),
+        ),
+    )
+    def test_blueprint_prefix_slash(app, client, prefix, rule, url):
+        bp = flask.Blueprint("test", __name__, url_prefix=prefix)
+    
+        @bp.route(rule)
+        def index():
+            return "", 204
+    
+        app.register_blueprint(bp)
+>       assert client.get(url).status_code == 204
+
+tests/test_blueprints.py:130: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/test.py:1243: in get
+    return self.open(*args, **kw)
+src/flask/testing.py:209: in open
+    builder = EnvironBuilder(self.application, *args, **kwargs)
+src/flask/testing.py:70: in __init__
+    url = url_parse(path)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+url = '/', scheme = None, allow_fragments = True
+
+    def url_parse(
+        url: str, scheme: str | None = None, allow_fragments: bool = True
+    ) -> BaseURL:
+        """Parses a URL from a string into a :class:`URL` tuple.  If the URL
+        is lacking a scheme it can be provided as second argument. Otherwise,
+        it is ignored.  Optionally fragments can be stripped from the URL
+        by setting `allow_fragments` to `False`.
+    
+        The inverse of this function is :func:`url_unparse`.
+    
+        :param url: the URL to parse.
+        :param scheme: the default schema to use if the URL is schemaless.
+        :param allow_fragments: if set to `False` a fragment will be removed
+                                from the URL.
+    
+        .. deprecated:: 2.3
+            Will be removed in Werkzeug 3.0. Use ``urllib.parse.urlsplit`` instead.
+        """
+>       warnings.warn(
+            "'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0."
+            " Use 'urllib.parse.urlsplit' instead.",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+E       DeprecationWarning: 'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0. Use 'urllib.parse.urlsplit' instead.
+
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/urls.py:505: DeprecationWarning
+______________________ test_blueprint_prefix_slash[/-/-/] ______________________
+
+app = <Flask 'flask_test'>, client = <FlaskClient <Flask 'flask_test'>>
+prefix = '/', rule = '/', url = '/'
+
+    @pytest.mark.parametrize(
+        ("prefix", "rule", "url"),
+        (
+            ("", "/", "/"),
+            ("/", "", "/"),
+            ("/", "/", "/"),
+            ("/foo", "", "/foo"),
+            ("/foo/", "", "/foo/"),
+            ("", "/bar", "/bar"),
+            ("/foo/", "/bar", "/foo/bar"),
+            ("/foo/", "bar", "/foo/bar"),
+            ("/foo", "/bar", "/foo/bar"),
+            ("/foo/", "//bar", "/foo/bar"),
+            ("/foo//", "/bar", "/foo/bar"),
+        ),
+    )
+    def test_blueprint_prefix_slash(app, client, prefix, rule, url):
+        bp = flask.Blueprint("test", __name__, url_prefix=prefix)
+    
+        @bp.route(rule)
+        def index():
+            return "", 204
+    
+        app.register_blueprint(bp)
+>       assert client.get(url).status_code == 204
+
+tests/test_blueprints.py:130: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/test.py:1243: in get
+    return self.open(*args, **kw)
+src/flask/testing.py:209: in open
+    builder = EnvironBuilder(self.application, *args, **kwargs)
+src/flask/testing.py:70: in __init__
+    url = url_parse(path)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+url = '/', scheme = None, allow_fragments = True
+
+    def url_parse(
+        url: str, scheme: str | None = None, allow_fragments: bool = True
+    ) -> BaseURL:
+        """Parses a URL from a string into a :class:`URL` tuple.  If the URL
+        is lacking a scheme it can be provided as second argument. Otherwise,
+        it is ignored.  Optionally fragments can be stripped from the URL
+        by setting `allow_fragments` to `False`.
+    
+        The inverse of this function is :func:`url_unparse`.
+    
+        :param url: the URL to parse.
+        :param scheme: the default schema to use if the URL is schemaless.
+        :param allow_fragments: if set to `False` a fragment will be removed
+                                from the URL.
+    
+        .. deprecated:: 2.3
+            Will be removed in Werkzeug 3.0. Use ``urllib.parse.urlsplit`` instead.
+        """
+>       warnings.warn(
+            "'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0."
+            " Use 'urllib.parse.urlsplit' instead.",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+E       DeprecationWarning: 'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0. Use 'urllib.parse.urlsplit' instead.
+
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/urls.py:505: DeprecationWarning
+___________________ test_blueprint_prefix_slash[/foo--/foo] ____________________
+
+app = <Flask 'flask_test'>, client = <FlaskClient <Flask 'flask_test'>>
+prefix = '/foo', rule = '', url = '/foo'
+
+    @pytest.mark.parametrize(
+        ("prefix", "rule", "url"),
+        (
+            ("", "/", "/"),
+            ("/", "", "/"),
+            ("/", "/", "/"),
+            ("/foo", "", "/foo"),
+            ("/foo/", "", "/foo/"),
+            ("", "/bar", "/bar"),
+            ("/foo/", "/bar", "/foo/bar"),
+            ("/foo/", "bar", "/foo/bar"),
+            ("/foo", "/bar", "/foo/bar"),
+            ("/foo/", "//bar", "/foo/bar"),
+            ("/foo//", "/bar", "/foo/bar"),
+        ),
+    )
+    def test_blueprint_prefix_slash(app, client, prefix, rule, url):
+        bp = flask.Blueprint("test", __name__, url_prefix=prefix)
+    
+        @bp.route(rule)
+        def index():
+            return "", 204
+    
+        app.register_blueprint(bp)
+>       assert client.get(url).status_code == 204
+
+tests/test_blueprints.py:130: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/test.py:1243: in get
+    return self.open(*args, **kw)
+src/flask/testing.py:209: in open
+    builder = EnvironBuilder(self.application, *args, **kwargs)
+src/flask/testing.py:70: in __init__
+    url = url_parse(path)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+url = '/foo', scheme = None, allow_fragments = True
+
+    def url_parse(
+        url: str, scheme: str | None = None, allow_fragments: bool = True
+    ) -> BaseURL:
+        """Parses a URL from a string into a :class:`URL` tuple.  If the URL
+        is lacking a scheme it can be provided as second argument. Otherwise,
+        it is ignored.  Optionally fragments can be stripped from the URL
+        by setting `allow_fragments` to `False`.
+    
+        The inverse of this function is :func:`url_unparse`.
+    
+        :param url: the URL to parse.
+        :param scheme: the default schema to use if the URL is schemaless.
+        :param allow_fragments: if set to `False` a fragment will be removed
+                                from the URL.
+    
+        .. deprecated:: 2.3
+            Will be removed in Werkzeug 3.0. Use ``urllib.parse.urlsplit`` instead.
+        """
+>       warnings.warn(
+            "'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0."
+            " Use 'urllib.parse.urlsplit' instead.",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+E       DeprecationWarning: 'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0. Use 'urllib.parse.urlsplit' instead.
+
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/urls.py:505: DeprecationWarning
+__________________ test_blueprint_prefix_slash[/foo/--/foo/] ___________________
+
+app = <Flask 'flask_test'>, client = <FlaskClient <Flask 'flask_test'>>
+prefix = '/foo/', rule = '', url = '/foo/'
+
+    @pytest.mark.parametrize(
+        ("prefix", "rule", "url"),
+        (
+            ("", "/", "/"),
+            ("/", "", "/"),
+            ("/", "/", "/"),
+            ("/foo", "", "/foo"),
+            ("/foo/", "", "/foo/"),
+            ("", "/bar", "/bar"),
+            ("/foo/", "/bar", "/foo/bar"),
+            ("/foo/", "bar", "/foo/bar"),
+            ("/foo", "/bar", "/foo/bar"),
+            ("/foo/", "//bar", "/foo/bar"),
+            ("/foo//", "/bar", "/foo/bar"),
+        ),
+    )
+    def test_blueprint_prefix_slash(app, client, prefix, rule, url):
+        bp = flask.Blueprint("test", __name__, url_prefix=prefix)
+    
+        @bp.route(rule)
+        def index():
+            return "", 204
+    
+        app.register_blueprint(bp)
+>       assert client.get(url).status_code == 204
+
+tests/test_blueprints.py:130: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/test.py:1243: in get
+    return self.open(*args, **kw)
+src/flask/testing.py:209: in open
+    builder = EnvironBuilder(self.application, *args, **kwargs)
+src/flask/testing.py:70: in __init__
+    url = url_parse(path)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+url = '/foo/', scheme = None, allow_fragments = True
+
+    def url_parse(
+        url: str, scheme: str | None = None, allow_fragments: bool = True
+    ) -> BaseURL:
+        """Parses a URL from a string into a :class:`URL` tuple.  If the URL
+        is lacking a scheme it can be provided as second argument. Otherwise,
+        it is ignored.  Optionally fragments can be stripped from the URL
+        by setting `allow_fragments` to `False`.
+    
+        The inverse of this function is :func:`url_unparse`.
+    
+        :param url: the URL to parse.
+        :param scheme: the default schema to use if the URL is schemaless.
+        :param allow_fragments: if set to `False` a fragment will be removed
+                                from the URL.
+    
+        .. deprecated:: 2.3
+            Will be removed in Werkzeug 3.0. Use ``urllib.parse.urlsplit`` instead.
+        """
+>       warnings.warn(
+            "'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0."
+            " Use 'urllib.parse.urlsplit' instead.",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+E       DeprecationWarning: 'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0. Use 'urllib.parse.urlsplit' instead.
+
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/urls.py:505: DeprecationWarning
+___________________ test_blueprint_prefix_slash[-/bar-/bar] ____________________
+
+app = <Flask 'flask_test'>, client = <FlaskClient <Flask 'flask_test'>>
+prefix = '', rule = '/bar', url = '/bar'
+
+    @pytest.mark.parametrize(
+        ("prefix", "rule", "url"),
+        (
+            ("", "/", "/"),
+            ("/", "", "/"),
+            ("/", "/", "/"),
+            ("/foo", "", "/foo"),
+            ("/foo/", "", "/foo/"),
+            ("", "/bar", "/bar"),
+            ("/foo/", "/bar", "/foo/bar"),
+            ("/foo/", "bar", "/foo/bar"),
+            ("/foo", "/bar", "/foo/bar"),
+            ("/foo/", "//bar", "/foo/bar"),
+            ("/foo//", "/bar", "/foo/bar"),
+        ),
+    )
+    def test_blueprint_prefix_slash(app, client, prefix, rule, url):
+        bp = flask.Blueprint("test", __name__, url_prefix=prefix)
+    
+        @bp.route(rule)
+        def index():
+            return "", 204
+    
+        app.register_blueprint(bp)
+>       assert client.get(url).status_code == 204
+
+tests/test_blueprints.py:130: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/test.py:1243: in get
+    return self.open(*args, **kw)
+src/flask/testing.py:209: in open
+    builder = EnvironBuilder(self.application, *args, **kwargs)
+src/flask/testing.py:70: in __init__
+    url = url_parse(path)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+url = '/bar', scheme = None, allow_fragments = True
+
+    def url_parse(
+        url: str, scheme: str | None = None, allow_fragments: bool = True
+    ) -> BaseURL:
+        """Parses a URL from a string into a :class:`URL` tuple.  If the URL
+        is lacking a scheme it can be provided as second argument. Otherwise,
+        it is ignored.  Optionally fragments can be stripped from the URL
+        by setting `allow_fragments` to `False`.
+    
+        The inverse of this function is :func:`url_unparse`.
+    
+        :param url: the URL to parse.
+        :param scheme: the default schema to use if the URL is schemaless.
+        :param allow_fragments: if set to `False` a fragment will be removed
+                                from the URL.
+    
+        .. deprecated:: 2.3
+            Will be removed in Werkzeug 3.0. Use ``urllib.parse.urlsplit`` instead.
+        """
+>       warnings.warn(
+            "'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0."
+            " Use 'urllib.parse.urlsplit' instead.",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+E       DeprecationWarning: 'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0. Use 'urllib.parse.urlsplit' instead.
+
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/urls.py:505: DeprecationWarning
+_______________ test_blueprint_prefix_slash[/foo/-/bar-/foo/bar] _______________
+
+app = <Flask 'flask_test'>, client = <FlaskClient <Flask 'flask_test'>>
+prefix = '/foo/', rule = '/bar', url = '/foo/bar'
+
+    @pytest.mark.parametrize(
+        ("prefix", "rule", "url"),
+        (
+            ("", "/", "/"),
+            ("/", "", "/"),
+            ("/", "/", "/"),
+            ("/foo", "", "/foo"),
+            ("/foo/", "", "/foo/"),
+            ("", "/bar", "/bar"),
+            ("/foo/", "/bar", "/foo/bar"),
+            ("/foo/", "bar", "/foo/bar"),
+            ("/foo", "/bar", "/foo/bar"),
+            ("/foo/", "//bar", "/foo/bar"),
+            ("/foo//", "/bar", "/foo/bar"),
+        ),
+    )
+    def test_blueprint_prefix_slash(app, client, prefix, rule, url):
+        bp = flask.Blueprint("test", __name__, url_prefix=prefix)
+    
+        @bp.route(rule)
+        def index():
+            return "", 204
+    
+        app.register_blueprint(bp)
+>       assert client.get(url).status_code == 204
+
+tests/test_blueprints.py:130: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/test.py:1243: in get
+    return self.open(*args, **kw)
+src/flask/testing.py:209: in open
+    builder = EnvironBuilder(self.application, *args, **kwargs)
+src/flask/testing.py:70: in __init__
+    url = url_parse(path)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+url = '/foo/bar', scheme = None, allow_fragments = True
+
+    def url_parse(
+        url: str, scheme: str | None = None, allow_fragments: bool = True
+    ) -> BaseURL:
+        """Parses a URL from a string into a :class:`URL` tuple.  If the URL
+        is lacking a scheme it can be provided as second argument. Otherwise,
+        it is ignored.  Optionally fragments can be stripped from the URL
+        by setting `allow_fragments` to `False`.
+    
+        The inverse of this function is :func:`url_unparse`.
+    
+        :param url: the URL to parse.
+        :param scheme: the default schema to use if the URL is schemaless.
+        :param allow_fragments: if set to `False` a fragment will be removed
+                                from the URL.
+    
+        .. deprecated:: 2.3
+            Will be removed in Werkzeug 3.0. Use ``urllib.parse.urlsplit`` instead.
+        """
+>       warnings.warn(
+            "'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0."
+            " Use 'urllib.parse.urlsplit' instead.",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+E       DeprecationWarning: 'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0. Use 'urllib.parse.urlsplit' instead.
+
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/urls.py:505: DeprecationWarning
+_______________ test_blueprint_prefix_slash[/foo/-bar-/foo/bar] ________________
+
+app = <Flask 'flask_test'>, client = <FlaskClient <Flask 'flask_test'>>
+prefix = '/foo/', rule = 'bar', url = '/foo/bar'
+
+    @pytest.mark.parametrize(
+        ("prefix", "rule", "url"),
+        (
+            ("", "/", "/"),
+            ("/", "", "/"),
+            ("/", "/", "/"),
+            ("/foo", "", "/foo"),
+            ("/foo/", "", "/foo/"),
+            ("", "/bar", "/bar"),
+            ("/foo/", "/bar", "/foo/bar"),
+            ("/foo/", "bar", "/foo/bar"),
+            ("/foo", "/bar", "/foo/bar"),
+            ("/foo/", "//bar", "/foo/bar"),
+            ("/foo//", "/bar", "/foo/bar"),
+        ),
+    )
+    def test_blueprint_prefix_slash(app, client, prefix, rule, url):
+        bp = flask.Blueprint("test", __name__, url_prefix=prefix)
+    
+        @bp.route(rule)
+        def index():
+            return "", 204
+    
+        app.register_blueprint(bp)
+>       assert client.get(url).status_code == 204
+
+tests/test_blueprints.py:130: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/test.py:1243: in get
+    return self.open(*args, **kw)
+src/flask/testing.py:209: in open
+    builder = EnvironBuilder(self.application, *args, **kwargs)
+src/flask/testing.py:70: in __init__
+    url = url_parse(path)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+url = '/foo/bar', scheme = None, allow_fragments = True
+
+    def url_parse(
+        url: str, scheme: str | None = None, allow_fragments: bool = True
+    ) -> BaseURL:
+        """Parses a URL from a string into a :class:`URL` tuple.  If the URL
+        is lacking a scheme it can be provided as second argument. Otherwise,
+        it is ignored.  Optionally fragments can be stripped from the URL
+        by setting `allow_fragments` to `False`.
+    
+        The inverse of this function is :func:`url_unparse`.
+    
+        :param url: the URL to parse.
+        :param scheme: the default schema to use if the URL is schemaless.
+        :param allow_fragments: if set to `False` a fragment will be removed
+                                from the URL.
+    
+        .. deprecated:: 2.3
+            Will be removed in Werkzeug 3.0. Use ``urllib.parse.urlsplit`` instead.
+        """
+>       warnings.warn(
+            "'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0."
+            " Use 'urllib.parse.urlsplit' instead.",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+E       DeprecationWarning: 'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0. Use 'urllib.parse.urlsplit' instead.
+
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/urls.py:505: DeprecationWarning
+_______________ test_blueprint_prefix_slash[/foo-/bar-/foo/bar] ________________
+
+app = <Flask 'flask_test'>, client = <FlaskClient <Flask 'flask_test'>>
+prefix = '/foo', rule = '/bar', url = '/foo/bar'
+
+    @pytest.mark.parametrize(
+        ("prefix", "rule", "url"),
+        (
+            ("", "/", "/"),
+            ("/", "", "/"),
+            ("/", "/", "/"),
+            ("/foo", "", "/foo"),
+            ("/foo/", "", "/foo/"),
+            ("", "/bar", "/bar"),
+            ("/foo/", "/bar", "/foo/bar"),
+            ("/foo/", "bar", "/foo/bar"),
+            ("/foo", "/bar", "/foo/bar"),
+            ("/foo/", "//bar", "/foo/bar"),
+            ("/foo//", "/bar", "/foo/bar"),
+        ),
+    )
+    def test_blueprint_prefix_slash(app, client, prefix, rule, url):
+        bp = flask.Blueprint("test", __name__, url_prefix=prefix)
+    
+        @bp.route(rule)
+        def index():
+            return "", 204
+    
+        app.register_blueprint(bp)
+>       assert client.get(url).status_code == 204
+
+tests/test_blueprints.py:130: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/test.py:1243: in get
+    return self.open(*args, **kw)
+src/flask/testing.py:209: in open
+    builder = EnvironBuilder(self.application, *args, **kwargs)
+src/flask/testing.py:70: in __init__
+    url = url_parse(path)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+url = '/foo/bar', scheme = None, allow_fragments = True
+
+    def url_parse(
+        url: str, scheme: str | None = None, allow_fragments: bool = True
+    ) -> BaseURL:
+        """Parses a URL from a string into a :class:`URL` tuple.  If the URL
+        is lacking a scheme it can be provided as second argument. Otherwise,
+        it is ignored.  Optionally fragments can be stripped from the URL
+        by setting `allow_fragments` to `False`.
+    
+        The inverse of this function is :func:`url_unparse`.
+    
+        :param url: the URL to parse.
+        :param scheme: the default schema to use if the URL is schemaless.
+        :param allow_fragments: if set to `False` a fragment will be removed
+                                from the URL.
+    
+        .. deprecated:: 2.3
+            Will be removed in Werkzeug 3.0. Use ``urllib.parse.urlsplit`` instead.
+        """
+>       warnings.warn(
+            "'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0."
+            " Use 'urllib.parse.urlsplit' instead.",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+E       DeprecationWarning: 'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0. Use 'urllib.parse.urlsplit' instead.
+
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/urls.py:505: DeprecationWarning
+______________ test_blueprint_prefix_slash[/foo/-//bar-/foo/bar] _______________
+
+app = <Flask 'flask_test'>, client = <FlaskClient <Flask 'flask_test'>>
+prefix = '/foo/', rule = '//bar', url = '/foo/bar'
+
+    @pytest.mark.parametrize(
+        ("prefix", "rule", "url"),
+        (
+            ("", "/", "/"),
+            ("/", "", "/"),
+            ("/", "/", "/"),
+            ("/foo", "", "/foo"),
+            ("/foo/", "", "/foo/"),
+            ("", "/bar", "/bar"),
+            ("/foo/", "/bar", "/foo/bar"),
+            ("/foo/", "bar", "/foo/bar"),
+            ("/foo", "/bar", "/foo/bar"),
+            ("/foo/", "//bar", "/foo/bar"),
+            ("/foo//", "/bar", "/foo/bar"),
+        ),
+    )
+    def test_blueprint_prefix_slash(app, client, prefix, rule, url):
+        bp = flask.Blueprint("test", __name__, url_prefix=prefix)
+    
+        @bp.route(rule)
+        def index():
+            return "", 204
+    
+        app.register_blueprint(bp)
+>       assert client.get(url).status_code == 204
+
+tests/test_blueprints.py:130: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/test.py:1243: in get
+    return self.open(*args, **kw)
+src/flask/testing.py:209: in open
+    builder = EnvironBuilder(self.application, *args, **kwargs)
+src/flask/testing.py:70: in __init__
+    url = url_parse(path)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+url = '/foo/bar', scheme = None, allow_fragments = True
+
+    def url_parse(
+        url: str, scheme: str | None = None, allow_fragments: bool = True
+    ) -> BaseURL:
+        """Parses a URL from a string into a :class:`URL` tuple.  If the URL
+        is lacking a scheme it can be provided as second argument. Otherwise,
+        it is ignored.  Optionally fragments can be stripped from the URL
+        by setting `allow_fragments` to `False`.
+    
+        The inverse of this function is :func:`url_unparse`.
+    
+        :param url: the URL to parse.
+        :param scheme: the default schema to use if the URL is schemaless.
+        :param allow_fragments: if set to `False` a fragment will be removed
+                                from the URL.
+    
+        .. deprecated:: 2.3
+            Will be removed in Werkzeug 3.0. Use ``urllib.parse.urlsplit`` instead.
+        """
+>       warnings.warn(
+            "'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0."
+            " Use 'urllib.parse.urlsplit' instead.",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+E       DeprecationWarning: 'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0. Use 'urllib.parse.urlsplit' instead.
+
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/urls.py:505: DeprecationWarning
+______________ test_blueprint_prefix_slash[/foo//-/bar-/foo/bar] _______________
+
+app = <Flask 'flask_test'>, client = <FlaskClient <Flask 'flask_test'>>
+prefix = '/foo//', rule = '/bar', url = '/foo/bar'
+
+    @pytest.mark.parametrize(
+        ("prefix", "rule", "url"),
+        (
+            ("", "/", "/"),
+            ("/", "", "/"),
+            ("/", "/", "/"),
+            ("/foo", "", "/foo"),
+            ("/foo/", "", "/foo/"),
+            ("", "/bar", "/bar"),
+            ("/foo/", "/bar", "/foo/bar"),
+            ("/foo/", "bar", "/foo/bar"),
+            ("/foo", "/bar", "/foo/bar"),
+            ("/foo/", "//bar", "/foo/bar"),
+            ("/foo//", "/bar", "/foo/bar"),
+        ),
+    )
+    def test_blueprint_prefix_slash(app, client, prefix, rule, url):
+        bp = flask.Blueprint("test", __name__, url_prefix=prefix)
+    
+        @bp.route(rule)
+        def index():
+            return "", 204
+    
+        app.register_blueprint(bp)
+>       assert client.get(url).status_code == 204
+
+tests/test_blueprints.py:130: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/test.py:1243: in get
+    return self.open(*args, **kw)
+src/flask/testing.py:209: in open
+    builder = EnvironBuilder(self.application, *args, **kwargs)
+src/flask/testing.py:70: in __init__
+    url = url_parse(path)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+url = '/foo/bar', scheme = None, allow_fragments = True
+
+    def url_parse(
+        url: str, scheme: str | None = None, allow_fragments: bool = True
+    ) -> BaseURL:
+        """Parses a URL from a string into a :class:`URL` tuple.  If the URL
+        is lacking a scheme it can be provided as second argument. Otherwise,
+        it is ignored.  Optionally fragments can be stripped from the URL
+        by setting `allow_fragments` to `False`.
+    
+        The inverse of this function is :func:`url_unparse`.
+    
+        :param url: the URL to parse.
+        :param scheme: the default schema to use if the URL is schemaless.
+        :param allow_fragments: if set to `False` a fragment will be removed
+                                from the URL.
+    
+        .. deprecated:: 2.3
+            Will be removed in Werkzeug 3.0. Use ``urllib.parse.urlsplit`` instead.
+        """
+>       warnings.warn(
+            "'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0."
+            " Use 'urllib.parse.urlsplit' instead.",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+E       DeprecationWarning: 'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0. Use 'urllib.parse.urlsplit' instead.
+
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/urls.py:505: DeprecationWarning
+_________________________ test_blueprint_url_defaults __________________________
+
+app = <Flask 'flask_test'>, client = <FlaskClient <Flask 'flask_test'>>
+
+    def test_blueprint_url_defaults(app, client):
+        bp = flask.Blueprint("test", __name__)
+    
+        @bp.route("/foo", defaults={"baz": 42})
+        def foo(bar, baz):
+            return f"{bar}/{baz:d}"
+    
+        @bp.route("/bar")
+        def bar(bar):
+            return str(bar)
+    
+        app.register_blueprint(bp, url_prefix="/1", url_defaults={"bar": 23})
+        app.register_blueprint(bp, url_prefix="/2", url_defaults={"bar": 19})
+    
+>       assert client.get("/1/foo").data == b"23/42"
+
+tests/test_blueprints.py:147: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/test.py:1243: in get
+    return self.open(*args, **kw)
+src/flask/testing.py:209: in open
+    builder = EnvironBuilder(self.application, *args, **kwargs)
+src/flask/testing.py:70: in __init__
+    url = url_parse(path)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+url = '/1/foo', scheme = None, allow_fragments = True
+
+    def url_parse(
+        url: str, scheme: str | None = None, allow_fragments: bool = True
+    ) -> BaseURL:
+        """Parses a URL from a string into a :class:`URL` tuple.  If the URL
+        is lacking a scheme it can be provided as second argument. Otherwise,
+        it is ignored.  Optionally fragments can be stripped from the URL
+        by setting `allow_fragments` to `False`.
+    
+        The inverse of this function is :func:`url_unparse`.
+    
+        :param url: the URL to parse.
+        :param scheme: the default schema to use if the URL is schemaless.
+        :param allow_fragments: if set to `False` a fragment will be removed
+                                from the URL.
+    
+        .. deprecated:: 2.3
+            Will be removed in Werkzeug 3.0. Use ``urllib.parse.urlsplit`` instead.
+        """
+>       warnings.warn(
+            "'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0."
+            " Use 'urllib.parse.urlsplit' instead.",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+E       DeprecationWarning: 'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0. Use 'urllib.parse.urlsplit' instead.
+
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/urls.py:505: DeprecationWarning
+________________________ test_blueprint_url_processors _________________________
+
+app = <Flask 'flask_test'>, client = <FlaskClient <Flask 'flask_test'>>
+
+    def test_blueprint_url_processors(app, client):
+        bp = flask.Blueprint("frontend", __name__, url_prefix="/<lang_code>")
+    
+        @bp.url_defaults
+        def add_language_code(endpoint, values):
+            values.setdefault("lang_code", flask.g.lang_code)
+    
+        @bp.url_value_preprocessor
+        def pull_lang_code(endpoint, values):
+            flask.g.lang_code = values.pop("lang_code")
+    
+        @bp.route("/")
+        def index():
+            return flask.url_for(".about")
+    
+        @bp.route("/about")
+        def about():
+            return flask.url_for(".index")
+    
+        app.register_blueprint(bp)
+    
+>       assert client.get("/de/").data == b"/de/about"
+
+tests/test_blueprints.py:174: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/test.py:1243: in get
+    return self.open(*args, **kw)
+src/flask/testing.py:209: in open
+    builder = EnvironBuilder(self.application, *args, **kwargs)
+src/flask/testing.py:70: in __init__
+    url = url_parse(path)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+url = '/de/', scheme = None, allow_fragments = True
+
+    def url_parse(
+        url: str, scheme: str | None = None, allow_fragments: bool = True
+    ) -> BaseURL:
+        """Parses a URL from a string into a :class:`URL` tuple.  If the URL
+        is lacking a scheme it can be provided as second argument. Otherwise,
+        it is ignored.  Optionally fragments can be stripped from the URL
+        by setting `allow_fragments` to `False`.
+    
+        The inverse of this function is :func:`url_unparse`.
+    
+        :param url: the URL to parse.
+        :param scheme: the default schema to use if the URL is schemaless.
+        :param allow_fragments: if set to `False` a fragment will be removed
+                                from the URL.
+    
+        .. deprecated:: 2.3
+            Will be removed in Werkzeug 3.0. Use ``urllib.parse.urlsplit`` instead.
+        """
+>       warnings.warn(
+            "'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0."
+            " Use 'urllib.parse.urlsplit' instead.",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+E       DeprecationWarning: 'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0. Use 'urllib.parse.urlsplit' instead.
+
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/urls.py:505: DeprecationWarning
+_________________________ test_default_static_max_age __________________________
+
+app = <Flask 'flask_test'>
+
+    def test_default_static_max_age(app):
+        class MyBlueprint(flask.Blueprint):
+            def get_send_file_max_age(self, filename):
+                return 100
+    
+        blueprint = MyBlueprint("blueprint", __name__, static_folder="static")
+        app.register_blueprint(blueprint)
+    
+        # try/finally, in case other tests use this app for Blueprint tests.
+        max_age_default = app.config["SEND_FILE_MAX_AGE_DEFAULT"]
+        try:
+>           with app.test_request_context():
+
+tests/test_blueprints.py:236: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/flask/app.py:2015: in test_request_context
+    builder = EnvironBuilder(self, *args, **kwargs)
+src/flask/testing.py:70: in __init__
+    url = url_parse(path)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+url = '/', scheme = None, allow_fragments = True
+
+    def url_parse(
+        url: str, scheme: str | None = None, allow_fragments: bool = True
+    ) -> BaseURL:
+        """Parses a URL from a string into a :class:`URL` tuple.  If the URL
+        is lacking a scheme it can be provided as second argument. Otherwise,
+        it is ignored.  Optionally fragments can be stripped from the URL
+        by setting `allow_fragments` to `False`.
+    
+        The inverse of this function is :func:`url_unparse`.
+    
+        :param url: the URL to parse.
+        :param scheme: the default schema to use if the URL is schemaless.
+        :param allow_fragments: if set to `False` a fragment will be removed
+                                from the URL.
+    
+        .. deprecated:: 2.3
+            Will be removed in Werkzeug 3.0. Use ``urllib.parse.urlsplit`` instead.
+        """
+>       warnings.warn(
+            "'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0."
+            " Use 'urllib.parse.urlsplit' instead.",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+E       DeprecationWarning: 'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0. Use 'urllib.parse.urlsplit' instead.
+
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/urls.py:505: DeprecationWarning
+__________________________ test_dotted_names_from_app __________________________
+
+app = <Flask 'flask_test'>, client = <FlaskClient <Flask 'flask_test'>>
+
+    def test_dotted_names_from_app(app, client):
+        test = flask.Blueprint("test", __name__)
+    
+        @app.route("/")
+        def app_index():
+            return flask.url_for("test.index")
+    
+        @test.route("/test/")
+        def index():
+            return flask.url_for("app_index")
+    
+        app.register_blueprint(test)
+    
+>       rv = client.get("/")
+
+tests/test_blueprints.py:280: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/test.py:1243: in get
+    return self.open(*args, **kw)
+src/flask/testing.py:209: in open
+    builder = EnvironBuilder(self.application, *args, **kwargs)
+src/flask/testing.py:70: in __init__
+    url = url_parse(path)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+url = '/', scheme = None, allow_fragments = True
+
+    def url_parse(
+        url: str, scheme: str | None = None, allow_fragments: bool = True
+    ) -> BaseURL:
+        """Parses a URL from a string into a :class:`URL` tuple.  If the URL
+        is lacking a scheme it can be provided as second argument. Otherwise,
+        it is ignored.  Optionally fragments can be stripped from the URL
+        by setting `allow_fragments` to `False`.
+    
+        The inverse of this function is :func:`url_unparse`.
+    
+        :param url: the URL to parse.
+        :param scheme: the default schema to use if the URL is schemaless.
+        :param allow_fragments: if set to `False` a fragment will be removed
+                                from the URL.
+    
+        .. deprecated:: 2.3
+            Will be removed in Werkzeug 3.0. Use ``urllib.parse.urlsplit`` instead.
+        """
+>       warnings.warn(
+            "'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0."
+            " Use 'urllib.parse.urlsplit' instead.",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+E       DeprecationWarning: 'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0. Use 'urllib.parse.urlsplit' instead.
+
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/urls.py:505: DeprecationWarning
+___________________________ test_empty_url_defaults ____________________________
+
+app = <Flask 'flask_test'>, client = <FlaskClient <Flask 'flask_test'>>
+
+    def test_empty_url_defaults(app, client):
+        bp = flask.Blueprint("bp", __name__)
+    
+        @bp.route("/", defaults={"page": 1})
+        @bp.route("/page/<int:page>")
+        def something(page):
+            return str(page)
+    
+        app.register_blueprint(bp)
+    
+>       assert client.get("/").data == b"1"
+
+tests/test_blueprints.py:294: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/test.py:1243: in get
+    return self.open(*args, **kw)
+src/flask/testing.py:209: in open
+    builder = EnvironBuilder(self.application, *args, **kwargs)
+src/flask/testing.py:70: in __init__
+    url = url_parse(path)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+url = '/', scheme = None, allow_fragments = True
+
+    def url_parse(
+        url: str, scheme: str | None = None, allow_fragments: bool = True
+    ) -> BaseURL:
+        """Parses a URL from a string into a :class:`URL` tuple.  If the URL
+        is lacking a scheme it can be provided as second argument. Otherwise,
+        it is ignored.  Optionally fragments can be stripped from the URL
+        by setting `allow_fragments` to `False`.
+    
+        The inverse of this function is :func:`url_unparse`.
+    
+        :param url: the URL to parse.
+        :param scheme: the default schema to use if the URL is schemaless.
+        :param allow_fragments: if set to `False` a fragment will be removed
+                                from the URL.
+    
+        .. deprecated:: 2.3
+            Will be removed in Werkzeug 3.0. Use ``urllib.parse.urlsplit`` instead.
+        """
+>       warnings.warn(
+            "'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0."
+            " Use 'urllib.parse.urlsplit' instead.",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+E       DeprecationWarning: 'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0. Use 'urllib.parse.urlsplit' instead.
+
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/urls.py:505: DeprecationWarning
+_____________________ test_route_decorator_custom_endpoint _____________________
+
+app = <Flask 'flask_test'>, client = <FlaskClient <Flask 'flask_test'>>
+
+    def test_route_decorator_custom_endpoint(app, client):
+        bp = flask.Blueprint("bp", __name__)
+    
+        @bp.route("/foo")
+        def foo():
+            return flask.request.endpoint
+    
+        @bp.route("/bar", endpoint="bar")
+        def foo_bar():
+            return flask.request.endpoint
+    
+        @bp.route("/bar/123", endpoint="123")
+        def foo_bar_foo():
+            return flask.request.endpoint
+    
+        @bp.route("/bar/foo")
+        def bar_foo():
+            return flask.request.endpoint
+    
+        app.register_blueprint(bp, url_prefix="/py")
+    
+        @app.route("/")
+        def index():
+            return flask.request.endpoint
+    
+>       assert client.get("/").data == b"index"
+
+tests/test_blueprints.py:323: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/test.py:1243: in get
+    return self.open(*args, **kw)
+src/flask/testing.py:209: in open
+    builder = EnvironBuilder(self.application, *args, **kwargs)
+src/flask/testing.py:70: in __init__
+    url = url_parse(path)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+url = '/', scheme = None, allow_fragments = True
+
+    def url_parse(
+        url: str, scheme: str | None = None, allow_fragments: bool = True
+    ) -> BaseURL:
+        """Parses a URL from a string into a :class:`URL` tuple.  If the URL
+        is lacking a scheme it can be provided as second argument. Otherwise,
+        it is ignored.  Optionally fragments can be stripped from the URL
+        by setting `allow_fragments` to `False`.
+    
+        The inverse of this function is :func:`url_unparse`.
+    
+        :param url: the URL to parse.
+        :param scheme: the default schema to use if the URL is schemaless.
+        :param allow_fragments: if set to `False` a fragment will be removed
+                                from the URL.
+    
+        .. deprecated:: 2.3
+            Will be removed in Werkzeug 3.0. Use ``urllib.parse.urlsplit`` instead.
+        """
+>       warnings.warn(
+            "'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0."
+            " Use 'urllib.parse.urlsplit' instead.",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+E       DeprecationWarning: 'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0. Use 'urllib.parse.urlsplit' instead.
+
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/urls.py:505: DeprecationWarning
+________________ test_route_decorator_custom_endpoint_with_dots ________________
+
+app = <Flask 'flask_test'>, client = <FlaskClient <Flask 'flask_test'>>
+
+    def test_route_decorator_custom_endpoint_with_dots(app, client):
+        bp = flask.Blueprint("bp", __name__)
+    
+        @bp.route("/foo")
+        def foo():
+            return flask.request.endpoint
+    
+        try:
+    
+            @bp.route("/bar", endpoint="bar.bar")
+>           def foo_bar():
+
+tests/test_blueprints.py:340: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+src/flask/scaffold.py:433: in decorator
+    self.add_url_rule(rule, endpoint, f, **options)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Blueprint 'bp'>, rule = '/bar', endpoint = 'bar.bar'
+view_func = <function test_route_decorator_custom_endpoint_with_dots.<locals>.foo_bar at 0x76ed03a883a0>
+options = {}
+
+    def add_url_rule(
+        self,
+        rule: str,
+        endpoint: t.Optional[str] = None,
+        view_func: t.Optional[t.Callable] = None,
+        **options: t.Any,
+    ) -> None:
+        """Like :meth:`Flask.add_url_rule` but for a blueprint.  The endpoint for
+        the :func:`url_for` function is prefixed with the name of the blueprint.
+        """
+        if endpoint and "." in endpoint:
+>           raise ValueError("'endpoint' may not contain a dot '.' character.")
+E           ValueError: 'endpoint' may not contain a dot '.' character.
+
+src/flask/blueprints.py:368: ValueError
+___________________________ test_endpoint_decorator ____________________________
+
+app = <Flask 'flask_test'>, client = <FlaskClient <Flask 'flask_test'>>
+
+    def test_endpoint_decorator(app, client):
+        from werkzeug.routing import Rule
+    
+        app.url_map.add(Rule("/foo", endpoint="bar"))
+    
+        bp = flask.Blueprint("bp", __name__)
+    
+        @bp.endpoint("bar")
+        def foobar():
+            return flask.request.endpoint
+    
+        app.register_blueprint(bp, url_prefix="/bp_prefix")
+    
+>       assert client.get("/foo").data == b"bar"
+
+tests/test_blueprints.py:404: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/test.py:1243: in get
+    return self.open(*args, **kw)
+src/flask/testing.py:209: in open
+    builder = EnvironBuilder(self.application, *args, **kwargs)
+src/flask/testing.py:70: in __init__
+    url = url_parse(path)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+url = '/foo', scheme = None, allow_fragments = True
+
+    def url_parse(
+        url: str, scheme: str | None = None, allow_fragments: bool = True
+    ) -> BaseURL:
+        """Parses a URL from a string into a :class:`URL` tuple.  If the URL
+        is lacking a scheme it can be provided as second argument. Otherwise,
+        it is ignored.  Optionally fragments can be stripped from the URL
+        by setting `allow_fragments` to `False`.
+    
+        The inverse of this function is :func:`url_unparse`.
+    
+        :param url: the URL to parse.
+        :param scheme: the default schema to use if the URL is schemaless.
+        :param allow_fragments: if set to `False` a fragment will be removed
+                                from the URL.
+    
+        .. deprecated:: 2.3
+            Will be removed in Werkzeug 3.0. Use ``urllib.parse.urlsplit`` instead.
+        """
+>       warnings.warn(
+            "'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0."
+            " Use 'urllib.parse.urlsplit' instead.",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+E       DeprecationWarning: 'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0. Use 'urllib.parse.urlsplit' instead.
+
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/urls.py:505: DeprecationWarning
+______________________ test_template_filter_with_template ______________________
+
+app = <Flask 'flask_test'>, client = <FlaskClient <Flask 'flask_test'>>
+
+    def test_template_filter_with_template(app, client):
+        bp = flask.Blueprint("bp", __name__)
+    
+        @bp.app_template_filter()
+        def super_reverse(s):
+            return s[::-1]
+    
+        app.register_blueprint(bp, url_prefix="/py")
+    
+        @app.route("/")
+        def index():
+            return flask.render_template("template_filter.html", value="abcd")
+    
+>       rv = client.get("/")
+
+tests/test_blueprints.py:473: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/test.py:1243: in get
+    return self.open(*args, **kw)
+src/flask/testing.py:209: in open
+    builder = EnvironBuilder(self.application, *args, **kwargs)
+src/flask/testing.py:70: in __init__
+    url = url_parse(path)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+url = '/', scheme = None, allow_fragments = True
+
+    def url_parse(
+        url: str, scheme: str | None = None, allow_fragments: bool = True
+    ) -> BaseURL:
+        """Parses a URL from a string into a :class:`URL` tuple.  If the URL
+        is lacking a scheme it can be provided as second argument. Otherwise,
+        it is ignored.  Optionally fragments can be stripped from the URL
+        by setting `allow_fragments` to `False`.
+    
+        The inverse of this function is :func:`url_unparse`.
+    
+        :param url: the URL to parse.
+        :param scheme: the default schema to use if the URL is schemaless.
+        :param allow_fragments: if set to `False` a fragment will be removed
+                                from the URL.
+    
+        .. deprecated:: 2.3
+            Will be removed in Werkzeug 3.0. Use ``urllib.parse.urlsplit`` instead.
+        """
+>       warnings.warn(
+            "'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0."
+            " Use 'urllib.parse.urlsplit' instead.",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+E       DeprecationWarning: 'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0. Use 'urllib.parse.urlsplit' instead.
+
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/urls.py:505: DeprecationWarning
+________________ test_template_filter_after_route_with_template ________________
+
+app = <Flask 'flask_test'>, client = <FlaskClient <Flask 'flask_test'>>
+
+    def test_template_filter_after_route_with_template(app, client):
+        @app.route("/")
+        def index():
+            return flask.render_template("template_filter.html", value="abcd")
+    
+        bp = flask.Blueprint("bp", __name__)
+    
+        @bp.app_template_filter()
+        def super_reverse(s):
+            return s[::-1]
+    
+        app.register_blueprint(bp, url_prefix="/py")
+>       rv = client.get("/")
+
+tests/test_blueprints.py:489: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/test.py:1243: in get
+    return self.open(*args, **kw)
+src/flask/testing.py:209: in open
+    builder = EnvironBuilder(self.application, *args, **kwargs)
+src/flask/testing.py:70: in __init__
+    url = url_parse(path)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+url = '/', scheme = None, allow_fragments = True
+
+    def url_parse(
+        url: str, scheme: str | None = None, allow_fragments: bool = True
+    ) -> BaseURL:
+        """Parses a URL from a string into a :class:`URL` tuple.  If the URL
+        is lacking a scheme it can be provided as second argument. Otherwise,
+        it is ignored.  Optionally fragments can be stripped from the URL
+        by setting `allow_fragments` to `False`.
+    
+        The inverse of this function is :func:`url_unparse`.
+    
+        :param url: the URL to parse.
+        :param scheme: the default schema to use if the URL is schemaless.
+        :param allow_fragments: if set to `False` a fragment will be removed
+                                from the URL.
+    
+        .. deprecated:: 2.3
+            Will be removed in Werkzeug 3.0. Use ``urllib.parse.urlsplit`` instead.
+        """
+>       warnings.warn(
+            "'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0."
+            " Use 'urllib.parse.urlsplit' instead.",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+E       DeprecationWarning: 'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0. Use 'urllib.parse.urlsplit' instead.
+
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/urls.py:505: DeprecationWarning
+____________________ test_add_template_filter_with_template ____________________
+
+app = <Flask 'flask_test'>, client = <FlaskClient <Flask 'flask_test'>>
+
+    def test_add_template_filter_with_template(app, client):
+        bp = flask.Blueprint("bp", __name__)
+    
+        def super_reverse(s):
+            return s[::-1]
+    
+        bp.add_app_template_filter(super_reverse)
+        app.register_blueprint(bp, url_prefix="/py")
+    
+        @app.route("/")
+        def index():
+            return flask.render_template("template_filter.html", value="abcd")
+    
+>       rv = client.get("/")
+
+tests/test_blueprints.py:506: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/test.py:1243: in get
+    return self.open(*args, **kw)
+src/flask/testing.py:209: in open
+    builder = EnvironBuilder(self.application, *args, **kwargs)
+src/flask/testing.py:70: in __init__
+    url = url_parse(path)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+url = '/', scheme = None, allow_fragments = True
+
+    def url_parse(
+        url: str, scheme: str | None = None, allow_fragments: bool = True
+    ) -> BaseURL:
+        """Parses a URL from a string into a :class:`URL` tuple.  If the URL
+        is lacking a scheme it can be provided as second argument. Otherwise,
+        it is ignored.  Optionally fragments can be stripped from the URL
+        by setting `allow_fragments` to `False`.
+    
+        The inverse of this function is :func:`url_unparse`.
+    
+        :param url: the URL to parse.
+        :param scheme: the default schema to use if the URL is schemaless.
+        :param allow_fragments: if set to `False` a fragment will be removed
+                                from the URL.
+    
+        .. deprecated:: 2.3
+            Will be removed in Werkzeug 3.0. Use ``urllib.parse.urlsplit`` instead.
+        """
+>       warnings.warn(
+            "'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0."
+            " Use 'urllib.parse.urlsplit' instead.",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+E       DeprecationWarning: 'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0. Use 'urllib.parse.urlsplit' instead.
+
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/urls.py:505: DeprecationWarning
+_________________ test_template_filter_with_name_and_template __________________
+
+app = <Flask 'flask_test'>, client = <FlaskClient <Flask 'flask_test'>>
+
+    def test_template_filter_with_name_and_template(app, client):
+        bp = flask.Blueprint("bp", __name__)
+    
+        @bp.app_template_filter("super_reverse")
+        def my_reverse(s):
+            return s[::-1]
+    
+        app.register_blueprint(bp, url_prefix="/py")
+    
+        @app.route("/")
+        def index():
+            return flask.render_template("template_filter.html", value="abcd")
+    
+>       rv = client.get("/")
+
+tests/test_blueprints.py:523: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/test.py:1243: in get
+    return self.open(*args, **kw)
+src/flask/testing.py:209: in open
+    builder = EnvironBuilder(self.application, *args, **kwargs)
+src/flask/testing.py:70: in __init__
+    url = url_parse(path)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+url = '/', scheme = None, allow_fragments = True
+
+    def url_parse(
+        url: str, scheme: str | None = None, allow_fragments: bool = True
+    ) -> BaseURL:
+        """Parses a URL from a string into a :class:`URL` tuple.  If the URL
+        is lacking a scheme it can be provided as second argument. Otherwise,
+        it is ignored.  Optionally fragments can be stripped from the URL
+        by setting `allow_fragments` to `False`.
+    
+        The inverse of this function is :func:`url_unparse`.
+    
+        :param url: the URL to parse.
+        :param scheme: the default schema to use if the URL is schemaless.
+        :param allow_fragments: if set to `False` a fragment will be removed
+                                from the URL.
+    
+        .. deprecated:: 2.3
+            Will be removed in Werkzeug 3.0. Use ``urllib.parse.urlsplit`` instead.
+        """
+>       warnings.warn(
+            "'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0."
+            " Use 'urllib.parse.urlsplit' instead.",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+E       DeprecationWarning: 'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0. Use 'urllib.parse.urlsplit' instead.
+
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/urls.py:505: DeprecationWarning
+_______________ test_add_template_filter_with_name_and_template ________________
+
+app = <Flask 'flask_test'>, client = <FlaskClient <Flask 'flask_test'>>
+
+    def test_add_template_filter_with_name_and_template(app, client):
+        bp = flask.Blueprint("bp", __name__)
+    
+        def my_reverse(s):
+            return s[::-1]
+    
+        bp.add_app_template_filter(my_reverse, "super_reverse")
+        app.register_blueprint(bp, url_prefix="/py")
+    
+        @app.route("/")
+        def index():
+            return flask.render_template("template_filter.html", value="abcd")
+    
+>       rv = client.get("/")
+
+tests/test_blueprints.py:540: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/test.py:1243: in get
+    return self.open(*args, **kw)
+src/flask/testing.py:209: in open
+    builder = EnvironBuilder(self.application, *args, **kwargs)
+src/flask/testing.py:70: in __init__
+    url = url_parse(path)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+url = '/', scheme = None, allow_fragments = True
+
+    def url_parse(
+        url: str, scheme: str | None = None, allow_fragments: bool = True
+    ) -> BaseURL:
+        """Parses a URL from a string into a :class:`URL` tuple.  If the URL
+        is lacking a scheme it can be provided as second argument. Otherwise,
+        it is ignored.  Optionally fragments can be stripped from the URL
+        by setting `allow_fragments` to `False`.
+    
+        The inverse of this function is :func:`url_unparse`.
+    
+        :param url: the URL to parse.
+        :param scheme: the default schema to use if the URL is schemaless.
+        :param allow_fragments: if set to `False` a fragment will be removed
+                                from the URL.
+    
+        .. deprecated:: 2.3
+            Will be removed in Werkzeug 3.0. Use ``urllib.parse.urlsplit`` instead.
+        """
+>       warnings.warn(
+            "'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0."
+            " Use 'urllib.parse.urlsplit' instead.",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+E       DeprecationWarning: 'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0. Use 'urllib.parse.urlsplit' instead.
+
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/urls.py:505: DeprecationWarning
+_______________________ test_template_test_with_template _______________________
+
+app = <Flask 'flask_test'>, client = <FlaskClient <Flask 'flask_test'>>
+
+    def test_template_test_with_template(app, client):
+        bp = flask.Blueprint("bp", __name__)
+    
+        @bp.app_template_test()
+        def boolean(value):
+            return isinstance(value, bool)
+    
+        app.register_blueprint(bp, url_prefix="/py")
+    
+        @app.route("/")
+        def index():
+            return flask.render_template("template_test.html", value=False)
+    
+>       rv = client.get("/")
+
+tests/test_blueprints.py:609: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/test.py:1243: in get
+    return self.open(*args, **kw)
+src/flask/testing.py:209: in open
+    builder = EnvironBuilder(self.application, *args, **kwargs)
+src/flask/testing.py:70: in __init__
+    url = url_parse(path)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+url = '/', scheme = None, allow_fragments = True
+
+    def url_parse(
+        url: str, scheme: str | None = None, allow_fragments: bool = True
+    ) -> BaseURL:
+        """Parses a URL from a string into a :class:`URL` tuple.  If the URL
+        is lacking a scheme it can be provided as second argument. Otherwise,
+        it is ignored.  Optionally fragments can be stripped from the URL
+        by setting `allow_fragments` to `False`.
+    
+        The inverse of this function is :func:`url_unparse`.
+    
+        :param url: the URL to parse.
+        :param scheme: the default schema to use if the URL is schemaless.
+        :param allow_fragments: if set to `False` a fragment will be removed
+                                from the URL.
+    
+        .. deprecated:: 2.3
+            Will be removed in Werkzeug 3.0. Use ``urllib.parse.urlsplit`` instead.
+        """
+>       warnings.warn(
+            "'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0."
+            " Use 'urllib.parse.urlsplit' instead.",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+E       DeprecationWarning: 'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0. Use 'urllib.parse.urlsplit' instead.
+
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/urls.py:505: DeprecationWarning
+_________________ test_template_test_after_route_with_template _________________
+
+app = <Flask 'flask_test'>, client = <FlaskClient <Flask 'flask_test'>>
+
+    def test_template_test_after_route_with_template(app, client):
+        @app.route("/")
+        def index():
+            return flask.render_template("template_test.html", value=False)
+    
+        bp = flask.Blueprint("bp", __name__)
+    
+        @bp.app_template_test()
+        def boolean(value):
+            return isinstance(value, bool)
+    
+        app.register_blueprint(bp, url_prefix="/py")
+>       rv = client.get("/")
+
+tests/test_blueprints.py:625: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/test.py:1243: in get
+    return self.open(*args, **kw)
+src/flask/testing.py:209: in open
+    builder = EnvironBuilder(self.application, *args, **kwargs)
+src/flask/testing.py:70: in __init__
+    url = url_parse(path)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+url = '/', scheme = None, allow_fragments = True
+
+    def url_parse(
+        url: str, scheme: str | None = None, allow_fragments: bool = True
+    ) -> BaseURL:
+        """Parses a URL from a string into a :class:`URL` tuple.  If the URL
+        is lacking a scheme it can be provided as second argument. Otherwise,
+        it is ignored.  Optionally fragments can be stripped from the URL
+        by setting `allow_fragments` to `False`.
+    
+        The inverse of this function is :func:`url_unparse`.
+    
+        :param url: the URL to parse.
+        :param scheme: the default schema to use if the URL is schemaless.
+        :param allow_fragments: if set to `False` a fragment will be removed
+                                from the URL.
+    
+        .. deprecated:: 2.3
+            Will be removed in Werkzeug 3.0. Use ``urllib.parse.urlsplit`` instead.
+        """
+>       warnings.warn(
+            "'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0."
+            " Use 'urllib.parse.urlsplit' instead.",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+E       DeprecationWarning: 'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0. Use 'urllib.parse.urlsplit' instead.
+
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/urls.py:505: DeprecationWarning
+_____________________ test_add_template_test_with_template _____________________
+
+app = <Flask 'flask_test'>, client = <FlaskClient <Flask 'flask_test'>>
+
+    def test_add_template_test_with_template(app, client):
+        bp = flask.Blueprint("bp", __name__)
+    
+        def boolean(value):
+            return isinstance(value, bool)
+    
+        bp.add_app_template_test(boolean)
+        app.register_blueprint(bp, url_prefix="/py")
+    
+        @app.route("/")
+        def index():
+            return flask.render_template("template_test.html", value=False)
+    
+>       rv = client.get("/")
+
+tests/test_blueprints.py:642: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/test.py:1243: in get
+    return self.open(*args, **kw)
+src/flask/testing.py:209: in open
+    builder = EnvironBuilder(self.application, *args, **kwargs)
+src/flask/testing.py:70: in __init__
+    url = url_parse(path)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+url = '/', scheme = None, allow_fragments = True
+
+    def url_parse(
+        url: str, scheme: str | None = None, allow_fragments: bool = True
+    ) -> BaseURL:
+        """Parses a URL from a string into a :class:`URL` tuple.  If the URL
+        is lacking a scheme it can be provided as second argument. Otherwise,
+        it is ignored.  Optionally fragments can be stripped from the URL
+        by setting `allow_fragments` to `False`.
+    
+        The inverse of this function is :func:`url_unparse`.
+    
+        :param url: the URL to parse.
+        :param scheme: the default schema to use if the URL is schemaless.
+        :param allow_fragments: if set to `False` a fragment will be removed
+                                from the URL.
+    
+        .. deprecated:: 2.3
+            Will be removed in Werkzeug 3.0. Use ``urllib.parse.urlsplit`` instead.
+        """
+>       warnings.warn(
+            "'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0."
+            " Use 'urllib.parse.urlsplit' instead.",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+E       DeprecationWarning: 'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0. Use 'urllib.parse.urlsplit' instead.
+
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/urls.py:505: DeprecationWarning
+__________________ test_template_test_with_name_and_template ___________________
+
+app = <Flask 'flask_test'>, client = <FlaskClient <Flask 'flask_test'>>
+
+    def test_template_test_with_name_and_template(app, client):
+        bp = flask.Blueprint("bp", __name__)
+    
+        @bp.app_template_test("boolean")
+        def is_boolean(value):
+            return isinstance(value, bool)
+    
+        app.register_blueprint(bp, url_prefix="/py")
+    
+        @app.route("/")
+        def index():
+            return flask.render_template("template_test.html", value=False)
+    
+>       rv = client.get("/")
+
+tests/test_blueprints.py:659: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/test.py:1243: in get
+    return self.open(*args, **kw)
+src/flask/testing.py:209: in open
+    builder = EnvironBuilder(self.application, *args, **kwargs)
+src/flask/testing.py:70: in __init__
+    url = url_parse(path)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+url = '/', scheme = None, allow_fragments = True
+
+    def url_parse(
+        url: str, scheme: str | None = None, allow_fragments: bool = True
+    ) -> BaseURL:
+        """Parses a URL from a string into a :class:`URL` tuple.  If the URL
+        is lacking a scheme it can be provided as second argument. Otherwise,
+        it is ignored.  Optionally fragments can be stripped from the URL
+        by setting `allow_fragments` to `False`.
+    
+        The inverse of this function is :func:`url_unparse`.
+    
+        :param url: the URL to parse.
+        :param scheme: the default schema to use if the URL is schemaless.
+        :param allow_fragments: if set to `False` a fragment will be removed
+                                from the URL.
+    
+        .. deprecated:: 2.3
+            Will be removed in Werkzeug 3.0. Use ``urllib.parse.urlsplit`` instead.
+        """
+>       warnings.warn(
+            "'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0."
+            " Use 'urllib.parse.urlsplit' instead.",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+E       DeprecationWarning: 'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0. Use 'urllib.parse.urlsplit' instead.
+
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/urls.py:505: DeprecationWarning
+________________ test_add_template_test_with_name_and_template _________________
+
+app = <Flask 'flask_test'>, client = <FlaskClient <Flask 'flask_test'>>
+
+    def test_add_template_test_with_name_and_template(app, client):
+        bp = flask.Blueprint("bp", __name__)
+    
+        def is_boolean(value):
+            return isinstance(value, bool)
+    
+        bp.add_app_template_test(is_boolean, "boolean")
+        app.register_blueprint(bp, url_prefix="/py")
+    
+        @app.route("/")
+        def index():
+            return flask.render_template("template_test.html", value=False)
+    
+>       rv = client.get("/")
+
+tests/test_blueprints.py:676: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/test.py:1243: in get
+    return self.open(*args, **kw)
+src/flask/testing.py:209: in open
+    builder = EnvironBuilder(self.application, *args, **kwargs)
+src/flask/testing.py:70: in __init__
+    url = url_parse(path)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+url = '/', scheme = None, allow_fragments = True
+
+    def url_parse(
+        url: str, scheme: str | None = None, allow_fragments: bool = True
+    ) -> BaseURL:
+        """Parses a URL from a string into a :class:`URL` tuple.  If the URL
+        is lacking a scheme it can be provided as second argument. Otherwise,
+        it is ignored.  Optionally fragments can be stripped from the URL
+        by setting `allow_fragments` to `False`.
+    
+        The inverse of this function is :func:`url_unparse`.
+    
+        :param url: the URL to parse.
+        :param scheme: the default schema to use if the URL is schemaless.
+        :param allow_fragments: if set to `False` a fragment will be removed
+                                from the URL.
+    
+        .. deprecated:: 2.3
+            Will be removed in Werkzeug 3.0. Use ``urllib.parse.urlsplit`` instead.
+        """
+>       warnings.warn(
+            "'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0."
+            " Use 'urllib.parse.urlsplit' instead.",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+E       DeprecationWarning: 'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0. Use 'urllib.parse.urlsplit' instead.
+
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/urls.py:505: DeprecationWarning
+___________________________ test_context_processing ____________________________
+
+app = <Flask 'flask_test'>, client = <FlaskClient <Flask 'flask_test'>>
+
+    def test_context_processing(app, client):
+        answer_bp = flask.Blueprint("answer_bp", __name__)
+    
+        template_string = lambda: flask.render_template_string(  # noqa: E731
+            "{% if notanswer %}{{ notanswer }} is not the answer. {% endif %}"
+            "{% if answer %}{{ answer }} is the answer.{% endif %}"
+        )
+    
+        # App global context processor
+        @answer_bp.app_context_processor
+        def not_answer_context_processor():
+            return {"notanswer": 43}
+    
+        # Blueprint local context processor
+        @answer_bp.context_processor
+        def answer_context_processor():
+            return {"answer": 42}
+    
+        # Setup endpoints for testing
+        @answer_bp.route("/bp")
+        def bp_page():
+            return template_string()
+    
+        @app.route("/")
+        def app_page():
+            return template_string()
+    
+        # Register the blueprint
+        app.register_blueprint(answer_bp)
+    
+>       app_page_bytes = client.get("/").data
+
+tests/test_blueprints.py:710: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/test.py:1243: in get
+    return self.open(*args, **kw)
+src/flask/testing.py:209: in open
+    builder = EnvironBuilder(self.application, *args, **kwargs)
+src/flask/testing.py:70: in __init__
+    url = url_parse(path)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+url = '/', scheme = None, allow_fragments = True
+
+    def url_parse(
+        url: str, scheme: str | None = None, allow_fragments: bool = True
+    ) -> BaseURL:
+        """Parses a URL from a string into a :class:`URL` tuple.  If the URL
+        is lacking a scheme it can be provided as second argument. Otherwise,
+        it is ignored.  Optionally fragments can be stripped from the URL
+        by setting `allow_fragments` to `False`.
+    
+        The inverse of this function is :func:`url_unparse`.
+    
+        :param url: the URL to parse.
+        :param scheme: the default schema to use if the URL is schemaless.
+        :param allow_fragments: if set to `False` a fragment will be removed
+                                from the URL.
+    
+        .. deprecated:: 2.3
+            Will be removed in Werkzeug 3.0. Use ``urllib.parse.urlsplit`` instead.
+        """
+>       warnings.warn(
+            "'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0."
+            " Use 'urllib.parse.urlsplit' instead.",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+E       DeprecationWarning: 'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0. Use 'urllib.parse.urlsplit' instead.
+
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/urls.py:505: DeprecationWarning
+___________________________ test_request_processing ____________________________
+
+app = <Flask 'flask_test'>, client = <FlaskClient <Flask 'flask_test'>>
+
+    def test_request_processing(app, client):
+        bp = flask.Blueprint("bp", __name__)
+        evts = []
+    
+        @bp.before_request
+        def before_bp():
+            evts.append("before")
+    
+        @bp.after_request
+        def after_bp(response):
+            response.data += b"|after"
+            evts.append("after")
+            return response
+    
+        @bp.teardown_request
+        def teardown_bp(exc):
+            evts.append("teardown")
+    
+        # Setup routes for testing
+        @bp.route("/bp")
+        def bp_endpoint():
+            return "request"
+    
+        app.register_blueprint(bp)
+    
+        assert evts == []
+>       rv = client.get("/bp")
+
+tests/test_blueprints.py:767: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/test.py:1243: in get
+    return self.open(*args, **kw)
+src/flask/testing.py:209: in open
+    builder = EnvironBuilder(self.application, *args, **kwargs)
+src/flask/testing.py:70: in __init__
+    url = url_parse(path)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+url = '/bp', scheme = None, allow_fragments = True
+
+    def url_parse(
+        url: str, scheme: str | None = None, allow_fragments: bool = True
+    ) -> BaseURL:
+        """Parses a URL from a string into a :class:`URL` tuple.  If the URL
+        is lacking a scheme it can be provided as second argument. Otherwise,
+        it is ignored.  Optionally fragments can be stripped from the URL
+        by setting `allow_fragments` to `False`.
+    
+        The inverse of this function is :func:`url_unparse`.
+    
+        :param url: the URL to parse.
+        :param scheme: the default schema to use if the URL is schemaless.
+        :param allow_fragments: if set to `False` a fragment will be removed
+                                from the URL.
+    
+        .. deprecated:: 2.3
+            Will be removed in Werkzeug 3.0. Use ``urllib.parse.urlsplit`` instead.
+        """
+>       warnings.warn(
+            "'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0."
+            " Use 'urllib.parse.urlsplit' instead.",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+E       DeprecationWarning: 'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0. Use 'urllib.parse.urlsplit' instead.
+
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/urls.py:505: DeprecationWarning
+_________________________ test_app_request_processing __________________________
+
+app = <Flask 'flask_test'>, client = <FlaskClient <Flask 'flask_test'>>
+
+    def test_app_request_processing(app, client):
+        bp = flask.Blueprint("bp", __name__)
+        evts = []
+    
+        @bp.before_app_first_request
+        def before_first_request():
+            evts.append("first")
+    
+        @bp.before_app_request
+        def before_app():
+            evts.append("before")
+    
+        @bp.after_app_request
+        def after_app(response):
+            response.data += b"|after"
+            evts.append("after")
+            return response
+    
+        @bp.teardown_app_request
+        def teardown_app(exc):
+            evts.append("teardown")
+    
+        app.register_blueprint(bp)
+    
+        # Setup routes for testing
+        @app.route("/")
+        def bp_endpoint():
+            return "request"
+    
+        # before first request
+        assert evts == []
+    
+        # first request
+>       resp = client.get("/").data
+
+tests/test_blueprints.py:805: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/test.py:1243: in get
+    return self.open(*args, **kw)
+src/flask/testing.py:209: in open
+    builder = EnvironBuilder(self.application, *args, **kwargs)
+src/flask/testing.py:70: in __init__
+    url = url_parse(path)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+url = '/', scheme = None, allow_fragments = True
+
+    def url_parse(
+        url: str, scheme: str | None = None, allow_fragments: bool = True
+    ) -> BaseURL:
+        """Parses a URL from a string into a :class:`URL` tuple.  If the URL
+        is lacking a scheme it can be provided as second argument. Otherwise,
+        it is ignored.  Optionally fragments can be stripped from the URL
+        by setting `allow_fragments` to `False`.
+    
+        The inverse of this function is :func:`url_unparse`.
+    
+        :param url: the URL to parse.
+        :param scheme: the default schema to use if the URL is schemaless.
+        :param allow_fragments: if set to `False` a fragment will be removed
+                                from the URL.
+    
+        .. deprecated:: 2.3
+            Will be removed in Werkzeug 3.0. Use ``urllib.parse.urlsplit`` instead.
+        """
+>       warnings.warn(
+            "'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0."
+            " Use 'urllib.parse.urlsplit' instead.",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+E       DeprecationWarning: 'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0. Use 'urllib.parse.urlsplit' instead.
+
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/urls.py:505: DeprecationWarning
+___________________________ test_app_url_processors ____________________________
+
+app = <Flask 'flask_test'>, client = <FlaskClient <Flask 'flask_test'>>
+
+    def test_app_url_processors(app, client):
+        bp = flask.Blueprint("bp", __name__)
+    
+        # Register app-wide url defaults and preprocessor on blueprint
+        @bp.app_url_defaults
+        def add_language_code(endpoint, values):
+            values.setdefault("lang_code", flask.g.lang_code)
+    
+        @bp.app_url_value_preprocessor
+        def pull_lang_code(endpoint, values):
+            flask.g.lang_code = values.pop("lang_code")
+    
+        # Register route rules at the app level
+        @app.route("/<lang_code>/")
+        def index():
+            return flask.url_for("about")
+    
+        @app.route("/<lang_code>/about")
+        def about():
+            return flask.url_for("index")
+    
+        app.register_blueprint(bp)
+    
+>       assert client.get("/de/").data == b"/de/about"
+
+tests/test_blueprints.py:838: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/test.py:1243: in get
+    return self.open(*args, **kw)
+src/flask/testing.py:209: in open
+    builder = EnvironBuilder(self.application, *args, **kwargs)
+src/flask/testing.py:70: in __init__
+    url = url_parse(path)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+url = '/de/', scheme = None, allow_fragments = True
+
+    def url_parse(
+        url: str, scheme: str | None = None, allow_fragments: bool = True
+    ) -> BaseURL:
+        """Parses a URL from a string into a :class:`URL` tuple.  If the URL
+        is lacking a scheme it can be provided as second argument. Otherwise,
+        it is ignored.  Optionally fragments can be stripped from the URL
+        by setting `allow_fragments` to `False`.
+    
+        The inverse of this function is :func:`url_unparse`.
+    
+        :param url: the URL to parse.
+        :param scheme: the default schema to use if the URL is schemaless.
+        :param allow_fragments: if set to `False` a fragment will be removed
+                                from the URL.
+    
+        .. deprecated:: 2.3
+            Will be removed in Werkzeug 3.0. Use ``urllib.parse.urlsplit`` instead.
+        """
+>       warnings.warn(
+            "'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0."
+            " Use 'urllib.parse.urlsplit' instead.",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+E       DeprecationWarning: 'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0. Use 'urllib.parse.urlsplit' instead.
+
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/urls.py:505: DeprecationWarning
+____________________________ test_nested_blueprint _____________________________
+
+app = <Flask 'flask_test'>, client = <FlaskClient <Flask 'flask_test'>>
+
+    def test_nested_blueprint(app, client):
+        parent = flask.Blueprint("parent", __name__)
+        child = flask.Blueprint("child", __name__)
+        grandchild = flask.Blueprint("grandchild", __name__)
+    
+        @parent.errorhandler(403)
+        def forbidden(e):
+            return "Parent no", 403
+    
+        @parent.route("/")
+        def parent_index():
+            return "Parent yes"
+    
+        @parent.route("/no")
+        def parent_no():
+            flask.abort(403)
+    
+        @child.route("/")
+        def child_index():
+            return "Child yes"
+    
+        @child.route("/no")
+        def child_no():
+            flask.abort(403)
+    
+        @grandchild.errorhandler(403)
+        def grandchild_forbidden(e):
+            return "Grandchild no", 403
+    
+        @grandchild.route("/")
+        def grandchild_index():
+            return "Grandchild yes"
+    
+        @grandchild.route("/no")
+        def grandchild_no():
+            flask.abort(403)
+    
+        child.register_blueprint(grandchild, url_prefix="/grandchild")
+        parent.register_blueprint(child, url_prefix="/child")
+        app.register_blueprint(parent, url_prefix="/parent")
+    
+>       assert client.get("/parent/").data == b"Parent yes"
+
+tests/test_blueprints.py:883: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/test.py:1243: in get
+    return self.open(*args, **kw)
+src/flask/testing.py:209: in open
+    builder = EnvironBuilder(self.application, *args, **kwargs)
+src/flask/testing.py:70: in __init__
+    url = url_parse(path)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+url = '/parent/', scheme = None, allow_fragments = True
+
+    def url_parse(
+        url: str, scheme: str | None = None, allow_fragments: bool = True
+    ) -> BaseURL:
+        """Parses a URL from a string into a :class:`URL` tuple.  If the URL
+        is lacking a scheme it can be provided as second argument. Otherwise,
+        it is ignored.  Optionally fragments can be stripped from the URL
+        by setting `allow_fragments` to `False`.
+    
+        The inverse of this function is :func:`url_unparse`.
+    
+        :param url: the URL to parse.
+        :param scheme: the default schema to use if the URL is schemaless.
+        :param allow_fragments: if set to `False` a fragment will be removed
+                                from the URL.
+    
+        .. deprecated:: 2.3
+            Will be removed in Werkzeug 3.0. Use ``urllib.parse.urlsplit`` instead.
+        """
+>       warnings.warn(
+            "'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0."
+            " Use 'urllib.parse.urlsplit' instead.",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+E       DeprecationWarning: 'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 3.0. Use 'urllib.parse.urlsplit' instead.
+
+/opt/miniconda3/envs/testbed/lib/python3.9/site-packages/werkzeug/urls.py:505: DeprecationWarning
+==================================== PASSES ====================================
+=========================== short test summary info ============================
+PASSED tests/test_blueprints.py::test_dotted_names
+PASSED tests/test_blueprints.py::test_blueprint_name_with_dot[.frontend]
+PASSED tests/test_blueprints.py::test_blueprint_name_with_dot[frontend.]
+PASSED tests/test_blueprints.py::test_blueprint_name_with_dot[my.app.frontend]
+PASSED tests/test_blueprints.py::test_template_filter
+PASSED tests/test_blueprints.py::test_add_template_filter
+PASSED tests/test_blueprints.py::test_template_filter_with_name
+PASSED tests/test_blueprints.py::test_add_template_filter_with_name
+PASSED tests/test_blueprints.py::test_template_test
+PASSED tests/test_blueprints.py::test_add_template_test
+PASSED tests/test_blueprints.py::test_template_test_with_name
+PASSED tests/test_blueprints.py::test_add_template_test_with_name
+PASSED tests/test_blueprints.py::test_template_global
+ERROR tests/test_blueprints.py::test_templates_and_static - DeprecationWarnin...
+ERROR tests/test_blueprints.py::test_templates_list - DeprecationWarning: pkg...
+FAILED tests/test_blueprints.py::test_blueprint_specific_error_handling - Dep...
+FAILED tests/test_blueprints.py::test_blueprint_specific_user_error_handling
+FAILED tests/test_blueprints.py::test_blueprint_app_error_handling - Deprecat...
+FAILED tests/test_blueprints.py::test_blueprint_prefix_slash[-/-/] - Deprecat...
+FAILED tests/test_blueprints.py::test_blueprint_prefix_slash[/--/] - Deprecat...
+FAILED tests/test_blueprints.py::test_blueprint_prefix_slash[/-/-/] - Depreca...
+FAILED tests/test_blueprints.py::test_blueprint_prefix_slash[/foo--/foo] - De...
+FAILED tests/test_blueprints.py::test_blueprint_prefix_slash[/foo/--/foo/] - ...
+FAILED tests/test_blueprints.py::test_blueprint_prefix_slash[-/bar-/bar] - De...
+FAILED tests/test_blueprints.py::test_blueprint_prefix_slash[/foo/-/bar-/foo/bar]
+FAILED tests/test_blueprints.py::test_blueprint_prefix_slash[/foo/-bar-/foo/bar]
+FAILED tests/test_blueprints.py::test_blueprint_prefix_slash[/foo-/bar-/foo/bar]
+FAILED tests/test_blueprints.py::test_blueprint_prefix_slash[/foo/-//bar-/foo/bar]
+FAILED tests/test_blueprints.py::test_blueprint_prefix_slash[/foo//-/bar-/foo/bar]
+FAILED tests/test_blueprints.py::test_blueprint_url_defaults - DeprecationWar...
+FAILED tests/test_blueprints.py::test_blueprint_url_processors - DeprecationW...
+FAILED tests/test_blueprints.py::test_default_static_max_age - DeprecationWar...
+FAILED tests/test_blueprints.py::test_dotted_names_from_app - DeprecationWarn...
+FAILED tests/test_blueprints.py::test_empty_url_defaults - DeprecationWarning...
+FAILED tests/test_blueprints.py::test_route_decorator_custom_endpoint - Depre...
+FAILED tests/test_blueprints.py::test_route_decorator_custom_endpoint_with_dots
+FAILED tests/test_blueprints.py::test_endpoint_decorator - DeprecationWarning...
+FAILED tests/test_blueprints.py::test_template_filter_with_template - Depreca...
+FAILED tests/test_blueprints.py::test_template_filter_after_route_with_template
+FAILED tests/test_blueprints.py::test_add_template_filter_with_template - Dep...
+FAILED tests/test_blueprints.py::test_template_filter_with_name_and_template
+FAILED tests/test_blueprints.py::test_add_template_filter_with_name_and_template
+FAILED tests/test_blueprints.py::test_template_test_with_template - Deprecati...
+FAILED tests/test_blueprints.py::test_template_test_after_route_with_template
+FAILED tests/test_blueprints.py::test_add_template_test_with_template - Depre...
+FAILED tests/test_blueprints.py::test_template_test_with_name_and_template - ...
+FAILED tests/test_blueprints.py::test_add_template_test_with_name_and_template
+FAILED tests/test_blueprints.py::test_context_processing - DeprecationWarning...
+FAILED tests/test_blueprints.py::test_request_processing - DeprecationWarning...
+FAILED tests/test_blueprints.py::test_app_request_processing - DeprecationWar...
+FAILED tests/test_blueprints.py::test_app_url_processors - DeprecationWarning...
+FAILED tests/test_blueprints.py::test_nested_blueprint - DeprecationWarning: ...
+=================== 37 failed, 13 passed, 2 errors in 2.64s ====================
++ cat coverage.cover
+{"/testbed/src/flask/blueprints.py": {"1": 1, "2": 1, "3": 1, "5": 1, "6": 1, "7": 1, "8": 1, "9": 1, "10": 1, "11": 1, "12": 1, "13": 1, "14": 1, "15": 1, "16": 1, "17": 1, "19": 1, "20": 0, "22": 1, "25": 2, "108": 2, "34": 1, "35": 1, "36": 1, "37": 1, "38": 1, "32": 1, "77": 2, "79": 1, "80": 1, "81": 1, "82": 1, "83": 1, "40": 51, "43": 51, "47": 51, "53": 51, "55": 51, "56": 51, "57": 51, "61": 51, "63": 51, "64": 51, "65": 26, "68": 51, "70": 51, "74": 51, "75": 51, "88": 39, "89": 27, "90": 24, "92": 3, "93": 39, "94": 39, "95": 36, "96": 39, "97": 39, "98": 3, "99": 156, "100": 39, "101": 39, "102": 39, "103": 39, "104": 39, "161": 1, "162": 1, "166": 1, "169": 1, "175": 2, "176": 2, "177": 2, "178": 2, "179": 2, "180": 2, "181": 2, "182": 2, "171": 2, "173": 1, "174": 1, "207": 1, "210": 1, "228": 1, "241": 2, "242": 1, "243": 1, "250": 1, "259": 1, "357": 2, "359": 1, "360": 1, "361": 1, "362": 1, "363": 1, "375": 1, "389": 2, "390": 1, "391": 1, "405": 1, "421": 2, "422": 1, "423": 1, "439": 1, "455": 2, "456": 1, "457": 1, "473": 1, "483": 1, "484": 1, "482": 1, "491": 1, "500": 1, "511": 1, "512": 1, "510": 1, "521": 1, "533": 1, "534": 1, "532": 1, "541": 1, "184": 110, "185": 55, "186": 55, "187": 55, "188": 55, "189": 55, "192": 55, "193": 4, "195": 51, "196": 51, "197": 51, "198": 51, "200": 51, "201": 51, "203": 51, "204": 51, "205": 51, "208": 17, "216": 64, "217": 0, "219": 0, "220": 0, "221": 0, "226": 64, "235": 27, "239": 27, "236": 27, "237": 27, "248": 51, "257": 2, "272": 51, "274": 51, "275": 1, "276": 0, "277": 0, "278": 0, "283": 50, "284": 50, "286": 51, "287": 51, "289": 51, "290": 2, "291": 1, "292": 1, "293": 1, "297": 51, "299": 50, "305": 55, "306": 5, "307": 10, "308": 5, "309": 20, "313": 10, "316": 5, "318": 51, "319": 1, "321": 50, "322": 50, "323": 100, "324": 50, "325": 50, "327": 50, "328": 50, "329": 50, "331": 116, "332": 65, "334": 51, "336": 51, "337": 0, "338": 0, "339": 0, "340": 0, "341": 0, "343": 0, "344": 0, "346": 53, "347": 2, "348": 2, "350": 2, "349": 2, "353": 2, "354": 2, "355": 2, "300": 355, "301": 55, "303": 55, "310": 21, "311": 11, "367": 38, "368": 1, "370": 37, "371": 0, "373": 75, "383": 5, "387": 5, "384": 5, "385": 5, "400": 9, "403": 9, "401": 9, "415": 5, "419": 5, "416": 5, "417": 5, "434": 9, "437": 9, "435": 9, "449": 1, "453": 1, "450": 1, "451": 1, "468": 1, "471": 1, "469": 1, "477": 2, "478": 2, "480": 1, "488": 2, "489": 1, "495": 2, "496": 2, "498": 1, "505": 2, "506": 2, "508": 1, "516": 2, "517": 2, "519": 1, "526": 1, "530": 1, "527": 2, "528": 1, "536": 2, "537": 2, "539": 1, "543": 2, "544": 2, "546": 1}}
++ git checkout d8c37f43724cd9fb0870f77877b7c4c7e38a19e0
+Note: switching to 'd8c37f43724cd9fb0870f77877b7c4c7e38a19e0'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at d8c37f43 Merge pull request #4026 from greyli/improve-type-hints
+M	src/flask/blueprints.py
+M	tests/test_blueprints.py
++ git apply /root/pre_state.patch
+error: unrecognized input

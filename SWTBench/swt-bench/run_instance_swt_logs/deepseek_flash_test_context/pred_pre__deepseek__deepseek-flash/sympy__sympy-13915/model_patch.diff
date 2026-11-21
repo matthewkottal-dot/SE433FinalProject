@@ -1,0 +1,17 @@
+diff --git a/sympy/core/tests/test_subs.py b/sympy/core/tests/test_subs.py
+index 90abb9e37..f36b4423a 100755
+--- a/sympy/core/tests/test_subs.py
++++ b/sympy/core/tests/test_subs.py
+@@ -779,3 +779,12 @@ def test_issue_12657():
+     reps = [(-oo, 2), (oo, 1)]
+     assert (x < oo).subs(reps) == (x < 1)
+     assert (x < oo).subs(list(reversed(reps))) == (x < 1)
++
++
++def test_undefined_result_after_substitution():
++    # Substituting b -> a makes individual terms undefined.  The result
++    # should therefore be nan rather than simplifying to 1 by cancelling
++    # two equal-looking undefined subexpressions.
++    a, b = symbols('a b')
++    r = (1/(a + b) + 1/(a - b))/(1/(a + b) - 1/(a - b))
++    assert r.subs(b, a) is S.NaN

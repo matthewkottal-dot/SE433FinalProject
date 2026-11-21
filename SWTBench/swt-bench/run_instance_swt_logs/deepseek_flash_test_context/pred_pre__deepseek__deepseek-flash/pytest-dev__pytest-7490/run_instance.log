@@ -1,0 +1,37 @@
+2026-11-19 15:31:14,392 - WARNING - Starting evaluation at 1795127474.3924308
+2026-11-19 15:31:14,501 - INFO - Creating container for pytest-dev__pytest-7490...
+2026-11-19 15:31:14,533 - INFO - Container for pytest-dev__pytest-7490 created: b3337df58717095617a9d1fcf9cd7a7a443efb94ca3d51618a0c58a37db04aa0
+2026-11-19 15:31:14,650 - INFO - Container for pytest-dev__pytest-7490 started: b3337df58717095617a9d1fcf9cd7a7a443efb94ca3d51618a0c58a37db04aa0
+2026-11-19 15:31:14,808 - INFO - Git diff before:
+
+2026-11-19 15:31:14,811 - INFO - Eval script for pytest-dev__pytest-7490 written to eval.sh, now applying to container...
+2026-11-19 15:31:20,148 - INFO - Test output for pytest-dev__pytest-7490 written to run_instance_swt_logs/deepseek_flash_test_context/pred_pre__deepseek__deepseek-flash/pytest-dev__pytest-7490/test_output.txt
+2026-11-19 15:31:20,184 - INFO - Git diff after:
+diff --git a/testing/test_skipping.py b/testing/test_skipping.py
+index 8fceb37aa..69176fa96 100644
+--- a/testing/test_skipping.py
++++ b/testing/test_skipping.py
+@@ -425,6 +425,18 @@ class TestXFail:
+         result = testdir.runpytest(p)
+         result.stdout.fnmatch_lines(["*1 xfailed*"])
+ 
++    def test_dynamic_xfail_set_during_test(self, testdir):
++        p = testdir.makepyfile(
++            """
++            import pytest
++            def test_this(request):
++                request.node.add_marker(pytest.mark.xfail(reason="xfail"))
++                assert 0
++        """
++        )
++        result = testdir.runpytest(p, "-rxX")
++        result.stdout.fnmatch_lines(["*XFAIL*test_this*", "*xfail*", "*1 xfailed*"])
++
+     @pytest.mark.parametrize(
+         "expected, actual, matchline",
+         [
+2026-11-19 15:31:20,184 - INFO - Git diff changed after running eval script
+2026-11-19 15:31:20,185 - INFO - Attempting to stop container exec.eval.x86_64.7ea5f61b7564fbc4e33129.3fac552f5a165e4495b2ea.131896705645168...
+2026-11-19 15:31:35,374 - INFO - Attempting to remove container exec.eval.x86_64.7ea5f61b7564fbc4e33129.3fac552f5a165e4495b2ea.131896705645168...
+2026-11-19 15:31:35,418 - INFO - Container exec.eval.x86_64.7ea5f61b7564fbc4e33129.3fac552f5a165e4495b2ea.131896705645168 removed.
+2026-11-19 15:31:35,418 - WARNING - End of eval at 1795127495.4186797

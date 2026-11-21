@@ -1,0 +1,90 @@
+2026-11-19 14:26:33,162 - WARNING - Starting evaluation at 1795123593.162037
+2026-11-19 14:26:33,281 - INFO - Creating container for pytest-dev__pytest-5103...
+2026-11-19 14:26:33,314 - INFO - Container for pytest-dev__pytest-5103 created: 6a2a6bbe4a166aca4bc25b4f3926b5f157f3cfe5a661630f980079992a45abdb
+2026-11-19 14:26:33,445 - INFO - Container for pytest-dev__pytest-5103 started: 6a2a6bbe4a166aca4bc25b4f3926b5f157f3cfe5a661630f980079992a45abdb
+2026-11-19 14:26:33,518 - INFO - Git diff before:
+
+2026-11-19 14:26:33,522 - INFO - Eval script for pytest-dev__pytest-5103 written to eval.sh, now applying to container...
+2026-11-19 14:26:39,893 - INFO - Test output for pytest-dev__pytest-5103 written to run_instance_swt_logs/deepseek_flash_test_baseline/pred_post__deepseek__deepseek-flash/pytest-dev__pytest-5103/test_output.txt
+2026-11-19 14:26:39,931 - INFO - Git diff after:
+diff --git a/src/_pytest/assertion/rewrite.py b/src/_pytest/assertion/rewrite.py
+index 2903b8995..3032130f3 100644
+--- a/src/_pytest/assertion/rewrite.py
++++ b/src/_pytest/assertion/rewrite.py
+@@ -968,6 +968,8 @@ warn_explicit(
+         """
+         visit `ast.Call` nodes on Python3.5 and after
+         """
++        if isinstance(call.func, ast.Name) and call.func.id == "all":
++            return self._visit_all(call)
+         new_func, func_expl = self.visit(call.func)
+         arg_expls = []
+         new_args = []
+@@ -991,6 +993,27 @@ warn_explicit(
+         outer_expl = "%s\n{%s = %s\n}" % (res_expl, res_expl, expl)
+         return res, outer_expl
+ 
++    def _visit_all(self, call):
++        """Special rewrite for the builtin all function, see #5062"""
++        if not isinstance(call.args[0], (ast.GeneratorExp, ast.ListComp)):
++            return
++        gen_exp = call.args[0]
++        assertion_module = ast.Module(
++            body=[ast.Assert(test=gen_exp.elt, lineno=1, msg="", col_offset=1)]
++        )
++        AssertionRewriter(module_path=None, config=None).run(assertion_module)
++        for_loop = ast.For(
++            iter=gen_exp.generators[0].iter,
++            target=gen_exp.generators[0].target,
++            body=assertion_module.body,
++            orelse=[],
++        )
++        self.statements.append(for_loop)
++        return (
++            ast.Num(n=1),
++            "",
++        )  # Return an empty expression, all the asserts are in the for_loop
++
+     def visit_Starred(self, starred):
+         # From Python 3.5, a Starred node can appear in a function call
+         res, expl = self.visit(starred.value)
+@@ -1001,6 +1024,8 @@ warn_explicit(
+         """
+         visit `ast.Call nodes on 3.4 and below`
+         """
++        if isinstance(call.func, ast.Name) and call.func.id == "all":
++            return self._visit_all(call)
+         new_func, func_expl = self.visit(call.func)
+         arg_expls = []
+         new_args = []
+diff --git a/testing/test_assertrewrite.py b/testing/test_assertrewrite.py
+index 87dada213..3c1496883 100644
+--- a/testing/test_assertrewrite.py
++++ b/testing/test_assertrewrite.py
+@@ -525,6 +525,21 @@ class TestAssertionRewrite(object):
+  +  where False = g(**{'a': 2})"""
+         )
+ 
++    def test_all_generator_unrolled(self):
++        class FailingItem(object):
++            def __repr__(self):
++                return "<FAILING_ITEM>"
++
++        def predicate(item):
++            return False
++
++        def f():
++            items = [failing_item]
++            assert all(predicate(item) for item in items)
++
++        msg = getmsg(f, {"failing_item": FailingItem(), "predicate": predicate})
++        assert "<FAILING_ITEM>" in msg
++
+     def test_attribute(self):
+         class X(object):
+             g = 3
+2026-11-19 14:26:39,932 - INFO - Git diff changed after running eval script
+2026-11-19 14:26:39,932 - INFO - Attempting to stop container exec.eval.x86_64.af2fdc0080883ffbb82939.42c836ae870b042a29a774.125556490478672...
+2026-11-19 14:26:55,136 - INFO - Attempting to remove container exec.eval.x86_64.af2fdc0080883ffbb82939.42c836ae870b042a29a774.125556490478672...
+2026-11-19 14:26:55,180 - INFO - Container exec.eval.x86_64.af2fdc0080883ffbb82939.42c836ae870b042a29a774.125556490478672 removed.
+2026-11-19 14:26:55,181 - WARNING - End of eval at 1795123615.181532

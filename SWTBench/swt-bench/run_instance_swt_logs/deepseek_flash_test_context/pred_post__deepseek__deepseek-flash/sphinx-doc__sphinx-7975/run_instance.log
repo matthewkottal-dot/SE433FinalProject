@@ -1,0 +1,170 @@
+2026-11-19 15:34:55,620 - WARNING - Starting evaluation at 1795127695.6200747
+2026-11-19 15:34:55,726 - INFO - Creating container for sphinx-doc__sphinx-7975...
+2026-11-19 15:34:55,756 - INFO - Container for sphinx-doc__sphinx-7975 created: d8ddec23fd8f89fa9f580ae97350f6e72f6496f2605f9bd3f6058e9e40f0c376
+2026-11-19 15:34:55,871 - INFO - Container for sphinx-doc__sphinx-7975 started: d8ddec23fd8f89fa9f580ae97350f6e72f6496f2605f9bd3f6058e9e40f0c376
+2026-11-19 15:34:56,022 - INFO - Git diff before:
+diff --git a/setup.py b/setup.py
+index a404f1fa5..2c6848797 100644
+--- a/setup.py
++++ b/setup.py
+@@ -15,22 +15,22 @@ if sys.version_info < (3, 5):
+     sys.exit(1)
+ 
+ install_requires = [
+-    'sphinxcontrib-applehelp',
+-    'sphinxcontrib-devhelp',
++    'sphinxcontrib-applehelp<=1.0.7',
++    'sphinxcontrib-devhelp<=1.0.5',
+     'sphinxcontrib-jsmath',
+-    'sphinxcontrib-htmlhelp',
+-    'sphinxcontrib-serializinghtml',
+-    'sphinxcontrib-qthelp',
+-    'Jinja2>=2.3',
++    'sphinxcontrib-htmlhelp<=2.0.4',
++    'sphinxcontrib-serializinghtml<=1.1.9',
++    'sphinxcontrib-qthelp<=1.0.6',
++    'Jinja2<3.0',
+     'Pygments>=2.0',
+     'docutils>=0.12',
+     'snowballstemmer>=1.1',
+     'babel>=1.3',
+-    'alabaster>=0.7,<0.8',
++    'alabaster>=0.7,<0.7.12',
+     'imagesize',
+     'requests>=2.5.0',
+     'setuptools',
+-    'packaging',
++    'packaging', 'markupsafe<=2.0.1',
+ ]
+ 
+ extras_require = {
+diff --git a/tox.ini b/tox.ini
+index bddd822a6..34baee205 100644
+--- a/tox.ini
++++ b/tox.ini
+@@ -27,7 +27,7 @@ extras =
+ setenv =
+     PYTHONWARNINGS = all,ignore::ImportWarning:importlib._bootstrap_external,ignore::DeprecationWarning:site,ignore::DeprecationWarning:distutils
+ commands=
+-    pytest --durations 25 {posargs}
++    pytest -rA --durations 25 {posargs}
+ 
+ [testenv:flake8]
+ basepython = python3
+2026-11-19 15:34:56,025 - INFO - Eval script for sphinx-doc__sphinx-7975 written to eval.sh, now applying to container...
+2026-11-19 15:35:02,402 - INFO - Test output for sphinx-doc__sphinx-7975 written to run_instance_swt_logs/deepseek_flash_test_context/pred_post__deepseek__deepseek-flash/sphinx-doc__sphinx-7975/test_output.txt
+2026-11-19 15:35:02,440 - INFO - Git diff after:
+diff --git a/setup.py b/setup.py
+index a404f1fa5..2c6848797 100644
+--- a/setup.py
++++ b/setup.py
+@@ -15,22 +15,22 @@ if sys.version_info < (3, 5):
+     sys.exit(1)
+ 
+ install_requires = [
+-    'sphinxcontrib-applehelp',
+-    'sphinxcontrib-devhelp',
++    'sphinxcontrib-applehelp<=1.0.7',
++    'sphinxcontrib-devhelp<=1.0.5',
+     'sphinxcontrib-jsmath',
+-    'sphinxcontrib-htmlhelp',
+-    'sphinxcontrib-serializinghtml',
+-    'sphinxcontrib-qthelp',
+-    'Jinja2>=2.3',
++    'sphinxcontrib-htmlhelp<=2.0.4',
++    'sphinxcontrib-serializinghtml<=1.1.9',
++    'sphinxcontrib-qthelp<=1.0.6',
++    'Jinja2<3.0',
+     'Pygments>=2.0',
+     'docutils>=0.12',
+     'snowballstemmer>=1.1',
+     'babel>=1.3',
+-    'alabaster>=0.7,<0.8',
++    'alabaster>=0.7,<0.7.12',
+     'imagesize',
+     'requests>=2.5.0',
+     'setuptools',
+-    'packaging',
++    'packaging', 'markupsafe<=2.0.1',
+ ]
+ 
+ extras_require = {
+diff --git a/sphinx/environment/adapters/indexentries.py b/sphinx/environment/adapters/indexentries.py
+index 5af213932..b13ac97c3 100644
+--- a/sphinx/environment/adapters/indexentries.py
++++ b/sphinx/environment/adapters/indexentries.py
+@@ -98,9 +98,8 @@ class IndexEntries:
+             for subentry in indexentry[1].values():
+                 subentry[0].sort(key=keyfunc0)  # type: ignore
+ 
+-        # sort the index entries; put all symbols at the front, even those
+-        # following the letters in ASCII, this is where the chr(127) comes from
+-        def keyfunc(entry: Tuple[str, List]) -> Tuple[str, str]:
++        # sort the index entries
++        def keyfunc(entry: Tuple[str, List]) -> Tuple[Tuple[int, str], str]:
+             key, (void, void, category_key) = entry
+             if category_key:
+                 # using specified category key to sort
+@@ -108,11 +107,16 @@ class IndexEntries:
+             lckey = unicodedata.normalize('NFD', key.lower())
+             if lckey.startswith('\N{RIGHT-TO-LEFT MARK}'):
+                 lckey = lckey[1:]
++
+             if lckey[0:1].isalpha() or lckey.startswith('_'):
+-                lckey = chr(127) + lckey
++                # put non-symbol characters at the folloing group (1)
++                sortkey = (1, lckey)
++            else:
++                # put symbols at the front of the index (0)
++                sortkey = (0, lckey)
+             # ensure a determinstic order *within* letters by also sorting on
+             # the entry itself
+-            return (lckey, entry[0])
++            return (sortkey, entry[0])
+         newlist = sorted(new.items(), key=keyfunc)
+ 
+         if group_entries:
+diff --git a/tests/test_environment_indexentries.py b/tests/test_environment_indexentries.py
+index 7f6003d54..3c10a19cf 100644
+--- a/tests/test_environment_indexentries.py
++++ b/tests/test_environment_indexentries.py
+@@ -163,3 +163,21 @@ def test_create_index_by_key(app):
+     assert index[0] == ('D', [('docutils', [[('main', '#term-docutils')], [], None])])
+     assert index[1] == ('P', [('Python', [[('main', '#term-Python')], [], None])])
+     assert index[2] == ('ス', [('スフィンクス', [[('main', '#term-0')], [], 'ス'])])
++
++
++@pytest.mark.sphinx('dummy', freshenv=True)
++def test_create_index_with_non_ascii_symbols(app):
++    text = (".. index:: @\n"
++            ".. index:: docutils\n"
++            ".. index:: £\n"
++            ".. index:: ←\n")
++    restructuredtext.parse(app, text)
++    index = IndexEntries(app.env).create_index(app.builder)
++
++    # All symbols should be grouped into a single section, even when some
++    # sort after the ASCII letters used to place alphabetical entries first.
++    assert len(index) == 2
++    assert index[0] == ('Symbols', [('@', [[('', '#index-0')], [], None]),
++                                    ('£', [[('', '#index-2')], [], None]),
++                                    ('←', [[('', '#index-3')], [], None])])
++    assert index[1] == ('D', [('docutils', [[('', '#index-1')], [], None])])
+diff --git a/tox.ini b/tox.ini
+index bddd822a6..34baee205 100644
+--- a/tox.ini
++++ b/tox.ini
+@@ -27,7 +27,7 @@ extras =
+ setenv =
+     PYTHONWARNINGS = all,ignore::ImportWarning:importlib._bootstrap_external,ignore::DeprecationWarning:site,ignore::DeprecationWarning:distutils
+ commands=
+-    pytest --durations 25 {posargs}
++    pytest -rA --durations 25 {posargs}
+ 
+ [testenv:flake8]
+ basepython = python3
+2026-11-19 15:35:02,441 - INFO - Git diff changed after running eval script
+2026-11-19 15:35:02,441 - INFO - Attempting to stop container exec.eval.x86_64.77d82541416cab86d0d86a.76bc7fa92b4535c64ef657.131896705810752...
+2026-11-19 15:35:17,669 - INFO - Attempting to remove container exec.eval.x86_64.77d82541416cab86d0d86a.76bc7fa92b4535c64ef657.131896705810752...
+2026-11-19 15:35:17,737 - INFO - Container exec.eval.x86_64.77d82541416cab86d0d86a.76bc7fa92b4535c64ef657.131896705810752 removed.
+2026-11-19 15:35:17,738 - WARNING - End of eval at 1795127717.738529

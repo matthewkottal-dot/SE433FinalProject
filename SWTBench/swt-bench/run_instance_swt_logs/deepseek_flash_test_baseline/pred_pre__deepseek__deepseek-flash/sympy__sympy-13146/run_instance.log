@@ -1,0 +1,29 @@
+2026-11-19 14:44:16,493 - WARNING - Starting evaluation at 1795124656.4934218
+2026-11-19 14:44:16,625 - INFO - Creating container for sympy__sympy-13146...
+2026-11-19 14:44:16,660 - INFO - Container for sympy__sympy-13146 created: 76f23c9ff43bb24d49afa0d08364afa6b45628b4a98893f867cd78487eb643b0
+2026-11-19 14:44:16,783 - INFO - Container for sympy__sympy-13146 started: 76f23c9ff43bb24d49afa0d08364afa6b45628b4a98893f867cd78487eb643b0
+2026-11-19 14:44:17,241 - INFO - Git diff before:
+
+2026-11-19 14:44:17,244 - INFO - Eval script for sympy__sympy-13146 written to eval.sh, now applying to container...
+2026-11-19 14:44:25,228 - INFO - Test output for sympy__sympy-13146 written to run_instance_swt_logs/deepseek_flash_test_baseline/pred_pre__deepseek__deepseek-flash/sympy__sympy-13146/test_output.txt
+2026-11-19 14:44:25,268 - INFO - Git diff after:
+diff --git a/sympy/simplify/tests/test_simplify.py b/sympy/simplify/tests/test_simplify.py
+index 6acf690006..2d4082dc4d 100644
+--- a/sympy/simplify/tests/test_simplify.py
++++ b/sympy/simplify/tests/test_simplify.py
+@@ -652,3 +652,10 @@ def test_clear_coefficients():
+     assert clear_coefficients(S.Infinity, x) == (S.Infinity, x)
+     assert clear_coefficients(-S.Pi, x) == (S.Pi, -x)
+     assert clear_coefficients(2 - S.Pi/3, x) == (pi, -3*x + 6)
++
++
++def test_simplify_float_exponent_of_different_precision():
++    # simplify should recognize that the two numerically evaluated terms
++    # cancel even though their exponents have different Float precisions
++    res = S(1)/2*x**2.5 - S(1)*x**(S(5)/2)/2
++    assert simplify(res.evalf(5)) == 0
+2026-11-19 14:44:25,269 - INFO - Git diff changed after running eval script
+2026-11-19 14:44:25,269 - INFO - Attempting to stop container exec.eval.x86_64.deec2122407a414e380748.396e2b5f4b8ee2c45adc3e.125556472320304...
+2026-11-19 14:44:40,441 - INFO - Attempting to remove container exec.eval.x86_64.deec2122407a414e380748.396e2b5f4b8ee2c45adc3e.125556472320304...
+2026-11-19 14:44:40,475 - INFO - Container exec.eval.x86_64.deec2122407a414e380748.396e2b5f4b8ee2c45adc3e.125556472320304 removed.
+2026-11-19 14:44:40,476 - WARNING - End of eval at 1795124680.4761186

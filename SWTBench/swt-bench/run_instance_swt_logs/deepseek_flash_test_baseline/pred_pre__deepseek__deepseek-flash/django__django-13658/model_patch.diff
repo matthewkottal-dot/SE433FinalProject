@@ -1,0 +1,30 @@
+diff --git a/tests/admin_scripts/tests.py b/tests/admin_scripts/tests.py
+index 62c6f485aa..1ea8a68e3e 100755
+--- a/tests/admin_scripts/tests.py
++++ b/tests/admin_scripts/tests.py
+@@ -17,7 +17,7 @@ from unittest import mock
+ from django import conf, get_version
+ from django.conf import settings
+ from django.core.management import (
+-    BaseCommand, CommandError, call_command, color,
++    BaseCommand, CommandError, call_command, color, execute_from_command_line,
+ )
+ from django.core.management.commands.loaddata import Command as LoaddataCommand
+ from django.core.management.commands.runserver import (
+@@ -162,6 +162,16 @@ class AdminScriptTestCase(SimpleTestCase):
+         "Utility assertion: assert that the given message doesn't exist in the output"
+         self.assertNotIn(msg, stream, "'%s' matches actual output text '%s'" % (msg, stream))
+ 
++
++class ManagementUtilityTests(SimpleTestCase):
++    def test_program_name_from_argv(self):
++        argv = ['django-admin', 'version']
++        with mock.patch('sys.argv', [None]):
++            with mock.patch('sys.stdout', new_callable=StringIO) as stdout:
++                execute_from_command_line(argv)
++        self.assertEqual(stdout.getvalue(), get_version() + '\n')
++
++
+ ##########################################################################
+ # DJANGO ADMIN TESTS
+ # This first series of test classes checks the environment processing

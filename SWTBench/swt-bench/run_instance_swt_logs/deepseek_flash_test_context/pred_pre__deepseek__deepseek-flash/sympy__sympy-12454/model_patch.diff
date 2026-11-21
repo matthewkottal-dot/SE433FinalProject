@@ -1,0 +1,26 @@
+diff --git a/sympy/matrices/tests/test_commonmatrix.py b/sympy/matrices/tests/test_commonmatrix.py
+index 757467198..a745f9968 100755
+--- a/sympy/matrices/tests/test_commonmatrix.py
++++ b/sympy/matrices/tests/test_commonmatrix.py
+@@ -293,6 +293,8 @@ def test_is_upper():
+     assert a.is_upper is True
+     a = PropertiesOnlyMatrix([[1], [2], [3]])
+     assert a.is_upper is False
++    a = PropertiesOnlyMatrix(4, 2, lambda i, j: 0)
++    assert a.is_upper is True
+ 
+ 
+ def test_is_lower():
+diff --git a/sympy/matrices/tests/test_matrices.py b/sympy/matrices/tests/test_matrices.py
+index 03b1548fd..33ab4bbb8 100755
+--- a/sympy/matrices/tests/test_matrices.py
++++ b/sympy/matrices/tests/test_matrices.py
+@@ -1225,6 +1225,8 @@ def test_is_upper():
+     assert a.is_upper is True
+     a = Matrix([[1], [2], [3]])
+     assert a.is_upper is False
++    a = zeros(4, 2)
++    assert a.is_upper is True
+ 
+ 
+ def test_is_lower():

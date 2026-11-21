@@ -1,0 +1,57 @@
+2026-11-19 14:22:38,446 - WARNING - Starting evaluation at 1795123358.4461877
+2026-11-19 14:22:38,566 - INFO - Creating container for psf__requests-863...
+2026-11-19 14:22:38,599 - INFO - Container for psf__requests-863 created: b66bb0bb936bb3065ec3b69eb6d648f67f64c761be875905633b369cf3eb64f6
+2026-11-19 14:22:38,723 - INFO - Container for psf__requests-863 started: b66bb0bb936bb3065ec3b69eb6d648f67f64c761be875905633b369cf3eb64f6
+2026-11-19 14:22:38,811 - INFO - Git diff before:
+
+2026-11-19 14:22:38,814 - INFO - Eval script for psf__requests-863 written to eval.sh, now applying to container...
+2026-11-19 14:22:56,239 - INFO - Test output for psf__requests-863 written to run_instance_swt_logs/deepseek_flash_test_baseline/pred_pre__deepseek__deepseek-flash/psf__requests-863/test_output.txt
+2026-11-19 14:22:56,277 - INFO - Git diff after:
+diff --git a/tests/test_requests.py b/tests/test_requests.py
+index f8a31f24..8c4b0ca7 100755
+--- a/tests/test_requests.py
++++ b/tests/test_requests.py
+@@ -19,6 +19,7 @@ from requests import HTTPError
+ from requests import get, post, head, put
+ from requests.auth import HTTPBasicAuth, HTTPDigestAuth
+ from requests.exceptions import InvalidURL
++from requests.hooks import dispatch_hook
+ 
+ if 'HTTPBIN_URL' not in os.environ:
+     os.environ['HTTPBIN_URL'] = 'http://httpbin.org/'
+@@ -744,6 +745,30 @@ class RequestsTestSuite(TestSetup, TestBaseMixin, unittest.TestCase):
+             assert 'foo' in response.text
+             assert 'bar' in response.text
+ 
++    def test_request_hooks_accept_lists(self):
++        calls = []
++
++        def first_hook(data):
++            calls.append('first')
++            data['first'] = True
++            return data
++
++        def second_hook(data):
++            calls.append('second')
++            assert data['first'] is True
++            data['second'] = True
++            return data
++
++        request = requests.Request(
++            'http://example.com',
++            hooks={'args': [first_hook, second_hook]},
++        )
++
++        result = dispatch_hook('args', request.hooks, {})
++
++        self.assertEqual(calls, ['first', 'second'])
++        self.assertEqual(result, {'first': True, 'second': True})
++
+     def test_session_persistent_cookies(self):
+ 
+         s = requests.session()
+2026-11-19 14:22:56,277 - INFO - Git diff changed after running eval script
+2026-11-19 14:22:56,278 - INFO - Attempting to stop container exec.eval.x86_64.3a9417a9d4b5c62087edb6.f9c825a48927a46fdbefc3.125556490489648...
+2026-11-19 14:23:11,441 - INFO - Attempting to remove container exec.eval.x86_64.3a9417a9d4b5c62087edb6.f9c825a48927a46fdbefc3.125556490489648...
+2026-11-19 14:23:11,471 - INFO - Container exec.eval.x86_64.3a9417a9d4b5c62087edb6.f9c825a48927a46fdbefc3.125556490489648 removed.
+2026-11-19 14:23:11,472 - WARNING - End of eval at 1795123391.471987

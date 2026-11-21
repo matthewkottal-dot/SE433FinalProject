@@ -1,0 +1,560 @@
++ source /opt/miniconda3/bin/activate
+++ _CONDA_ROOT=/opt/miniconda3
+++ . /opt/miniconda3/etc/profile.d/conda.sh
++++ export CONDA_EXE=/opt/miniconda3/bin/conda
++++ CONDA_EXE=/opt/miniconda3/bin/conda
++++ export _CE_M=
++++ _CE_M=
++++ export _CE_CONDA=
++++ _CE_CONDA=
++++ export CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++++ CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++++ '[' -z '' ']'
++++ export CONDA_SHLVL=0
++++ CONDA_SHLVL=0
++++ '[' -n '' ']'
++++++ dirname /opt/miniconda3/bin/conda
+++++ dirname /opt/miniconda3/bin
++++ PATH=/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++++ export PATH
++++ '[' -z '' ']'
++++ PS1=
+++ conda activate
+++ local cmd=activate
+++ case "$cmd" in
+++ __conda_activate activate
+++ '[' -n '' ']'
+++ local ask_conda
++++ PS1=
++++ __conda_exe shell.posix activate
++++ /opt/miniconda3/bin/conda shell.posix activate
+++ ask_conda='PS1='\''(base) '\''
+export PATH='\''/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3'\''
+export CONDA_SHLVL='\''1'\''
+export CONDA_DEFAULT_ENV='\''base'\''
+export CONDA_PROMPT_MODIFIER='\''(base) '\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
+++ eval 'PS1='\''(base) '\''
+export PATH='\''/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3'\''
+export CONDA_SHLVL='\''1'\''
+export CONDA_DEFAULT_ENV='\''base'\''
+export CONDA_PROMPT_MODIFIER='\''(base) '\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
++++ PS1='(base) '
++++ export PATH=/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++++ PATH=/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++++ export CONDA_PREFIX=/opt/miniconda3
++++ CONDA_PREFIX=/opt/miniconda3
++++ export CONDA_SHLVL=1
++++ CONDA_SHLVL=1
++++ export CONDA_DEFAULT_ENV=base
++++ CONDA_DEFAULT_ENV=base
++++ export 'CONDA_PROMPT_MODIFIER=(base) '
++++ CONDA_PROMPT_MODIFIER='(base) '
++++ export CONDA_EXE=/opt/miniconda3/bin/conda
++++ CONDA_EXE=/opt/miniconda3/bin/conda
++++ export _CE_M=
++++ _CE_M=
++++ export _CE_CONDA=
++++ _CE_CONDA=
++++ export CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++++ CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
+++ __conda_hashr
+++ '[' -n '' ']'
+++ '[' -n '' ']'
+++ hash -r
++ conda activate testbed
++ local cmd=activate
++ case "$cmd" in
++ __conda_activate activate testbed
++ '[' -n '' ']'
++ local ask_conda
+++ PS1='(base) '
+++ __conda_exe shell.posix activate testbed
+++ /opt/miniconda3/bin/conda shell.posix activate testbed
++ ask_conda='PS1='\''(testbed) '\''
+export PATH='\''/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3/envs/testbed'\''
+export CONDA_SHLVL='\''2'\''
+export CONDA_DEFAULT_ENV='\''testbed'\''
+export CONDA_PROMPT_MODIFIER='\''(testbed) '\''
+export CONDA_PREFIX_1='\''/opt/miniconda3'\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
++ eval 'PS1='\''(testbed) '\''
+export PATH='\''/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3/envs/testbed'\''
+export CONDA_SHLVL='\''2'\''
+export CONDA_DEFAULT_ENV='\''testbed'\''
+export CONDA_PROMPT_MODIFIER='\''(testbed) '\''
+export CONDA_PREFIX_1='\''/opt/miniconda3'\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
+++ PS1='(testbed) '
+++ export PATH=/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ PATH=/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ export CONDA_PREFIX=/opt/miniconda3/envs/testbed
+++ CONDA_PREFIX=/opt/miniconda3/envs/testbed
+++ export CONDA_SHLVL=2
+++ CONDA_SHLVL=2
+++ export CONDA_DEFAULT_ENV=testbed
+++ CONDA_DEFAULT_ENV=testbed
+++ export 'CONDA_PROMPT_MODIFIER=(testbed) '
+++ CONDA_PROMPT_MODIFIER='(testbed) '
+++ export CONDA_PREFIX_1=/opt/miniconda3
+++ CONDA_PREFIX_1=/opt/miniconda3
+++ export CONDA_EXE=/opt/miniconda3/bin/conda
+++ CONDA_EXE=/opt/miniconda3/bin/conda
+++ export _CE_M=
+++ _CE_M=
+++ export _CE_CONDA=
+++ _CE_CONDA=
+++ export CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
+++ CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++ __conda_hashr
++ '[' -n '' ']'
++ '[' -n '' ']'
++ hash -r
++ cd /testbed
++ git diff HEAD 0773837e15bb632afffb6848a58c59a791008fa1
++ sed -i '/en_US.UTF-8/s/^# //g' /etc/locale.gen
++ locale-gen
+Generating locales (this might take a while)...
+  en_US.UTF-8... done
+Generation complete.
++ export LANG=en_US.UTF-8
++ LANG=en_US.UTF-8
++ export LANGUAGE=en_US:en
++ LANGUAGE=en_US:en
++ export LC_ALL=en_US.UTF-8
++ LC_ALL=en_US.UTF-8
++ git config --global --add safe.directory /testbed
++ cd /testbed
++ git status
+On branch main
+nothing to commit, working tree clean
++ git show
+commit 0773837e15bb632afffb6848a58c59a791008fa1
+Author: Hannes Ljungberg <hannes.ljungberg@gmail.com>
+Date:   Mon Nov 9 17:54:20 2020 +0100
+
+    Fixed #32182 -- Fixed crash of JSONField nested key transforms with subquery annotations on PostgreSQL.
+
+diff --git a/django/db/models/fields/json.py b/django/db/models/fields/json.py
+index 5b0272a945..94596556d2 100644
+--- a/django/db/models/fields/json.py
++++ b/django/db/models/fields/json.py
+@@ -302,7 +302,8 @@ class KeyTransform(Transform):
+     def as_postgresql(self, compiler, connection):
+         lhs, params, key_transforms = self.preprocess_lhs(compiler, connection)
+         if len(key_transforms) > 1:
+-            return '(%s %s %%s)' % (lhs, self.postgres_nested_operator), params + [key_transforms]
++            sql = '(%s %s %%s)' % (lhs, self.postgres_nested_operator)
++            return sql, tuple(params) + (key_transforms,)
+         try:
+             lookup = int(self.key_name)
+         except ValueError:
+diff --git a/docs/releases/3.1.4.txt b/docs/releases/3.1.4.txt
+index 6641b0aaf5..02408cca68 100644
+--- a/docs/releases/3.1.4.txt
++++ b/docs/releases/3.1.4.txt
+@@ -14,3 +14,6 @@ Bugfixes
+ 
+ * Fixed passing extra HTTP headers to ``AsyncRequestFactory`` request methods
+   (:ticket:`32159`).
++
++* Fixed crash of key transforms for :class:`~django.db.models.JSONField` on
++  PostgreSQL when using on a ``Subquery()`` annotation (:ticket:`32182`).
+diff --git a/tests/model_fields/test_jsonfield.py b/tests/model_fields/test_jsonfield.py
+index 1c63d70bf9..e39e3fe757 100644
+--- a/tests/model_fields/test_jsonfield.py
++++ b/tests/model_fields/test_jsonfield.py
+@@ -408,6 +408,18 @@ class TestQuerying(TestCase):
+             [self.objs[4]],
+         )
+ 
++    def test_nested_key_transform_on_subquery(self):
++        self.assertSequenceEqual(
++            NullableJSONModel.objects.filter(value__d__0__isnull=False).annotate(
++                subquery_value=Subquery(
++                    NullableJSONModel.objects.filter(pk=OuterRef('pk')).values('value')
++                ),
++                key=KeyTransform('d', 'subquery_value'),
++                chain=KeyTransform('f', KeyTransform('1', 'key')),
++            ).filter(chain='g'),
++            [self.objs[4]],
++        )
++
+     def test_expression_wrapper_key_transform(self):
+         self.assertSequenceEqual(
+             NullableJSONModel.objects.annotate(
++ git diff 0773837e15bb632afffb6848a58c59a791008fa1
++ source /opt/miniconda3/bin/activate
+++ _CONDA_ROOT=/opt/miniconda3
+++ . /opt/miniconda3/etc/profile.d/conda.sh
++++ export CONDA_EXE=/opt/miniconda3/bin/conda
++++ CONDA_EXE=/opt/miniconda3/bin/conda
++++ export _CE_M=
++++ _CE_M=
++++ export _CE_CONDA=
++++ _CE_CONDA=
++++ export CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++++ CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++++ '[' -z x ']'
+++ conda activate
+++ local cmd=activate
+++ case "$cmd" in
+++ __conda_activate activate
+++ '[' -n '' ']'
+++ local ask_conda
++++ PS1='(testbed) '
++++ __conda_exe shell.posix activate
++++ /opt/miniconda3/bin/conda shell.posix activate
+++ ask_conda='PS1='\''(base) '\''
+export PATH='\''/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3'\''
+export CONDA_SHLVL='\''3'\''
+export CONDA_DEFAULT_ENV='\''base'\''
+export CONDA_PROMPT_MODIFIER='\''(base) '\''
+export CONDA_PREFIX_2='\''/opt/miniconda3/envs/testbed'\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
+++ eval 'PS1='\''(base) '\''
+export PATH='\''/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3'\''
+export CONDA_SHLVL='\''3'\''
+export CONDA_DEFAULT_ENV='\''base'\''
+export CONDA_PROMPT_MODIFIER='\''(base) '\''
+export CONDA_PREFIX_2='\''/opt/miniconda3/envs/testbed'\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
++++ PS1='(base) '
++++ export PATH=/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++++ PATH=/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++++ export CONDA_PREFIX=/opt/miniconda3
++++ CONDA_PREFIX=/opt/miniconda3
++++ export CONDA_SHLVL=3
++++ CONDA_SHLVL=3
++++ export CONDA_DEFAULT_ENV=base
++++ CONDA_DEFAULT_ENV=base
++++ export 'CONDA_PROMPT_MODIFIER=(base) '
++++ CONDA_PROMPT_MODIFIER='(base) '
++++ export CONDA_PREFIX_2=/opt/miniconda3/envs/testbed
++++ CONDA_PREFIX_2=/opt/miniconda3/envs/testbed
++++ export CONDA_EXE=/opt/miniconda3/bin/conda
++++ CONDA_EXE=/opt/miniconda3/bin/conda
++++ export _CE_M=
++++ _CE_M=
++++ export _CE_CONDA=
++++ _CE_CONDA=
++++ export CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++++ CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
+++ __conda_hashr
+++ '[' -n '' ']'
+++ '[' -n '' ']'
+++ hash -r
++ conda activate testbed
++ local cmd=activate
++ case "$cmd" in
++ __conda_activate activate testbed
++ '[' -n '' ']'
++ local ask_conda
+++ PS1='(base) '
+++ __conda_exe shell.posix activate testbed
+++ /opt/miniconda3/bin/conda shell.posix activate testbed
++ ask_conda='PS1='\''(testbed) '\''
+export PATH='\''/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3/envs/testbed'\''
+export CONDA_SHLVL='\''4'\''
+export CONDA_DEFAULT_ENV='\''testbed'\''
+export CONDA_PROMPT_MODIFIER='\''(testbed) '\''
+export CONDA_PREFIX_3='\''/opt/miniconda3'\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
++ eval 'PS1='\''(testbed) '\''
+export PATH='\''/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3/envs/testbed'\''
+export CONDA_SHLVL='\''4'\''
+export CONDA_DEFAULT_ENV='\''testbed'\''
+export CONDA_PROMPT_MODIFIER='\''(testbed) '\''
+export CONDA_PREFIX_3='\''/opt/miniconda3'\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
+++ PS1='(testbed) '
+++ export PATH=/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ PATH=/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ export CONDA_PREFIX=/opt/miniconda3/envs/testbed
+++ CONDA_PREFIX=/opt/miniconda3/envs/testbed
+++ export CONDA_SHLVL=4
+++ CONDA_SHLVL=4
+++ export CONDA_DEFAULT_ENV=testbed
+++ CONDA_DEFAULT_ENV=testbed
+++ export 'CONDA_PROMPT_MODIFIER=(testbed) '
+++ CONDA_PROMPT_MODIFIER='(testbed) '
+++ export CONDA_PREFIX_3=/opt/miniconda3
+++ CONDA_PREFIX_3=/opt/miniconda3
+++ export CONDA_EXE=/opt/miniconda3/bin/conda
+++ CONDA_EXE=/opt/miniconda3/bin/conda
+++ export _CE_M=
+++ _CE_M=
+++ export _CE_CONDA=
+++ _CE_CONDA=
+++ export CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
+++ CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++ __conda_hashr
++ '[' -n '' ']'
++ '[' -n '' ']'
++ hash -r
++ python -m pip install -e .
+Obtaining file:///testbed
+Requirement already satisfied: asgiref>=3.2.10 in /opt/miniconda3/envs/testbed/lib/python3.6/site-packages (from Django==3.2) (3.4.1)
+Requirement already satisfied: pytz in /opt/miniconda3/envs/testbed/lib/python3.6/site-packages (from Django==3.2) (2026.6)
+Requirement already satisfied: sqlparse>=0.2.2 in /opt/miniconda3/envs/testbed/lib/python3.6/site-packages (from Django==3.2) (0.4.4)
+Requirement already satisfied: typing-extensions in /opt/miniconda3/envs/testbed/lib/python3.6/site-packages (from asgiref>=3.2.10->Django==3.2) (4.1.1)
+Installing collected packages: Django
+  Attempting uninstall: Django
+    Found existing installation: Django 3.2
+    Uninstalling Django-3.2:
+      Successfully uninstalled Django-3.2
+  Running setup.py develop for Django
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+Successfully installed Django-3.2
++ git apply -v -
+Checking patch tests/user_commands/tests.py...
+warning: tests/user_commands/tests.py has type 100644, expected 100755
+Applied patch tests/user_commands/tests.py cleanly.
++ python3 /root/trace.py --count -C coverage.cover --include-pattern '/testbed/(django/core/management/__init__\.py)' ./tests/runtests.py --verbosity 2 --settings=test_sqlite --parallel 1 user_commands.tests
+test_disallowed_abbreviated_options (user_commands.tests.CommandRunTests) ... FAIL
+test_script_prefix_set_in_commands (user_commands.tests.CommandRunTests) ... ['--count', '-C', 'coverage.cover', '--include-pattern', '/testbed/(django/core/management/__init__\\.py)']
+Testing against Django installed in '/testbed/django'
+Importing application user_commands
+Skipping setup of unused database(s): default, other.
+System check identified no issues (0 silenced).
+FAIL
+test_skip_checks (user_commands.tests.CommandRunTests) ... FAIL
+test_call_command_no_checks (user_commands.tests.CommandTests) ... ok
+test_call_command_option_parsing (user_commands.tests.CommandTests) ... ok
+test_call_command_option_parsing_non_string_arg (user_commands.tests.CommandTests) ... ok
+test_call_command_unrecognized_option (user_commands.tests.CommandTests) ... ok
+test_call_command_with_required_parameters_in_mixed_options (user_commands.tests.CommandTests) ... ok
+test_call_command_with_required_parameters_in_options (user_commands.tests.CommandTests) ... ok
+test_calling_a_command_with_no_app_labels_and_parameters_should_raise_a_command_error (user_commands.tests.CommandTests) ... ok
+test_calling_a_command_with_only_empty_parameter_should_ends_gracefully (user_commands.tests.CommandTests) ... ok
+test_calling_command_with_app_labels_and_parameters_should_be_ok (user_commands.tests.CommandTests) ... ok
+test_calling_command_with_parameters_and_app_labels_at_the_end_should_be_ok (user_commands.tests.CommandTests) ... ok
+test_check_migrations (user_commands.tests.CommandTests) ... ok
+test_command (user_commands.tests.CommandTests) ... ok
+test_command_add_arguments_after_common_arguments (user_commands.tests.CommandTests) ... ok
+test_command_style (user_commands.tests.CommandTests) ... ok
+test_create_parser_kwargs (user_commands.tests.CommandTests)
+BaseCommand.create_parser() passes kwargs to CommandParser. ... ok
+test_discover_commands_in_eggs (user_commands.tests.CommandTests) ... ok
+test_explode (user_commands.tests.CommandTests)
+An unknown command raises CommandError ... ok
+test_find_command_without_PATH (user_commands.tests.CommandTests) ... ok
+test_language_preserved (user_commands.tests.CommandTests) ... ok
+test_management_utility_uses_custom_argv_prog_name (user_commands.tests.CommandTests) ... ERROR
+test_mutually_exclusive_group_required_const_options (user_commands.tests.CommandTests) ... ok
+test_mutually_exclusive_group_required_options (user_commands.tests.CommandTests) ... ok
+test_no_translations_deactivate_translations (user_commands.tests.CommandTests) ... ok
+test_output_transaction (user_commands.tests.CommandTests) ... ok
+test_outputwrapper_flush (user_commands.tests.CommandTests) ... ok
+test_required_const_options (user_commands.tests.CommandTests) ... ok
+test_required_list_option (user_commands.tests.CommandTests) ... ok
+test_requires_system_checks_empty (user_commands.tests.CommandTests) ... ok
+test_requires_system_checks_invalid (user_commands.tests.CommandTests) ... ok
+test_requires_system_checks_specific (user_commands.tests.CommandTests) ... ok
+test_subparser (user_commands.tests.CommandTests) ... ok
+test_subparser_dest_args (user_commands.tests.CommandTests) ... ok
+test_subparser_dest_required_args (user_commands.tests.CommandTests) ... ok
+test_subparser_invalid_option (user_commands.tests.CommandTests) ... ok
+test_system_exit (user_commands.tests.CommandTests)
+Exception raised in a command should raise CommandError with ... ok
+test_requires_system_checks_false (user_commands.tests.DeprecationTests) ... ok
+test_requires_system_checks_true (user_commands.tests.DeprecationTests) ... ok
+test_requires_system_checks_warning (user_commands.tests.DeprecationTests) ... ok
+test_get_random_secret_key (user_commands.tests.UtilsTests) ... ok
+test_is_ignored_path_false (user_commands.tests.UtilsTests) ... ok
+test_is_ignored_path_true (user_commands.tests.UtilsTests) ... ok
+test_no_existent_external_program (user_commands.tests.UtilsTests) ... ok
+test_normalize_path_patterns_truncates_wildcard_base (user_commands.tests.UtilsTests) ... ok
+
+======================================================================
+ERROR: test_management_utility_uses_custom_argv_prog_name (user_commands.tests.CommandTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/testbed/lib/python3.6/unittest/mock.py", line 1183, in patched
+    return func(*args, **keywargs)
+  File "./tests/user_commands/tests.py", line 61, in test_management_utility_uses_custom_argv_prog_name
+    management.execute_from_command_line(['custom_prog', 'help'])
+  File "/testbed/django/core/management/__init__.py", line 414, in execute_from_command_line
+    utility.execute()
+  File "/testbed/django/core/management/__init__.py", line 347, in execute
+    parser = CommandParser(usage='%(prog)s subcommand [options] [args]', add_help=False, allow_abbrev=False)
+  File "/testbed/django/core/management/base.py", line 54, in __init__
+    super().__init__(**kwargs)
+  File "/opt/miniconda3/envs/testbed/lib/python3.6/argparse.py", line 1626, in __init__
+    prog = _os.path.basename(_sys.argv[0])
+  File "/opt/miniconda3/envs/testbed/lib/python3.6/posixpath.py", line 146, in basename
+    p = os.fspath(p)
+TypeError: expected str, bytes or os.PathLike object, not NoneType
+
+======================================================================
+FAIL: test_disallowed_abbreviated_options (user_commands.tests.CommandRunTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "./tests/user_commands/tests.py", line 396, in test_disallowed_abbreviated_options
+    self.assertNoOutput(err)
+  File "./tests/admin_scripts/tests.py", line 149, in assertNoOutput
+    self.assertEqual(len(stream), 0, "Stream should be empty: actually contains '%s'" % stream)
+AssertionError: 1308 != 0 : Stream should be empty: actually contains 'Traceback (most recent call last):
+  File "/root/trace.py", line 1119, in <module>
+    main()
+  File "/root/trace.py", line 1106, in main
+    t.runctx(code, globs, globs)
+  File "/root/trace.py", line 771, in runctx
+    exec(cmd, globals, locals)
+  File "./manage.py", line 22, in <module>
+    main()
+  File "./manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/testbed/django/core/management/__init__.py", line 414, in execute_from_command_line
+    utility.execute()
+  File "/testbed/django/core/management/__init__.py", line 390, in execute
+    django.setup()
+  File "/testbed/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/testbed/django/apps/registry.py", line 91, in populate
+    app_config = AppConfig.create(entry)
+  File "/testbed/django/apps/config.py", line 210, in create
+    import_module(entry)
+  File "/opt/miniconda3/envs/testbed/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'user_commands'
+'
+
+======================================================================
+FAIL: test_script_prefix_set_in_commands (user_commands.tests.CommandRunTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "./tests/user_commands/tests.py", line 386, in test_script_prefix_set_in_commands
+    self.assertNoOutput(err)
+  File "./tests/admin_scripts/tests.py", line 149, in assertNoOutput
+    self.assertEqual(len(stream), 0, "Stream should be empty: actually contains '%s'" % stream)
+AssertionError: 1308 != 0 : Stream should be empty: actually contains 'Traceback (most recent call last):
+  File "/root/trace.py", line 1119, in <module>
+    main()
+  File "/root/trace.py", line 1106, in main
+    t.runctx(code, globs, globs)
+  File "/root/trace.py", line 771, in runctx
+    exec(cmd, globals, locals)
+  File "./manage.py", line 22, in <module>
+    main()
+  File "./manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/testbed/django/core/management/__init__.py", line 414, in execute_from_command_line
+    utility.execute()
+  File "/testbed/django/core/management/__init__.py", line 390, in execute
+    django.setup()
+  File "/testbed/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/testbed/django/apps/registry.py", line 91, in populate
+    app_config = AppConfig.create(entry)
+  File "/testbed/django/apps/config.py", line 210, in create
+    import_module(entry)
+  File "/opt/miniconda3/envs/testbed/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'user_commands'
+'
+
+======================================================================
+FAIL: test_skip_checks (user_commands.tests.CommandRunTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "./tests/user_commands/tests.py", line 406, in test_skip_checks
+    self.assertNoOutput(err)
+  File "./tests/admin_scripts/tests.py", line 149, in assertNoOutput
+    self.assertEqual(len(stream), 0, "Stream should be empty: actually contains '%s'" % stream)
+AssertionError: 1308 != 0 : Stream should be empty: actually contains 'Traceback (most recent call last):
+  File "/root/trace.py", line 1119, in <module>
+    main()
+  File "/root/trace.py", line 1106, in main
+    t.runctx(code, globs, globs)
+  File "/root/trace.py", line 771, in runctx
+    exec(cmd, globals, locals)
+  File "./manage.py", line 22, in <module>
+    main()
+  File "./manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/testbed/django/core/management/__init__.py", line 414, in execute_from_command_line
+    utility.execute()
+  File "/testbed/django/core/management/__init__.py", line 390, in execute
+    django.setup()
+  File "/testbed/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/testbed/django/apps/registry.py", line 91, in populate
+    app_config = AppConfig.create(entry)
+  File "/testbed/django/apps/config.py", line 210, in create
+    import_module(entry)
+  File "/opt/miniconda3/envs/testbed/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'user_commands'
+'
+
+----------------------------------------------------------------------
+Ran 46 tests in 0.573s
+
+FAILED (failures=3, errors=1)
++ cat coverage.cover
+{"/testbed/django/core/management/__init__.py": {"1": 1, "2": 1, "3": 1, "4": 1, "5": 1, "8": 1, "9": 1, "10": 1, "12": 1, "13": 1, "14": 1, "15": 1, "16": 1, "19": 1, "20": 1, "23": 1, "33": 1, "43": 1, "78": 1, "184": 2, "411": 1, "28": 18, "29": 173, "30": 137, "39": 51, "40": 51, "66": 78, "68": 3, "69": 0, "71": 17, "72": 14, "73": 92, "75": 3, "98": 53, "100": 2, "101": 2, "104": 51, "105": 51, "106": 1, "107": 1, "109": 50, "111": 0, "113": 50, "116": 52, "118": 776, "120": 724, "122": 177, "123": 52, "124": 84, "125": 32, "126": 2, "128": 30, "130": 52, "139": 52, "140": 119, "142": 67, "147": 730, "149": 678, "150": 33, "152": 18, "153": 18, "154": 10, "155": 8, "156": 8, "157": 2, "159": 6, "160": 52, "161": 50, "163": 50, "164": 750, "165": 50, "166": 50, "167": 50, "168": 3, "169": 3, "171": 3, "172": 3, "173": 3, "177": 47, "178": 47, "179": 45, "181": 47, "132": 742, "133": 684, "134": 12, "135": 6, "137": 678, "143": 135, "188": 1, "195": 1, "228": 1, "260": 1, "334": 1, "189": 2, "190": 2, "191": 2, "192": 0, "193": 2, "197": 0, "198": 0, "201": 0, "202": 0, "203": 0, "204": 0, "206": 0, "207": 0, "208": 0, "209": 0, "211": 0, "212": 0, "213": 0, "214": 0, "215": 0, "216": 0, "217": 0, "218": 0, "220": 0, "221": 0, "222": 0, "224": 0, "226": 0, "235": 1, "236": 1, "237": 1, "238": 0, "239": 0, "244": 0, "245": 0, "246": 0, "247": 0, "248": 0, "249": 0, "250": 0, "251": 0, "252": 0, "253": 1, "255": 0, "257": 1, "258": 1, "282": 1, "283": 1, "285": 0, "286": 0, "288": 0, "289": 0, "290": 0, "291": 0, "293": 0, "294": 0, "297": 0, "298": 0, "301": 0, "302": 0, "304": 0, "305": 0, "306": 0, "308": 0, "309": 0, "312": 0, "313": 0, "314": 0, "315": 0, "316": 0, "319": 0, "320": 0, "323": 0, "324": 0, "326": 0, "327": 0, "328": 0, "332": 0, "339": 2, "340": 2, "341": 0, "342": 0, "347": 2, "348": 1, "349": 1, "350": 1, "351": 1, "352": 1, "353": 1, "354": 0, "355": 0, "357": 1, "358": 1, "359": 0, "360": 0, "361": 0, "362": 0, "364": 1, "368": 1, "369": 0, "370": 0, "371": 0, "375": 0, "376": 0, "377": 0, "383": 0, "384": 0, "385": 0, "386": 0, "390": 1, "392": 1, "394": 1, "395": 0, "396": 0, "397": 0, "398": 0, "400": 0, "403": 1, "404": 0, "405": 1, "406": 0, "408": 1, "413": 1, "414": 1}}
++ git checkout 0773837e15bb632afffb6848a58c59a791008fa1
+Note: switching to '0773837e15bb632afffb6848a58c59a791008fa1'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 0773837e15 Fixed #32182 -- Fixed crash of JSONField nested key transforms with subquery annotations on PostgreSQL.
+M	tests/user_commands/tests.py
++ git apply /root/pre_state.patch
+error: unrecognized input

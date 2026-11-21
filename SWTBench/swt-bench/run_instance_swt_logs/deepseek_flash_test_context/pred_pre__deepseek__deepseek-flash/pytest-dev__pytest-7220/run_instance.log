@@ -1,0 +1,47 @@
+2026-11-19 15:29:38,979 - WARNING - Starting evaluation at 1795127378.9797196
+2026-11-19 15:29:39,086 - INFO - Creating container for pytest-dev__pytest-7220...
+2026-11-19 15:29:39,119 - INFO - Container for pytest-dev__pytest-7220 created: 414f26fb40f09a0c745e72311a99d5b5543cdba48785c930fb4b1399f6d227f2
+2026-11-19 15:29:39,218 - INFO - Container for pytest-dev__pytest-7220 started: 414f26fb40f09a0c745e72311a99d5b5543cdba48785c930fb4b1399f6d227f2
+2026-11-19 15:29:39,376 - INFO - Git diff before:
+
+2026-11-19 15:29:39,379 - INFO - Eval script for pytest-dev__pytest-7220 written to eval.sh, now applying to container...
+2026-11-19 15:29:47,808 - INFO - Test output for pytest-dev__pytest-7220 written to run_instance_swt_logs/deepseek_flash_test_context/pred_pre__deepseek__deepseek-flash/pytest-dev__pytest-7220/test_output.txt
+2026-11-19 15:29:47,845 - INFO - Git diff after:
+diff --git a/testing/test_terminal.py b/testing/test_terminal.py
+index 0f5b4cb68..80c16fb60 100644
+--- a/testing/test_terminal.py
++++ b/testing/test_terminal.py
+@@ -2177,3 +2177,28 @@ class TestCodeHighlight:
+                 ]
+             )
+         )
++
++
++def test_failure_path_after_fixture_chdir(testdir):
++    """The failure path should be relative to the original working directory."""
++    testdir.makepyfile(
++        test_path_error="""
++        import os
++
++        import pytest
++
++        @pytest.fixture
++        def change_dir():
++            old_dir = os.getcwd()
++            os.mkdir("subdir")
++            os.chdir("subdir")
++            yield
++            os.chdir(old_dir)
++
++        def test_failure(change_dir):
++            assert False
++        """
++    )
++    result = testdir.runpytest()
++    result.stdout.fnmatch_lines(["test_path_error.py:*: AssertionError"])
++    result.stdout.no_fnmatch_line("*../test_path_error.py:*")
+2026-11-19 15:29:47,846 - INFO - Git diff changed after running eval script
+2026-11-19 15:29:47,846 - INFO - Attempting to stop container exec.eval.x86_64.bfa0b4daea744b5aaefba0.0ac742aae04648a96a8848.131896705644688...
+2026-11-19 15:30:03,031 - INFO - Attempting to remove container exec.eval.x86_64.bfa0b4daea744b5aaefba0.0ac742aae04648a96a8848.131896705644688...
+2026-11-19 15:30:03,079 - INFO - Container exec.eval.x86_64.bfa0b4daea744b5aaefba0.0ac742aae04648a96a8848.131896705644688 removed.
+2026-11-19 15:30:03,079 - WARNING - End of eval at 1795127403.079804

@@ -1,0 +1,33 @@
+2026-11-19 14:41:38,657 - WARNING - Starting evaluation at 1795124498.657556
+2026-11-19 14:41:38,772 - INFO - Creating container for sympy__sympy-11897...
+2026-11-19 14:41:38,804 - INFO - Container for sympy__sympy-11897 created: 17be98d4ce946bf581f1e993e7e3823494427e88d55501806259ea5a3cc4fbb4
+2026-11-19 14:41:38,921 - INFO - Container for sympy__sympy-11897 started: 17be98d4ce946bf581f1e993e7e3823494427e88d55501806259ea5a3cc4fbb4
+2026-11-19 14:41:39,299 - INFO - Git diff before:
+
+2026-11-19 14:41:39,302 - INFO - Eval script for sympy__sympy-11897 written to eval.sh, now applying to container...
+2026-11-19 14:41:44,091 - INFO - Test output for sympy__sympy-11897 written to run_instance_swt_logs/deepseek_flash_test_baseline/pred_pre__deepseek__deepseek-flash/sympy__sympy-11897/test_output.txt
+2026-11-19 14:41:44,129 - INFO - Git diff after:
+diff --git a/sympy/printing/tests/test_latex.py b/sympy/printing/tests/test_latex.py
+index 8a70549050..9aa77a4b53 100644
+--- a/sympy/printing/tests/test_latex.py
++++ b/sympy/printing/tests/test_latex.py
+@@ -994,6 +994,15 @@ def test_latex_pow_fraction():
+     assert '3^{-x}' in latex(3**-x/2).replace(' ', '')
+ 
+ 
++def test_latex_mul_negative_irrational_power():
++    # The pretty printer leaves negative non-rational powers in the numerator.
++    # The LaTeX printer should do the same rather than moving them into the
++    # denominator.
++    assert latex(2*x**(-pi)) == r"2 x^{- \pi}"
++    assert latex(2*x**(-sqrt(2))) == r"2 x^{- \sqrt{2}}"
++    assert latex(2*(x + y)**(-pi)) == r"2 \left(x + y\right)^{- \pi}"
++
++
+ def test_noncommutative():
+     A, B, C = symbols('A,B,C', commutative=False)
+2026-11-19 14:41:44,130 - INFO - Git diff changed after running eval script
+2026-11-19 14:41:44,131 - INFO - Attempting to stop container exec.eval.x86_64.deec2122407a414e380748.ac13b229d0305e89d94ded.125556472319824...
+2026-11-19 14:41:59,311 - INFO - Attempting to remove container exec.eval.x86_64.deec2122407a414e380748.ac13b229d0305e89d94ded.125556472319824...
+2026-11-19 14:41:59,345 - INFO - Container exec.eval.x86_64.deec2122407a414e380748.ac13b229d0305e89d94ded.125556472319824 removed.
+2026-11-19 14:41:59,346 - WARNING - End of eval at 1795124519.3463042

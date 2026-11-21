@@ -1,0 +1,61 @@
+2026-11-19 15:15:18,107 - WARNING - Starting evaluation at 1795126518.1069922
+2026-11-19 15:15:18,235 - INFO - Creating container for psf__requests-2317...
+2026-11-19 15:15:18,266 - INFO - Container for psf__requests-2317 created: fbc884f897a4d71b54a447b225e12b54a3193eb03a36c716f8ce33d89b308c2c
+2026-11-19 15:15:18,392 - INFO - Container for psf__requests-2317 started: fbc884f897a4d71b54a447b225e12b54a3193eb03a36c716f8ce33d89b308c2c
+2026-11-19 15:15:18,447 - INFO - Git diff before:
+
+2026-11-19 15:15:18,450 - INFO - Eval script for psf__requests-2317 written to eval.sh, now applying to container...
+2026-11-19 15:22:53,488 - INFO - Test output for psf__requests-2317 written to run_instance_swt_logs/deepseek_flash_test_context/pred_post__deepseek__deepseek-flash/psf__requests-2317/test_output.txt
+2026-11-19 15:22:53,527 - INFO - Git diff after:
+diff --git a/requests/sessions.py b/requests/sessions.py
+index d701ff2e..dfce7cf9 100644
+--- a/requests/sessions.py
++++ b/requests/sessions.py
+@@ -13,7 +13,7 @@ from collections import Mapping
+ from datetime import datetime
+ 
+ from .auth import _basic_auth_str
+-from .compat import cookielib, OrderedDict, urljoin, urlparse, builtin_str
++from .compat import cookielib, OrderedDict, urljoin, urlparse
+ from .cookies import (
+     cookiejar_from_dict, extract_cookies_to_jar, RequestsCookieJar, merge_cookies)
+ from .models import Request, PreparedRequest, DEFAULT_REDIRECT_LIMIT
+@@ -425,7 +425,7 @@ class Session(SessionRedirectMixin):
+             If Tuple, ('cert', 'key') pair.
+         """
+ 
+-        method = builtin_str(method)
++        method = to_native_string(method)
+ 
+         # Create the Request.
+         req = Request(
+diff --git a/test_requests.py b/test_requests.py
+index 467c5bc6..bee1ecaf 100755
+--- a/test_requests.py
++++ b/test_requests.py
+@@ -523,6 +523,20 @@ class RequestsTestCase(unittest.TestCase):
+             method=u('POST'), url=httpbin('post'), files=files)
+         assert r.status_code == 200
+ 
++    def test_bytes_method_name(self):
++        session = requests.Session()
++        sent = []
++
++        def capture_send(request, **kwargs):
++            sent.append(request)
++            return requests.Response()
++
++        session.send = capture_send
++        session.request(method=b'GET', url='http://example.com/')
++
++        assert len(sent) == 1
++        assert sent[0].method == 'GET'
++
+     def test_custom_content_type(self):
+         r = requests.post(
+             httpbin('post'),
+2026-11-19 15:22:53,528 - INFO - Git diff changed after running eval script
+2026-11-19 15:22:53,528 - INFO - Attempting to stop container exec.eval.x86_64.3a9417a9d4b5c62087edb6.5f7d4c21322e5beca90b73.131896724485568...
+2026-11-19 15:23:08,714 - INFO - Attempting to remove container exec.eval.x86_64.3a9417a9d4b5c62087edb6.5f7d4c21322e5beca90b73.131896724485568...
+2026-11-19 15:23:08,744 - INFO - Container exec.eval.x86_64.3a9417a9d4b5c62087edb6.5f7d4c21322e5beca90b73.131896724485568 removed.
+2026-11-19 15:23:08,745 - WARNING - End of eval at 1795126988.7450817

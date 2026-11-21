@@ -1,0 +1,31 @@
+2026-11-19 15:43:06,635 - WARNING - Starting evaluation at 1795128186.6353092
+2026-11-19 15:43:06,743 - INFO - Creating container for sympy__sympy-13915...
+2026-11-19 15:43:06,773 - INFO - Container for sympy__sympy-13915 created: 3d784b0ea94dd13e6ac0fab7a2684cc288504f1fb7b0e60a649fb5bbea0bb877
+2026-11-19 15:43:06,883 - INFO - Container for sympy__sympy-13915 started: 3d784b0ea94dd13e6ac0fab7a2684cc288504f1fb7b0e60a649fb5bbea0bb877
+2026-11-19 15:43:07,331 - INFO - Git diff before:
+
+2026-11-19 15:43:07,333 - INFO - Eval script for sympy__sympy-13915 written to eval.sh, now applying to container...
+2026-11-19 15:43:14,056 - INFO - Test output for sympy__sympy-13915 written to run_instance_swt_logs/deepseek_flash_test_context/pred_pre__deepseek__deepseek-flash/sympy__sympy-13915/test_output.txt
+2026-11-19 15:43:14,092 - INFO - Git diff after:
+diff --git a/sympy/core/tests/test_subs.py b/sympy/core/tests/test_subs.py
+index 90abb9e374..f36b4423ae 100644
+--- a/sympy/core/tests/test_subs.py
++++ b/sympy/core/tests/test_subs.py
+@@ -779,3 +779,12 @@ def test_issue_12657():
+     reps = [(-oo, 2), (oo, 1)]
+     assert (x < oo).subs(reps) == (x < 1)
+     assert (x < oo).subs(list(reversed(reps))) == (x < 1)
++
++
++def test_undefined_result_after_substitution():
++    # Substituting b -> a makes individual terms undefined.  The result
++    # should therefore be nan rather than simplifying to 1 by cancelling
++    # two equal-looking undefined subexpressions.
++    a, b = symbols('a b')
++    r = (1/(a + b) + 1/(a - b))/(1/(a + b) - 1/(a - b))
++    assert r.subs(b, a) is S.NaN
+2026-11-19 15:43:14,093 - INFO - Git diff changed after running eval script
+2026-11-19 15:43:14,093 - INFO - Attempting to stop container exec.eval.x86_64.deec2122407a414e380748.ef0c45e0de59e417b0ce7b.131896705815312...
+2026-11-19 15:43:29,288 - INFO - Attempting to remove container exec.eval.x86_64.deec2122407a414e380748.ef0c45e0de59e417b0ce7b.131896705815312...
+2026-11-19 15:43:29,319 - INFO - Container exec.eval.x86_64.deec2122407a414e380748.ef0c45e0de59e417b0ce7b.131896705815312 removed.
+2026-11-19 15:43:29,320 - WARNING - End of eval at 1795128209.3199959

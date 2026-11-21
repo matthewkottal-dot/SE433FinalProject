@@ -1,0 +1,40 @@
+2026-11-19 14:29:46,574 - WARNING - Starting evaluation at 1795123786.574904
+2026-11-19 14:29:46,694 - INFO - Creating container for pytest-dev__pytest-7490...
+2026-11-19 14:29:46,733 - INFO - Container for pytest-dev__pytest-7490 created: 3574056de57d5265735cc4d066bd0615e8be9c6d93d7a7cf27fe9931f70450d1
+2026-11-19 14:29:46,850 - INFO - Container for pytest-dev__pytest-7490 started: 3574056de57d5265735cc4d066bd0615e8be9c6d93d7a7cf27fe9931f70450d1
+2026-11-19 14:29:47,013 - INFO - Git diff before:
+
+2026-11-19 14:29:47,016 - INFO - Eval script for pytest-dev__pytest-7490 written to eval.sh, now applying to container...
+2026-11-19 14:29:52,979 - INFO - Test output for pytest-dev__pytest-7490 written to run_instance_swt_logs/deepseek_flash_test_baseline/pred_pre__deepseek__deepseek-flash/pytest-dev__pytest-7490/test_output.txt
+2026-11-19 14:29:53,017 - INFO - Git diff after:
+diff --git a/testing/test_skipping.py b/testing/test_skipping.py
+index 8fceb37aa..997885744 100644
+--- a/testing/test_skipping.py
++++ b/testing/test_skipping.py
+@@ -203,6 +203,21 @@ class TestXFail:
+         callreport = reports[1]
+         assert callreport.wasxfail
+ 
++    def test_xfail_set_during_call(self, testdir):
++        item = testdir.getitem(
++            """
++            import pytest
++            def test_func(request):
++                request.node.add_marker(pytest.mark.xfail(reason="xfail"))
++                assert 0
++        """
++        )
++        reports = runtestprotocol(item, log=False)
++        assert len(reports) == 3
++        callreport = reports[1]
++        assert callreport.skipped
++        assert callreport.wasxfail == "xfail"
++
+     def test_xfail_xpassed_strict(self, testdir):
+         item = testdir.getitem(
+             """
+2026-11-19 14:29:53,017 - INFO - Git diff changed after running eval script
+2026-11-19 14:29:53,018 - INFO - Attempting to stop container exec.eval.x86_64.7ea5f61b7564fbc4e33129.3fac552f5a165e4495b2ea.125556472150640...
+2026-11-19 14:30:08,223 - INFO - Attempting to remove container exec.eval.x86_64.7ea5f61b7564fbc4e33129.3fac552f5a165e4495b2ea.125556472150640...
+2026-11-19 14:30:08,271 - INFO - Container exec.eval.x86_64.7ea5f61b7564fbc4e33129.3fac552f5a165e4495b2ea.125556472150640 removed.
+2026-11-19 14:30:08,272 - WARNING - End of eval at 1795123808.272612

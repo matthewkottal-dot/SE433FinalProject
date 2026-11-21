@@ -1,0 +1,24 @@
+diff --git a/testing/test_terminal.py b/testing/test_terminal.py
+index 1bec577b8..6c9a26368 100755
+--- a/testing/test_terminal.py
++++ b/testing/test_terminal.py
+@@ -288,6 +288,19 @@ class TestCollectonly:
+             ["<Module test_collectonly_basic.py>", "  <Function test_func>"]
+         )
+ 
++    def test_collectonly_shortcut(self, testdir):
++        """`--co` is a shortcut for `--collect-only`."""
++        testdir.makepyfile(
++            """
++            def test_func():
++                pass
++        """
++        )
++        result = testdir.runpytest("--co")
++        result.stdout.fnmatch_lines(
++            ["<Module test_collectonly_shortcut.py>", "  <Function test_func>"]
++        )
++
+     def test_collectonly_skipped_module(self, testdir):
+         testdir.makepyfile(
+             """

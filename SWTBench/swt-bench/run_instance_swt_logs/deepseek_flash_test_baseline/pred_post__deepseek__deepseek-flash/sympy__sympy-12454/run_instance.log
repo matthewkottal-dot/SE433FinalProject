@@ -1,0 +1,77 @@
+2026-11-19 14:42:49,144 - WARNING - Starting evaluation at 1795124569.1441875
+2026-11-19 14:42:49,265 - INFO - Creating container for sympy__sympy-12454...
+2026-11-19 14:42:49,297 - INFO - Container for sympy__sympy-12454 created: d9570a881df9c789c6ec22a7836d2925e161d4c67681de30eeeddccd341f4d0f
+2026-11-19 14:42:49,398 - INFO - Container for sympy__sympy-12454 started: d9570a881df9c789c6ec22a7836d2925e161d4c67681de30eeeddccd341f4d0f
+2026-11-19 14:42:49,578 - INFO - Git diff before:
+
+2026-11-19 14:42:49,581 - INFO - Eval script for sympy__sympy-12454 written to eval.sh, now applying to container...
+2026-11-19 14:43:03,102 - INFO - Test output for sympy__sympy-12454 written to run_instance_swt_logs/deepseek_flash_test_baseline/pred_post__deepseek__deepseek-flash/sympy__sympy-12454/test_output.txt
+2026-11-19 14:43:03,144 - INFO - Git diff after:
+diff --git a/sympy/matrices/matrices.py b/sympy/matrices/matrices.py
+index 90ea232faf..ca6ba63a2f 100644
+--- a/sympy/matrices/matrices.py
++++ b/sympy/matrices/matrices.py
+@@ -641,7 +641,7 @@ def _eval_is_zero(self):
+     def _eval_is_upper_hessenberg(self):
+         return all(self[i, j].is_zero
+                    for i in range(2, self.rows)
+-                   for j in range(i - 1))
++                   for j in range(min(self.cols, (i - 1))))
+ 
+     def _eval_values(self):
+         return [i for i in self if not i.is_zero]
+@@ -1112,7 +1112,7 @@ def is_upper(self):
+         """
+         return all(self[i, j].is_zero
+                    for i in range(1, self.rows)
+-                   for j in range(i))
++                   for j in range(min(i, self.cols)))
+ 
+     @property
+     def is_zero(self):
+diff --git a/sympy/matrices/tests/test_commonmatrix.py b/sympy/matrices/tests/test_commonmatrix.py
+index 7574671989..c682b37f4d 100644
+--- a/sympy/matrices/tests/test_commonmatrix.py
++++ b/sympy/matrices/tests/test_commonmatrix.py
+@@ -294,6 +294,14 @@ def test_is_upper():
+     a = PropertiesOnlyMatrix([[1], [2], [3]])
+     assert a.is_upper is False
+ 
++    # Tall matrices should not be indexed past their last column.
++    a = PropertiesOnlyMatrix(4, 2, lambda i, j: 0)
++    assert a.is_upper is True
++
++    a = PropertiesOnlyMatrix(4, 2,
++        lambda i, j: int((i, j) == (3, 0)))
++    assert a.is_upper is False
++
+ 
+ def test_is_lower():
+     a = PropertiesOnlyMatrix([[1, 2, 3]])
+diff --git a/sympy/matrices/tests/test_matrices.py b/sympy/matrices/tests/test_matrices.py
+index 03b1548fd9..34d04b25eb 100644
+--- a/sympy/matrices/tests/test_matrices.py
++++ b/sympy/matrices/tests/test_matrices.py
+@@ -1226,6 +1226,17 @@ def test_is_upper():
+     a = Matrix([[1], [2], [3]])
+     assert a.is_upper is False
+ 
++    # Tall matrices should not be indexed past their last column.
++    for cls in classes:
++        a = cls.zeros(4, 2)
++        assert a.is_upper is True
++
++        a = cls([[1, 2], [0, 3], [0, 0], [0, 0]])
++        assert a.is_upper is True
++
++        a = cls([[1, 2], [0, 3], [0, 0], [1, 0]])
++        assert a.is_upper is False
++
+ 
+ def test_is_lower():
+     a = Matrix([[1, 2, 3]])
+2026-11-19 14:43:03,145 - INFO - Git diff changed after running eval script
+2026-11-19 14:43:03,146 - INFO - Attempting to stop container exec.eval.x86_64.deec2122407a414e380748.ab890e779fb3a983684ad0.125556472320064...
+2026-11-19 14:43:18,330 - INFO - Attempting to remove container exec.eval.x86_64.deec2122407a414e380748.ab890e779fb3a983684ad0.125556472320064...
+2026-11-19 14:43:18,364 - INFO - Container exec.eval.x86_64.deec2122407a414e380748.ab890e779fb3a983684ad0.125556472320064 removed.
+2026-11-19 14:43:18,364 - WARNING - End of eval at 1795124598.3648405

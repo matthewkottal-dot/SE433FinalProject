@@ -1,0 +1,26 @@
+diff --git a/tests/test_environment_indexentries.py b/tests/test_environment_indexentries.py
+index 7f6003d54..3c10a19cf 100755
+--- a/tests/test_environment_indexentries.py
++++ b/tests/test_environment_indexentries.py
+@@ -163,3 +163,21 @@ def test_create_index_by_key(app):
+     assert index[0] == ('D', [('docutils', [[('main', '#term-docutils')], [], None])])
+     assert index[1] == ('P', [('Python', [[('main', '#term-Python')], [], None])])
+     assert index[2] == ('ス', [('スフィンクス', [[('main', '#term-0')], [], 'ス'])])
++
++
++@pytest.mark.sphinx('dummy', freshenv=True)
++def test_create_index_with_non_ascii_symbols(app):
++    text = (".. index:: @\n"
++            ".. index:: docutils\n"
++            ".. index:: £\n"
++            ".. index:: ←\n")
++    restructuredtext.parse(app, text)
++    index = IndexEntries(app.env).create_index(app.builder)
++
++    # All symbols should be grouped into a single section, even when some
++    # sort after the ASCII letters used to place alphabetical entries first.
++    assert len(index) == 2
++    assert index[0] == ('Symbols', [('@', [[('', '#index-0')], [], None]),
++                                    ('£', [[('', '#index-2')], [], None]),
++                                    ('←', [[('', '#index-3')], [], None])])
++    assert index[1] == ('D', [('docutils', [[('', '#index-1')], [], None])])

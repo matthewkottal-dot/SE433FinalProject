@@ -1,0 +1,53 @@
+2026-11-19 14:46:12,691 - WARNING - Starting evaluation at 1795124772.6916916
+2026-11-19 14:46:12,821 - INFO - Creating container for sympy__sympy-13177...
+2026-11-19 14:46:12,855 - INFO - Container for sympy__sympy-13177 created: 04724f69629f3450471752daa74bb3b4063391419170ba5aac2956ba9c00d480
+2026-11-19 14:46:12,983 - INFO - Container for sympy__sympy-13177 started: 04724f69629f3450471752daa74bb3b4063391419170ba5aac2956ba9c00d480
+2026-11-19 14:46:13,170 - INFO - Git diff before:
+
+2026-11-19 14:46:13,173 - INFO - Eval script for sympy__sympy-13177 written to eval.sh, now applying to container...
+2026-11-19 14:46:18,864 - INFO - Test output for sympy__sympy-13177 written to run_instance_swt_logs/deepseek_flash_test_baseline/pred_post__deepseek__deepseek-flash/sympy__sympy-13177/test_output.txt
+2026-11-19 14:46:18,905 - INFO - Git diff after:
+diff --git a/sympy/core/mod.py b/sympy/core/mod.py
+index 11c800704b..3aa94d4ac2 100644
+--- a/sympy/core/mod.py
++++ b/sympy/core/mod.py
+@@ -39,7 +39,8 @@ def doit(p, q):
+             if p.is_infinite or q.is_infinite or p is nan or q is nan:
+                 return nan
+             if (p == q or p == -q or
+-                    p.is_Pow and p.exp.is_Integer and p.base == q or
++                    p.is_Pow and p.exp.is_integer and p.base == q and q.is_integer
++                    and p.exp.is_positive or
+                     p.is_integer and q == 1):
+                 return S.Zero
+ 
+diff --git a/sympy/core/tests/test_arit.py b/sympy/core/tests/test_arit.py
+index 06d65203fb..2504ab746e 100644
+--- a/sympy/core/tests/test_arit.py
++++ b/sympy/core/tests/test_arit.py
+@@ -1608,6 +1608,20 @@ def test_Mod():
+     assert (x**6000%400).args[1] == 400
+ 
+ 
++def test_Mod_noninteger_base():
++    # A power only reduces to zero modulo its base if the base is known
++    # to be an integer.  Otherwise the unevaluated expression must be kept
++    # so that substitution uses the actual value of the base.
++    assert Mod(x**2, x).func is Mod
++    assert Mod(x**2, x) != 0
++    assert Mod(x**2, x).subs(x, 1.5) == Mod(S(1.5)**2, S(1.5))
++    assert Mod(x**2, x).subs(x, 1.5) == S(3)/4
++
++    # The simplification remains valid for an integer base.
++    i = Symbol('i', integer=True)
++    assert Mod(i**2, i) == 0
++
++
+ def test_Mod_is_integer():
+     p = Symbol('p', integer=True)
+     q1 = Symbol('q1', integer=True)
+2026-11-19 14:46:18,905 - INFO - Git diff changed after running eval script
+2026-11-19 14:46:18,906 - INFO - Attempting to stop container exec.eval.x86_64.deec2122407a414e380748.75ac9b2059330cbe6158ef.125556472320544...
+2026-11-19 14:46:34,101 - INFO - Attempting to remove container exec.eval.x86_64.deec2122407a414e380748.75ac9b2059330cbe6158ef.125556472320544...
+2026-11-19 14:46:34,137 - INFO - Container exec.eval.x86_64.deec2122407a414e380748.75ac9b2059330cbe6158ef.125556472320544 removed.
+2026-11-19 14:46:34,138 - WARNING - End of eval at 1795124794.1385472

@@ -1,0 +1,1007 @@
++ source /opt/miniconda3/bin/activate
+++ _CONDA_ROOT=/opt/miniconda3
+++ . /opt/miniconda3/etc/profile.d/conda.sh
++++ export CONDA_EXE=/opt/miniconda3/bin/conda
++++ CONDA_EXE=/opt/miniconda3/bin/conda
++++ export _CE_M=
++++ _CE_M=
++++ export _CE_CONDA=
++++ _CE_CONDA=
++++ export CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++++ CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++++ '[' -z '' ']'
++++ export CONDA_SHLVL=0
++++ CONDA_SHLVL=0
++++ '[' -n '' ']'
++++++ dirname /opt/miniconda3/bin/conda
+++++ dirname /opt/miniconda3/bin
++++ PATH=/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++++ export PATH
++++ '[' -z '' ']'
++++ PS1=
+++ conda activate
+++ local cmd=activate
+++ case "$cmd" in
+++ __conda_activate activate
+++ '[' -n '' ']'
+++ local ask_conda
++++ PS1=
++++ __conda_exe shell.posix activate
++++ /opt/miniconda3/bin/conda shell.posix activate
+++ ask_conda='PS1='\''(base) '\''
+export PATH='\''/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3'\''
+export CONDA_SHLVL='\''1'\''
+export CONDA_DEFAULT_ENV='\''base'\''
+export CONDA_PROMPT_MODIFIER='\''(base) '\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
+++ eval 'PS1='\''(base) '\''
+export PATH='\''/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3'\''
+export CONDA_SHLVL='\''1'\''
+export CONDA_DEFAULT_ENV='\''base'\''
+export CONDA_PROMPT_MODIFIER='\''(base) '\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
++++ PS1='(base) '
++++ export PATH=/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++++ PATH=/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++++ export CONDA_PREFIX=/opt/miniconda3
++++ CONDA_PREFIX=/opt/miniconda3
++++ export CONDA_SHLVL=1
++++ CONDA_SHLVL=1
++++ export CONDA_DEFAULT_ENV=base
++++ CONDA_DEFAULT_ENV=base
++++ export 'CONDA_PROMPT_MODIFIER=(base) '
++++ CONDA_PROMPT_MODIFIER='(base) '
++++ export CONDA_EXE=/opt/miniconda3/bin/conda
++++ CONDA_EXE=/opt/miniconda3/bin/conda
++++ export _CE_M=
++++ _CE_M=
++++ export _CE_CONDA=
++++ _CE_CONDA=
++++ export CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++++ CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
+++ __conda_hashr
+++ '[' -n '' ']'
+++ '[' -n '' ']'
+++ hash -r
++ conda activate testbed
++ local cmd=activate
++ case "$cmd" in
++ __conda_activate activate testbed
++ '[' -n '' ']'
++ local ask_conda
+++ PS1='(base) '
+++ __conda_exe shell.posix activate testbed
+++ /opt/miniconda3/bin/conda shell.posix activate testbed
++ ask_conda='PS1='\''(testbed) '\''
+export PATH='\''/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3/envs/testbed'\''
+export CONDA_SHLVL='\''2'\''
+export CONDA_DEFAULT_ENV='\''testbed'\''
+export CONDA_PROMPT_MODIFIER='\''(testbed) '\''
+export CONDA_PREFIX_1='\''/opt/miniconda3'\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
++ eval 'PS1='\''(testbed) '\''
+export PATH='\''/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3/envs/testbed'\''
+export CONDA_SHLVL='\''2'\''
+export CONDA_DEFAULT_ENV='\''testbed'\''
+export CONDA_PROMPT_MODIFIER='\''(testbed) '\''
+export CONDA_PREFIX_1='\''/opt/miniconda3'\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
+++ PS1='(testbed) '
+++ export PATH=/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ PATH=/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ export CONDA_PREFIX=/opt/miniconda3/envs/testbed
+++ CONDA_PREFIX=/opt/miniconda3/envs/testbed
+++ export CONDA_SHLVL=2
+++ CONDA_SHLVL=2
+++ export CONDA_DEFAULT_ENV=testbed
+++ CONDA_DEFAULT_ENV=testbed
+++ export 'CONDA_PROMPT_MODIFIER=(testbed) '
+++ CONDA_PROMPT_MODIFIER='(testbed) '
+++ export CONDA_PREFIX_1=/opt/miniconda3
+++ CONDA_PREFIX_1=/opt/miniconda3
+++ export CONDA_EXE=/opt/miniconda3/bin/conda
+++ CONDA_EXE=/opt/miniconda3/bin/conda
+++ export _CE_M=
+++ _CE_M=
+++ export _CE_CONDA=
+++ _CE_CONDA=
+++ export CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
+++ CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++ __conda_hashr
++ '[' -n '' ']'
++ '[' -n '' ']'
++ hash -r
++ cd /testbed
++ git diff HEAD 10ca84ffc56c2dd2d9dc4bd71b7b898e083500cd
++ git config --global --add safe.directory /testbed
++ cd /testbed
++ git status
+On branch main
+nothing to commit, working tree clean
++ git show
+commit 10ca84ffc56c2dd2d9dc4bd71b7b898e083500cd
+Merge: b4d75ad31 f9f41e69a
+Author: Daniel Hahler <git@thequod.de>
+Date:   Fri May 24 18:28:43 2019 +0200
+
+    Merge pull request #5119 from blueyed/reportopts-A-order
+    
+    reportopts: A: put "Pp" in front
+
++ git diff 10ca84ffc56c2dd2d9dc4bd71b7b898e083500cd
++ source /opt/miniconda3/bin/activate
+++ _CONDA_ROOT=/opt/miniconda3
+++ . /opt/miniconda3/etc/profile.d/conda.sh
++++ export CONDA_EXE=/opt/miniconda3/bin/conda
++++ CONDA_EXE=/opt/miniconda3/bin/conda
++++ export _CE_M=
++++ _CE_M=
++++ export _CE_CONDA=
++++ _CE_CONDA=
++++ export CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++++ CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++++ '[' -z x ']'
+++ conda activate
+++ local cmd=activate
+++ case "$cmd" in
+++ __conda_activate activate
+++ '[' -n '' ']'
+++ local ask_conda
++++ PS1='(testbed) '
++++ __conda_exe shell.posix activate
++++ /opt/miniconda3/bin/conda shell.posix activate
+++ ask_conda='PS1='\''(base) '\''
+export PATH='\''/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3'\''
+export CONDA_SHLVL='\''3'\''
+export CONDA_DEFAULT_ENV='\''base'\''
+export CONDA_PROMPT_MODIFIER='\''(base) '\''
+export CONDA_PREFIX_2='\''/opt/miniconda3/envs/testbed'\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
+++ eval 'PS1='\''(base) '\''
+export PATH='\''/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3'\''
+export CONDA_SHLVL='\''3'\''
+export CONDA_DEFAULT_ENV='\''base'\''
+export CONDA_PROMPT_MODIFIER='\''(base) '\''
+export CONDA_PREFIX_2='\''/opt/miniconda3/envs/testbed'\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
++++ PS1='(base) '
++++ export PATH=/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++++ PATH=/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++++ export CONDA_PREFIX=/opt/miniconda3
++++ CONDA_PREFIX=/opt/miniconda3
++++ export CONDA_SHLVL=3
++++ CONDA_SHLVL=3
++++ export CONDA_DEFAULT_ENV=base
++++ CONDA_DEFAULT_ENV=base
++++ export 'CONDA_PROMPT_MODIFIER=(base) '
++++ CONDA_PROMPT_MODIFIER='(base) '
++++ export CONDA_PREFIX_2=/opt/miniconda3/envs/testbed
++++ CONDA_PREFIX_2=/opt/miniconda3/envs/testbed
++++ export CONDA_EXE=/opt/miniconda3/bin/conda
++++ CONDA_EXE=/opt/miniconda3/bin/conda
++++ export _CE_M=
++++ _CE_M=
++++ export _CE_CONDA=
++++ _CE_CONDA=
++++ export CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++++ CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
+++ __conda_hashr
+++ '[' -n '' ']'
+++ '[' -n '' ']'
+++ hash -r
++ conda activate testbed
++ local cmd=activate
++ case "$cmd" in
++ __conda_activate activate testbed
++ '[' -n '' ']'
++ local ask_conda
+++ PS1='(base) '
+++ __conda_exe shell.posix activate testbed
+++ /opt/miniconda3/bin/conda shell.posix activate testbed
++ ask_conda='PS1='\''(testbed) '\''
+export PATH='\''/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3/envs/testbed'\''
+export CONDA_SHLVL='\''4'\''
+export CONDA_DEFAULT_ENV='\''testbed'\''
+export CONDA_PROMPT_MODIFIER='\''(testbed) '\''
+export CONDA_PREFIX_3='\''/opt/miniconda3'\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
++ eval 'PS1='\''(testbed) '\''
+export PATH='\''/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3/envs/testbed'\''
+export CONDA_SHLVL='\''4'\''
+export CONDA_DEFAULT_ENV='\''testbed'\''
+export CONDA_PROMPT_MODIFIER='\''(testbed) '\''
+export CONDA_PREFIX_3='\''/opt/miniconda3'\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
+++ PS1='(testbed) '
+++ export PATH=/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ PATH=/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ export CONDA_PREFIX=/opt/miniconda3/envs/testbed
+++ CONDA_PREFIX=/opt/miniconda3/envs/testbed
+++ export CONDA_SHLVL=4
+++ CONDA_SHLVL=4
+++ export CONDA_DEFAULT_ENV=testbed
+++ CONDA_DEFAULT_ENV=testbed
+++ export 'CONDA_PROMPT_MODIFIER=(testbed) '
+++ CONDA_PROMPT_MODIFIER='(testbed) '
+++ export CONDA_PREFIX_3=/opt/miniconda3
+++ CONDA_PREFIX_3=/opt/miniconda3
+++ export CONDA_EXE=/opt/miniconda3/bin/conda
+++ CONDA_EXE=/opt/miniconda3/bin/conda
+++ export _CE_M=
+++ _CE_M=
+++ export _CE_CONDA=
+++ _CE_CONDA=
+++ export CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
+++ CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++ __conda_hashr
++ '[' -n '' ']'
++ '[' -n '' ']'
++ hash -r
++ python -m pip install -e .
+Obtaining file:///testbed
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: py>=1.5.0 in /opt/miniconda3/envs/testbed/lib/python3.9/site-packages (from pytest==4.5.1.dev40+g10ca84ffc) (1.11.0)
+Requirement already satisfied: six>=1.10.0 in /opt/miniconda3/envs/testbed/lib/python3.9/site-packages (from pytest==4.5.1.dev40+g10ca84ffc) (1.16.0)
+Requirement already satisfied: setuptools in /opt/miniconda3/envs/testbed/lib/python3.9/site-packages (from pytest==4.5.1.dev40+g10ca84ffc) (68.0.0)
+Requirement already satisfied: attrs>=17.4.0 in /opt/miniconda3/envs/testbed/lib/python3.9/site-packages (from pytest==4.5.1.dev40+g10ca84ffc) (23.1.0)
+Requirement already satisfied: more-itertools>=4.0.0 in /opt/miniconda3/envs/testbed/lib/python3.9/site-packages (from pytest==4.5.1.dev40+g10ca84ffc) (10.1.0)
+Requirement already satisfied: atomicwrites>=1.0 in /opt/miniconda3/envs/testbed/lib/python3.9/site-packages (from pytest==4.5.1.dev40+g10ca84ffc) (1.4.1)
+Requirement already satisfied: pluggy!=0.10,<1.0,>=0.9 in /opt/miniconda3/envs/testbed/lib/python3.9/site-packages (from pytest==4.5.1.dev40+g10ca84ffc) (0.11.0)
+Requirement already satisfied: wcwidth in /opt/miniconda3/envs/testbed/lib/python3.9/site-packages (from pytest==4.5.1.dev40+g10ca84ffc) (0.2.6)
+Building wheels for collected packages: pytest
+  Building editable for pytest (pyproject.toml): started
+  Building editable for pytest (pyproject.toml): finished with status 'done'
+  Created wheel for pytest: filename=pytest-4.5.1.dev40+g10ca84ffc-0.editable-py2.py3-none-any.whl size=4882 sha256=8c9f6daebc403e7395f3e268ba13dfd97487c68f8c9c577e80d6922d893c1b42
+  Stored in directory: /tmp/pip-ephem-wheel-cache-aisnmd4m/wheels/7d/66/67/70d1ee2124ccf21d601c352e25cdca10f611f7c8b3f9ffb9e4
+Successfully built pytest
+Installing collected packages: pytest
+  Attempting uninstall: pytest
+    Found existing installation: pytest 4.5.1.dev40+g10ca84ffc
+    Uninstalling pytest-4.5.1.dev40+g10ca84ffc:
+      Successfully uninstalled pytest-4.5.1.dev40+g10ca84ffc
+Successfully installed pytest-4.5.1.dev40+g10ca84ffc
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
++ git apply -v -
+Checking patch src/_pytest/assertion/rewrite.py...
+Hunk #1 succeeded at 968 (offset 4 lines).
+Hunk #2 succeeded at 993 (offset 4 lines).
+Hunk #3 succeeded at 1024 (offset 4 lines).
+Applied patch src/_pytest/assertion/rewrite.py cleanly.
++ git apply -v -
+Checking patch testing/test_assertrewrite.py...
+warning: testing/test_assertrewrite.py has type 100644, expected 100755
+Applied patch testing/test_assertrewrite.py cleanly.
++ python3 /root/trace.py --count -C coverage.cover --include-pattern '/testbed/(src/_pytest/assertion/rewrite\.py)' -m pytest -rA testing/test_assertrewrite.py
+['--count', '-C', 'coverage.cover', '--include-pattern', '/testbed/(src/_pytest/assertion/rewrite\\.py)']
+============================= test session starts ==============================
+platform linux -- Python 3.9.25, pytest-4.5.1.dev40+g10ca84ffc, py-1.11.0, pluggy-0.11.0
+rootdir: /testbed, inifile: tox.ini
+collected 70 items
+
+testing/test_assertrewrite.py ...........FF........................F.... [ 60%]
+....s..ssss.................                                             [100%]
+
+=================================== FAILURES ===================================
+___________ TestAssertionRewrite.test_all_reports_failing_iteration ____________
+
+self = <test_assertrewrite.TestAssertionRewrite object at 0x75dc18d59c10>
+
+    def test_all_reports_failing_iteration(self):
+        def f():
+            def is_even(number):
+                return number % 2 == 0
+    
+            assert all(is_even(number) for number in [1, 3, 5])
+    
+        msg = getmsg(f)
+>       assert "is_even(1)" in msg
+E       AssertionError
+
+testing/test_assertrewrite.py:536: AssertionError
+___________ TestAssertionRewrite.test_any_reports_failing_iteration ____________
+
+self = <test_assertrewrite.TestAssertionRewrite object at 0x75dc18ec13a0>
+
+    def test_any_reports_failing_iteration(self):
+        def f():
+            def is_even(number):
+                return number % 2 == 0
+    
+            assert any(is_even(number) for number in [1])
+    
+        msg = getmsg(f)
+>       assert "is_even(1)" in msg
+E       AssertionError
+
+testing/test_assertrewrite.py:546: AssertionError
+_____________________ TestRewriteOnImport.test_pyc_vs_pyo ______________________
+
+self = <test_assertrewrite.TestRewriteOnImport object at 0x75dc18929f70>
+testdir = <Testdir local('/tmp/pytest-of-root/pytest-0/test_pyc_vs_pyo0')>
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x75dc18e09ac0>
+
+    @pytest.mark.skipif('"__pypy__" in sys.modules')
+    def test_pyc_vs_pyo(self, testdir, monkeypatch):
+        testdir.makepyfile(
+            """
+            import pytest
+            def test_optimized():
+                "hello"
+                assert test_optimized.__doc__ is None"""
+        )
+        p = py.path.local.make_numbered_dir(
+            prefix="runpytest-", keep=None, rootdir=testdir.tmpdir
+        )
+        tmp = "--basetemp=%s" % p
+        monkeypatch.setenv("PYTHONOPTIMIZE", "2")
+        monkeypatch.delenv("PYTHONDONTWRITEBYTECODE", raising=False)
+        assert testdir.runpytest_subprocess(tmp).ret == 0
+        tagged = "test_pyc_vs_pyo." + PYTEST_TAG
+        assert tagged + ".pyo" in os.listdir("__pycache__")
+        monkeypatch.undo()
+        monkeypatch.delenv("PYTHONDONTWRITEBYTECODE", raising=False)
+>       assert testdir.runpytest_subprocess(tmp).ret == 1
+E       AssertionError
+
+/testbed/testing/test_assertrewrite.py:815: AssertionError
+----------------------------- Captured stdout call -----------------------------
+running: /opt/miniconda3/envs/testbed/bin/python3 -mpytest --basetemp=/tmp/pytest-of-root/pytest-0/test_pyc_vs_pyo0/runpytest-1 --basetemp=/tmp/pytest-of-root/pytest-0/test_pyc_vs_pyo0/runpytest-0
+     in: /tmp/pytest-of-root/pytest-0/test_pyc_vs_pyo0
+['--count', '-C', 'coverage.cover', '--include-pattern', '/testbed/(src/_pytest/assertion/rewrite\\.py)']
+============================= test session starts ==============================
+platform linux -- Python 3.9.25, pytest-4.5.1.dev40+g10ca84ffc, py-1.11.0, pluggy-0.11.0
+rootdir: /tmp/pytest-of-root/pytest-0/test_pyc_vs_pyo0
+collected 1 item
+
+test_pyc_vs_pyo.py .                                                     [100%]
+
+=========================== 1 passed in 0.02 seconds ===========================
+running: /opt/miniconda3/envs/testbed/bin/python3 -mpytest --basetemp=/tmp/pytest-of-root/pytest-0/test_pyc_vs_pyo0/runpytest-2 --basetemp=/tmp/pytest-of-root/pytest-0/test_pyc_vs_pyo0/runpytest-0
+     in: /tmp/pytest-of-root/pytest-0/test_pyc_vs_pyo0
+['--count', '-C', 'coverage.cover', '--include-pattern', '/testbed/(src/_pytest/assertion/rewrite\\.py)']
+============================= test session starts ==============================
+platform linux -- Python 3.9.25, pytest-4.5.1.dev40+g10ca84ffc, py-1.11.0, pluggy-0.11.0
+rootdir: /tmp/pytest-of-root/pytest-0/test_pyc_vs_pyo0
+collected 1 item
+
+test_pyc_vs_pyo.py F                                                     [100%]
+
+=================================== FAILURES ===================================
+________________________________ test_optimized ________________________________
+
+    def test_optimized():
+        "hello"
+>       assert test_optimized.__doc__ is None
+E       AssertionError: assert 'hello' is None
+E        +  where 'hello' = test_optimized.__doc__
+
+test_pyc_vs_pyo.py:4: AssertionError
+=========================== 1 failed in 0.03 seconds ===========================
+----------------------------- Captured stderr call -----------------------------
+WARNING: assertions not in test modules or plugins will be ignored because assert statements are not executed by the underlying Python interpreter (are you using python -O?)
+==================================== PASSES ====================================
+________________ TestAssertionRewrite.test_dont_rewrite_plugin _________________
+----------------------------- Captured stdout call -----------------------------
+running: /opt/miniconda3/envs/testbed/bin/python3 -mpytest --basetemp=/tmp/pytest-of-root/pytest-0/test_dont_rewrite_plugin0/runpytest-0
+     in: /tmp/pytest-of-root/pytest-0/test_dont_rewrite_plugin0
+['--count', '-C', 'coverage.cover', '--include-pattern', '/testbed/(src/_pytest/assertion/rewrite\\.py)']
+============================= test session starts ==============================
+platform linux -- Python 3.9.25, pytest-4.5.1.dev40+g10ca84ffc, py-1.11.0, pluggy-0.11.0
+rootdir: /tmp/pytest-of-root/pytest-0/test_dont_rewrite_plugin0
+collected 1 item
+
+test_foo.py .                                                            [100%]
+
+=========================== 1 passed in 0.01 seconds ===========================
+_________________ TestAssertionRewrite.test_assertion_message __________________
+----------------------------- Captured stdout call -----------------------------
+============================= test session starts ==============================
+platform linux -- Python 3.9.25, pytest-4.5.1.dev40+g10ca84ffc, py-1.11.0, pluggy-0.11.0
+rootdir: /tmp/pytest-of-root/pytest-0/test_assertion_message0
+collected 1 item
+
+test_assertion_message.py F                                              [100%]
+
+=================================== FAILURES ===================================
+___________________________________ test_foo ___________________________________
+
+    def test_foo():
+>       assert 1 == 2, "The failure message"
+E       AssertionError: The failure message
+E       assert 1 == 2
+
+test_assertion_message.py:2: AssertionError
+=========================== 1 failed in 0.01 seconds ===========================
+____________ TestAssertionRewrite.test_assertion_message_multiline _____________
+----------------------------- Captured stdout call -----------------------------
+============================= test session starts ==============================
+platform linux -- Python 3.9.25, pytest-4.5.1.dev40+g10ca84ffc, py-1.11.0, pluggy-0.11.0
+rootdir: /tmp/pytest-of-root/pytest-0/test_assertion_message_multiline0
+collected 1 item
+
+test_assertion_message_multiline.py F                                    [100%]
+
+=================================== FAILURES ===================================
+___________________________________ test_foo ___________________________________
+
+    def test_foo():
+>       assert 1 == 2, "A multiline\nfailure message"
+E       AssertionError: A multiline
+E         failure message
+E       assert 1 == 2
+
+test_assertion_message_multiline.py:2: AssertionError
+=========================== 1 failed in 0.01 seconds ===========================
+______________ TestAssertionRewrite.test_assertion_message_tuple _______________
+----------------------------- Captured stdout call -----------------------------
+============================= test session starts ==============================
+platform linux -- Python 3.9.25, pytest-4.5.1.dev40+g10ca84ffc, py-1.11.0, pluggy-0.11.0
+rootdir: /tmp/pytest-of-root/pytest-0/test_assertion_message_tuple0
+collected 1 item
+
+test_assertion_message_tuple.py F                                        [100%]
+
+=================================== FAILURES ===================================
+___________________________________ test_foo ___________________________________
+
+    def test_foo():
+>       assert 1 == 2, (1, 2)
+E       AssertionError: (1, 2)
+E       assert 1 == 2
+
+test_assertion_message_tuple.py:2: AssertionError
+=========================== 1 failed in 0.01 seconds ===========================
+_______________ TestAssertionRewrite.test_assertion_message_expr _______________
+----------------------------- Captured stdout call -----------------------------
+============================= test session starts ==============================
+platform linux -- Python 3.9.25, pytest-4.5.1.dev40+g10ca84ffc, py-1.11.0, pluggy-0.11.0
+rootdir: /tmp/pytest-of-root/pytest-0/test_assertion_message_expr0
+collected 1 item
+
+test_assertion_message_expr.py F                                         [100%]
+
+=================================== FAILURES ===================================
+___________________________________ test_foo ___________________________________
+
+    def test_foo():
+>       assert 1 == 2, 1 + 2
+E       AssertionError: 3
+E       assert 1 == 2
+
+test_assertion_message_expr.py:2: AssertionError
+=========================== 1 failed in 0.01 seconds ===========================
+______________ TestAssertionRewrite.test_assertion_message_escape ______________
+----------------------------- Captured stdout call -----------------------------
+============================= test session starts ==============================
+platform linux -- Python 3.9.25, pytest-4.5.1.dev40+g10ca84ffc, py-1.11.0, pluggy-0.11.0
+rootdir: /tmp/pytest-of-root/pytest-0/test_assertion_message_escape0
+collected 1 item
+
+test_assertion_message_escape.py F                                       [100%]
+
+=================================== FAILURES ===================================
+___________________________________ test_foo ___________________________________
+
+    def test_foo():
+>       assert 1 == 2, 'To be escaped: %'
+E       AssertionError: To be escaped: %
+E       assert 1 == 2
+
+test_assertion_message_escape.py:2: AssertionError
+=========================== 1 failed in 0.01 seconds ===========================
+______________ TestAssertionRewrite.test_assertion_messages_bytes ______________
+----------------------------- Captured stdout call -----------------------------
+============================= test session starts ==============================
+platform linux -- Python 3.9.25, pytest-4.5.1.dev40+g10ca84ffc, py-1.11.0, pluggy-0.11.0
+rootdir: /tmp/pytest-of-root/pytest-0/test_assertion_messages_bytes0
+collected 1 item
+
+test_assertion_messages_bytes.py F                                       [100%]
+
+=================================== FAILURES ===================================
+_____________________________ test_bytes_assertion _____________________________
+
+    def test_bytes_assertion():
+>       assert False, b'ohai!'
+E       AssertionError: b'ohai!'
+E       assert False
+
+test_assertion_messages_bytes.py:2: AssertionError
+=========================== 1 failed in 0.01 seconds ===========================
+_______________ TestAssertionRewrite.test_at_operator_issue1290 ________________
+----------------------------- Captured stdout call -----------------------------
+============================= test session starts ==============================
+platform linux -- Python 3.9.25, pytest-4.5.1.dev40+g10ca84ffc, py-1.11.0, pluggy-0.11.0
+rootdir: /tmp/pytest-of-root/pytest-0/test_at_operator_issue12900
+collected 1 item
+
+test_at_operator_issue1290.py .                                          [100%]
+
+=========================== 1 passed in 0.01 seconds ===========================
+______________ TestAssertionRewrite.test_starred_with_side_effect ______________
+----------------------------- Captured stdout call -----------------------------
+============================= test session starts ==============================
+platform linux -- Python 3.9.25, pytest-4.5.1.dev40+g10ca84ffc, py-1.11.0, pluggy-0.11.0
+rootdir: /tmp/pytest-of-root/pytest-0/test_starred_with_side_effect0
+collected 1 item
+
+test_starred_with_side_effect.py .                                       [100%]
+
+=========================== 1 passed in 0.01 seconds ===========================
+__________________ TestRewriteOnImport.test_pycache_is_a_file __________________
+----------------------------- Captured stdout call -----------------------------
+============================= test session starts ==============================
+platform linux -- Python 3.9.25, pytest-4.5.1.dev40+g10ca84ffc, py-1.11.0, pluggy-0.11.0
+rootdir: /tmp/pytest-of-root/pytest-0/test_pycache_is_a_file0
+collected 1 item
+
+test_pycache_is_a_file.py .                                              [100%]
+
+=========================== 1 passed in 0.01 seconds ===========================
+_________________ TestRewriteOnImport.test_pycache_is_readonly _________________
+----------------------------- Captured stdout call -----------------------------
+============================= test session starts ==============================
+platform linux -- Python 3.9.25, pytest-4.5.1.dev40+g10ca84ffc, py-1.11.0, pluggy-0.11.0
+rootdir: /tmp/pytest-of-root/pytest-0/test_pycache_is_readonly0
+collected 1 item
+
+test_pycache_is_readonly.py .                                            [100%]
+
+=========================== 1 passed in 0.01 seconds ===========================
+_______________________ TestRewriteOnImport.test_zipfile _______________________
+----------------------------- Captured stdout call -----------------------------
+============================= test session starts ==============================
+platform linux -- Python 3.9.25, pytest-4.5.1.dev40+g10ca84ffc, py-1.11.0, pluggy-0.11.0
+rootdir: /tmp/pytest-of-root/pytest-0/test_zipfile0
+collected 0 items
+
+========================= no tests ran in 0.01 seconds =========================
+______________________ TestRewriteOnImport.test_readonly _______________________
+----------------------------- Captured stdout call -----------------------------
+============================= test session starts ==============================
+platform linux -- Python 3.9.25, pytest-4.5.1.dev40+g10ca84ffc, py-1.11.0, pluggy-0.11.0
+rootdir: /tmp/pytest-of-root/pytest-0/test_readonly0
+collected 1 item
+
+testing/test_readonly.py .                                               [100%]
+
+=========================== 1 passed in 0.01 seconds ===========================
+_________________ TestRewriteOnImport.test_dont_write_bytecode _________________
+----------------------------- Captured stdout call -----------------------------
+running: /opt/miniconda3/envs/testbed/bin/python3 -mpytest --basetemp=/tmp/pytest-of-root/pytest-0/test_dont_write_bytecode0/runpytest-0
+     in: /tmp/pytest-of-root/pytest-0/test_dont_write_bytecode0
+['--count', '-C', 'coverage.cover', '--include-pattern', '/testbed/(src/_pytest/assertion/rewrite\\.py)']
+============================= test session starts ==============================
+platform linux -- Python 3.9.25, pytest-4.5.1.dev40+g10ca84ffc, py-1.11.0, pluggy-0.11.0
+rootdir: /tmp/pytest-of-root/pytest-0/test_dont_write_bytecode0
+collected 1 item
+
+test_dont_write_bytecode.py .                                            [100%]
+
+=========================== 1 passed in 0.01 seconds ===========================
+__________________ TestRewriteOnImport.test_orphaned_pyc_file __________________
+----------------------------- Captured stdout call -----------------------------
+============================= test session starts ==============================
+platform linux -- Python 3.9.25, pytest-4.5.1.dev40+g10ca84ffc, py-1.11.0, pluggy-0.11.0
+rootdir: /tmp/pytest-of-root/pytest-0/test_orphaned_pyc_file0
+collected 1 item
+
+test_orphaned_pyc_file.py .                                              [100%]
+
+=========================== 1 passed in 0.01 seconds ===========================
+_______________________ TestRewriteOnImport.test_package _______________________
+----------------------------- Captured stdout call -----------------------------
+============================= test session starts ==============================
+platform linux -- Python 3.9.25, pytest-4.5.1.dev40+g10ca84ffc, py-1.11.0, pluggy-0.11.0
+rootdir: /tmp/pytest-of-root/pytest-0/test_package0
+collected 1 item
+
+pkg/test_blah.py .                                                       [100%]
+
+=========================== 1 passed in 0.01 seconds ===========================
+_________________ TestRewriteOnImport.test_translate_newlines __________________
+----------------------------- Captured stdout call -----------------------------
+============================= test session starts ==============================
+platform linux -- Python 3.9.25, pytest-4.5.1.dev40+g10ca84ffc, py-1.11.0, pluggy-0.11.0
+rootdir: /tmp/pytest-of-root/pytest-0/test_translate_newlines0
+collected 1 item
+
+test_newlines.py .                                                       [100%]
+
+=========================== 1 passed in 0.01 seconds ===========================
+______________ TestRewriteOnImport.test_package_without__init__py ______________
+----------------------------- Captured stdout call -----------------------------
+============================= test session starts ==============================
+platform linux -- Python 3.9.25, pytest-4.5.1.dev40+g10ca84ffc, py-1.11.0, pluggy-0.11.0
+rootdir: /tmp/pytest-of-root/pytest-0/test_package_without__init__py0
+collected 0 items
+
+========================= no tests ran in 0.01 seconds =========================
+___________________ TestRewriteOnImport.test_rewrite_warning ___________________
+----------------------------- Captured stdout call -----------------------------
+running: /opt/miniconda3/envs/testbed/bin/python3 -mpytest --basetemp=/tmp/pytest-of-root/pytest-0/test_rewrite_warning0/runpytest-0
+     in: /tmp/pytest-of-root/pytest-0/test_rewrite_warning0
+['--count', '-C', 'coverage.cover', '--include-pattern', '/testbed/(src/_pytest/assertion/rewrite\\.py)']
+============================= test session starts ==============================
+platform linux -- Python 3.9.25, pytest-4.5.1.dev40+g10ca84ffc, py-1.11.0, pluggy-0.11.0
+rootdir: /tmp/pytest-of-root/pytest-0/test_rewrite_warning0
+collected 0 items
+
+=============================== warnings summary ===============================
+conftest.py:2
+  /tmp/pytest-of-root/pytest-0/test_rewrite_warning0/conftest.py:2: PytestAssertRewriteWarning: Module already imported so cannot be rewritten: _pytest
+    pytest.register_assert_rewrite("_pytest")
+
+-- Docs: https://docs.pytest.org/en/latest/warnings.html
+========================== 1 warnings in 0.01 seconds ==========================
+________ TestRewriteOnImport.test_rewrite_module_imported_from_conftest ________
+----------------------------- Captured stdout call -----------------------------
+running: /opt/miniconda3/envs/testbed/bin/python3 -mpytest --basetemp=/tmp/pytest-of-root/pytest-0/test_rewrite_module_imported_from_conftest0/runpytest-0
+     in: /tmp/pytest-of-root/pytest-0/test_rewrite_module_imported_from_conftest0
+['--count', '-C', 'coverage.cover', '--include-pattern', '/testbed/(src/_pytest/assertion/rewrite\\.py)']
+============================= test session starts ==============================
+platform linux -- Python 3.9.25, pytest-4.5.1.dev40+g10ca84ffc, py-1.11.0, pluggy-0.11.0
+rootdir: /tmp/pytest-of-root/pytest-0/test_rewrite_module_imported_from_conftest0
+collected 1 item
+
+test_rewrite_module_imported.py .                                        [100%]
+
+=========================== 1 passed in 0.01 seconds ===========================
+________ TestRewriteOnImport.test_rewrite_warning_using_pytest_plugins _________
+----------------------------- Captured stdout call -----------------------------
+running: /opt/miniconda3/envs/testbed/bin/python3 -mpytest --basetemp=/tmp/pytest-of-root/pytest-0/test_rewrite_warning_using_pytest_plugins0/runpytest-0
+     in: /tmp/pytest-of-root/pytest-0/test_rewrite_warning_using_pytest_plugins0
+['--count', '-C', 'coverage.cover', '--include-pattern', '/testbed/(src/_pytest/assertion/rewrite\\.py)']
+============================= test session starts ==============================
+platform linux -- Python 3.9.25, pytest-4.5.1.dev40+g10ca84ffc, py-1.11.0, pluggy-0.11.0
+rootdir: /tmp/pytest-of-root/pytest-0/test_rewrite_warning_using_pytest_plugins0
+collected 1 item
+
+test_rewrite_warning_pytest_plugins.py .                                 [100%]
+
+=========================== 1 passed in 0.01 seconds ===========================
+____ TestRewriteOnImport.test_rewrite_warning_using_pytest_plugins_env_var _____
+----------------------------- Captured stdout call -----------------------------
+running: /opt/miniconda3/envs/testbed/bin/python3 -mpytest --basetemp=/tmp/pytest-of-root/pytest-0/test_rewrite_warning_using_pytest_plugins_env_var0/runpytest-0
+     in: /tmp/pytest-of-root/pytest-0/test_rewrite_warning_using_pytest_plugins_env_var0
+['--count', '-C', 'coverage.cover', '--include-pattern', '/testbed/(src/_pytest/assertion/rewrite\\.py)']
+============================= test session starts ==============================
+platform linux -- Python 3.9.25, pytest-4.5.1.dev40+g10ca84ffc, py-1.11.0, pluggy-0.11.0
+rootdir: /tmp/pytest-of-root/pytest-0/test_rewrite_warning_using_pytest_plugins_env_var0
+collected 1 item
+
+test_rewrite_warning_using_pytest_plugins_env_var.py .                   [100%]
+
+=========================== 1 passed in 0.01 seconds ===========================
+___ TestAssertionRewriteHookDetails.test_loader_is_package_false_for_module ____
+----------------------------- Captured stdout call -----------------------------
+============================= test session starts ==============================
+platform linux -- Python 3.9.25, pytest-4.5.1.dev40+g10ca84ffc, py-1.11.0, pluggy-0.11.0
+rootdir: /tmp/pytest-of-root/pytest-0/test_loader_is_package_false_for_module0
+collected 1 item
+
+test_fun.py .                                                            [100%]
+
+=========================== 1 passed in 0.01 seconds ===========================
+___ TestAssertionRewriteHookDetails.test_loader_is_package_true_for_package ____
+----------------------------- Captured stdout call -----------------------------
+============================= test session starts ==============================
+platform linux -- Python 3.9.25, pytest-4.5.1.dev40+g10ca84ffc, py-1.11.0, pluggy-0.11.0
+rootdir: /tmp/pytest-of-root/pytest-0/test_loader_is_package_true_for_package0
+collected 3 items
+
+test_fun.py ...                                                          [100%]
+
+=========================== 3 passed in 0.01 seconds ===========================
+__________ TestAssertionRewriteHookDetails.test_sys_meta_path_munged ___________
+----------------------------- Captured stdout call -----------------------------
+============================= test session starts ==============================
+platform linux -- Python 3.9.25, pytest-4.5.1.dev40+g10ca84ffc, py-1.11.0, pluggy-0.11.0
+rootdir: /tmp/pytest-of-root/pytest-0/test_sys_meta_path_munged0
+collected 1 item
+
+test_sys_meta_path_munged.py .                                           [100%]
+
+=========================== 1 passed in 0.01 seconds ===========================
+______ TestAssertionRewriteHookDetails.test_resources_provider_for_loader ______
+----------------------------- Captured stdout call -----------------------------
+running: /opt/miniconda3/envs/testbed/bin/python3 -mpytest --basetemp=/tmp/pytest-of-root/pytest-0/test_resources_provider_for_loader0/runpytest-0
+     in: /tmp/pytest-of-root/pytest-0/test_resources_provider_for_loader0
+['--count', '-C', 'coverage.cover', '--include-pattern', '/testbed/(src/_pytest/assertion/rewrite\\.py)']
+============================= test session starts ==============================
+platform linux -- Python 3.9.25, pytest-4.5.1.dev40+g10ca84ffc, py-1.11.0, pluggy-0.11.0
+rootdir: /tmp/pytest-of-root/pytest-0/test_resources_provider_for_loader0
+collected 1 item
+
+testpkg/test_pkg.py .                                                    [100%]
+
+=========================== 1 passed in 0.02 seconds ===========================
+_____________ TestAssertionRewriteHookDetails.test_reload_is_same ______________
+----------------------------- Captured stdout call -----------------------------
+============================= test session starts ==============================
+platform linux -- Python 3.9.25, pytest-4.5.1.dev40+g10ca84ffc, py-1.11.0, pluggy-0.11.0
+rootdir: /tmp/pytest-of-root/pytest-0/test_reload_is_same0, inifile: pytest.ini
+collected 1 item
+
+test_fun.py .
+
+=========================== 1 passed in 0.01 seconds ===========================
+_____________ TestAssertionRewriteHookDetails.test_reload_reloads ______________
+----------------------------- Captured stdout call -----------------------------
+============================= test session starts ==============================
+platform linux -- Python 3.9.25, pytest-4.5.1.dev40+g10ca84ffc, py-1.11.0, pluggy-0.11.0
+rootdir: /tmp/pytest-of-root/pytest-0/test_reload_reloads0, inifile: pytest.ini
+collected 1 item
+
+test_fun.py .
+
+=========================== 1 passed in 0.02 seconds ===========================
+____________ TestAssertionRewriteHookDetails.test_get_data_support _____________
+----------------------------- Captured stdout call -----------------------------
+============================= test session starts ==============================
+platform linux -- Python 3.9.25, pytest-4.5.1.dev40+g10ca84ffc, py-1.11.0, pluggy-0.11.0
+rootdir: /tmp/pytest-of-root/pytest-0/test_get_data_support0
+collected 1 item
+
+foo/test_foo.py .                                                        [100%]
+
+=========================== 1 passed in 0.01 seconds ===========================
+________________________________ test_issue731 _________________________________
+----------------------------- Captured stdout call -----------------------------
+============================= test session starts ==============================
+platform linux -- Python 3.9.25, pytest-4.5.1.dev40+g10ca84ffc, py-1.11.0, pluggy-0.11.0
+rootdir: /tmp/pytest-of-root/pytest-0/test_issue7310
+collected 1 item
+
+test_issue731.py F                                                       [100%]
+
+=================================== FAILURES ===================================
+________________________________ test_long_repr ________________________________
+
+    def test_long_repr():
+        obj = LongReprWithBraces()
+>       assert obj.some_method()
+E       assert False
+E        +  where False = <bound method LongReprWithBraces.some_method of LongReprWithBraces({aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa...aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa)>()
+E        +    where <bound method LongReprWithBraces.some_method of LongReprWithBraces({aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa...aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa)> = LongReprWithBraces({aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa}aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa).some_method
+
+test_issue731.py:10: AssertionError
+=========================== 1 failed in 0.01 seconds ===========================
+________________________ TestIssue925.test_simple_case _________________________
+----------------------------- Captured stdout call -----------------------------
+============================= test session starts ==============================
+platform linux -- Python 3.9.25, pytest-4.5.1.dev40+g10ca84ffc, py-1.11.0, pluggy-0.11.0
+rootdir: /tmp/pytest-of-root/pytest-0/test_simple_case0
+collected 1 item
+
+test_simple_case.py F                                                    [100%]
+
+=================================== FAILURES ===================================
+_____________________________ test_ternary_display _____________________________
+
+    def test_ternary_display():
+>       assert (False == False) == False
+E       assert (False == False) == False
+
+test_simple_case.py:2: AssertionError
+=========================== 1 failed in 0.01 seconds ===========================
+_________________________ TestIssue925.test_long_case __________________________
+----------------------------- Captured stdout call -----------------------------
+============================= test session starts ==============================
+platform linux -- Python 3.9.25, pytest-4.5.1.dev40+g10ca84ffc, py-1.11.0, pluggy-0.11.0
+rootdir: /tmp/pytest-of-root/pytest-0/test_long_case0
+collected 1 item
+
+test_long_case.py F                                                      [100%]
+
+=================================== FAILURES ===================================
+_____________________________ test_ternary_display _____________________________
+
+    def test_ternary_display():
+>        assert False == (False == True) == True
+E        assert (False == True) == True
+
+test_long_case.py:2: AssertionError
+=========================== 1 failed in 0.01 seconds ===========================
+_______________________ TestIssue925.test_many_brackets ________________________
+----------------------------- Captured stdout call -----------------------------
+============================= test session starts ==============================
+platform linux -- Python 3.9.25, pytest-4.5.1.dev40+g10ca84ffc, py-1.11.0, pluggy-0.11.0
+rootdir: /tmp/pytest-of-root/pytest-0/test_many_brackets0
+collected 1 item
+
+test_many_brackets.py F                                                  [100%]
+
+=================================== FAILURES ===================================
+_____________________________ test_ternary_display _____________________________
+
+    def test_ternary_display():
+>        assert True == ((False == True) == True)
+E        assert True == ((False == True) == True)
+
+test_many_brackets.py:2: AssertionError
+=========================== 1 failed in 0.01 seconds ===========================
+___________ TestIssue2121.test_rewrite_python_files_contain_subdirs ____________
+----------------------------- Captured stdout call -----------------------------
+============================= test session starts ==============================
+platform linux -- Python 3.9.25, pytest-4.5.1.dev40+g10ca84ffc, py-1.11.0, pluggy-0.11.0
+rootdir: /tmp/pytest-of-root/pytest-0/test_rewrite_python_files_contain_subdirs0, inifile: tox.ini
+collected 1 item
+
+tests/file.py F                                                          [100%]
+
+=================================== FAILURES ===================================
+_____________________________ test_simple_failure ______________________________
+
+    def test_simple_failure():
+>       assert 1 + 1 == 3
+E       assert (1 + 1) == 3
+
+tests/file.py:2: AssertionError
+=========================== 1 failed in 0.01 seconds ===========================
+_______________________ test_source_mtime_long_long[-1] ________________________
+----------------------------- Captured stdout call -----------------------------
+============================= test session starts ==============================
+platform linux -- Python 3.9.25, pytest-4.5.1.dev40+g10ca84ffc, py-1.11.0, pluggy-0.11.0
+rootdir: /tmp/pytest-of-root/pytest-0/test_source_mtime_long_long0
+collected 1 item
+
+test_source_mtime_long_long.py .                                         [100%]
+
+=========================== 1 passed in 0.01 seconds ===========================
+________________________ test_source_mtime_long_long[1] ________________________
+----------------------------- Captured stdout call -----------------------------
+============================= test session starts ==============================
+platform linux -- Python 3.9.25, pytest-4.5.1.dev40+g10ca84ffc, py-1.11.0, pluggy-0.11.0
+rootdir: /tmp/pytest-of-root/pytest-0/test_source_mtime_long_long1
+collected 1 item
+
+test_source_mtime_long_long.py .                                         [100%]
+
+=========================== 1 passed in 0.01 seconds ===========================
+___________________ TestEarlyRewriteBailout.test_cwd_changed ___________________
+----------------------------- Captured stdout call -----------------------------
+============================= test session starts ==============================
+platform linux -- Python 3.9.25, pytest-4.5.1.dev40+g10ca84ffc, py-1.11.0, pluggy-0.11.0
+rootdir: /tmp/pytest-of-root/pytest-0/test_cwd_changed0
+collected 1 item
+
+test_test.py .                                                           [100%]
+
+=========================== 1 passed in 0.01 seconds ===========================
+=========================== short test summary info ============================
+PASSED testing/test_assertrewrite.py::TestAssertionRewrite::test_place_initial_imports
+PASSED testing/test_assertrewrite.py::TestAssertionRewrite::test_dont_rewrite
+PASSED testing/test_assertrewrite.py::TestAssertionRewrite::test_name
+PASSED testing/test_assertrewrite.py::TestAssertionRewrite::test_dont_rewrite_if_hasattr_fails
+PASSED testing/test_assertrewrite.py::TestAssertionRewrite::test_assert_already_has_message
+PASSED testing/test_assertrewrite.py::TestAssertionRewrite::test_boolop
+PASSED testing/test_assertrewrite.py::TestAssertionRewrite::test_short_circuit_evaluation
+PASSED testing/test_assertrewrite.py::TestAssertionRewrite::test_unary_op
+PASSED testing/test_assertrewrite.py::TestAssertionRewrite::test_binary_op
+PASSED testing/test_assertrewrite.py::TestAssertionRewrite::test_boolop_percent
+PASSED testing/test_assertrewrite.py::TestAssertionRewrite::test_call
+PASSED testing/test_assertrewrite.py::TestAssertionRewrite::test_attribute
+PASSED testing/test_assertrewrite.py::TestAssertionRewrite::test_comparisons
+PASSED testing/test_assertrewrite.py::TestAssertionRewrite::test_len
+PASSED testing/test_assertrewrite.py::TestAssertionRewrite::test_custom_reprcompare
+PASSED testing/test_assertrewrite.py::TestAssertionRewrite::test_assert_raising_nonzero_in_comparison
+PASSED testing/test_assertrewrite.py::TestAssertionRewrite::test_formatchar
+PASSED testing/test_assertrewrite.py::TestAssertionRewrite::test_custom_repr
+PASSED testing/test_assertrewrite.py::TestAssertionRewrite::test_custom_repr_non_ascii
+PASSED testing/test_assertrewrite.py::TestAssertionRewriteHookDetails::test_read_pyc
+PASSED testing/test_assertrewrite.py::TestAssertionRewrite::test_dont_rewrite_plugin
+PASSED testing/test_assertrewrite.py::TestAssertionRewrite::test_assertion_message
+PASSED testing/test_assertrewrite.py::TestAssertionRewrite::test_assertion_message_multiline
+PASSED testing/test_assertrewrite.py::TestAssertionRewrite::test_assertion_message_tuple
+PASSED testing/test_assertrewrite.py::TestAssertionRewrite::test_assertion_message_expr
+PASSED testing/test_assertrewrite.py::TestAssertionRewrite::test_assertion_message_escape
+PASSED testing/test_assertrewrite.py::TestAssertionRewrite::test_assertion_messages_bytes
+PASSED testing/test_assertrewrite.py::TestAssertionRewrite::test_at_operator_issue1290
+PASSED testing/test_assertrewrite.py::TestAssertionRewrite::test_starred_with_side_effect
+PASSED testing/test_assertrewrite.py::TestRewriteOnImport::test_pycache_is_a_file
+PASSED testing/test_assertrewrite.py::TestRewriteOnImport::test_pycache_is_readonly
+PASSED testing/test_assertrewrite.py::TestRewriteOnImport::test_zipfile
+PASSED testing/test_assertrewrite.py::TestRewriteOnImport::test_readonly
+PASSED testing/test_assertrewrite.py::TestRewriteOnImport::test_dont_write_bytecode
+PASSED testing/test_assertrewrite.py::TestRewriteOnImport::test_orphaned_pyc_file
+PASSED testing/test_assertrewrite.py::TestRewriteOnImport::test_package
+PASSED testing/test_assertrewrite.py::TestRewriteOnImport::test_translate_newlines
+PASSED testing/test_assertrewrite.py::TestRewriteOnImport::test_package_without__init__py
+PASSED testing/test_assertrewrite.py::TestRewriteOnImport::test_rewrite_warning
+PASSED testing/test_assertrewrite.py::TestRewriteOnImport::test_rewrite_module_imported_from_conftest
+PASSED testing/test_assertrewrite.py::TestRewriteOnImport::test_remember_rewritten_modules
+PASSED testing/test_assertrewrite.py::TestRewriteOnImport::test_rewrite_warning_using_pytest_plugins
+PASSED testing/test_assertrewrite.py::TestRewriteOnImport::test_rewrite_warning_using_pytest_plugins_env_var
+PASSED testing/test_assertrewrite.py::TestAssertionRewriteHookDetails::test_loader_is_package_false_for_module
+PASSED testing/test_assertrewrite.py::TestAssertionRewriteHookDetails::test_loader_is_package_true_for_package
+PASSED testing/test_assertrewrite.py::TestAssertionRewriteHookDetails::test_sys_meta_path_munged
+PASSED testing/test_assertrewrite.py::TestAssertionRewriteHookDetails::test_write_pyc
+PASSED testing/test_assertrewrite.py::TestAssertionRewriteHookDetails::test_resources_provider_for_loader
+PASSED testing/test_assertrewrite.py::TestAssertionRewriteHookDetails::test_reload_is_same
+PASSED testing/test_assertrewrite.py::TestAssertionRewriteHookDetails::test_reload_reloads
+PASSED testing/test_assertrewrite.py::TestAssertionRewriteHookDetails::test_get_data_support
+PASSED testing/test_assertrewrite.py::test_issue731
+PASSED testing/test_assertrewrite.py::TestIssue925::test_simple_case
+PASSED testing/test_assertrewrite.py::TestIssue925::test_long_case
+PASSED testing/test_assertrewrite.py::TestIssue925::test_many_brackets
+PASSED testing/test_assertrewrite.py::TestIssue2121::test_rewrite_python_files_contain_subdirs
+PASSED testing/test_assertrewrite.py::test_source_mtime_long_long[-1]
+PASSED testing/test_assertrewrite.py::test_source_mtime_long_long[1]
+PASSED testing/test_assertrewrite.py::test_rewrite_infinite_recursion
+PASSED testing/test_assertrewrite.py::TestEarlyRewriteBailout::test_basic
+PASSED testing/test_assertrewrite.py::TestEarlyRewriteBailout::test_pattern_contains_subdirectories
+PASSED testing/test_assertrewrite.py::TestEarlyRewriteBailout::test_cwd_changed
+SKIPPED [1] testing/test_assertrewrite.py:921: python 2 only
+SKIPPED [1] testing/test_assertrewrite.py:970: condition: sys.version_info[0] >= 3
+SKIPPED [1] testing/test_assertrewrite.py:979: condition: sys.version_info[0] >= 3
+SKIPPED [1] testing/test_assertrewrite.py:990: condition: sys.version_info[0] >= 3
+SKIPPED [1] testing/test_assertrewrite.py:1001: condition: sys.version_info[0] >= 3
+FAILED testing/test_assertrewrite.py::TestAssertionRewrite::test_all_reports_failing_iteration
+FAILED testing/test_assertrewrite.py::TestAssertionRewrite::test_any_reports_failing_iteration
+FAILED testing/test_assertrewrite.py::TestRewriteOnImport::test_pyc_vs_pyo - ...
+================ 3 failed, 62 passed, 5 skipped in 3.72 seconds ================
++ cat coverage.cover
+{"/testbed/src/_pytest/assertion/rewrite.py": {"2": 1, "3": 1, "4": 1, "6": 1, "7": 1, "8": 1, "9": 1, "10": 1, "11": 1, "12": 1, "13": 1, "14": 1, "15": 1, "16": 1, "18": 1, "19": 1, "20": 1, "22": 1, "23": 1, "24": 1, "27": 1, "28": 1, "29": 1, "32": 1, "33": 1, "35": 0, "36": 0, "37": 0, "38": 0, "40": 0, "41": 0, "42": 0, "43": 0, "45": 1, "46": 1, "48": 1, "50": 1, "51": 1, "54": 0, "58": 2, "343": 1, "367": 1, "368": 1, "370": 1, "371": 1, "374": 1, "430": 2, "466": 1, "471": 1, "493": 1, "519": 1, "529": 1, "537": 1, "552": 1, "555": 1, "556": 1, "557": 1, "558": 1, "559": 1, "560": 1, "561": 1, "562": 1, "563": 1, "564": 1, "565": 1, "566": 1, "567": 1, "568": 1, "569": 1, "570": 1, "571": 1, "572": 1, "573": 1, "574": 1, "575": 1, "576": 1, "554": 1, "579": 1, "580": 1, "581": 0, "582": 0, "585": 1, "586": 1, "589": 0, "593": 1, "608": 2, "55": 0, "61": 1, "76": 1, "80": 1, "84": 1, "181": 1, "219": 1, "240": 1, "253": 1, "270": 1, "282": 1, "308": 1, "318": 1, "319": 1, "336": 1, "62": 36, "63": 36, "64": 36, "65": 36, "66": 36, "67": 36, "68": 36, "71": 36, "72": 36, "73": 36, "74": 36, "77": 64, "78": 64, "82": 128, "85": 79, "86": 1, "87": 78, "88": 78, "89": 9, "90": 69, "91": 69, "92": 69, "93": 69, "94": 69, "97": 16, "98": 16, "99": 16, "100": 69, "101": 53, "102": 53, "103": 4, "104": 4, "105": 49, "106": 46, "107": 49, "108": 49, "109": 1, "110": 1, "111": 1, "112": 1, "115": 1, "117": 0, "118": 48, "120": 5, "122": 16, "124": 60, "125": 60, "126": 14, "128": 46, "138": 46, "139": 46, "140": 46, "141": 46, "142": 46, "143": 16, "144": 16, "145": 16, "149": 14, "150": 2, "153": 2, "154": 0, "155": 0, "156": 0, "158": 0, "159": 46, "160": 46, "163": 46, "164": 46, "165": 45, "166": 45, "167": 45, "169": 3, "170": 42, "171": 42, "172": 42, "173": 42, "175": 42, "177": 1, "178": 43, "179": 43, "188": 78, "189": 33, "190": 65, "193": 32, "195": 32, "198": 78, "199": 78, "200": 4, "203": 74, "205": 126, "208": 117, "209": 24, "210": 93, "211": 41, "213": 9, "214": 0, "216": 9, "217": 9, "221": 60, "222": 60, "223": 2, "224": 2, "226": 58, "227": 48, "228": 2, "229": 2, "233": 93, "234": 78, "235": 41, "236": 41, "238": 15, "241": 24, "242": 24, "243": 24, "244": 38, "245": 15, "246": 1, "247": 1, "248": 1, "250": 23, "251": 23, "260": 3, "259": 3, "262": 3, "263": 0, "264": 0, "266": 0, "267": 3, "268": 3, "271": 0, "272": 0, "274": 0, "275": 0, "276": 0, "278": 0, "279": 0, "283": 38, "284": 38, "288": 2, "293": 36, "294": 38, "295": 38, "297": 38, "298": 38, "300": 38, "301": 38, "302": 0, "303": 0, "304": 0, "305": 0, "306": 38, "309": 79, "310": 79, "311": 7, "312": 7, "313": 72, "314": 71, "315": 72, "316": 72, "324": 36, "325": 36, "328": 36, "329": 0, "330": 0, "334": 36, "339": 1, "340": 1, "349": 44, "350": 44, "351": 42, "353": 42, "354": 42, "356": 42, "357": 42, "358": 2, "359": 2, "363": 2, "364": 42, "376": 45, "377": 45, "378": 45, "379": 43, "380": 2, "381": 2, "382": 43, "394": 0, "395": 0, "397": 0, "396": 0, "398": 0, "399": 0, "401": 0, "403": 0, "404": 0, "405": 0, "406": 0, "407": 0, "408": 0, "410": 0, "412": 0, "413": 43, "414": 43, "415": 0, "417": 0, "418": 0, "419": 43, "420": 43, "421": 43, "422": 1, "425": 1, "426": 1, "427": 42, "435": 47, "436": 47, "437": 44, "438": 44, "439": 3, "440": 3, "441": 3, "442": 3, "443": 3, "444": 0, "445": 0, "446": 0, "449": 3, "448": 9, "450": 3, "451": 3, "453": 2, "454": 2, "455": 1, "456": 1, "457": 0, "458": 0, "459": 0, "460": 1, "461": 0, "462": 0, "463": 1, "468": 100, "482": 123, "484": 123, "486": 0, "488": 0, "490": 123, "487": 0, "505": 7, "506": 7, "507": 3, "508": 3, "510": 7, "511": 0, "513": 24, "514": 17, "516": 7, "520": 17, "521": 15, "523": 2, "524": 2, "525": 0, "526": 0, "530": 10, "531": 10, "532": 10, "534": 0, "538": 35, "539": 32, "540": 32, "541": 0, "542": 0, "543": 32, "544": 25, "545": 28, "546": 28, "547": 28, "548": 3, "549": 25, "590": 0, "596": 1603, "604": 1603, "605": 1603, "597": 43150, "598": 27718, "599": 43150, "600": 27718, "601": 84697, "602": 41547, "660": 1, "665": 1, "730": 1, "731": 1, "734": 1, "741": 1, "747": 1, "751": 1, "757": 1, "762": 1, "775": 1, "789": 1, "808": 1, "814": 1, "881": 1, "908": 1, "918": 1, "953": 1, "959": 1, "967": 1, "996": 1, "1017": 1, "1023": 1, "1058": 1, "1059": 1, "1061": 0, "1063": 1, "1073": 1, "661": 102, "662": 102, "663": 102, "667": 102, "669": 2, "673": 100, "674": 100, "672": 100, "676": 100, "677": 100, "678": 100, "679": 0, "680": 100, "681": 100, "682": 113, "684": 112, "683": 222, "685": 104, "686": 6, "688": 5, "689": 5, "690": 1, "691": 4, "693": 107, "692": 126, "694": 10, "695": 9, "697": 98, "698": 98, "699": 13, "701": 1, "702": 495, "703": 297, "705": 99, "707": 99, "708": 4022, "709": 3923, "710": 14447, "711": 10524, "712": 3849, "713": 7065, "714": 3216, "716": 274, "718": 2942, "719": 2942, "720": 2942, "721": 3849, "723": 6675, "722": 8702, "726": 2027, "728": 882, "732": 5, "737": 841, "738": 841, "739": 841, "743": 615, "744": 615, "745": 615, "749": 938, "753": 1834, "754": 1834, "755": 1834, "759": 397, "760": 397, "771": 1151, "772": 1151, "773": 1151, "786": 549, "787": 549, "798": 549, "799": 549, "800": 275, "801": 2249, "802": 549, "803": 549, "804": 549, "805": 549, "806": 549, "810": 273, "811": 273, "812": 273, "823": 274, "824": 0, "825": 0, "827": 0, "828": 0, "829": 0, "831": 0, "832": 0, "833": 0, "836": 274, "837": 274, "838": 274, "839": 274, "840": 274, "841": 274, "843": 274, "845": 274, "846": 440, "847": 440, "848": 220, "852": 274, "853": 274, "854": 274, "855": 274, "856": 12, "857": 12, "859": 262, "860": 262, "861": 274, "862": 274, "863": 274, "864": 274, "865": 274, "866": 274, "867": 274, "869": 0, "870": 274, "872": 274, "873": 1377, "874": 268, "875": 268, "877": 1877, "878": 1603, "879": 274, "890": 220, "891": 220, "892": 440, "893": 440, "903": 220, "906": 220, "911": 397, "912": 397, "913": 397, "914": 397, "915": 397, "916": 397, "919": 30, "920": 30, "921": 30, "922": 30, "923": 30, "924": 30, "925": 30, "926": 30, "928": 92, "929": 62, "930": 32, "932": 32, "933": 32, "934": 62, "935": 62, "936": 62, "937": 62, "938": 62, "939": 62, "940": 62, "941": 32, "942": 32, "943": 12, "944": 32, "945": 32, "946": 32, "947": 30, "948": 30, "949": 30, "950": 30, "951": 30, "954": 24, "955": 24, "956": 24, "957": 24, "960": 20, "961": 20, "962": 20, "963": 20, "964": 20, "965": 20, "971": 155, "972": 2, "973": 153, "974": 153, "975": 153, "976": 153, "977": 297, "978": 144, "979": 144, "980": 144, "981": 159, "982": 6, "983": 6, "984": 6, "985": 4, "987": 2, "989": 153, "990": 153, "991": 153, "992": 153, "993": 153, "994": 153, "998": 2, "999": 0, "1000": 2, "1001": 4, "1002": 2, "1004": 2, "1005": 4, "1006": 2, "1007": 2, "1008": 2, "1009": 2, "1011": 2, "1013": 2, "1014": 2, "1012": 2, "1019": 3, "1020": 3, "1021": 3, "1027": 0, "1028": 0, "1029": 0, "1030": 0, "1031": 0, "1032": 0, "1033": 0, "1034": 0, "1035": 0, "1036": 0, "1037": 0, "1038": 0, "1039": 0, "1040": 0, "1041": 0, "1042": 0, "1043": 0, "1044": 0, "1045": 0, "1046": 0, "1047": 0, "1048": 0, "1049": 0, "1050": 0, "1051": 0, "1052": 0, "1053": 0, "1064": 115, "1065": 0, "1066": 115, "1067": 115, "1068": 115, "1069": 115, "1070": 115, "1071": 115, "1074": 183, "1075": 183, "1076": 183, "1077": 2, "1078": 562, "1079": 562, "1080": 562, "1081": 183, "1082": 183, "1083": 183, "1084": 183, "1085": 379, "1086": 196, "1087": 196, "1088": 2, "1089": 196, "1090": 196, "1091": 196, "1092": 196, "1093": 196, "1094": 196, "1095": 196, "1096": 196, "1098": 366, "1099": 183, "1100": 183, "1101": 183, "1102": 183, "1103": 183, "1105": 183, "1106": 9, "1108": 174, "1109": 183}}
++ git checkout 10ca84ffc56c2dd2d9dc4bd71b7b898e083500cd
+Note: switching to '10ca84ffc56c2dd2d9dc4bd71b7b898e083500cd'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 10ca84ffc Merge pull request #5119 from blueyed/reportopts-A-order
+M	src/_pytest/assertion/rewrite.py
+M	testing/test_assertrewrite.py
++ git apply /root/pre_state.patch
+error: unrecognized input

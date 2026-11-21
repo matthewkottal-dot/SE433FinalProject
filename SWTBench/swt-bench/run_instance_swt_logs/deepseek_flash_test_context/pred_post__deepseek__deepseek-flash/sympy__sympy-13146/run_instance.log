@@ -1,0 +1,55 @@
+2026-11-19 15:42:02,941 - WARNING - Starting evaluation at 1795128122.94105
+2026-11-19 15:42:03,047 - INFO - Creating container for sympy__sympy-13146...
+2026-11-19 15:42:03,075 - INFO - Container for sympy__sympy-13146 created: c919e384d436fd782851e31e807c52242cb1a553b48560ea807f19dfa25437e7
+2026-11-19 15:42:03,182 - INFO - Container for sympy__sympy-13146 started: c919e384d436fd782851e31e807c52242cb1a553b48560ea807f19dfa25437e7
+2026-11-19 15:42:03,356 - INFO - Git diff before:
+
+2026-11-19 15:42:03,359 - INFO - Eval script for sympy__sympy-13146 written to eval.sh, now applying to container...
+2026-11-19 15:42:09,909 - INFO - Test output for sympy__sympy-13146 written to run_instance_swt_logs/deepseek_flash_test_context/pred_post__deepseek__deepseek-flash/sympy__sympy-13146/test_output.txt
+2026-11-19 15:42:09,947 - INFO - Git diff after:
+diff --git a/sympy/core/operations.py b/sympy/core/operations.py
+index 4c4a7b95f2..fe1618e8d1 100644
+--- a/sympy/core/operations.py
++++ b/sympy/core/operations.py
+@@ -332,9 +332,7 @@ def _eval_evalf(self, prec):
+                         args.append(a)
+                     else:
+                         args.append(newa)
+-                if not _aresame(tuple(args), tail_args):
+-                    tail = self.func(*args)
+-                return self.func(x, tail)
++                return self.func(x, *args)
+ 
+         # this is the same as above, but there were no pure-number args to
+         # deal with
+@@ -345,9 +343,7 @@ def _eval_evalf(self, prec):
+                 args.append(a)
+             else:
+                 args.append(newa)
+-        if not _aresame(tuple(args), self.args):
+-            return self.func(*args)
+-        return self
++        return self.func(*args)
+ 
+     @classmethod
+     def make_args(cls, expr):
+diff --git a/sympy/simplify/tests/test_simplify.py b/sympy/simplify/tests/test_simplify.py
+index 6acf690006..94a8599f59 100644
+--- a/sympy/simplify/tests/test_simplify.py
++++ b/sympy/simplify/tests/test_simplify.py
+@@ -652,3 +652,10 @@ def test_clear_coefficients():
+     assert clear_coefficients(S.Infinity, x) == (S.Infinity, x)
+     assert clear_coefficients(-S.Pi, x) == (S.Pi, -x)
+     assert clear_coefficients(2 - S.Pi/3, x) == (pi, -3*x + 6)
++
++
++def test_simplify_float_power_cancellation():
++    x = Symbol('x')
++    expr1 = S(1)/2*x**2.5
++    expr2 = S(1)*x**(S(5)/2)/2
++    assert simplify((expr1 - expr2).evalf(5)) == 0
+2026-11-19 15:42:09,948 - INFO - Git diff changed after running eval script
+2026-11-19 15:42:09,948 - INFO - Attempting to stop container exec.eval.x86_64.deec2122407a414e380748.396e2b5f4b8ee2c45adc3e.131896705814832...
+2026-11-19 15:42:25,128 - INFO - Attempting to remove container exec.eval.x86_64.deec2122407a414e380748.396e2b5f4b8ee2c45adc3e.131896705814832...
+2026-11-19 15:42:25,160 - INFO - Container exec.eval.x86_64.deec2122407a414e380748.396e2b5f4b8ee2c45adc3e.131896705814832 removed.
+2026-11-19 15:42:25,161 - WARNING - End of eval at 1795128145.1614015

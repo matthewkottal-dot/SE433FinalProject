@@ -1,0 +1,26 @@
+diff --git a/testing/test_assertrewrite.py b/testing/test_assertrewrite.py
+index 87dada21..3c149688 100755
+--- a/testing/test_assertrewrite.py
++++ b/testing/test_assertrewrite.py
+@@ -525,6 +525,21 @@ class TestAssertionRewrite(object):
+  +  where False = g(**{'a': 2})"""
+         )
+ 
++    def test_all_generator_unrolled(self):
++        class FailingItem(object):
++            def __repr__(self):
++                return "<FAILING_ITEM>"
++
++        def predicate(item):
++            return False
++
++        def f():
++            items = [failing_item]
++            assert all(predicate(item) for item in items)
++
++        msg = getmsg(f, {"failing_item": FailingItem(), "predicate": predicate})
++        assert "<FAILING_ITEM>" in msg
++
+     def test_attribute(self):
+         class X(object):
+             g = 3

@@ -1,0 +1,35 @@
+2026-11-19 15:28:54,838 - WARNING - Starting evaluation at 1795127334.8380299
+2026-11-19 15:28:54,944 - INFO - Creating container for pytest-dev__pytest-6116...
+2026-11-19 15:28:54,977 - INFO - Container for pytest-dev__pytest-6116 created: f280508b7089faf21aa5d5b698bb4b5c2db55d10f63259a17225bb1b14a4c3d9
+2026-11-19 15:28:55,099 - INFO - Container for pytest-dev__pytest-6116 started: f280508b7089faf21aa5d5b698bb4b5c2db55d10f63259a17225bb1b14a4c3d9
+2026-11-19 15:28:55,245 - INFO - Git diff before:
+
+2026-11-19 15:28:55,248 - INFO - Eval script for pytest-dev__pytest-6116 written to eval.sh, now applying to container...
+2026-11-19 15:29:01,770 - INFO - Test output for pytest-dev__pytest-6116 written to run_instance_swt_logs/deepseek_flash_test_context/pred_pre__deepseek__deepseek-flash/pytest-dev__pytest-6116/test_output.txt
+2026-11-19 15:29:01,806 - INFO - Git diff after:
+diff --git a/testing/test_collection.py b/testing/test_collection.py
+index 259868357..99dc59ac1 100644
+--- a/testing/test_collection.py
++++ b/testing/test_collection.py
+@@ -1257,3 +1257,16 @@ def test_collector_respects_tbstyle(testdir):
+             "*= 1 error in *",
+         ]
+     )
++
++
++def test_collect_only_with_short_option(testdir):
++    """``--co`` is a shortcut for ``--collect-only``."""
++    testdir.makepyfile(
++        """
++        def test_collected():
++            assert False
++        """
++    )
++    result = testdir.runpytest("--co")
++    assert result.ret == ExitCode.OK
++    result.stdout.fnmatch_lines(["*test_collected*", "collected 1 item*"])
+2026-11-19 15:29:01,807 - INFO - Git diff changed after running eval script
+2026-11-19 15:29:01,807 - INFO - Attempting to stop container exec.eval.x86_64.bbbc4277fd8f648e693b98.81edf9e00f8a91f1a378b3.131896705634128...
+2026-11-19 15:29:17,005 - INFO - Attempting to remove container exec.eval.x86_64.bbbc4277fd8f648e693b98.81edf9e00f8a91f1a378b3.131896705634128...
+2026-11-19 15:29:17,048 - INFO - Container exec.eval.x86_64.bbbc4277fd8f648e693b98.81edf9e00f8a91f1a378b3.131896705634128 removed.
+2026-11-19 15:29:17,049 - WARNING - End of eval at 1795127357.0494535

@@ -1,0 +1,77 @@
+2026-11-19 14:24:57,859 - WARNING - Starting evaluation at 1795123497.8593159
+2026-11-19 14:24:57,977 - INFO - Creating container for pytest-dev__pytest-11148...
+2026-11-19 14:24:58,010 - INFO - Container for pytest-dev__pytest-11148 created: 78ab022ba4d0c266c706804f1e7170642cfd0c992212e80ddc4455adb66da204
+2026-11-19 14:24:58,134 - INFO - Container for pytest-dev__pytest-11148 started: 78ab022ba4d0c266c706804f1e7170642cfd0c992212e80ddc4455adb66da204
+2026-11-19 14:24:58,224 - INFO - Git diff before:
+
+2026-11-19 14:24:58,228 - INFO - Eval script for pytest-dev__pytest-11148 written to eval.sh, now applying to container...
+2026-11-19 14:25:06,821 - INFO - Test output for pytest-dev__pytest-11148 written to run_instance_swt_logs/deepseek_flash_test_baseline/pred_post__deepseek__deepseek-flash/pytest-dev__pytest-11148/test_output.txt
+2026-11-19 14:25:06,860 - INFO - Git diff after:
+diff --git a/src/_pytest/pathlib.py b/src/_pytest/pathlib.py
+index e43310ef0..14fb2e3ae 100644
+--- a/src/_pytest/pathlib.py
++++ b/src/_pytest/pathlib.py
+@@ -523,6 +523,8 @@ def import_path(
+ 
+     if mode is ImportMode.importlib:
+         module_name = module_name_from_path(path, root)
++        with contextlib.suppress(KeyError):
++            return sys.modules[module_name]
+ 
+         for meta_importer in sys.meta_path:
+             spec = meta_importer.find_spec(module_name, [str(path.parent)])
+diff --git a/testing/test_doctest.py b/testing/test_doctest.py
+index f189e8645..26638ff28 100644
+--- a/testing/test_doctest.py
++++ b/testing/test_doctest.py
+@@ -135,6 +135,45 @@ class TestDoctests:
+         reprec = pytester.inline_run("--doctest-modules", "--import-mode=importlib")
+         reprec.assertoutcome(passed=1)
+ 
++    def test_importmode_importlib_does_not_reimport_package_modules(
++        self, pytester: Pytester
++    ) -> None:
++        """Modules imported during collection must not replace existing instances."""
++        pytester.makeini(
++            """
++            [pytest]
++            pythonpath = .
++            """
++        )
++        pytester.makepyfile(
++            **{
++                "pkg/__init__.py": "from . import logging\n",
++                "pkg/core.py": """
++                    from . import logging
++
++                    def initialize():
++                        logging.Logger.store = object()
++                """,
++                "pkg/logging.py": """
++                    class Logger:
++                        store = None
++                """,
++                "tests/test_commands.py": """
++                    import sys
++
++                    from pkg import core
++                    from pkg import logging
++
++                    def test_initialize():
++                        core.initialize()
++                        assert logging is sys.modules["pkg.logging"]
++                        assert logging.Logger.store is not None
++                """,
++            }
++        )
++        result = pytester.runpytest("--doctest-modules", "--import-mode=importlib")
++        result.assert_outcomes(passed=1)
++
+     def test_new_pattern(self, pytester: Pytester):
+         p = pytester.maketxtfile(
+             xdoc="""
+2026-11-19 14:25:06,861 - INFO - Git diff changed after running eval script
+2026-11-19 14:25:06,861 - INFO - Attempting to stop container exec.eval.x86_64.0a53cb26c68560f276cb87.fa39195893122d674eb8da.125556490475344...
+2026-11-19 14:25:22,077 - INFO - Attempting to remove container exec.eval.x86_64.0a53cb26c68560f276cb87.fa39195893122d674eb8da.125556490475344...
+2026-11-19 14:25:22,133 - INFO - Container exec.eval.x86_64.0a53cb26c68560f276cb87.fa39195893122d674eb8da.125556490475344 removed.
+2026-11-19 14:25:22,134 - WARNING - End of eval at 1795123522.134179

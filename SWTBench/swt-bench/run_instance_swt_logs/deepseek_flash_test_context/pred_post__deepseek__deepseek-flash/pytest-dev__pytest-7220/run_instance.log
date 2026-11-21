@@ -1,0 +1,76 @@
+2026-11-19 15:30:03,092 - WARNING - Starting evaluation at 1795127403.0923774
+2026-11-19 15:30:03,195 - INFO - Creating container for pytest-dev__pytest-7220...
+2026-11-19 15:30:03,225 - INFO - Container for pytest-dev__pytest-7220 created: 2b581d24dfbb229d869c6b9fc1579f64d8c3021923e3eda910706aa9d5a9fd1e
+2026-11-19 15:30:03,341 - INFO - Container for pytest-dev__pytest-7220 started: 2b581d24dfbb229d869c6b9fc1579f64d8c3021923e3eda910706aa9d5a9fd1e
+2026-11-19 15:30:03,413 - INFO - Git diff before:
+
+2026-11-19 15:30:03,416 - INFO - Eval script for pytest-dev__pytest-7220 written to eval.sh, now applying to container...
+2026-11-19 15:30:11,536 - INFO - Test output for pytest-dev__pytest-7220 written to run_instance_swt_logs/deepseek_flash_test_context/pred_post__deepseek__deepseek-flash/pytest-dev__pytest-7220/test_output.txt
+2026-11-19 15:30:11,572 - INFO - Git diff after:
+diff --git a/src/_pytest/nodes.py b/src/_pytest/nodes.py
+index 4a79bc861..7a8c28cd4 100644
+--- a/src/_pytest/nodes.py
++++ b/src/_pytest/nodes.py
+@@ -29,6 +29,7 @@ from _pytest.mark.structures import Mark
+ from _pytest.mark.structures import MarkDecorator
+ from _pytest.mark.structures import NodeKeywords
+ from _pytest.outcomes import fail
++from _pytest.pathlib import Path
+ from _pytest.store import Store
+ 
+ if TYPE_CHECKING:
+@@ -361,9 +362,14 @@ class Node(metaclass=NodeMeta):
+         else:
+             truncate_locals = True
+ 
++        # excinfo.getrepr() formats paths relative to the CWD if `abspath` is False.
++        # It is possible for a fixture/test to change the CWD while this code runs, which
++        # would then result in the user seeing confusing paths in the failure message.
++        # To fix this, if the CWD changed, always display the full absolute path.
++        # It will be better to just always display paths relative to invocation_dir, but
++        # this requires a lot of plumbing (#6428).
+         try:
+-            os.getcwd()
+-            abspath = False
++            abspath = Path(os.getcwd()) != Path(self.config.invocation_dir)
+         except OSError:
+             abspath = True
+ 
+diff --git a/testing/test_terminal.py b/testing/test_terminal.py
+index 0f5b4cb68..80c16fb60 100644
+--- a/testing/test_terminal.py
++++ b/testing/test_terminal.py
+@@ -2177,3 +2177,28 @@ class TestCodeHighlight:
+                 ]
+             )
+         )
++
++
++def test_failure_path_after_fixture_chdir(testdir):
++    """The failure path should be relative to the original working directory."""
++    testdir.makepyfile(
++        test_path_error="""
++        import os
++
++        import pytest
++
++        @pytest.fixture
++        def change_dir():
++            old_dir = os.getcwd()
++            os.mkdir("subdir")
++            os.chdir("subdir")
++            yield
++            os.chdir(old_dir)
++
++        def test_failure(change_dir):
++            assert False
++        """
++    )
++    result = testdir.runpytest()
++    result.stdout.fnmatch_lines(["test_path_error.py:*: AssertionError"])
++    result.stdout.no_fnmatch_line("*../test_path_error.py:*")
+2026-11-19 15:30:11,573 - INFO - Git diff changed after running eval script
+2026-11-19 15:30:11,574 - INFO - Attempting to stop container exec.eval.x86_64.bfa0b4daea744b5aaefba0.0ac742aae04648a96a8848.131896705644688...
+2026-11-19 15:30:26,795 - INFO - Attempting to remove container exec.eval.x86_64.bfa0b4daea744b5aaefba0.0ac742aae04648a96a8848.131896705644688...
+2026-11-19 15:30:26,845 - INFO - Container exec.eval.x86_64.bfa0b4daea744b5aaefba0.0ac742aae04648a96a8848.131896705644688 removed.
+2026-11-19 15:30:26,846 - WARNING - End of eval at 1795127426.8462377

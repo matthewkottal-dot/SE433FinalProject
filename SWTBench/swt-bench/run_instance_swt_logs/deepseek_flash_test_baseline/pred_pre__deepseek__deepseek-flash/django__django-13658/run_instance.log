@@ -1,0 +1,44 @@
+2026-11-19 13:59:32,246 - WARNING - Starting evaluation at 1795121972.2464826
+2026-11-19 13:59:32,368 - INFO - Creating container for django__django-13658...
+2026-11-19 13:59:32,410 - INFO - Container for django__django-13658 created: 8ba14bde499118b47cf80a3b0890db24b140cd59b9ca18df463635ead1497c58
+2026-11-19 13:59:32,543 - INFO - Container for django__django-13658 started: 8ba14bde499118b47cf80a3b0890db24b140cd59b9ca18df463635ead1497c58
+2026-11-19 13:59:33,787 - INFO - Git diff before:
+
+2026-11-19 13:59:33,790 - INFO - Eval script for django__django-13658 written to eval.sh, now applying to container...
+2026-11-19 14:00:06,888 - INFO - Test output for django__django-13658 written to run_instance_swt_logs/deepseek_flash_test_baseline/pred_pre__deepseek__deepseek-flash/django__django-13658/test_output.txt
+2026-11-19 14:00:06,930 - INFO - Git diff after:
+diff --git a/tests/admin_scripts/tests.py b/tests/admin_scripts/tests.py
+index 62c6f485aa..1ea8a68e3e 100644
+--- a/tests/admin_scripts/tests.py
++++ b/tests/admin_scripts/tests.py
+@@ -17,7 +17,7 @@ from unittest import mock
+ from django import conf, get_version
+ from django.conf import settings
+ from django.core.management import (
+-    BaseCommand, CommandError, call_command, color,
++    BaseCommand, CommandError, call_command, color, execute_from_command_line,
+ )
+ from django.core.management.commands.loaddata import Command as LoaddataCommand
+ from django.core.management.commands.runserver import (
+@@ -162,6 +162,16 @@ class AdminScriptTestCase(SimpleTestCase):
+         "Utility assertion: assert that the given message doesn't exist in the output"
+         self.assertNotIn(msg, stream, "'%s' matches actual output text '%s'" % (msg, stream))
+ 
++
++class ManagementUtilityTests(SimpleTestCase):
++    def test_program_name_from_argv(self):
++        argv = ['django-admin', 'version']
++        with mock.patch('sys.argv', [None]):
++            with mock.patch('sys.stdout', new_callable=StringIO) as stdout:
++                execute_from_command_line(argv)
++        self.assertEqual(stdout.getvalue(), get_version() + '\n')
++
++
+ ##########################################################################
+ # DJANGO ADMIN TESTS
+ # This first series of test classes checks the environment processing
+2026-11-19 14:00:06,931 - INFO - Git diff changed after running eval script
+2026-11-19 14:00:06,932 - INFO - Attempting to stop container exec.eval.x86_64.f904a9d2e0f61fc0d70077.17968096d520ad8b776daa.125556490018096...
+2026-11-19 14:00:22,131 - INFO - Attempting to remove container exec.eval.x86_64.f904a9d2e0f61fc0d70077.17968096d520ad8b776daa.125556490018096...
+2026-11-19 14:00:22,175 - INFO - Container exec.eval.x86_64.f904a9d2e0f61fc0d70077.17968096d520ad8b776daa.125556490018096 removed.
+2026-11-19 14:00:22,176 - WARNING - End of eval at 1795122022.1760418

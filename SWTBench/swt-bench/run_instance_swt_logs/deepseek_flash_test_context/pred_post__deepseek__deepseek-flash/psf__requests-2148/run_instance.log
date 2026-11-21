@@ -1,0 +1,84 @@
+2026-11-19 15:06:48,929 - WARNING - Starting evaluation at 1795126008.9299016
+2026-11-19 15:06:49,062 - INFO - Creating container for psf__requests-2148...
+2026-11-19 15:06:49,101 - INFO - Container for psf__requests-2148 created: b86122c287d36dcd3e6e929eb56042f313c33217f007f633301a705851a6f583
+2026-11-19 15:06:49,230 - INFO - Container for psf__requests-2148 started: b86122c287d36dcd3e6e929eb56042f313c33217f007f633301a705851a6f583
+2026-11-19 15:06:49,325 - INFO - Git diff before:
+
+2026-11-19 15:06:49,328 - INFO - Eval script for psf__requests-2148 written to eval.sh, now applying to container...
+2026-11-19 15:07:12,647 - INFO - Test output for psf__requests-2148 written to run_instance_swt_logs/deepseek_flash_test_context/pred_post__deepseek__deepseek-flash/psf__requests-2148/test_output.txt
+2026-11-19 15:07:12,687 - INFO - Git diff after:
+diff --git a/requests/models.py b/requests/models.py
+index 0dc55568..2ababaf8 100644
+--- a/requests/models.py
++++ b/requests/models.py
+@@ -9,6 +9,7 @@ This module contains the primary objects that power Requests.
+ 
+ import collections
+ import datetime
++import socket
+ 
+ from io import BytesIO, UnsupportedOperation
+ from .hooks import default_hooks
+@@ -22,7 +23,7 @@ from .packages.urllib3.util import parse_url
+ from .packages.urllib3.exceptions import DecodeError
+ from .exceptions import (
+     HTTPError, RequestException, MissingSchema, InvalidURL,
+-    ChunkedEncodingError, ContentDecodingError)
++    ChunkedEncodingError, ContentDecodingError, ConnectionError)
+ from .utils import (
+     guess_filename, get_auth_from_url, requote_uri,
+     stream_decode_response_unicode, to_key_val_list, parse_header_links,
+@@ -640,6 +641,8 @@ class Response(object):
+                     raise ChunkedEncodingError(e)
+                 except DecodeError as e:
+                     raise ContentDecodingError(e)
++                except socket.error as e:
++                    raise ConnectionError(e)
+             except AttributeError:
+                 # Standard file-like object.
+                 while True:
+diff --git a/test_requests.py b/test_requests.py
+index 283353b9..480a8b0b 100755
+--- a/test_requests.py
++++ b/test_requests.py
+@@ -7,6 +7,7 @@ from __future__ import division
+ import json
+ import os
+ import pickle
++import socket
+ import unittest
+ import collections
+ 
+@@ -18,7 +19,7 @@ from requests.auth import HTTPDigestAuth, _basic_auth_str
+ from requests.compat import (
+     Morsel, cookielib, getproxies, str, urljoin, urlparse, is_py3, builtin_str)
+ from requests.cookies import cookiejar_from_dict, morsel_to_cookie
+-from requests.exceptions import InvalidURL, MissingSchema
++from requests.exceptions import ConnectionError, InvalidURL, MissingSchema
+ from requests.models import PreparedRequest
+ from requests.structures import CaseInsensitiveDict
+ from requests.sessions import SessionRedirectMixin
+@@ -720,6 +721,18 @@ class RequestsTestCase(unittest.TestCase):
+         assert next(iter(r))
+         io.close()
+ 
++    def test_response_connection_error(self):
++        """A socket error while reading the body is wrapped as ConnectionError."""
++        class Raw(object):
++            def stream(self, *args, **kwargs):
++                raise socket.error(104, 'Connection reset by peer')
++
++        r = requests.Response()
++        r.raw = Raw()
++
++        with pytest.raises(ConnectionError):
++            r.content
++
+     def test_response_decode_unicode(self):
+         """
+         When called with decode_unicode, Response.iter_content should always
+2026-11-19 15:07:12,687 - INFO - Git diff changed after running eval script
+2026-11-19 15:07:12,688 - INFO - Attempting to stop container exec.eval.x86_64.3a9417a9d4b5c62087edb6.3f8f53c274e85085f55f65.131896724477360...
+2026-11-19 15:07:27,895 - INFO - Attempting to remove container exec.eval.x86_64.3a9417a9d4b5c62087edb6.3f8f53c274e85085f55f65.131896724477360...
+2026-11-19 15:07:27,928 - INFO - Container exec.eval.x86_64.3a9417a9d4b5c62087edb6.3f8f53c274e85085f55f65.131896724477360 removed.
+2026-11-19 15:07:27,928 - WARNING - End of eval at 1795126047.9288096

@@ -1,0 +1,88 @@
+2026-11-19 15:04:05,927 - WARNING - Starting evaluation at 1795125845.927788
+2026-11-19 15:04:06,045 - INFO - Creating container for pallets__flask-4045...
+2026-11-19 15:04:06,075 - INFO - Container for pallets__flask-4045 created: b1e3fd27e49f6f3a0039a7934bb6f73a250f7f33982a00f46d55f565a9f80d20
+2026-11-19 15:04:06,182 - INFO - Container for pallets__flask-4045 started: b1e3fd27e49f6f3a0039a7934bb6f73a250f7f33982a00f46d55f565a9f80d20
+2026-11-19 15:04:06,236 - INFO - Git diff before:
+
+2026-11-19 15:04:06,239 - INFO - Eval script for pallets__flask-4045 written to eval.sh, now applying to container...
+2026-11-19 15:04:10,745 - INFO - Test output for pallets__flask-4045 written to run_instance_swt_logs/deepseek_flash_test_context/pred_post__deepseek__deepseek-flash/pallets__flask-4045/test_output.txt
+2026-11-19 15:04:10,782 - INFO - Git diff after:
+diff --git a/src/flask/blueprints.py b/src/flask/blueprints.py
+index 5fb84d86..823995f6 100644
+--- a/src/flask/blueprints.py
++++ b/src/flask/blueprints.py
+@@ -188,6 +188,10 @@ class Blueprint(Scaffold):
+             template_folder=template_folder,
+             root_path=root_path,
+         )
++
++        if "." in name:
++            raise ValueError("'name' may not contain a dot '.' character.")
++
+         self.name = name
+         self.url_prefix = url_prefix
+         self.subdomain = subdomain
+@@ -360,12 +364,12 @@ class Blueprint(Scaffold):
+         """Like :meth:`Flask.add_url_rule` but for a blueprint.  The endpoint for
+         the :func:`url_for` function is prefixed with the name of the blueprint.
+         """
+-        if endpoint:
+-            assert "." not in endpoint, "Blueprint endpoints should not contain dots"
+-        if view_func and hasattr(view_func, "__name__"):
+-            assert (
+-                "." not in view_func.__name__
+-            ), "Blueprint view function name should not contain dots"
++        if endpoint and "." in endpoint:
++            raise ValueError("'endpoint' may not contain a dot '.' character.")
++
++        if view_func and hasattr(view_func, "__name__") and "." in view_func.__name__:
++            raise ValueError("'view_func' name may not contain a dot '.' character.")
++
+         self.record(lambda s: s.add_url_rule(rule, endpoint, view_func, **options))
+ 
+     def app_template_filter(self, name: t.Optional[str] = None) -> t.Callable:
+diff --git a/tests/test_blueprints.py b/tests/test_blueprints.py
+index b986ca02..22961429 100644
+--- a/tests/test_blueprints.py
++++ b/tests/test_blueprints.py
+@@ -253,28 +253,15 @@ def test_templates_list(test_apps):
+     assert templates == ["admin/index.html", "frontend/index.html"]
+ 
+ 
+-def test_dotted_names(app, client):
+-    frontend = flask.Blueprint("myapp.frontend", __name__)
+-    backend = flask.Blueprint("myapp.backend", __name__)
++def test_dotted_names():
++    with pytest.raises(ValueError, match="may not contain a dot"):
++        flask.Blueprint("myapp.frontend", __name__)
+ 
+-    @frontend.route("/fe")
+-    def frontend_index():
+-        return flask.url_for("myapp.backend.backend_index")
+ 
+-    @frontend.route("/fe2")
+-    def frontend_page2():
+-        return flask.url_for(".frontend_index")
+-
+-    @backend.route("/be")
+-    def backend_index():
+-        return flask.url_for("myapp.frontend.frontend_index")
+-
+-    app.register_blueprint(frontend)
+-    app.register_blueprint(backend)
+-
+-    assert client.get("/fe").data.strip() == b"/be"
+-    assert client.get("/fe2").data.strip() == b"/fe"
+-    assert client.get("/be").data.strip() == b"/fe"
++@pytest.mark.parametrize("name", [".frontend", "frontend.", "my.app.frontend"])
++def test_blueprint_name_with_dot(name):
++    with pytest.raises(ValueError, match="may not contain a dot"):
++        flask.Blueprint(name, __name__)
+ 
+ 
+ def test_dotted_names_from_app(app, client):
+2026-11-19 15:04:10,782 - INFO - Git diff changed after running eval script
+2026-11-19 15:04:10,783 - INFO - Attempting to stop container exec.eval.x86_64.a76142573b3d6fbe711563.781a43cd59615fabd1befe.131896724633104...
+2026-11-19 15:04:25,985 - INFO - Attempting to remove container exec.eval.x86_64.a76142573b3d6fbe711563.781a43cd59615fabd1befe.131896724633104...
+2026-11-19 15:04:26,013 - INFO - Container exec.eval.x86_64.a76142573b3d6fbe711563.781a43cd59615fabd1befe.131896724633104 removed.
+2026-11-19 15:04:26,013 - WARNING - End of eval at 1795125866.013767

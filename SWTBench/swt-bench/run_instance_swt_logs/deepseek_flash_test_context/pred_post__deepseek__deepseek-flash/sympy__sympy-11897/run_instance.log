@@ -1,0 +1,64 @@
+2026-11-19 15:40:24,043 - WARNING - Starting evaluation at 1795128024.0436478
+2026-11-19 15:40:24,148 - INFO - Creating container for sympy__sympy-11897...
+2026-11-19 15:40:24,176 - INFO - Container for sympy__sympy-11897 created: 6166e4a205e362912994050921461600b480b3a3623b88781051cb4ac4c71d16
+2026-11-19 15:40:24,286 - INFO - Container for sympy__sympy-11897 started: 6166e4a205e362912994050921461600b480b3a3623b88781051cb4ac4c71d16
+2026-11-19 15:40:24,452 - INFO - Git diff before:
+
+2026-11-19 15:40:24,455 - INFO - Eval script for sympy__sympy-11897 written to eval.sh, now applying to container...
+2026-11-19 15:40:28,899 - INFO - Test output for sympy__sympy-11897 written to run_instance_swt_logs/deepseek_flash_test_context/pred_post__deepseek__deepseek-flash/sympy__sympy-11897/test_output.txt
+2026-11-19 15:40:28,937 - INFO - Git diff after:
+diff --git a/sympy/printing/latex.py b/sympy/printing/latex.py
+index 1edc712358..9d09ba03c7 100644
+--- a/sympy/printing/latex.py
++++ b/sympy/printing/latex.py
+@@ -235,10 +235,12 @@ def _needs_mul_brackets(self, expr, first=False, last=False):
+         elif expr.is_Mul:
+             if not first and _coeff_isneg(expr):
+                 return True
++        if expr.is_Piecewise:
++            return True
+         if any([expr.has(x) for x in (Mod,)]):
+             return True
+         if (not last and
+-            any([expr.has(x) for x in (Integral, Piecewise, Product, Sum)])):
++            any([expr.has(x) for x in (Integral, Product, Sum)])):
+             return True
+ 
+         return False
+diff --git a/sympy/printing/tests/test_latex.py b/sympy/printing/tests/test_latex.py
+index 8a70549050..9a50abb00f 100644
+--- a/sympy/printing/tests/test_latex.py
++++ b/sympy/printing/tests/test_latex.py
+@@ -867,10 +867,26 @@ def test_latex_Piecewise():
+     p = Piecewise((A**2, Eq(A, B)), (A*B, True))
+     s = r"\begin{cases} A^{2} & \text{for}\: A = B \\A B & \text{otherwise} \end{cases}"
+     assert latex(p) == s
+-    assert latex(A*p) == r"A %s" % s
++    assert latex(A*p) == r"A \left(%s\right)" % s
+     assert latex(p*A) == r"\left(%s\right) A" % s
+ 
+ 
++def test_latex_Piecewise_mul():
++    # A Piecewise multiplied by other factors must be parenthesized to
++    # match the pretty printer's output (issue 11275).
++    p = Piecewise((x, x < 0), (0, True))
++    expected = r"2 \left(\begin{cases} x & \text{for}\: x < 0 \\0 & \text{otherwise} \end{cases}\right)"
++    assert latex(2*p) == expected
++
++    p = Piecewise(((-1)**Rational(2, 3), 3*x/4 < 0), (1, True))
++    expr = 6**Rational(1, 3)*x**Rational(1, 3)*p
++    assert latex(FiniteSet(expr)) == (
++        r"\left\{\sqrt[3]{6} \sqrt[3]{x} "
++        r"\left(\begin{cases} \left(-1\right)^{\frac{2}{3}} & "
++        r"\text{for}\: \frac{3 x}{4} < 0 \\1 & \text{otherwise} "
++        r"\end{cases}\right)\right\}")
++
++
+ def test_latex_Matrix():
+     M = Matrix([[1 + x, y], [y, x - 1]])
+     assert latex(M) == \
+2026-11-19 15:40:28,938 - INFO - Git diff changed after running eval script
+2026-11-19 15:40:28,938 - INFO - Attempting to stop container exec.eval.x86_64.deec2122407a414e380748.ac13b229d0305e89d94ded.131896705814352...
+2026-11-19 15:40:44,114 - INFO - Attempting to remove container exec.eval.x86_64.deec2122407a414e380748.ac13b229d0305e89d94ded.131896705814352...
+2026-11-19 15:40:44,147 - INFO - Container exec.eval.x86_64.deec2122407a414e380748.ac13b229d0305e89d94ded.131896705814352 removed.
+2026-11-19 15:40:44,148 - WARNING - End of eval at 1795128044.148521

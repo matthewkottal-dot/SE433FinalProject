@@ -1,0 +1,489 @@
++ source /opt/miniconda3/bin/activate
+++ _CONDA_ROOT=/opt/miniconda3
+++ . /opt/miniconda3/etc/profile.d/conda.sh
++++ export CONDA_EXE=/opt/miniconda3/bin/conda
++++ CONDA_EXE=/opt/miniconda3/bin/conda
++++ export _CE_M=
++++ _CE_M=
++++ export _CE_CONDA=
++++ _CE_CONDA=
++++ export CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++++ CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++++ '[' -z '' ']'
++++ export CONDA_SHLVL=0
++++ CONDA_SHLVL=0
++++ '[' -n '' ']'
++++++ dirname /opt/miniconda3/bin/conda
+++++ dirname /opt/miniconda3/bin
++++ PATH=/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++++ export PATH
++++ '[' -z '' ']'
++++ PS1=
+++ conda activate
+++ local cmd=activate
+++ case "$cmd" in
+++ __conda_activate activate
+++ '[' -n '' ']'
+++ local ask_conda
++++ PS1=
++++ __conda_exe shell.posix activate
++++ /opt/miniconda3/bin/conda shell.posix activate
+++ ask_conda='PS1='\''(base) '\''
+export PATH='\''/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3'\''
+export CONDA_SHLVL='\''1'\''
+export CONDA_DEFAULT_ENV='\''base'\''
+export CONDA_PROMPT_MODIFIER='\''(base) '\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
+++ eval 'PS1='\''(base) '\''
+export PATH='\''/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3'\''
+export CONDA_SHLVL='\''1'\''
+export CONDA_DEFAULT_ENV='\''base'\''
+export CONDA_PROMPT_MODIFIER='\''(base) '\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
++++ PS1='(base) '
++++ export PATH=/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++++ PATH=/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++++ export CONDA_PREFIX=/opt/miniconda3
++++ CONDA_PREFIX=/opt/miniconda3
++++ export CONDA_SHLVL=1
++++ CONDA_SHLVL=1
++++ export CONDA_DEFAULT_ENV=base
++++ CONDA_DEFAULT_ENV=base
++++ export 'CONDA_PROMPT_MODIFIER=(base) '
++++ CONDA_PROMPT_MODIFIER='(base) '
++++ export CONDA_EXE=/opt/miniconda3/bin/conda
++++ CONDA_EXE=/opt/miniconda3/bin/conda
++++ export _CE_M=
++++ _CE_M=
++++ export _CE_CONDA=
++++ _CE_CONDA=
++++ export CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++++ CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
+++ __conda_hashr
+++ '[' -n '' ']'
+++ '[' -n '' ']'
+++ hash -r
++ conda activate testbed
++ local cmd=activate
++ case "$cmd" in
++ __conda_activate activate testbed
++ '[' -n '' ']'
++ local ask_conda
+++ PS1='(base) '
+++ __conda_exe shell.posix activate testbed
+++ /opt/miniconda3/bin/conda shell.posix activate testbed
++ ask_conda='PS1='\''(testbed) '\''
+export PATH='\''/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3/envs/testbed'\''
+export CONDA_SHLVL='\''2'\''
+export CONDA_DEFAULT_ENV='\''testbed'\''
+export CONDA_PROMPT_MODIFIER='\''(testbed) '\''
+export CONDA_PREFIX_1='\''/opt/miniconda3'\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
++ eval 'PS1='\''(testbed) '\''
+export PATH='\''/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3/envs/testbed'\''
+export CONDA_SHLVL='\''2'\''
+export CONDA_DEFAULT_ENV='\''testbed'\''
+export CONDA_PROMPT_MODIFIER='\''(testbed) '\''
+export CONDA_PREFIX_1='\''/opt/miniconda3'\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
+++ PS1='(testbed) '
+++ export PATH=/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ PATH=/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ export CONDA_PREFIX=/opt/miniconda3/envs/testbed
+++ CONDA_PREFIX=/opt/miniconda3/envs/testbed
+++ export CONDA_SHLVL=2
+++ CONDA_SHLVL=2
+++ export CONDA_DEFAULT_ENV=testbed
+++ CONDA_DEFAULT_ENV=testbed
+++ export 'CONDA_PROMPT_MODIFIER=(testbed) '
+++ CONDA_PROMPT_MODIFIER='(testbed) '
+++ export CONDA_PREFIX_1=/opt/miniconda3
+++ CONDA_PREFIX_1=/opt/miniconda3
+++ export CONDA_EXE=/opt/miniconda3/bin/conda
+++ CONDA_EXE=/opt/miniconda3/bin/conda
+++ export _CE_M=
+++ _CE_M=
+++ export _CE_CONDA=
+++ _CE_CONDA=
+++ export CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
+++ CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++ __conda_hashr
++ '[' -n '' ']'
++ '[' -n '' ']'
++ hash -r
++ cd /testbed
++ git diff HEAD 5c1644ff85e15752f9f8721bc142bfbf975e7805
++ git config --global --add safe.directory /testbed
++ cd /testbed
++ git status
+On branch master
+nothing to commit, working tree clean
++ git show
+commit 5c1644ff85e15752f9f8721bc142bfbf975e7805
+Merge: 726e3ddff1 2ec7166dc1
+Author: Aaron Meurer <asmeurer@gmail.com>
+Date:   Sat Jan 13 13:20:52 2018 -0600
+
+    Merge pull request #13909 from normalhuman/better_polylog_test
+    
+    Use verify_numerically in testing polylog expansions
+
++ git diff 5c1644ff85e15752f9f8721bc142bfbf975e7805
++ source /opt/miniconda3/bin/activate
+++ _CONDA_ROOT=/opt/miniconda3
+++ . /opt/miniconda3/etc/profile.d/conda.sh
++++ export CONDA_EXE=/opt/miniconda3/bin/conda
++++ CONDA_EXE=/opt/miniconda3/bin/conda
++++ export _CE_M=
++++ _CE_M=
++++ export _CE_CONDA=
++++ _CE_CONDA=
++++ export CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++++ CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++++ '[' -z x ']'
+++ conda activate
+++ local cmd=activate
+++ case "$cmd" in
+++ __conda_activate activate
+++ '[' -n '' ']'
+++ local ask_conda
++++ PS1='(testbed) '
++++ __conda_exe shell.posix activate
++++ /opt/miniconda3/bin/conda shell.posix activate
+++ ask_conda='PS1='\''(base) '\''
+export PATH='\''/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3'\''
+export CONDA_SHLVL='\''3'\''
+export CONDA_DEFAULT_ENV='\''base'\''
+export CONDA_PROMPT_MODIFIER='\''(base) '\''
+export CONDA_PREFIX_2='\''/opt/miniconda3/envs/testbed'\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
+++ eval 'PS1='\''(base) '\''
+export PATH='\''/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3'\''
+export CONDA_SHLVL='\''3'\''
+export CONDA_DEFAULT_ENV='\''base'\''
+export CONDA_PROMPT_MODIFIER='\''(base) '\''
+export CONDA_PREFIX_2='\''/opt/miniconda3/envs/testbed'\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
++++ PS1='(base) '
++++ export PATH=/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++++ PATH=/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++++ export CONDA_PREFIX=/opt/miniconda3
++++ CONDA_PREFIX=/opt/miniconda3
++++ export CONDA_SHLVL=3
++++ CONDA_SHLVL=3
++++ export CONDA_DEFAULT_ENV=base
++++ CONDA_DEFAULT_ENV=base
++++ export 'CONDA_PROMPT_MODIFIER=(base) '
++++ CONDA_PROMPT_MODIFIER='(base) '
++++ export CONDA_PREFIX_2=/opt/miniconda3/envs/testbed
++++ CONDA_PREFIX_2=/opt/miniconda3/envs/testbed
++++ export CONDA_EXE=/opt/miniconda3/bin/conda
++++ CONDA_EXE=/opt/miniconda3/bin/conda
++++ export _CE_M=
++++ _CE_M=
++++ export _CE_CONDA=
++++ _CE_CONDA=
++++ export CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++++ CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
+++ __conda_hashr
+++ '[' -n '' ']'
+++ '[' -n '' ']'
+++ hash -r
++ conda activate testbed
++ local cmd=activate
++ case "$cmd" in
++ __conda_activate activate testbed
++ '[' -n '' ']'
++ local ask_conda
+++ PS1='(base) '
+++ __conda_exe shell.posix activate testbed
+++ /opt/miniconda3/bin/conda shell.posix activate testbed
++ ask_conda='PS1='\''(testbed) '\''
+export PATH='\''/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3/envs/testbed'\''
+export CONDA_SHLVL='\''4'\''
+export CONDA_DEFAULT_ENV='\''testbed'\''
+export CONDA_PROMPT_MODIFIER='\''(testbed) '\''
+export CONDA_PREFIX_3='\''/opt/miniconda3'\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
++ eval 'PS1='\''(testbed) '\''
+export PATH='\''/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3/envs/testbed'\''
+export CONDA_SHLVL='\''4'\''
+export CONDA_DEFAULT_ENV='\''testbed'\''
+export CONDA_PROMPT_MODIFIER='\''(testbed) '\''
+export CONDA_PREFIX_3='\''/opt/miniconda3'\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
+++ PS1='(testbed) '
+++ export PATH=/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ PATH=/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ export CONDA_PREFIX=/opt/miniconda3/envs/testbed
+++ CONDA_PREFIX=/opt/miniconda3/envs/testbed
+++ export CONDA_SHLVL=4
+++ CONDA_SHLVL=4
+++ export CONDA_DEFAULT_ENV=testbed
+++ CONDA_DEFAULT_ENV=testbed
+++ export 'CONDA_PROMPT_MODIFIER=(testbed) '
+++ CONDA_PROMPT_MODIFIER='(testbed) '
+++ export CONDA_PREFIX_3=/opt/miniconda3
+++ CONDA_PREFIX_3=/opt/miniconda3
+++ export CONDA_EXE=/opt/miniconda3/bin/conda
+++ CONDA_EXE=/opt/miniconda3/bin/conda
+++ export _CE_M=
+++ _CE_M=
+++ export _CE_CONDA=
+++ _CE_CONDA=
+++ export CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
+++ CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++ __conda_hashr
++ '[' -n '' ']'
++ '[' -n '' ']'
++ hash -r
++ python -m pip install -e .
+Obtaining file:///testbed
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: mpmath>=0.19 in /opt/miniconda3/envs/testbed/lib/python3.9/site-packages (from sympy==1.1.2.dev0) (1.3.0)
+Building wheels for collected packages: sympy
+  Building editable for sympy (pyproject.toml): started
+  Building editable for sympy (pyproject.toml): finished with status 'done'
+  Created wheel for sympy: filename=sympy-1.1.2.dev0-0.editable-py3-none-any.whl size=17064 sha256=c4140f81b57b42ffb1a2bad1355f8e38aa2a134fec3ae6b21eb7dc653019b035
+  Stored in directory: /tmp/pip-ephem-wheel-cache-41dr6uph/wheels/7d/66/67/70d1ee2124ccf21d601c352e25cdca10f611f7c8b3f9ffb9e4
+Successfully built sympy
+Installing collected packages: sympy
+  Attempting uninstall: sympy
+    Found existing installation: sympy 1.1.2.dev0
+    Uninstalling sympy-1.1.2.dev0:
+      Successfully uninstalled sympy-1.1.2.dev0
+Successfully installed sympy-1.1.2.dev0
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
++ git apply -v -
+Checking patch sympy/core/mul.py...
+Applied patch sympy/core/mul.py cleanly.
++ git apply -v -
+Checking patch sympy/core/tests/test_subs.py...
+warning: sympy/core/tests/test_subs.py has type 100644, expected 100755
+Applied patch sympy/core/tests/test_subs.py cleanly.
++ PYTHONWARNINGS=ignore::UserWarning,ignore::SyntaxWarning
++ python3 /root/trace.py --count -C coverage.cover --include-pattern '/testbed/(sympy/core/mul\.py)' bin/test -C --verbose sympy/core/tests/test_subs.p
+/testbed/sympy/core/basic.py:3: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working
+  from collections import Mapping, defaultdict
+/testbed/sympy/core/containers.py:271: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working
+  class OrderedSet(collections.MutableSet):
+/testbed/sympy/plotting/plot.py:28: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working
+  from collections import Callable
+/testbed/sympy/core/basic.py:3: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working
+  from collections import Mapping, defaultdict
+/testbed/sympy/core/containers.py:271: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working
+  class OrderedSet(collections.MutableSet):
+/testbed/sympy/plotting/plot.py:28: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working
+  from collections import Callable
+['--count', '-C', 'coverage.cover', '--include-pattern', '/testbed/(sympy/core/mul\\.py)']
+============================= test process starts ==============================
+executable:         /opt/miniconda3/envs/testbed/bin/python3  (3.9.25-final-0) [CPython]
+architecture:       64-bit
+cache:              no
+ground types:       python 
+numpy:              None
+random seed:        40346687
+hash randomization: on (PYTHONHASHSEED=4258585482)
+
+sympy/core/tests/test_subs.py[58] 
+test_subs ok
+test_subs_Matrix E
+test_subs_AccumBounds ok
+test_trigonometric E
+test_powers ok
+test_logexppow ok
+test_bug ok
+test_subbug1 ok
+test_subbug2 ok
+test_dict_set ok
+test_dict_ambigous ok
+test_deriv_sub_bug3 ok
+test_equality_subs1 ok
+test_equality_subs2 ok
+test_issue_3742 ok
+test_subs_dict1 ok
+test_mul ok
+test_subs_simple ok
+test_subs_constants ok
+test_subs_commutative ok
+test_subs_noncommutative ok
+test_subs_basic_funcs ok
+test_subs_wild ok
+test_subs_mixed ok
+test_division ok
+test_add ok
+test_subs_issue_4009 ok
+test_functions_subs ok
+test_derivative_subs ok
+test_derivative_subs2 ok
+test_derivative_subs3 E
+test_issue_5284 ok
+test_subs_iter ok
+test_subs_dict ok
+test_no_arith_subs_on_floats ok
+test_issue_5651 ok
+test_issue_6075 ok
+test_issue_6079 ok
+test_issue_4680 ok
+test_issue_6158 ok
+test_Function_subs ok
+test_simultaneous_subs ok
+test_issue_6419_6421 ok
+test_issue_6559 ok
+test_issue_5261 ok
+test_issue_6923 ok
+test_2arg_hack ok
+test_mul2 f
+test_noncommutative_subs ok
+test_issue_2877 ok
+test_issue_5910 ok
+test_issue_5217 ok
+test_issue_10829 ok
+test_pow_eval_subs_no_cache ok
+test_RootOf_issue_10092 ok
+test_issue_8886 E
+test_issue_12657 ok
+test_subs_undefined ok                                                    [FAIL]
+
+
+________________________________________________________________________________
+________________ sympy/core/tests/test_subs.py:test_subs_Matrix ________________
+  File "/testbed/sympy/core/tests/test_subs.py", line 27, in test_subs_Matrix
+    assert (x*y).subs({x:z, y:0}) == z
+  File "/testbed/sympy/core/basic.py", line 920, in subs
+    rv = rv._subs(old, new, **kwargs)
+  File "/testbed/sympy/core/basic.py", line 1034, in _subs
+    rv = fallback(self, old, new)
+  File "/testbed/sympy/core/basic.py", line 1011, in fallback
+    rv = self.func(*args)
+  File "/testbed/sympy/core/operations.py", line 42, in __new__
+    c_part, nc_part, order_symbols = cls.flatten(args)
+  File "/testbed/sympy/core/mul.py", line 276, in flatten
+    coeff = o.__mul__(coeff)
+  File "/testbed/sympy/core/decorators.py", line 132, in binary_op_wrapper
+    return func(self, other)
+  File "/testbed/sympy/matrices/common.py", line 2026, in __mul__
+    if not isinstance(other, collections.Iterable):
+  File "/opt/miniconda3/envs/testbed/lib/python3.9/collections/__init__.py", line 62, in __getattr__
+    warnings.warn("Using or importing the ABCs from 'collections' instead "
+DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working
+________________________________________________________________________________
+_______________ sympy/core/tests/test_subs.py:test_trigonometric _______________
+  File "/testbed/sympy/core/tests/test_subs.py", line 49, in test_trigonometric
+    e = (sin(x)**2).diff(x)
+  File "/testbed/sympy/core/expr.py", line 3009, in diff
+    return Derivative(self, *new_symbols, **assumptions)
+  File "/testbed/sympy/core/function.py", line 1246, in __new__
+    if isinstance(v, (collections.Iterable, Tuple, MatrixCommon, NDimArray)):
+  File "/opt/miniconda3/envs/testbed/lib/python3.9/collections/__init__.py", line 62, in __getattr__
+    warnings.warn("Using or importing the ABCs from 'collections' instead "
+DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working
+________________________________________________________________________________
+_____________ sympy/core/tests/test_subs.py:test_derivative_subs3 ______________
+  File "/testbed/sympy/core/tests/test_subs.py", line 525, in test_derivative_subs3
+    assert Derivative(dex, x).subs(dex, exp(x)) == dex
+  File "/testbed/sympy/core/function.py", line 1246, in __new__
+    if isinstance(v, (collections.Iterable, Tuple, MatrixCommon, NDimArray)):
+  File "/opt/miniconda3/envs/testbed/lib/python3.9/collections/__init__.py", line 62, in __getattr__
+    warnings.warn("Using or importing the ABCs from 'collections' instead "
+DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working
+________________________________________________________________________________
+________________ sympy/core/tests/test_subs.py:test_issue_8886 _________________
+  File "/testbed/sympy/core/tests/test_subs.py", line 770, in test_issue_8886
+    assert v.subs(v, x) == v
+  File "/testbed/sympy/physics/vector/vector.py", line 137, in __eq__
+    if expand((self - other) & v) != 0:
+  File "/testbed/sympy/physics/vector/vector.py", line 387, in __sub__
+    return self.__add__(other * -1)
+  File "/testbed/sympy/physics/vector/vector.py", line 165, in __mul__
+    newlist[i] = (sympify(other) * newlist[i][0], newlist[i][1])
+  File "/testbed/sympy/core/numbers.py", line 2095, in __mul__
+    return Rational.__mul__(self, other)
+  File "/testbed/sympy/core/decorators.py", line 91, in __sympifyit_wrapper
+    return func(a, b)
+  File "/testbed/sympy/core/numbers.py", line 1619, in __mul__
+    return Number.__mul__(self, other)
+  File "/testbed/sympy/core/decorators.py", line 91, in __sympifyit_wrapper
+    return func(a, b)
+  File "/testbed/sympy/core/numbers.py", line 676, in __mul__
+    return AtomicExpr.__mul__(self, other)
+  File "/testbed/sympy/core/decorators.py", line 91, in __sympifyit_wrapper
+    return func(a, b)
+  File "/testbed/sympy/core/decorators.py", line 131, in binary_op_wrapper
+    return f(self)
+  File "/testbed/sympy/core/decorators.py", line 132, in binary_op_wrapper
+    return func(self, other)
+  File "/testbed/sympy/matrices/common.py", line 2098, in __rmul__
+    if not isinstance(other, collections.Iterable):
+  File "/opt/miniconda3/envs/testbed/lib/python3.9/collections/__init__.py", line 62, in __getattr__
+    warnings.warn("Using or importing the ABCs from 'collections' instead "
+DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.10 it will stop working
+
+= tests finished: 53 passed, 1 expected to fail, 4 exceptions, in 4.58 seconds =
+DO *NOT* COMMIT!
+['--count', '-C', 'coverage.cover', '--include-pattern', '/testbed/(sympy/core/mul\\.py)']
++ cat coverage.cover
+{"/testbed/sympy/core/mul.py": {"1": 1, "3": 1, "4": 1, "5": 1, "7": 1, "8": 1, "9": 1, "10": 1, "11": 1, "12": 1, "13": 1, "14": 1, "15": 1, "21": 2, "31": 1, "32": 1, "37": 1, "91": 2, "1683": 1, "1709": 1, "1768": 1, "1779": 1, "1780": 1, "1781": 1, "22": 1, "23": 1, "24": 1, "25": 1, "27": 1, "34": 5795, "68": 29, "69": 29, "70": 29, "71": 29, "72": 55, "73": 26, "74": 26, "75": 0, "76": 0, "77": 0, "78": 0, "79": 26, "80": 0, "82": 26, "83": 29, "84": 29, "85": 0, "86": 29, "87": 0, "88": 29, "93": 1, "95": 1, "97": 1, "98": 1, "628": 1, "657": 1, "658": 1, "661": 1, "677": 1, "678": 1, "692": 1, "693": 1, "720": 1, "721": 1, "747": 1, "748": 1, "767": 1, "781": 1, "834": 1, "835": 1, "853": 1, "895": 1, "896": 1, "905": 1, "912": 1, "921": 1, "946": 1, "1003": 1, "1004": 1, "1035": 1, "1042": 1, "1049": 1, "1064": 1, "1067": 1, "1070": 1, "1073": 7999, "1075": 10139, "1077": 4001, "1080": 1, "1088": 1, "1095": 1, "1102": 1, "1119": 1, "1131": 1, "1136": 1, "1139": 1, "1181": 1, "1188": 1, "1191": 1, "1224": 1, "1231": 1, "1244": 1, "1259": 1, "1291": 1, "1296": 1, "1320": 1, "1329": 1, "1345": 1, "1609": 1, "1617": 1, "1620": 1, "1623": 1, "1626": 1, "1629": 1, "1635": 1, "1661": 1, "1678": 1, "1679": 1, "176": 5871, "177": 5871, "178": 5871, "179": 5871, "180": 5648, "181": 5648, "182": 388, "183": 5648, "184": 5648, "185": 2175, "186": 2175, "187": 85, "189": 0, "190": 85, "191": 84, "192": 319, "193": 84, "194": 84, "195": 84, "196": 18, "197": 84, "198": 84, "199": 5648, "200": 84, "203": 5787, "204": 5787, "206": 5787, "208": 5787, "211": 5787, "214": 5787, "217": 5787, "219": 5787, "222": 5787, "235": 20167, "237": 14387, "238": 0, "241": 14387, "242": 1240, "243": 1039, "247": 718, "248": 517, "249": 110, "251": 407, "255": 201, "257": 1240, "260": 13147, "261": 3175, "263": 6, "264": 3169, "265": 3169, "266": 3169, "268": 0, "269": 0, "271": 9972, "272": 1, "273": 1, "275": 9971, "276": 1, "277": 0, "279": 9970, "280": 14, "282": 0, "283": 14, "285": 0, "286": 14, "287": 14, "289": 9956, "290": 2126, "291": 2126, "293": 7830, "296": 6664, "300": 6664, "301": 1596, "306": 256, "307": 160, "308": 66, "309": 66, "310": 94, "311": 0, "312": 0, "313": 94, "314": 4, "315": 4, "316": 94, "317": 90, "318": 90, "319": 96, "320": 96, "321": 96, "323": 1340, "324": 0, "325": 0, "327": 6408, "332": 1166, "333": 965, "336": 2567, "337": 1401, "338": 1401, "339": 705, "340": 705, "344": 696, "345": 696, "346": 696, "347": 696, "352": 696, "353": 29, "356": 29, "357": 0, "358": 0, "360": 29, "363": 667, "364": 667, "379": 5780, "394": 5780, "397": 5780, "421": 5780, "422": 5780, "423": 5780, "424": 12037, "425": 6258, "427": 131, "428": 3, "429": 1, "430": 1, "431": 0, "432": 6130, "433": 4853, "434": 0, "435": 0, "436": 4853, "437": 6130, "438": 1277, "442": 1277, "443": 1195, "444": 1195, "445": 1195, "446": 0, "447": 6130, "448": 6130, "451": 5779, "452": 0, "454": 0, "455": 0, "457": 5779, "461": 5779, "463": 5875, "464": 96, "465": 5875, "466": 96, "467": 11654, "471": 5779, "472": 5863, "473": 84, "474": 5779, "478": 5779, "479": 5863, "480": 84, "481": 84, "482": 6, "483": 6, "484": 78, "485": 0, "486": 0, "487": 0, "488": 78, "489": 5779, "493": 5779, "494": 5779, "495": 5857, "496": 78, "497": 78, "498": 78, "499": 0, "500": 0, "501": 0, "504": 0, "505": 0, "506": 0, "508": 0, "509": 0, "510": 0, "511": 0, "512": 0, "514": 0, "516": 0, "517": 0, "518": 0, "519": 78, "520": 78, "521": 78, "522": 2, "525": 152, "526": 76, "527": 0, "529": 76, "530": 76, "531": 76, "533": 78, "534": 78, "537": 5855, "538": 76, "541": 5779, "543": 2127, "545": 2127, "546": 2127, "547": 3, "549": 2127, "550": 2120, "551": 7, "554": 4, "555": 4, "556": 0, "557": 0, "558": 0, "562": 4, "565": 11634, "568": 5779, "569": 0, "579": 0, "580": 0, "581": 0, "584": 5779, "590": 24, "592": 16, "596": 5771, "599": 37, "600": 0, "601": 13, "604": 5766, "605": 14177, "606": 8411, "607": 2, "609": 8409, "610": 5766, "613": 5766, "616": 5766, "617": 2393, "620": 7641, "621": 1875, "623": 4, "624": 19, "626": 5766, "380": 11560, "381": 18064, "382": 6504, "383": 19512, "384": 13008, "385": 17914, "386": 12708, "387": 6354, "388": 11560, "389": 17914, "390": 19062, "391": 11560, "570": 0, "571": 0, "572": 0, "573": 0, "574": 0, "575": 0, "576": 0, "577": 0, "578": 0, "591": 4, "593": 0, "631": 63, "633": 63, "634": 222, "635": 44, "636": 19, "637": 16, "638": 16, "639": 16, "640": 0, "641": 0, "642": 0, "643": 0, "644": 0, "645": 0, "646": 0, "647": 0, "648": 0, "650": 19, "652": 19, "653": 17, "655": 2, "659": 1, "662": 4, "663": 4, "664": 0, "665": 0, "667": 0, "668": 0, "669": 0, "670": 0, "672": 4, "673": 4, "674": 4, "675": 0, "682": 0, "683": 0, "684": 0, "688": 0, "690": 0, "710": 0, "712": 0, "713": 0, "714": 0, "715": 0, "718": 0, "737": 0, "738": 0, "740": 0, "741": 0, "743": 0, "745": 0, "749": 46, "750": 46, "751": 0, "752": 0, "753": 0, "754": 0, "755": 0, "757": 0, "758": 0, "759": 46, "760": 46, "761": 31, "762": 30, "763": 1, "764": 0, "765": 16, "769": 1130, "771": 1130, "772": 870, "773": 870, "774": 753, "776": 117, "777": 0, "778": 0, "779": 260, "782": 0, "783": 0, "784": 0, "785": 0, "786": 0, "787": 0, "788": 0, "789": 0, "790": 0, "791": 0, "792": 0, "793": 0, "795": 0, "796": 0, "797": 0, "798": 0, "799": 0, "801": 0, "802": 0, "804": 0, "806": 0, "807": 0, "808": 0, "809": 0, "810": 0, "811": 0, "815": 0, "816": 0, "817": 0, "818": 0, "819": 0, "820": 0, "821": 0, "823": 0, "824": 0, "825": 0, "826": 0, "827": 0, "828": 0, "829": 0, "831": 0, "832": 0, "842": 0, "843": 0, "844": 0, "845": 0, "846": 0, "847": 0, "849": 0, "850": 0, "851": 0, "854": 16, "858": 16, "859": 16, "860": 16, "861": 0, "862": 0, "863": 0, "864": 0, "865": 0, "867": 16, "868": 48, "869": 32, "870": 0, "871": 0, "873": 32, "874": 32, "876": 0, "878": 16, "879": 16, "881": 0, "882": 0, "883": 0, "884": 0, "885": 0, "886": 0, "887": 0, "888": 0, "889": 0, "890": 0, "891": 0, "893": 0, "897": 0, "898": 0, "899": 0, "900": 0, "901": 0, "902": 0, "903": 0, "906": 0, "907": 0, "908": 0, "909": 0, "910": 0, "914": 3, "915": 3, "916": 3, "917": 0, "918": 0, "919": 3, "922": 3, "923": 3, "924": 3, "925": 0, "926": 0, "927": 0, "928": 0, "929": 0, "930": 0, "931": 0, "932": 0, "933": 0, "934": 0, "935": 0, "937": 0, "938": 0, "939": 0, "940": 0, "941": 0, "943": 0, "944": 0, "948": 0, "949": 0, "950": 0, "951": 0, "952": 0, "953": 0, "956": 0, "957": 0, "958": 0, "959": 0, "960": 0, "962": 0, "964": 0, "966": 0, "967": 0, "969": 0, "970": 0, "971": 0, "972": 0, "973": 0, "974": 0, "976": 0, "979": 0, "980": 0, "981": 0, "982": 0, "983": 0, "984": 0, "987": 0, "988": 0, "989": 0, "991": 0, "992": 0, "994": 0, "995": 0, "997": 0, "998": 0, "999": 0, "1000": 0, "1001": 0, "1009": 2, "1010": 0, "1012": 2, "1019": 2, "1020": 0, "1021": 2, "1022": 0, "1023": 0, "1024": 0, "1025": 0, "1026": 0, "1027": 0, "1028": 0, "1029": 0, "1031": 0, "1032": 0, "1033": 2, "1013": 4, "1017": 0, "1018": 4, "1036": 0, "1037": 0, "1038": 0, "1039": 0, "1040": 0, "1046": 132, "1047": 30, "1050": 25, "1051": 25, "1052": 25, "1053": 81, "1054": 56, "1055": 56, "1056": 0, "1057": 56, "1058": 25, "1059": 31, "1060": 0, "1061": 56, "1062": 25, "1065": 6, "1068": 0, "1071": 0, "1074": 5931, "1076": 6122, "1078": 5885, "1081": 8111, "1082": 0, "1083": 0, "1084": 0, "1085": 0, "1086": 0, "1089": 6032, "1090": 2088, "1091": 9, "1092": 2079, "1093": 1, "1096": 5908, "1097": 2028, "1098": 0, "1099": 2028, "1100": 5, "1103": 2261, "1104": 6978, "1105": 4717, "1106": 4717, "1107": 0, "1108": 0, "1109": 0, "1111": 4717, "1112": 2700, "1113": 0, "1114": 2700, "1115": 4717, "1116": 2099, "1117": 2261, "1120": 2082, "1122": 2082, "1123": 9, "1124": 9, "1125": 9, "1126": 0, "1127": 0, "1128": 2073, "1129": 55, "1132": 0, "1133": 0, "1134": 0, "1137": 2060, "1140": 2066, "1141": 2066, "1143": 4087, "1144": 3946, "1145": 1925, "1146": 2021, "1147": 1597, "1148": 424, "1149": 424, "1150": 424, "1151": 424, "1152": 418, "1153": 6, "1154": 0, "1155": 0, "1156": 0, "1157": 0, "1159": 0, "1160": 0, "1161": 0, "1162": 0, "1163": 0, "1164": 0, "1165": 0, "1167": 0, "1169": 141, "1170": 0, "1171": 0, "1172": 0, "1173": 0, "1174": 0, "1175": 0, "1176": 141, "1177": 10, "1178": 131, "1179": 114, "1182": 1999, "1183": 1999, "1184": 0, "1185": 1999, "1186": 6, "1189": 1990, "1192": 1990, "1194": 3862, "1195": 3787, "1196": 0, "1197": 0, "1198": 0, "1200": 3787, "1201": 1589, "1202": 2198, "1203": 283, "1204": 283, "1205": 283, "1206": 278, "1207": 5, "1208": 0, "1209": 0, "1210": 0, "1211": 1915, "1212": 0, "1213": 0, "1214": 0, "1216": 1915, "1218": 75, "1219": 0, "1220": 0, "1221": 75, "1222": 58, "1225": 1933, "1226": 1933, "1227": 0, "1228": 1933, "1229": 0, "1232": 3874, "1233": 3873, "1234": 3873, "1235": 21, "1236": 21, "1237": 52, "1238": 0, "1239": 21, "1240": 3852, "1241": 2029, "1242": 1, "1257": 2038, "1260": 3936, "1261": 7477, "1262": 7471, "1263": 217, "1264": 7254, "1265": 165, "1266": 7089, "1267": 0, "1268": 0, "1269": 0, "1270": 7089, "1271": 0, "1272": 0, "1273": 7089, "1274": 4, "1275": 7085, "1276": 3155, "1277": 3155, "1278": 0, "1279": 3155, "1280": 3930, "1281": 0, "1282": 0, "1283": 0, "1285": 3930, "1286": 6, "1287": 1, "1288": 5, "1289": 3, "1292": 2050, "1293": 152, "1294": 1898, "1297": 2051, "1299": 2051, "1300": 9, "1301": 27, "1302": 18, "1303": 0, "1304": 18, "1305": 7, "1306": 11, "1307": 11, "1308": 7, "1309": 4, "1310": 0, "1311": 4, "1312": 2, "1313": 18, "1314": 9, "1317": 2042, "1318": 15, "1321": 2046, "1323": 2046, "1324": 4, "1326": 2042, "1327": 17, "1330": 2051, "1337": 0, "1338": 0, "1339": 0, "1340": 0, "1342": 0, "1343": 0, "1346": 341, "1347": 341, "1348": 341, "1349": 341, "1351": 341, "1352": 223, "1355": 118, "1356": 7, "1357": 7, "1358": 6, "1359": 1, "1361": 111, "1370": 111, "1391": 111, "1401": 111, "1412": 111, "1413": 111, "1414": 111, "1415": 111, "1416": 18, "1417": 18, "1418": 2, "1419": 16, "1420": 6, "1428": 109, "1429": 109, "1430": 109, "1431": 109, "1434": 28, "1435": 26, "1436": 81, "1437": 2, "1441": 107, "1442": 107, "1449": 107, "1450": 23, "1451": 23, "1452": 23, "1453": 1, "1455": 22, "1456": 23, "1458": 84, "1462": 107, "1463": 107, "1465": 8, "1466": 99, "1468": 3, "1469": 454, "1471": 2, "1472": 94, "1474": 12, "1475": 265, "1477": 8, "1478": 107, "1479": 33, "1481": 74, "1482": 16, "1484": 58, "1485": 158, "1486": 101, "1487": 101, "1488": 101, "1489": 1, "1490": 57, "1492": 73, "1493": 41, "1494": 42, "1495": 1, "1497": 32, "1498": 32, "1499": 32, "1500": 32, "1501": 32, "1502": 86, "1503": 54, "1509": 54, "1510": 116, "1511": 78, "1512": 16, "1513": 62, "1514": 38, "1515": 24, "1516": 21, "1517": 3, "1518": 0, "1520": 3, "1521": 62, "1523": 38, "1524": 38, "1525": 38, "1526": 17, "1527": 17, "1528": 34, "1529": 17, "1531": 21, "1535": 42, "1536": 21, "1540": 21, "1544": 21, "1545": 42, "1546": 21, "1547": 21, "1548": 6, "1549": 4, "1551": 2, "1552": 2, "1557": 15, "1559": 38, "1560": 38, "1561": 38, "1562": 54, "1566": 16, "1567": 54, "1570": 32, "1571": 1, "1577": 31, "1578": 67, "1579": 36, "1583": 72, "1584": 15, "1585": 57, "1586": 41, "1588": 16, "1590": 72, "1591": 206, "1592": 134, "1596": 100, "1597": 100, "1599": 34, "1600": 72, "1606": 41, "1607": 72, "1365": 759, "1366": 759, "1367": 123, "1368": 636, "1377": 214, "1378": 762, "1379": 548, "1380": 548, "1381": 548, "1382": 111, "1383": 111, "1384": 111, "1385": 548, "1386": 358, "1388": 190, "1389": 214, "1398": 211, "1399": 211, "1406": 160, "1407": 160, "1408": 0, "1610": 0, "1611": 0, "1612": 0, "1613": 0, "1614": 0, "1615": 0, "1618": 0, "1621": 0, "1624": 0, "1627": 0, "1630": 0, "1631": 0, "1632": 0, "1633": 0, "1649": 106, "1650": 106, "1651": 332, "1652": 226, "1653": 226, "1654": 226, "1655": 167, "1659": 106, "1674": 23, "1675": 68, "1676": 23, "1680": 0, "1706": 0, "1737": 564, "1738": 0, "1739": 0, "1741": 0, "1742": 564, "1743": 328, "1744": 236, "1745": 145, "1746": 91, "1747": 4, "1748": 0, "1749": 0, "1750": 0, "1751": 0, "1752": 0, "1753": 0, "1754": 4, "1755": 87, "1756": 3, "1757": 3, "1758": 1, "1759": 1, "1760": 0, "1762": 2, "1763": 3, "1765": 84, "1769": 0, "1770": 0, "1776": 0, "1771": 0, "1772": 0, "1773": 0, "1774": 0, "1775": 0}}
+{"/testbed/sympy/core/mul.py": {"1": 1, "3": 1, "4": 1, "5": 1, "7": 1, "8": 1, "9": 1, "10": 1, "11": 1, "12": 1, "13": 1, "14": 1, "15": 1, "21": 2, "31": 1, "32": 1, "37": 1, "91": 2, "1683": 1, "1709": 1, "1768": 1, "1779": 1, "1780": 1, "1781": 1, "22": 1, "23": 1, "24": 1, "25": 1, "27": 1, "34": 2, "68": 0, "69": 0, "70": 0, "71": 0, "72": 0, "73": 0, "74": 0, "75": 0, "76": 0, "77": 0, "78": 0, "79": 0, "80": 0, "82": 0, "83": 0, "84": 0, "85": 0, "86": 0, "87": 0, "88": 0, "93": 1, "95": 1, "97": 1, "98": 1, "628": 1, "657": 1, "658": 1, "661": 1, "677": 1, "678": 1, "692": 1, "693": 1, "720": 1, "721": 1, "747": 1, "748": 1, "767": 1, "781": 1, "834": 1, "835": 1, "853": 1, "895": 1, "896": 1, "905": 1, "912": 1, "921": 1, "946": 1, "1003": 1, "1004": 1, "1035": 1, "1042": 1, "1049": 1, "1064": 1, "1067": 1, "1070": 1, "1073": 1, "1075": 1, "1077": 1, "1080": 1, "1088": 1, "1095": 1, "1102": 1, "1119": 1, "1131": 1, "1136": 1, "1139": 1, "1181": 1, "1188": 1, "1191": 1, "1224": 1, "1231": 1, "1244": 1, "1259": 1, "1291": 1, "1296": 1, "1320": 1, "1329": 1, "1345": 1, "1609": 1, "1617": 1, "1620": 1, "1623": 1, "1626": 1, "1629": 1, "1635": 1, "1661": 1, "1678": 1, "1679": 1, "176": 2, "177": 2, "178": 2, "179": 2, "180": 2, "181": 2, "182": 0, "183": 2, "184": 2, "185": 0, "186": 0, "187": 0, "189": 0, "190": 0, "191": 0, "192": 0, "193": 0, "194": 0, "195": 0, "196": 0, "197": 0, "198": 0, "199": 2, "200": 0, "203": 2, "204": 2, "206": 2, "208": 2, "211": 2, "214": 2, "217": 2, "219": 2, "222": 2, "235": 6, "237": 4, "238": 0, "241": 4, "242": 0, "243": 0, "247": 0, "248": 0, "249": 0, "251": 0, "255": 0, "257": 0, "260": 4, "261": 0, "263": 0, "264": 0, "265": 0, "266": 0, "268": 0, "269": 0, "271": 4, "272": 0, "273": 0, "275": 4, "276": 0, "277": 0, "279": 4, "280": 0, "282": 0, "283": 0, "285": 0, "286": 0, "287": 0, "289": 4, "290": 2, "291": 2, "293": 2, "296": 2, "300": 2, "301": 0, "306": 0, "307": 0, "308": 0, "309": 0, "310": 0, "311": 0, "312": 0, "313": 0, "314": 0, "315": 0, "316": 0, "317": 0, "318": 0, "319": 0, "320": 0, "321": 0, "323": 0, "324": 0, "325": 0, "327": 2, "332": 0, "333": 0, "336": 0, "337": 0, "338": 0, "339": 0, "340": 0, "344": 0, "345": 0, "346": 0, "347": 0, "352": 0, "353": 0, "356": 0, "357": 0, "358": 0, "360": 0, "363": 0, "364": 0, "379": 2, "394": 2, "397": 2, "421": 2, "422": 2, "423": 2, "424": 4, "425": 2, "427": 0, "428": 0, "429": 0, "430": 0, "431": 0, "432": 2, "433": 2, "434": 0, "435": 0, "436": 2, "437": 2, "438": 0, "442": 0, "443": 0, "444": 0, "445": 0, "446": 0, "447": 2, "448": 2, "451": 2, "452": 0, "454": 0, "455": 0, "457": 2, "461": 2, "463": 2, "464": 0, "465": 2, "466": 0, "467": 4, "471": 2, "472": 2, "473": 0, "474": 2, "478": 2, "479": 2, "480": 0, "481": 0, "482": 0, "483": 0, "484": 0, "485": 0, "486": 0, "487": 0, "488": 0, "489": 2, "493": 2, "494": 2, "495": 2, "496": 0, "497": 0, "498": 0, "499": 0, "500": 0, "501": 0, "504": 0, "505": 0, "506": 0, "508": 0, "509": 0, "510": 0, "511": 0, "512": 0, "514": 0, "516": 0, "517": 0, "518": 0, "519": 0, "520": 0, "521": 0, "522": 0, "525": 0, "526": 0, "527": 0, "529": 0, "530": 0, "531": 0, "533": 0, "534": 0, "537": 2, "538": 0, "541": 2, "543": 2, "545": 2, "546": 2, "547": 0, "549": 2, "550": 2, "551": 0, "554": 0, "555": 0, "556": 0, "557": 0, "558": 0, "562": 0, "565": 4, "568": 2, "569": 0, "579": 0, "580": 0, "581": 0, "584": 2, "590": 0, "592": 0, "596": 2, "599": 0, "600": 0, "601": 0, "604": 2, "605": 6, "606": 4, "607": 0, "609": 4, "610": 2, "613": 2, "616": 2, "617": 0, "620": 2, "621": 0, "623": 0, "624": 0, "626": 2, "380": 4, "381": 6, "382": 2, "383": 6, "384": 4, "385": 6, "386": 4, "387": 2, "388": 4, "389": 6, "390": 6, "391": 4, "570": 0, "571": 0, "572": 0, "573": 0, "574": 0, "575": 0, "576": 0, "577": 0, "578": 0, "591": 0, "593": 0, "631": 0, "633": 0, "634": 0, "635": 0, "636": 0, "637": 0, "638": 0, "639": 0, "640": 0, "641": 0, "642": 0, "643": 0, "644": 0, "645": 0, "646": 0, "647": 0, "648": 0, "650": 0, "652": 0, "653": 0, "655": 0, "659": 0, "662": 0, "663": 0, "664": 0, "665": 0, "667": 0, "668": 0, "669": 0, "670": 0, "672": 0, "673": 0, "674": 0, "675": 0, "682": 0, "683": 0, "684": 0, "688": 0, "690": 0, "710": 0, "712": 0, "713": 0, "714": 0, "715": 0, "718": 0, "737": 0, "738": 0, "740": 0, "741": 0, "743": 0, "745": 0, "749": 0, "750": 0, "751": 0, "752": 0, "753": 0, "754": 0, "755": 0, "757": 0, "758": 0, "759": 0, "760": 0, "761": 0, "762": 0, "763": 0, "764": 0, "765": 0, "769": 2, "771": 2, "772": 0, "773": 0, "774": 0, "776": 0, "777": 0, "778": 0, "779": 2, "782": 0, "783": 0, "784": 0, "785": 0, "786": 0, "787": 0, "788": 0, "789": 0, "790": 0, "791": 0, "792": 0, "793": 0, "795": 0, "796": 0, "797": 0, "798": 0, "799": 0, "801": 0, "802": 0, "804": 0, "806": 0, "807": 0, "808": 0, "809": 0, "810": 0, "811": 0, "815": 0, "816": 0, "817": 0, "818": 0, "819": 0, "820": 0, "821": 0, "823": 0, "824": 0, "825": 0, "826": 0, "827": 0, "828": 0, "829": 0, "831": 0, "832": 0, "842": 0, "843": 0, "844": 0, "845": 0, "846": 0, "847": 0, "849": 0, "850": 0, "851": 0, "854": 0, "858": 0, "859": 0, "860": 0, "861": 0, "862": 0, "863": 0, "864": 0, "865": 0, "867": 0, "868": 0, "869": 0, "870": 0, "871": 0, "873": 0, "874": 0, "876": 0, "878": 0, "879": 0, "881": 0, "882": 0, "883": 0, "884": 0, "885": 0, "886": 0, "887": 0, "888": 0, "889": 0, "890": 0, "891": 0, "893": 0, "897": 0, "898": 0, "899": 0, "900": 0, "901": 0, "902": 0, "903": 0, "906": 0, "907": 0, "908": 0, "909": 0, "910": 0, "914": 0, "915": 0, "916": 0, "917": 0, "918": 0, "919": 0, "922": 0, "923": 0, "924": 0, "925": 0, "926": 0, "927": 0, "928": 0, "929": 0, "930": 0, "931": 0, "932": 0, "933": 0, "934": 0, "935": 0, "937": 0, "938": 0, "939": 0, "940": 0, "941": 0, "943": 0, "944": 0, "948": 0, "949": 0, "950": 0, "951": 0, "952": 0, "953": 0, "956": 0, "957": 0, "958": 0, "959": 0, "960": 0, "962": 0, "964": 0, "966": 0, "967": 0, "969": 0, "970": 0, "971": 0, "972": 0, "973": 0, "974": 0, "976": 0, "979": 0, "980": 0, "981": 0, "982": 0, "983": 0, "984": 0, "987": 0, "988": 0, "989": 0, "991": 0, "992": 0, "994": 0, "995": 0, "997": 0, "998": 0, "999": 0, "1000": 0, "1001": 0, "1009": 0, "1010": 0, "1012": 0, "1019": 0, "1020": 0, "1021": 0, "1022": 0, "1023": 0, "1024": 0, "1025": 0, "1026": 0, "1027": 0, "1028": 0, "1029": 0, "1031": 0, "1032": 0, "1033": 0, "1013": 0, "1017": 0, "1018": 0, "1036": 0, "1037": 0, "1038": 0, "1039": 0, "1040": 0, "1046": 0, "1047": 0, "1050": 0, "1051": 0, "1052": 0, "1053": 0, "1054": 0, "1055": 0, "1056": 0, "1057": 0, "1058": 0, "1059": 0, "1060": 0, "1061": 0, "1062": 0, "1065": 0, "1068": 0, "1071": 0, "1074": 0, "1076": 0, "1078": 0, "1081": 0, "1082": 0, "1083": 0, "1084": 0, "1085": 0, "1086": 0, "1089": 0, "1090": 0, "1091": 0, "1092": 0, "1093": 0, "1096": 0, "1097": 0, "1098": 0, "1099": 0, "1100": 0, "1103": 0, "1104": 0, "1105": 0, "1106": 0, "1107": 0, "1108": 0, "1109": 0, "1111": 0, "1112": 0, "1113": 0, "1114": 0, "1115": 0, "1116": 0, "1117": 0, "1120": 0, "1122": 0, "1123": 0, "1124": 0, "1125": 0, "1126": 0, "1127": 0, "1128": 0, "1129": 0, "1132": 0, "1133": 0, "1134": 0, "1137": 0, "1140": 0, "1141": 0, "1143": 0, "1144": 0, "1145": 0, "1146": 0, "1147": 0, "1148": 0, "1149": 0, "1150": 0, "1151": 0, "1152": 0, "1153": 0, "1154": 0, "1155": 0, "1156": 0, "1157": 0, "1159": 0, "1160": 0, "1161": 0, "1162": 0, "1163": 0, "1164": 0, "1165": 0, "1167": 0, "1169": 0, "1170": 0, "1171": 0, "1172": 0, "1173": 0, "1174": 0, "1175": 0, "1176": 0, "1177": 0, "1178": 0, "1179": 0, "1182": 0, "1183": 0, "1184": 0, "1185": 0, "1186": 0, "1189": 0, "1192": 0, "1194": 0, "1195": 0, "1196": 0, "1197": 0, "1198": 0, "1200": 0, "1201": 0, "1202": 0, "1203": 0, "1204": 0, "1205": 0, "1206": 0, "1207": 0, "1208": 0, "1209": 0, "1210": 0, "1211": 0, "1212": 0, "1213": 0, "1214": 0, "1216": 0, "1218": 0, "1219": 0, "1220": 0, "1221": 0, "1222": 0, "1225": 0, "1226": 0, "1227": 0, "1228": 0, "1229": 0, "1232": 0, "1233": 0, "1234": 0, "1235": 0, "1236": 0, "1237": 0, "1238": 0, "1239": 0, "1240": 0, "1241": 0, "1242": 0, "1257": 0, "1260": 0, "1261": 0, "1262": 0, "1263": 0, "1264": 0, "1265": 0, "1266": 0, "1267": 0, "1268": 0, "1269": 0, "1270": 0, "1271": 0, "1272": 0, "1273": 0, "1274": 0, "1275": 0, "1276": 0, "1277": 0, "1278": 0, "1279": 0, "1280": 0, "1281": 0, "1282": 0, "1283": 0, "1285": 0, "1286": 0, "1287": 0, "1288": 0, "1289": 0, "1292": 0, "1293": 0, "1294": 0, "1297": 0, "1299": 0, "1300": 0, "1301": 0, "1302": 0, "1303": 0, "1304": 0, "1305": 0, "1306": 0, "1307": 0, "1308": 0, "1309": 0, "1310": 0, "1311": 0, "1312": 0, "1313": 0, "1314": 0, "1317": 0, "1318": 0, "1321": 0, "1323": 0, "1324": 0, "1326": 0, "1327": 0, "1330": 0, "1337": 0, "1338": 0, "1339": 0, "1340": 0, "1342": 0, "1343": 0, "1346": 0, "1347": 0, "1348": 0, "1349": 0, "1351": 0, "1352": 0, "1355": 0, "1356": 0, "1357": 0, "1358": 0, "1359": 0, "1361": 0, "1370": 0, "1391": 0, "1401": 0, "1412": 0, "1413": 0, "1414": 0, "1415": 0, "1416": 0, "1417": 0, "1418": 0, "1419": 0, "1420": 0, "1428": 0, "1429": 0, "1430": 0, "1431": 0, "1434": 0, "1435": 0, "1436": 0, "1437": 0, "1441": 0, "1442": 0, "1449": 0, "1450": 0, "1451": 0, "1452": 0, "1453": 0, "1455": 0, "1456": 0, "1458": 0, "1462": 0, "1463": 0, "1465": 0, "1466": 0, "1468": 0, "1469": 0, "1471": 0, "1472": 0, "1474": 0, "1475": 0, "1477": 0, "1478": 0, "1479": 0, "1481": 0, "1482": 0, "1484": 0, "1485": 0, "1486": 0, "1487": 0, "1488": 0, "1489": 0, "1490": 0, "1492": 0, "1493": 0, "1494": 0, "1495": 0, "1497": 0, "1498": 0, "1499": 0, "1500": 0, "1501": 0, "1502": 0, "1503": 0, "1509": 0, "1510": 0, "1511": 0, "1512": 0, "1513": 0, "1514": 0, "1515": 0, "1516": 0, "1517": 0, "1518": 0, "1520": 0, "1521": 0, "1523": 0, "1524": 0, "1525": 0, "1526": 0, "1527": 0, "1528": 0, "1529": 0, "1531": 0, "1535": 0, "1536": 0, "1540": 0, "1544": 0, "1545": 0, "1546": 0, "1547": 0, "1548": 0, "1549": 0, "1551": 0, "1552": 0, "1557": 0, "1559": 0, "1560": 0, "1561": 0, "1562": 0, "1566": 0, "1567": 0, "1570": 0, "1571": 0, "1577": 0, "1578": 0, "1579": 0, "1583": 0, "1584": 0, "1585": 0, "1586": 0, "1588": 0, "1590": 0, "1591": 0, "1592": 0, "1596": 0, "1597": 0, "1599": 0, "1600": 0, "1606": 0, "1607": 0, "1365": 0, "1366": 0, "1367": 0, "1368": 0, "1377": 0, "1378": 0, "1379": 0, "1380": 0, "1381": 0, "1382": 0, "1383": 0, "1384": 0, "1385": 0, "1386": 0, "1388": 0, "1389": 0, "1398": 0, "1399": 0, "1406": 0, "1407": 0, "1408": 0, "1610": 0, "1611": 0, "1612": 0, "1613": 0, "1614": 0, "1615": 0, "1618": 0, "1621": 0, "1624": 0, "1627": 0, "1630": 0, "1631": 0, "1632": 0, "1633": 0, "1649": 0, "1650": 0, "1651": 0, "1652": 0, "1653": 0, "1654": 0, "1655": 0, "1659": 0, "1674": 0, "1675": 0, "1676": 0, "1680": 0, "1706": 0, "1737": 0, "1738": 0, "1739": 0, "1741": 0, "1742": 0, "1743": 0, "1744": 0, "1745": 0, "1746": 0, "1747": 0, "1748": 0, "1749": 0, "1750": 0, "1751": 0, "1752": 0, "1753": 0, "1754": 0, "1755": 0, "1756": 0, "1757": 0, "1758": 0, "1759": 0, "1760": 0, "1762": 0, "1763": 0, "1765": 0, "1769": 0, "1770": 0, "1776": 0, "1771": 0, "1772": 0, "1773": 0, "1774": 0, "1775": 0}}
++ git checkout 5c1644ff85e15752f9f8721bc142bfbf975e7805
+Note: switching to '5c1644ff85e15752f9f8721bc142bfbf975e7805'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 5c1644ff85 Merge pull request #13909 from normalhuman/better_polylog_test
+M	sympy/core/mul.py
+M	sympy/core/tests/test_subs.py
++ git apply /root/pre_state.patch
+error: unrecognized input

@@ -1,0 +1,20 @@
+diff --git a/sympy/printing/tests/test_latex.py b/sympy/printing/tests/test_latex.py
+index 8a7054905..9aa77a4b5 100755
+--- a/sympy/printing/tests/test_latex.py
++++ b/sympy/printing/tests/test_latex.py
+@@ -994,6 +994,15 @@ def test_latex_pow_fraction():
+     assert '3^{-x}' in latex(3**-x/2).replace(' ', '')
+ 
+ 
++def test_latex_mul_negative_irrational_power():
++    # The pretty printer leaves negative non-rational powers in the numerator.
++    # The LaTeX printer should do the same rather than moving them into the
++    # denominator.
++    assert latex(2*x**(-pi)) == r"2 x^{- \pi}"
++    assert latex(2*x**(-sqrt(2))) == r"2 x^{- \sqrt{2}}"
++    assert latex(2*(x + y)**(-pi)) == r"2 \left(x + y\right)^{- \pi}"
++
++
+ def test_noncommutative():
+     A, B, C = symbols('A,B,C', commutative=False)
+ 

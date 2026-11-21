@@ -1,0 +1,55 @@
+diff --git a/tests/test_ext_napoleon_docstring.py b/tests/test_ext_napoleon_docstring.py
+index 3027a4cb2..51a47ee52 100755
+--- a/tests/test_ext_napoleon_docstring.py
++++ b/tests/test_ext_napoleon_docstring.py
+@@ -1065,6 +1065,22 @@ Methods:
+                                      options={'noindex': True}))
+         self.assertEqual(expected, actual)
+ 
++    def test_underscore_in_attribute(self):
++        docstring = """
++Attributes:
++    hello_ (int): hi
++"""
++
++        expected = """
++.. attribute:: hello_
++   :type: int
++
++   hi
++"""
++        config = Config()
++        actual = str(GoogleDocstring(docstring, config=config, what='class'))
++        self.assertEqual(expected, actual)
++
+ 
+ class NumpyDocstringTest(BaseDocstringTest):
+     docstrings = [(
+@@ -1409,6 +1425,27 @@ arg_ : type
+ 
+         self.assertEqual(expected, actual)
+ 
++    def test_underscore_in_attribute_without_ivar(self):
++        docstring = """
++Attributes
++----------
++
++hello_ : int
++    hi
++"""
++
++        expected = """
++.. attribute:: hello_
++   :type: int
++
++   hi
++"""
++        config = Config()
++        app = mock.Mock()
++        actual = str(NumpyDocstring(docstring, config, app, "class"))
++
++        self.assertEqual(expected, actual)
++
+     def test_raises_types(self):
+         docstrings = [("""
+ Example Function

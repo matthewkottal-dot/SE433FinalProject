@@ -1,0 +1,33 @@
+diff --git a/testing/test_terminal.py b/testing/test_terminal.py
+index 0f5b4cb68..80c16fb60 100755
+--- a/testing/test_terminal.py
++++ b/testing/test_terminal.py
+@@ -2177,3 +2177,28 @@ class TestCodeHighlight:
+                 ]
+             )
+         )
++
++
++def test_failure_path_after_fixture_chdir(testdir):
++    """The failure path should be relative to the original working directory."""
++    testdir.makepyfile(
++        test_path_error="""
++        import os
++
++        import pytest
++
++        @pytest.fixture
++        def change_dir():
++            old_dir = os.getcwd()
++            os.mkdir("subdir")
++            os.chdir("subdir")
++            yield
++            os.chdir(old_dir)
++
++        def test_failure(change_dir):
++            assert False
++        """
++    )
++    result = testdir.runpytest()
++    result.stdout.fnmatch_lines(["test_path_error.py:*: AssertionError"])
++    result.stdout.no_fnmatch_line("*../test_path_error.py:*")

@@ -1,0 +1,14 @@
+2026-11-19 14:28:34,336 - WARNING - Starting evaluation at 1795123714.3362641
+2026-11-19 14:28:34,455 - INFO - Creating container for pytest-dev__pytest-7220...
+2026-11-19 14:28:34,494 - INFO - Container for pytest-dev__pytest-7220 created: de834bd969011ffdedd889b5b81f8502be518dac8d3c4b034d7b770db9956dff
+2026-11-19 14:28:34,615 - INFO - Container for pytest-dev__pytest-7220 started: de834bd969011ffdedd889b5b81f8502be518dac8d3c4b034d7b770db9956dff
+2026-11-19 14:28:34,780 - INFO - Git diff before:
+
+2026-11-19 14:28:34,783 - INFO - Eval script for pytest-dev__pytest-7220 written to eval.sh, now applying to container...
+2026-11-19 14:28:37,376 - INFO - Test output for pytest-dev__pytest-7220 written to run_instance_swt_logs/deepseek_flash_test_baseline/pred_pre__deepseek__deepseek-flash/pytest-dev__pytest-7220/test_output.txt
+2026-11-19 14:28:37,415 - INFO - Git diff after:
+
+2026-11-19 14:28:37,416 - INFO - Attempting to stop container exec.eval.x86_64.bfa0b4daea744b5aaefba0.0ac742aae04648a96a8848.125556472150160...
+2026-11-19 14:28:52,637 - INFO - Attempting to remove container exec.eval.x86_64.bfa0b4daea744b5aaefba0.0ac742aae04648a96a8848.125556472150160...
+2026-11-19 14:28:52,668 - INFO - Container exec.eval.x86_64.bfa0b4daea744b5aaefba0.0ac742aae04648a96a8848.125556472150160 removed.
+2026-11-19 14:28:52,669 - WARNING - End of eval at 1795123732.6695826

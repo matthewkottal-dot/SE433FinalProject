@@ -1,0 +1,78 @@
+2026-11-19 14:03:50,440 - WARNING - Starting evaluation at 1795122230.440898
+2026-11-19 14:03:50,567 - INFO - Creating container for psf__requests-2148...
+2026-11-19 14:03:50,604 - INFO - Container for psf__requests-2148 created: 941a66eb9ca5ddb5d342c0e95a3e0731f3970e29671d6b9779a70d97d6339392
+2026-11-19 14:03:50,721 - INFO - Container for psf__requests-2148 started: 941a66eb9ca5ddb5d342c0e95a3e0731f3970e29671d6b9779a70d97d6339392
+2026-11-19 14:03:50,815 - INFO - Git diff before:
+
+2026-11-19 14:03:50,818 - INFO - Eval script for psf__requests-2148 written to eval.sh, now applying to container...
+2026-11-19 14:04:12,905 - INFO - Test output for psf__requests-2148 written to run_instance_swt_logs/deepseek_flash_test_baseline/pred_post__deepseek__deepseek-flash/psf__requests-2148/test_output.txt
+2026-11-19 14:04:12,944 - INFO - Git diff after:
+diff --git a/requests/models.py b/requests/models.py
+index 0dc55568..2ababaf8 100644
+--- a/requests/models.py
++++ b/requests/models.py
+@@ -9,6 +9,7 @@ This module contains the primary objects that power Requests.
+ 
+ import collections
+ import datetime
++import socket
+ 
+ from io import BytesIO, UnsupportedOperation
+ from .hooks import default_hooks
+@@ -22,7 +23,7 @@ from .packages.urllib3.util import parse_url
+ from .packages.urllib3.exceptions import DecodeError
+ from .exceptions import (
+     HTTPError, RequestException, MissingSchema, InvalidURL,
+-    ChunkedEncodingError, ContentDecodingError)
++    ChunkedEncodingError, ContentDecodingError, ConnectionError)
+ from .utils import (
+     guess_filename, get_auth_from_url, requote_uri,
+     stream_decode_response_unicode, to_key_val_list, parse_header_links,
+@@ -640,6 +641,8 @@ class Response(object):
+                     raise ChunkedEncodingError(e)
+                 except DecodeError as e:
+                     raise ContentDecodingError(e)
++                except socket.error as e:
++                    raise ConnectionError(e)
+             except AttributeError:
+                 # Standard file-like object.
+                 while True:
+diff --git a/test_requests.py b/test_requests.py
+index 283353b9..d665859e 100755
+--- a/test_requests.py
++++ b/test_requests.py
+@@ -7,6 +7,7 @@ from __future__ import division
+ import json
+ import os
+ import pickle
++import socket
+ import unittest
+ import collections
+ 
+@@ -1421,5 +1422,21 @@ def test_prepared_request_complete_copy():
+     )
+     assert_copy(p, p.copy())
+ 
++
++def test_response_iter_content_socket_error():
++    """Socket errors while reading a response body are wrapped."""
++    class SocketErrorStream(object):
++        def stream(self, *args, **kwargs):
++            yield b'some data'
++            raise socket.error(104, 'Connection reset by peer')
++
++    response = requests.Response()
++    response.status_code = 200
++    response.raw = SocketErrorStream()
++
++    with pytest.raises(requests.exceptions.ConnectionError):
++        response.content
++
++
+ if __name__ == '__main__':
+     unittest.main()
+2026-11-19 14:04:12,944 - INFO - Git diff changed after running eval script
+2026-11-19 14:04:12,945 - INFO - Attempting to stop container exec.eval.x86_64.3a9417a9d4b5c62087edb6.3f8f53c274e85085f55f65.125556489967024...
+2026-11-19 14:04:28,164 - INFO - Attempting to remove container exec.eval.x86_64.3a9417a9d4b5c62087edb6.3f8f53c274e85085f55f65.125556489967024...
+2026-11-19 14:04:28,196 - INFO - Container exec.eval.x86_64.3a9417a9d4b5c62087edb6.3f8f53c274e85085f55f65.125556489967024 removed.
+2026-11-19 14:04:28,197 - WARNING - End of eval at 1795122268.1969903

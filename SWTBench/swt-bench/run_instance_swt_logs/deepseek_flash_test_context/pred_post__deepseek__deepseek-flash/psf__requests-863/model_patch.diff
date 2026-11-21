@@ -1,0 +1,23 @@
+diff --git a/tests/test_requests.py b/tests/test_requests.py
+index f8a31f2..22172dc 100755
+--- a/tests/test_requests.py
++++ b/tests/test_requests.py
+@@ -710,6 +710,18 @@ class RequestsTestSuite(TestSetup, TestBaseMixin, unittest.TestCase):
+ 
+             assert 'foo' in response.text
+ 
++    def test_multiple_hooks_are_parsed_from_hooks_dict(self):
++        def first_hook(args):
++            return args
++
++        def second_hook(args):
++            return args
++
++        request = requests.Request(
++            'http://example.com/', hooks={'args': [first_hook, second_hook]})
++
++        self.assertEqual(request.hooks['args'], [first_hook, second_hook])
++
+     def test_multiple_hooks(self):
+ 
+         def add_foo_header(args):

@@ -1,0 +1,513 @@
++ source /opt/miniconda3/bin/activate
+++ _CONDA_ROOT=/opt/miniconda3
+++ . /opt/miniconda3/etc/profile.d/conda.sh
++++ export CONDA_EXE=/opt/miniconda3/bin/conda
++++ CONDA_EXE=/opt/miniconda3/bin/conda
++++ export _CE_M=
++++ _CE_M=
++++ export _CE_CONDA=
++++ _CE_CONDA=
++++ export CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++++ CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++++ '[' -z '' ']'
++++ export CONDA_SHLVL=0
++++ CONDA_SHLVL=0
++++ '[' -n '' ']'
++++++ dirname /opt/miniconda3/bin/conda
+++++ dirname /opt/miniconda3/bin
++++ PATH=/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++++ export PATH
++++ '[' -z '' ']'
++++ PS1=
+++ conda activate
+++ local cmd=activate
+++ case "$cmd" in
+++ __conda_activate activate
+++ '[' -n '' ']'
+++ local ask_conda
++++ PS1=
++++ __conda_exe shell.posix activate
++++ /opt/miniconda3/bin/conda shell.posix activate
+++ ask_conda='PS1='\''(base) '\''
+export PATH='\''/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3'\''
+export CONDA_SHLVL='\''1'\''
+export CONDA_DEFAULT_ENV='\''base'\''
+export CONDA_PROMPT_MODIFIER='\''(base) '\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
+++ eval 'PS1='\''(base) '\''
+export PATH='\''/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3'\''
+export CONDA_SHLVL='\''1'\''
+export CONDA_DEFAULT_ENV='\''base'\''
+export CONDA_PROMPT_MODIFIER='\''(base) '\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
++++ PS1='(base) '
++++ export PATH=/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++++ PATH=/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++++ export CONDA_PREFIX=/opt/miniconda3
++++ CONDA_PREFIX=/opt/miniconda3
++++ export CONDA_SHLVL=1
++++ CONDA_SHLVL=1
++++ export CONDA_DEFAULT_ENV=base
++++ CONDA_DEFAULT_ENV=base
++++ export 'CONDA_PROMPT_MODIFIER=(base) '
++++ CONDA_PROMPT_MODIFIER='(base) '
++++ export CONDA_EXE=/opt/miniconda3/bin/conda
++++ CONDA_EXE=/opt/miniconda3/bin/conda
++++ export _CE_M=
++++ _CE_M=
++++ export _CE_CONDA=
++++ _CE_CONDA=
++++ export CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++++ CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
+++ __conda_hashr
+++ '[' -n '' ']'
+++ '[' -n '' ']'
+++ hash -r
++ conda activate testbed
++ local cmd=activate
++ case "$cmd" in
++ __conda_activate activate testbed
++ '[' -n '' ']'
++ local ask_conda
+++ PS1='(base) '
+++ __conda_exe shell.posix activate testbed
+++ /opt/miniconda3/bin/conda shell.posix activate testbed
++ ask_conda='PS1='\''(testbed) '\''
+export PATH='\''/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3/envs/testbed'\''
+export CONDA_SHLVL='\''2'\''
+export CONDA_DEFAULT_ENV='\''testbed'\''
+export CONDA_PROMPT_MODIFIER='\''(testbed) '\''
+export CONDA_PREFIX_1='\''/opt/miniconda3'\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
++ eval 'PS1='\''(testbed) '\''
+export PATH='\''/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3/envs/testbed'\''
+export CONDA_SHLVL='\''2'\''
+export CONDA_DEFAULT_ENV='\''testbed'\''
+export CONDA_PROMPT_MODIFIER='\''(testbed) '\''
+export CONDA_PREFIX_1='\''/opt/miniconda3'\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
+++ PS1='(testbed) '
+++ export PATH=/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ PATH=/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ export CONDA_PREFIX=/opt/miniconda3/envs/testbed
+++ CONDA_PREFIX=/opt/miniconda3/envs/testbed
+++ export CONDA_SHLVL=2
+++ CONDA_SHLVL=2
+++ export CONDA_DEFAULT_ENV=testbed
+++ CONDA_DEFAULT_ENV=testbed
+++ export 'CONDA_PROMPT_MODIFIER=(testbed) '
+++ CONDA_PROMPT_MODIFIER='(testbed) '
+++ export CONDA_PREFIX_1=/opt/miniconda3
+++ CONDA_PREFIX_1=/opt/miniconda3
+++ export CONDA_EXE=/opt/miniconda3/bin/conda
+++ CONDA_EXE=/opt/miniconda3/bin/conda
+++ export _CE_M=
+++ _CE_M=
+++ export _CE_CONDA=
+++ _CE_CONDA=
+++ export CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
+++ CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++ __conda_hashr
++ '[' -n '' ']'
++ '[' -n '' ']'
++ hash -r
++ cd /testbed
++ git diff HEAD 56bf819c2f4eaf8b36bd8c42c06bb59d5a3bfc0f
++ git config --global --add safe.directory /testbed
++ cd /testbed
++ git status
+On branch main
+nothing to commit, working tree clean
++ git show
+commit 56bf819c2f4eaf8b36bd8c42c06bb59d5a3bfc0f
+Author: Bruno Oliveira <nicoddemus@gmail.com>
+Date:   Sat May 30 14:33:22 2020 -0300
+
+    Do not call TestCase.tearDown for skipped tests (#7236)
+    
+    Fix #7215
+
+diff --git a/changelog/7215.bugfix.rst b/changelog/7215.bugfix.rst
+new file mode 100644
+index 000000000..815149132
+--- /dev/null
++++ b/changelog/7215.bugfix.rst
+@@ -0,0 +1,2 @@
++Fix regression where running with ``--pdb`` would call the ``tearDown`` methods of ``unittest.TestCase``
++subclasses for skipped tests.
+diff --git a/src/_pytest/unittest.py b/src/_pytest/unittest.py
+index 773f545af..0d9133f60 100644
+--- a/src/_pytest/unittest.py
++++ b/src/_pytest/unittest.py
+@@ -41,7 +41,7 @@ class UnitTestCase(Class):
+         if not getattr(cls, "__test__", True):
+             return
+ 
+-        skipped = getattr(cls, "__unittest_skip__", False)
++        skipped = _is_skipped(cls)
+         if not skipped:
+             self._inject_setup_teardown_fixtures(cls)
+             self._inject_setup_class_fixture()
+@@ -89,7 +89,7 @@ def _make_xunit_fixture(obj, setup_name, teardown_name, scope, pass_self):
+ 
+     @pytest.fixture(scope=scope, autouse=True)
+     def fixture(self, request):
+-        if getattr(self, "__unittest_skip__", None):
++        if _is_skipped(self):
+             reason = self.__unittest_skip_why__
+             pytest.skip(reason)
+         if setup is not None:
+@@ -220,7 +220,7 @@ class TestCaseFunction(Function):
+             # arguably we could always postpone tearDown(), but this changes the moment where the
+             # TestCase instance interacts with the results object, so better to only do it
+             # when absolutely needed
+-            if self.config.getoption("usepdb"):
++            if self.config.getoption("usepdb") and not _is_skipped(self.obj):
+                 self._explicit_tearDown = self._testcase.tearDown
+                 setattr(self._testcase, "tearDown", lambda *args: None)
+ 
+@@ -301,3 +301,8 @@ def check_testcase_implements_trial_reporter(done=[]):
+ 
+     classImplements(TestCaseFunction, IReporter)
+     done.append(1)
++
++
++def _is_skipped(obj) -> bool:
++    """Return True if the given object has been marked with @unittest.skip"""
++    return bool(getattr(obj, "__unittest_skip__", False))
+diff --git a/testing/test_unittest.py b/testing/test_unittest.py
+index 83f1b6b2a..74a36c41b 100644
+--- a/testing/test_unittest.py
++++ b/testing/test_unittest.py
+@@ -1193,6 +1193,40 @@ def test_pdb_teardown_called(testdir, monkeypatch):
+     ]
+ 
+ 
++@pytest.mark.parametrize("mark", ["@unittest.skip", "@pytest.mark.skip"])
++def test_pdb_teardown_skipped(testdir, monkeypatch, mark):
++    """
++    With --pdb, setUp and tearDown should not be called for skipped tests.
++    """
++    tracked = []
++    monkeypatch.setattr(pytest, "test_pdb_teardown_skipped", tracked, raising=False)
++
++    testdir.makepyfile(
++        """
++        import unittest
++        import pytest
++
++        class MyTestCase(unittest.TestCase):
++
++            def setUp(self):
++                pytest.test_pdb_teardown_skipped.append("setUp:" + self.id())
++
++            def tearDown(self):
++                pytest.test_pdb_teardown_skipped.append("tearDown:" + self.id())
++
++            {mark}("skipped for reasons")
++            def test_1(self):
++                pass
++
++    """.format(
++            mark=mark
++        )
++    )
++    result = testdir.runpytest_inprocess("--pdb")
++    result.stdout.fnmatch_lines("* 1 skipped in *")
++    assert tracked == []
++
++
+ def test_async_support(testdir):
+     pytest.importorskip("unittest.async_case")
+ 
++ git diff 56bf819c2f4eaf8b36bd8c42c06bb59d5a3bfc0f
++ source /opt/miniconda3/bin/activate
+++ _CONDA_ROOT=/opt/miniconda3
+++ . /opt/miniconda3/etc/profile.d/conda.sh
++++ export CONDA_EXE=/opt/miniconda3/bin/conda
++++ CONDA_EXE=/opt/miniconda3/bin/conda
++++ export _CE_M=
++++ _CE_M=
++++ export _CE_CONDA=
++++ _CE_CONDA=
++++ export CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++++ CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++++ '[' -z x ']'
+++ conda activate
+++ local cmd=activate
+++ case "$cmd" in
+++ __conda_activate activate
+++ '[' -n '' ']'
+++ local ask_conda
++++ PS1='(testbed) '
++++ __conda_exe shell.posix activate
++++ /opt/miniconda3/bin/conda shell.posix activate
+++ ask_conda='PS1='\''(base) '\''
+export PATH='\''/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3'\''
+export CONDA_SHLVL='\''3'\''
+export CONDA_DEFAULT_ENV='\''base'\''
+export CONDA_PROMPT_MODIFIER='\''(base) '\''
+export CONDA_PREFIX_2='\''/opt/miniconda3/envs/testbed'\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
+++ eval 'PS1='\''(base) '\''
+export PATH='\''/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3'\''
+export CONDA_SHLVL='\''3'\''
+export CONDA_DEFAULT_ENV='\''base'\''
+export CONDA_PROMPT_MODIFIER='\''(base) '\''
+export CONDA_PREFIX_2='\''/opt/miniconda3/envs/testbed'\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
++++ PS1='(base) '
++++ export PATH=/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++++ PATH=/opt/miniconda3/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
++++ export CONDA_PREFIX=/opt/miniconda3
++++ CONDA_PREFIX=/opt/miniconda3
++++ export CONDA_SHLVL=3
++++ CONDA_SHLVL=3
++++ export CONDA_DEFAULT_ENV=base
++++ CONDA_DEFAULT_ENV=base
++++ export 'CONDA_PROMPT_MODIFIER=(base) '
++++ CONDA_PROMPT_MODIFIER='(base) '
++++ export CONDA_PREFIX_2=/opt/miniconda3/envs/testbed
++++ CONDA_PREFIX_2=/opt/miniconda3/envs/testbed
++++ export CONDA_EXE=/opt/miniconda3/bin/conda
++++ CONDA_EXE=/opt/miniconda3/bin/conda
++++ export _CE_M=
++++ _CE_M=
++++ export _CE_CONDA=
++++ _CE_CONDA=
++++ export CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++++ CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
+++ __conda_hashr
+++ '[' -n '' ']'
+++ '[' -n '' ']'
+++ hash -r
++ conda activate testbed
++ local cmd=activate
++ case "$cmd" in
++ __conda_activate activate testbed
++ '[' -n '' ']'
++ local ask_conda
+++ PS1='(base) '
+++ __conda_exe shell.posix activate testbed
+++ /opt/miniconda3/bin/conda shell.posix activate testbed
++ ask_conda='PS1='\''(testbed) '\''
+export PATH='\''/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3/envs/testbed'\''
+export CONDA_SHLVL='\''4'\''
+export CONDA_DEFAULT_ENV='\''testbed'\''
+export CONDA_PROMPT_MODIFIER='\''(testbed) '\''
+export CONDA_PREFIX_3='\''/opt/miniconda3'\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
++ eval 'PS1='\''(testbed) '\''
+export PATH='\''/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'\''
+export CONDA_PREFIX='\''/opt/miniconda3/envs/testbed'\''
+export CONDA_SHLVL='\''4'\''
+export CONDA_DEFAULT_ENV='\''testbed'\''
+export CONDA_PROMPT_MODIFIER='\''(testbed) '\''
+export CONDA_PREFIX_3='\''/opt/miniconda3'\''
+export CONDA_EXE='\''/opt/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/opt/miniconda3/bin/python'\'''
+++ PS1='(testbed) '
+++ export PATH=/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ PATH=/opt/miniconda3/envs/testbed/bin:/opt/miniconda3/condabin:/opt/miniconda3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+++ export CONDA_PREFIX=/opt/miniconda3/envs/testbed
+++ CONDA_PREFIX=/opt/miniconda3/envs/testbed
+++ export CONDA_SHLVL=4
+++ CONDA_SHLVL=4
+++ export CONDA_DEFAULT_ENV=testbed
+++ CONDA_DEFAULT_ENV=testbed
+++ export 'CONDA_PROMPT_MODIFIER=(testbed) '
+++ CONDA_PROMPT_MODIFIER='(testbed) '
+++ export CONDA_PREFIX_3=/opt/miniconda3
+++ CONDA_PREFIX_3=/opt/miniconda3
+++ export CONDA_EXE=/opt/miniconda3/bin/conda
+++ CONDA_EXE=/opt/miniconda3/bin/conda
+++ export _CE_M=
+++ _CE_M=
+++ export _CE_CONDA=
+++ _CE_CONDA=
+++ export CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
+++ CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
++ __conda_hashr
++ '[' -n '' ']'
++ '[' -n '' ']'
++ hash -r
++ python -m pip install -e .
+Obtaining file:///testbed
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: py>=1.5.0 in /opt/miniconda3/envs/testbed/lib/python3.9/site-packages (from pytest==5.4.1.dev380+g56bf819c2) (1.11.0)
+Requirement already satisfied: packaging in /opt/miniconda3/envs/testbed/lib/python3.9/site-packages (from pytest==5.4.1.dev380+g56bf819c2) (23.1)
+Requirement already satisfied: attrs>=17.4.0 in /opt/miniconda3/envs/testbed/lib/python3.9/site-packages (from pytest==5.4.1.dev380+g56bf819c2) (23.1.0)
+Requirement already satisfied: more-itertools>=4.0.0 in /opt/miniconda3/envs/testbed/lib/python3.9/site-packages (from pytest==5.4.1.dev380+g56bf819c2) (10.1.0)
+Requirement already satisfied: pluggy<1.0,>=0.12 in /opt/miniconda3/envs/testbed/lib/python3.9/site-packages (from pytest==5.4.1.dev380+g56bf819c2) (0.13.1)
+Requirement already satisfied: wcwidth in /opt/miniconda3/envs/testbed/lib/python3.9/site-packages (from pytest==5.4.1.dev380+g56bf819c2) (0.9.4)
+Building wheels for collected packages: pytest
+  Building editable for pytest (pyproject.toml): started
+  Building editable for pytest (pyproject.toml): finished with status 'done'
+  Created wheel for pytest: filename=pytest-5.4.1.dev380+g56bf819c2-0.editable-py3-none-any.whl size=8027 sha256=1cc48814279d876e246d0ba7dd44e0dd371eda337f498e6c4196ef65314468e7
+  Stored in directory: /tmp/pip-ephem-wheel-cache-i_yjhxmh/wheels/7d/66/67/70d1ee2124ccf21d601c352e25cdca10f611f7c8b3f9ffb9e4
+Successfully built pytest
+Installing collected packages: pytest
+  Attempting uninstall: pytest
+    Found existing installation: pytest 5.4.1.dev380+g56bf819c2
+    Uninstalling pytest-5.4.1.dev380+g56bf819c2:
+      Successfully uninstalled pytest-5.4.1.dev380+g56bf819c2
+Successfully installed pytest-5.4.1.dev380+g56bf819c2
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
++ git apply -v -
+Checking patch src/_pytest/nodes.py...
+Applied patch src/_pytest/nodes.py cleanly.
++ git apply -v -
+Checking patch testing/test_traceback_path.py...
+Applied patch testing/test_traceback_path.py cleanly.
++ python3 /root/trace.py --count -C coverage.cover --include-pattern '/testbed/(src/_pytest/nodes\.py)' -m pytest -rA testing/test_traceback_path.py
+['--count', '-C', 'coverage.cover', '--include-pattern', '/testbed/(src/_pytest/nodes\\.py)']
+============================= test session starts ==============================
+platform linux -- Python 3.9.25, pytest-5.4.1.dev380+g56bf819c2, py-1.11.0, pluggy-0.13.1
+rootdir: /testbed, inifile: tox.ini
+collected 1 item
+
+testing/test_traceback_path.py F                                         [100%]
+
+=================================== FAILURES ===================================
+_______________ test_traceback_path_unaffected_by_fixture_chdir ________________
+
+testdir = <Testdir local('/tmp/pytest-of-root/pytest-0/test_traceback_path_unaffected_by_fixture_chdir0')>
+
+    def test_traceback_path_unaffected_by_fixture_chdir(testdir):
+        """A traceback path should be relative to the invocation directory.
+    
+        The current working directory may be changed by a fixture while the test
+        runs; that should not alter how the failing test's path is displayed.
+        """
+        testdir.makepyfile(
+            test_path_error="""
+            import os
+    
+            import pytest
+    
+    
+            @pytest.fixture
+            def private_dir():
+                out_dir = "ddd"
+                os.mkdir(out_dir)
+                old_dir = os.getcwd()
+                os.chdir(out_dir)
+                yield out_dir
+                os.chdir(old_dir)
+    
+    
+            def test_show_wrong_path(private_dir):
+                assert False
+            """
+        )
+        result = testdir.runpytest()
+>       result.stdout.fnmatch_lines(["test_path_error.py:*: AssertionError"])
+E       Failed: nomatch: 'test_path_error.py:*: AssertionError'
+E           and: '============================= test session starts =============================='
+E           and: 'platform linux -- Python 3.9.25, pytest-5.4.1.dev380+g56bf819c2, py-1.11.0, pluggy-0.13.1'
+E           and: 'rootdir: /tmp/pytest-of-root/pytest-0/test_traceback_path_unaffected_by_fixture_chdir0'
+E           and: 'collected 1 item'
+E           and: ''
+E           and: 'test_path_error.py F                                                     [100%]'
+E           and: ''
+E           and: '=================================== FAILURES ==================================='
+E           and: '_____________________________ test_show_wrong_path _____________________________'
+E           and: ''
+E           and: "private_dir = 'ddd'"
+E           and: ''
+E           and: '    def test_show_wrong_path(private_dir):'
+E           and: '>       assert False'
+E           and: 'E       assert False'
+E           and: ''
+E           and: '/tmp/pytest-of-root/pytest-0/test_traceback_path_unaffected_by_fixture_chdir0/test_path_error.py:17: AssertionError'
+E           and: '=========================== short test summary info ============================'
+E           and: 'FAILED test_path_error.py::test_show_wrong_path - assert False'
+E           and: '============================== 1 failed in 0.05s ==============================='
+E       remains unmatched: 'test_path_error.py:*: AssertionError'
+
+/testbed/testing/test_traceback_path.py:29: Failed
+----------------------------- Captured stdout call -----------------------------
+============================= test session starts ==============================
+platform linux -- Python 3.9.25, pytest-5.4.1.dev380+g56bf819c2, py-1.11.0, pluggy-0.13.1
+rootdir: /tmp/pytest-of-root/pytest-0/test_traceback_path_unaffected_by_fixture_chdir0
+collected 1 item
+
+test_path_error.py F                                                     [100%]
+
+=================================== FAILURES ===================================
+_____________________________ test_show_wrong_path _____________________________
+
+private_dir = 'ddd'
+
+    def test_show_wrong_path(private_dir):
+>       assert False
+E       assert False
+
+/tmp/pytest-of-root/pytest-0/test_traceback_path_unaffected_by_fixture_chdir0/test_path_error.py:17: AssertionError
+=========================== short test summary info ============================
+FAILED test_path_error.py::test_show_wrong_path - assert False
+============================== 1 failed in 0.05s ===============================
+=========================== short test summary info ============================
+FAILED testing/test_traceback_path.py::test_traceback_path_unaffected_by_fixture_chdir
+============================== 1 failed in 0.09s ===============================
++ cat coverage.cover
+{"/testbed/src/_pytest/nodes.py": {"1": 0, "2": 0, "3": 0, "4": 0, "5": 0, "6": 0, "7": 0, "8": 0, "9": 0, "10": 0, "12": 0, "14": 0, "15": 0, "16": 0, "17": 0, "18": 0, "19": 0, "20": 0, "21": 0, "22": 0, "23": 0, "24": 0, "25": 0, "26": 0, "27": 0, "28": 0, "29": 0, "30": 0, "31": 0, "32": 0, "33": 0, "35": 0, "37": 0, "39": 0, "41": 0, "44": 0, "45": 0, "70": 0, "82": 0, "91": 0, "397": 0, "398": 0, "396": 0, "417": 0, "460": 0, "466": 0, "477": 0, "560": 0, "564": 0, "60": 6, "62": 1, "63": 5, "65": 5, "67": 5, "75": 5, "76": 5, "77": 5, "78": 0, "79": 5, "83": 0, "87": 0, "84": 0, "85": 0, "88": 8, "97": 0, "108": 0, "110": 0, "111": 0, "112": 0, "113": 0, "114": 0, "115": 0, "116": 0, "168": 0, "169": 0, "186": 0, "187": 0, "191": 0, "194": 0, "227": 0, "228": 0, "232": 0, "235": 0, "238": 0, "241": 0, "252": 0, "253": 0, "254": 0, "276": 0, "284": 0, "296": 0, "305": 0, "312": 0, "315": 0, "323": 0, "331": 0, "334": 0, "335": 0, "336": 0, "385": 0, "387": 0, "118": 8, "121": 8, "124": 8, "125": 2, "127": 6, "128": 0, "129": 6, "132": 8, "133": 4, "135": 4, "136": 0, "137": 4, "140": 8, "143": 8, "146": 8, "149": 8, "152": 8, "154": 8, "155": 4, "156": 4, "158": 4, "159": 0, "160": 4, "161": 4, "162": 4, "166": 8, "180": 6, "181": 0, "182": 6, "183": 0, "184": 6, "189": 107, "192": 0, "210": 0, "212": 0, "213": 0, "214": 0, "215": 0, "218": 0, "219": 0, "220": 0, "221": 0, "222": 0, "223": 0, "230": 37, "233": 21, "236": 4, "239": 6, "244": 32, "245": 32, "246": 128, "247": 96, "248": 96, "249": 32, "250": 32, "262": 1, "264": 1, "265": 1, "266": 0, "267": 0, "269": 0, "270": 1, "271": 1, "272": 1, "274": 0, "282": 52, "291": 104, "292": 86, "293": 8, "294": 0, "303": 0, "307": 0, "308": 0, "309": 0, "310": 0, "313": 0, "321": 0, "326": 9, "327": 25, "328": 16, "329": 9, "332": 0, "337": 2, "338": 0, "339": 2, "340": 1, "341": 0, "342": 2, "343": 0, "344": 2, "345": 0, "347": 2, "348": 2, "349": 2, "350": 0, "351": 2, "352": 0, "354": 2, "355": 0, "356": 0, "358": 0, "360": 2, "361": 0, "363": 2, "371": 2, "372": 2, "373": 0, "374": 0, "376": 4, "377": 2, "378": 2, "379": 2, "380": 2, "381": 2, "382": 2, "393": 0, "407": 0, "408": 0, "409": 0, "410": 0, "411": 0, "412": 0, "413": 0, "414": 0, "422": 0, "425": 0, "431": 0, "451": 0, "429": 0, "437": 0, "438": 0, "440": 0, "441": 0, "445": 0, "446": 0, "447": 0, "449": 0, "452": 0, "453": 0, "454": 0, "455": 0, "456": 0, "457": 0, "461": 0, "462": 0, "463": 0, "467": 0, "471": 0, "468": 5, "469": 5, "472": 6, "473": 5, "474": 5, "478": 0, "479": 0, "480": 0, "503": 0, "504": 0, "510": 0, "524": 0, "537": 0, "481": 4, "482": 4, "483": 2, "484": 2, "485": 2, "486": 2, "487": 4, "489": 4, "491": 4, "492": 2, "494": 2, "495": 0, "496": 2, "497": 0, "499": 4, "501": 4, "508": 2, "513": 124, "514": 124, "515": 124, "516": 124, "518": 5, "521": 119, "522": 124, "525": 0, "526": 0, "527": 0, "528": 0, "529": 0, "530": 0, "531": 0, "532": 0, "533": 0, "534": 0, "535": 0, "539": 2, "538": 2, "540": 0, "541": 0, "543": 2, "544": 2, "545": 1, "546": 0, "548": 2, "549": 1, "550": 1, "551": 1, "552": 1, "553": 0, "555": 1, "557": 2, "569": 0, "571": 0, "579": 0, "582": 0, "601": 0, "604": 0, "605": 0, "572": 4, "573": 4, "577": 4, "580": 0, "598": 18, "599": 1, "602": 0, "606": 2, "607": 2, "608": 2, "610": 0, "611": 2, "612": 2, "613": 2}}
++ git checkout 56bf819c2f4eaf8b36bd8c42c06bb59d5a3bfc0f
+M	src/_pytest/nodes.py
+Note: switching to '56bf819c2f4eaf8b36bd8c42c06bb59d5a3bfc0f'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 56bf819c2 Do not call TestCase.tearDown for skipped tests (#7236)
++ git apply /root/pre_state.patch
+error: unrecognized input

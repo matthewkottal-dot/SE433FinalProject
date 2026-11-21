@@ -1,0 +1,42 @@
+2026-11-19 14:28:52,685 - WARNING - Starting evaluation at 1795123732.6855533
+2026-11-19 14:28:52,803 - INFO - Creating container for pytest-dev__pytest-7220...
+2026-11-19 14:28:52,836 - INFO - Container for pytest-dev__pytest-7220 created: 4bb9ee5d1f8f88496ffa60394501855691d7c2e1338fcf22e2203ed6eda89118
+2026-11-19 14:28:52,968 - INFO - Container for pytest-dev__pytest-7220 started: 4bb9ee5d1f8f88496ffa60394501855691d7c2e1338fcf22e2203ed6eda89118
+2026-11-19 14:28:53,049 - INFO - Git diff before:
+
+2026-11-19 14:28:53,053 - INFO - Eval script for pytest-dev__pytest-7220 written to eval.sh, now applying to container...
+2026-11-19 14:28:55,430 - INFO - Test output for pytest-dev__pytest-7220 written to run_instance_swt_logs/deepseek_flash_test_baseline/pred_post__deepseek__deepseek-flash/pytest-dev__pytest-7220/test_output.txt
+2026-11-19 14:28:55,468 - INFO - Git diff after:
+diff --git a/src/_pytest/nodes.py b/src/_pytest/nodes.py
+index 4a79bc861..7a8c28cd4 100644
+--- a/src/_pytest/nodes.py
++++ b/src/_pytest/nodes.py
+@@ -29,6 +29,7 @@ from _pytest.mark.structures import Mark
+ from _pytest.mark.structures import MarkDecorator
+ from _pytest.mark.structures import NodeKeywords
+ from _pytest.outcomes import fail
++from _pytest.pathlib import Path
+ from _pytest.store import Store
+ 
+ if TYPE_CHECKING:
+@@ -361,9 +362,14 @@ class Node(metaclass=NodeMeta):
+         else:
+             truncate_locals = True
+ 
++        # excinfo.getrepr() formats paths relative to the CWD if `abspath` is False.
++        # It is possible for a fixture/test to change the CWD while this code runs, which
++        # would then result in the user seeing confusing paths in the failure message.
++        # To fix this, if the CWD changed, always display the full absolute path.
++        # It will be better to just always display paths relative to invocation_dir, but
++        # this requires a lot of plumbing (#6428).
+         try:
+-            os.getcwd()
+-            abspath = False
++            abspath = Path(os.getcwd()) != Path(self.config.invocation_dir)
+         except OSError:
+             abspath = True
+2026-11-19 14:28:55,469 - INFO - Git diff changed after running eval script
+2026-11-19 14:28:55,469 - INFO - Attempting to stop container exec.eval.x86_64.bfa0b4daea744b5aaefba0.0ac742aae04648a96a8848.125556472150160...
+2026-11-19 14:29:10,693 - INFO - Attempting to remove container exec.eval.x86_64.bfa0b4daea744b5aaefba0.0ac742aae04648a96a8848.125556472150160...
+2026-11-19 14:29:10,724 - INFO - Container exec.eval.x86_64.bfa0b4daea744b5aaefba0.0ac742aae04648a96a8848.125556472150160 removed.
+2026-11-19 14:29:10,725 - WARNING - End of eval at 1795123750.7251978

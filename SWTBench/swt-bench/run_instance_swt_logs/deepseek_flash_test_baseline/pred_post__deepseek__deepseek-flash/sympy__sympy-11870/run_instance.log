@@ -1,0 +1,74 @@
+2026-11-19 14:37:36,032 - WARNING - Starting evaluation at 1795124256.0323908
+2026-11-19 14:37:36,149 - INFO - Creating container for sympy__sympy-11870...
+2026-11-19 14:37:36,179 - INFO - Container for sympy__sympy-11870 created: 48bdcb2a9c22ba2bf505a6e6dc3edcb6022fe75bc657d0bd481c396a04c6cd77
+2026-11-19 14:37:36,282 - INFO - Container for sympy__sympy-11870 started: 48bdcb2a9c22ba2bf505a6e6dc3edcb6022fe75bc657d0bd481c396a04c6cd77
+2026-11-19 14:37:36,495 - INFO - Git diff before:
+
+2026-11-19 14:37:36,497 - INFO - Eval script for sympy__sympy-11870 written to eval.sh, now applying to container...
+2026-11-19 14:38:39,555 - INFO - Test output for sympy__sympy-11870 written to run_instance_swt_logs/deepseek_flash_test_baseline/pred_post__deepseek__deepseek-flash/sympy__sympy-11870/test_output.txt
+2026-11-19 14:38:39,597 - INFO - Git diff after:
+diff --git a/sympy/functions/elementary/trigonometric.py b/sympy/functions/elementary/trigonometric.py
+index b2a3f3d6a7..1c22527775 100644
+--- a/sympy/functions/elementary/trigonometric.py
++++ b/sympy/functions/elementary/trigonometric.py
+@@ -16,6 +16,8 @@
+ from sympy.sets.sets import FiniteSet
+ from sympy.utilities.iterables import numbered_symbols
+ from sympy.core.compatibility import range
++from sympy.core.relational import Ne
++from sympy.functions.elementary.piecewise import Piecewise
+ 
+ ###############################################################################
+ ########################## TRIGONOMETRIC FUNCTIONS ############################
+@@ -408,6 +410,9 @@ def _eval_rewrite_as_csc(self, arg):
+     def _eval_rewrite_as_sec(self, arg):
+         return 1 / sec(arg - S.Pi / 2, evaluate=False)
+ 
++    def _eval_rewrite_as_sinc(self, arg):
++        return arg*sinc(arg)
++
+     def _eval_conjugate(self):
+         return self.func(self.args[0].conjugate())
+ 
+@@ -1817,7 +1822,7 @@ def _eval_rewrite_as_jn(self, arg):
+         return jn(0, arg)
+ 
+     def _eval_rewrite_as_sin(self, arg):
+-        return sin(arg) / arg
++        return Piecewise((sin(arg)/arg, Ne(arg, 0)), (1, True))
+ 
+ 
+ ###############################################################################
+diff --git a/sympy/simplify/tests/test_trigsimp.py b/sympy/simplify/tests/test_trigsimp.py
+index 67694b477b..28319c4ef9 100644
+--- a/sympy/simplify/tests/test_trigsimp.py
++++ b/sympy/simplify/tests/test_trigsimp.py
+@@ -426,3 +426,23 @@ def test_Piecewise():
+     # trigsimp tries not to touch non-trig containing args
+     assert trigsimp(Piecewise((e1, e3 < e2), (e3, True))) == \
+         Piecewise((e1, e3 < s2), (e3, True))
++
++
++def test_exponential_to_trig():
++    k = Symbol('k')
++    f = S.Half*(-I*exp(I*k) + I*exp(-I*k))
++
++    # The expression should reduce to sin(k) using either the general
++    # trigonometric simplifier or the dedicated exponential/trig simplifier.
++    r = trigsimp(f)
++    if r != sin(k):
++        r = exptrigsimp(f)
++    assert r == sin(k)
++
++    # As in the issue, the same identity divided by k should reduce to
++    # sin(k)/k (possibly expressed as the equivalent sinc(k)).
++    f = f/k
++    r = trigsimp(f)
++    if r.rewrite(sin) != sin(k)/k:
++        r = exptrigsimp(f)
++    assert r.rewrite(sin) == sin(k)/k
+2026-11-19 14:38:39,598 - INFO - Git diff changed after running eval script
+2026-11-19 14:38:39,598 - INFO - Attempting to stop container exec.eval.x86_64.deec2122407a414e380748.e14f807b5e51d01559f8d7.125556472319584...
+2026-11-19 14:38:54,785 - INFO - Attempting to remove container exec.eval.x86_64.deec2122407a414e380748.e14f807b5e51d01559f8d7.125556472319584...
+2026-11-19 14:38:54,819 - INFO - Container exec.eval.x86_64.deec2122407a414e380748.e14f807b5e51d01559f8d7.125556472319584 removed.
+2026-11-19 14:38:54,820 - WARNING - End of eval at 1795124334.8201077

@@ -1,0 +1,38 @@
+2026-11-19 14:26:55,288 - WARNING - Starting evaluation at 1795123615.2885156
+2026-11-19 14:26:55,412 - INFO - Creating container for pytest-dev__pytest-6116...
+2026-11-19 14:26:55,451 - INFO - Container for pytest-dev__pytest-6116 created: 5568d19024e109983e2c2b7064a408d4769da6226137502f3cb82023bf548be7
+2026-11-19 14:26:55,576 - INFO - Container for pytest-dev__pytest-6116 started: 5568d19024e109983e2c2b7064a408d4769da6226137502f3cb82023bf548be7
+2026-11-19 14:26:55,728 - INFO - Git diff before:
+
+2026-11-19 14:26:55,731 - INFO - Eval script for pytest-dev__pytest-6116 written to eval.sh, now applying to container...
+2026-11-19 14:27:05,050 - INFO - Test output for pytest-dev__pytest-6116 written to run_instance_swt_logs/deepseek_flash_test_baseline/pred_pre__deepseek__deepseek-flash/pytest-dev__pytest-6116/test_output.txt
+2026-11-19 14:27:05,089 - INFO - Git diff after:
+diff --git a/testing/test_terminal.py b/testing/test_terminal.py
+index 1bec577b8..6c9a26368 100644
+--- a/testing/test_terminal.py
++++ b/testing/test_terminal.py
+@@ -288,6 +288,19 @@ class TestCollectonly:
+             ["<Module test_collectonly_basic.py>", "  <Function test_func>"]
+         )
+ 
++    def test_collectonly_shortcut(self, testdir):
++        """`--co` is a shortcut for `--collect-only`."""
++        testdir.makepyfile(
++            """
++            def test_func():
++                pass
++        """
++        )
++        result = testdir.runpytest("--co")
++        result.stdout.fnmatch_lines(
++            ["<Module test_collectonly_shortcut.py>", "  <Function test_func>"]
++        )
++
+     def test_collectonly_skipped_module(self, testdir):
+         testdir.makepyfile(
+             """
+2026-11-19 14:27:05,090 - INFO - Git diff changed after running eval script
+2026-11-19 14:27:05,090 - INFO - Attempting to stop container exec.eval.x86_64.bbbc4277fd8f648e693b98.81edf9e00f8a91f1a378b3.125556472139600...
+2026-11-19 14:27:20,318 - INFO - Attempting to remove container exec.eval.x86_64.bbbc4277fd8f648e693b98.81edf9e00f8a91f1a378b3.125556472139600...
+2026-11-19 14:27:20,371 - INFO - Container exec.eval.x86_64.bbbc4277fd8f648e693b98.81edf9e00f8a91f1a378b3.125556472139600 removed.
+2026-11-19 14:27:20,372 - WARNING - End of eval at 1795123640.3722634

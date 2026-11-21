@@ -1,0 +1,62 @@
+2026-11-19 14:24:09,828 - WARNING - Starting evaluation at 1795123449.8289032
+2026-11-19 14:24:09,947 - INFO - Creating container for pytest-dev__pytest-11143...
+2026-11-19 14:24:09,980 - INFO - Container for pytest-dev__pytest-11143 created: 7c8da4316c1bb77bccf6172d814ec2cc1e43cba8fd904cadcad361ad06531c0a
+2026-11-19 14:24:10,081 - INFO - Container for pytest-dev__pytest-11143 started: 7c8da4316c1bb77bccf6172d814ec2cc1e43cba8fd904cadcad361ad06531c0a
+2026-11-19 14:24:10,167 - INFO - Git diff before:
+
+2026-11-19 14:24:10,170 - INFO - Eval script for pytest-dev__pytest-11143 written to eval.sh, now applying to container...
+2026-11-19 14:24:18,085 - INFO - Test output for pytest-dev__pytest-11143 written to run_instance_swt_logs/deepseek_flash_test_baseline/pred_post__deepseek__deepseek-flash/pytest-dev__pytest-11143/test_output.txt
+2026-11-19 14:24:18,124 - INFO - Git diff after:
+diff --git a/src/_pytest/assertion/rewrite.py b/src/_pytest/assertion/rewrite.py
+index 157903faf..9bf79f1e1 100644
+--- a/src/_pytest/assertion/rewrite.py
++++ b/src/_pytest/assertion/rewrite.py
+@@ -676,6 +676,7 @@ class AssertionRewriter(ast.NodeVisitor):
+                 expect_docstring
+                 and isinstance(item, ast.Expr)
+                 and isinstance(item.value, ast.Constant)
++                and isinstance(item.value.value, str)
+             ):
+                 doc = item.value.value
+                 if self.is_rewrite_disabled(doc):
+diff --git a/testing/test_assertrewrite.py b/testing/test_assertrewrite.py
+index d01803204..be07957bb 100644
+--- a/testing/test_assertrewrite.py
++++ b/testing/test_assertrewrite.py
+@@ -141,6 +141,11 @@ class TestAssertionRewrite:
+         assert isinstance(m.body[1], ast.Assert)
+         assert m.body[1].msg is None
+ 
++    def test_non_string_first_expression_is_not_docstring(self) -> None:
++        s = """1\nassert 1 == 2"""
++        m = rewrite(s)
++        assert not any(isinstance(node, ast.Assert) for node in ast.walk(m))
++
+     def test_dont_rewrite_plugin(self, pytester: Pytester) -> None:
+         contents = {
+             "conftest.py": "pytest_plugins = 'plugin'; import plugin",
+@@ -727,6 +732,19 @@ class TestAssertionRewrite:
+ 
+ 
+ class TestRewriteOnImport:
++    def test_first_expression_is_not_a_docstring(self, pytester: Pytester) -> None:
++        pytester.makepyfile(
++            """
++            1
++
++            def test_fails():
++                assert 1 == 2
++            """
++        )
++        result = pytester.runpytest()
++        result.assert_outcomes(failed=1)
++        result.stdout.fnmatch_lines(["*assert 1 == 2*"])
++
+     def test_pycache_is_a_file(self, pytester: Pytester) -> None:
+         pytester.path.joinpath("__pycache__").write_text("Hello", encoding="utf-8")
+         pytester.makepyfile(
+2026-11-19 14:24:18,125 - INFO - Git diff changed after running eval script
+2026-11-19 14:24:18,125 - INFO - Attempting to stop container exec.eval.x86_64.0a53cb26c68560f276cb87.8b5a06a3ebdb128156a175.125556490494000...
+2026-11-19 14:24:33,336 - INFO - Attempting to remove container exec.eval.x86_64.0a53cb26c68560f276cb87.8b5a06a3ebdb128156a175.125556490494000...
+2026-11-19 14:24:33,387 - INFO - Container exec.eval.x86_64.0a53cb26c68560f276cb87.8b5a06a3ebdb128156a175.125556490494000 removed.
+2026-11-19 14:24:33,388 - WARNING - End of eval at 1795123473.3884492

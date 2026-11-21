@@ -1,0 +1,59 @@
+diff --git a/tests/test_ext_napoleon_docstring.py b/tests/test_ext_napoleon_docstring.py
+index 3027a4cb2..3f3ec9e85 100755
+--- a/tests/test_ext_napoleon_docstring.py
++++ b/tests/test_ext_napoleon_docstring.py
+@@ -1037,6 +1037,25 @@ Sooper Warning:
+             actual = str(GoogleDocstring(docstring, testConfig))
+             self.assertEqual(expected, actual)
+ 
++    def test_underscore_in_attribute(self):
++        docstring = """\
++Attributes:
++    arg_ (type): some description
++"""
++
++        expected = """\
++.. attribute:: arg_
++   :type: type
++
++   some description
++"""
++
++        config = Config()
++        app = mock.Mock()
++        actual = str(GoogleDocstring(docstring, config, app, "class"))
++
++        self.assertEqual(expected, actual)
++
+     def test_noindex(self):
+         docstring = """
+ Attributes:
+@@ -1409,6 +1428,28 @@ arg_ : type
+ 
+         self.assertEqual(expected, actual)
+ 
++    def test_underscore_in_attribute_without_ivar(self):
++        docstring = """\
++Attributes
++----------
++
++arg_ : type
++    some description
++"""
++
++        expected = """\
++.. attribute:: arg_
++   :type: type
++
++   some description
++"""
++
++        config = Config(napoleon_use_ivar=False)
++        app = mock.Mock()
++        actual = str(NumpyDocstring(docstring, config, app, "class"))
++
++        self.assertEqual(expected, actual)
++
+     def test_raises_types(self):
+         docstrings = [("""
+ Example Function

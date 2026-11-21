@@ -1,0 +1,27 @@
+diff --git a/test_requests.py b/test_requests.py
+index 467c5bc..73d94b8 100755
+--- a/test_requests.py
++++ b/test_requests.py
+@@ -523,6 +523,22 @@ class RequestsTestCase(unittest.TestCase):
+             method=u('POST'), url=httpbin('post'), files=files)
+         assert r.status_code == 200
+ 
++    def test_bytes_method_name(self):
++        session = requests.Session()
++        sent = []
++
++        def mock_send(request, **kwargs):
++            sent.append(request.method)
++            response = requests.Response()
++            response.status_code = 200
++            response.request = request
++            return response
++
++        session.send = mock_send
++        session.request(method=b'GET', url='http://example.com')
++
++        assert sent == ['GET']
++
+     def test_custom_content_type(self):
+         r = requests.post(
+             httpbin('post'),

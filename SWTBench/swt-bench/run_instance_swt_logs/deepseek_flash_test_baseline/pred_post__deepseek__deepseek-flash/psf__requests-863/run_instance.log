@@ -1,0 +1,74 @@
+2026-11-19 14:23:11,485 - WARNING - Starting evaluation at 1795123391.485965
+2026-11-19 14:23:11,606 - INFO - Creating container for psf__requests-863...
+2026-11-19 14:23:11,637 - INFO - Container for psf__requests-863 created: 8729662a5013d10da3a1fea9b0151971c2315dd81902a32e6def5283b2a6e4ef
+2026-11-19 14:23:11,741 - INFO - Container for psf__requests-863 started: 8729662a5013d10da3a1fea9b0151971c2315dd81902a32e6def5283b2a6e4ef
+2026-11-19 14:23:11,795 - INFO - Git diff before:
+
+2026-11-19 14:23:11,797 - INFO - Eval script for psf__requests-863 written to eval.sh, now applying to container...
+2026-11-19 14:23:30,290 - INFO - Test output for psf__requests-863 written to run_instance_swt_logs/deepseek_flash_test_baseline/pred_post__deepseek__deepseek-flash/psf__requests-863/test_output.txt
+2026-11-19 14:23:30,327 - INFO - Git diff after:
+diff --git a/requests/models.py b/requests/models.py
+index d8456375..f33c3c3e 100644
+--- a/requests/models.py
++++ b/requests/models.py
+@@ -462,8 +462,10 @@ class Request(object):
+ 
+     def register_hook(self, event, hook):
+         """Properly register a hook."""
+-
+-        self.hooks[event].append(hook)
++        if isinstance(hook, (list, tuple, set)):
++            self.hooks[event].extend(hook)
++        else:
++            self.hooks[event].append(hook)
+ 
+     def deregister_hook(self, event, hook):
+         """Deregister a previously registered hook.
+diff --git a/tests/test_requests.py b/tests/test_requests.py
+index f8a31f24..8c4b0ca7 100755
+--- a/tests/test_requests.py
++++ b/tests/test_requests.py
+@@ -19,6 +19,7 @@ from requests import HTTPError
+ from requests import get, post, head, put
+ from requests.auth import HTTPBasicAuth, HTTPDigestAuth
+ from requests.exceptions import InvalidURL
++from requests.hooks import dispatch_hook
+ 
+ if 'HTTPBIN_URL' not in os.environ:
+     os.environ['HTTPBIN_URL'] = 'http://httpbin.org/'
+@@ -744,6 +745,30 @@ class RequestsTestSuite(TestSetup, TestBaseMixin, unittest.TestCase):
+             assert 'foo' in response.text
+             assert 'bar' in response.text
+ 
++    def test_request_hooks_accept_lists(self):
++        calls = []
++
++        def first_hook(data):
++            calls.append('first')
++            data['first'] = True
++            return data
++
++        def second_hook(data):
++            calls.append('second')
++            assert data['first'] is True
++            data['second'] = True
++            return data
++
++        request = requests.Request(
++            'http://example.com',
++            hooks={'args': [first_hook, second_hook]},
++        )
++
++        result = dispatch_hook('args', request.hooks, {})
++
++        self.assertEqual(calls, ['first', 'second'])
++        self.assertEqual(result, {'first': True, 'second': True})
++
+     def test_session_persistent_cookies(self):
+ 
+         s = requests.session()
+2026-11-19 14:23:30,328 - INFO - Git diff changed after running eval script
+2026-11-19 14:23:30,328 - INFO - Attempting to stop container exec.eval.x86_64.3a9417a9d4b5c62087edb6.f9c825a48927a46fdbefc3.125556490489648...
+2026-11-19 14:23:45,497 - INFO - Attempting to remove container exec.eval.x86_64.3a9417a9d4b5c62087edb6.f9c825a48927a46fdbefc3.125556490489648...
+2026-11-19 14:23:45,528 - INFO - Container exec.eval.x86_64.3a9417a9d4b5c62087edb6.f9c825a48927a46fdbefc3.125556490489648 removed.
+2026-11-19 14:23:45,529 - WARNING - End of eval at 1795123425.5291622

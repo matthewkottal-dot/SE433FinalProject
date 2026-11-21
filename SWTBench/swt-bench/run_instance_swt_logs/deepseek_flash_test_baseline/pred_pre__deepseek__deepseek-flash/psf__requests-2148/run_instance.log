@@ -1,0 +1,48 @@
+2026-11-19 14:03:11,935 - WARNING - Starting evaluation at 1795122191.9354646
+2026-11-19 14:03:12,053 - INFO - Creating container for psf__requests-2148...
+2026-11-19 14:03:12,086 - INFO - Container for psf__requests-2148 created: dd35227114521c32114bd284c769b7669d5695f519d650ee11b8a193b241adf4
+2026-11-19 14:03:12,207 - INFO - Container for psf__requests-2148 started: dd35227114521c32114bd284c769b7669d5695f519d650ee11b8a193b241adf4
+2026-11-19 14:03:12,291 - INFO - Git diff before:
+
+2026-11-19 14:03:12,294 - INFO - Eval script for psf__requests-2148 written to eval.sh, now applying to container...
+2026-11-19 14:03:35,128 - INFO - Test output for psf__requests-2148 written to run_instance_swt_logs/deepseek_flash_test_baseline/pred_pre__deepseek__deepseek-flash/psf__requests-2148/test_output.txt
+2026-11-19 14:03:35,166 - INFO - Git diff after:
+diff --git a/test_requests.py b/test_requests.py
+index 283353b9..d665859e 100755
+--- a/test_requests.py
++++ b/test_requests.py
+@@ -7,6 +7,7 @@ from __future__ import division
+ import json
+ import os
+ import pickle
++import socket
+ import unittest
+ import collections
+ 
+@@ -1421,5 +1422,21 @@ def test_prepared_request_complete_copy():
+     )
+     assert_copy(p, p.copy())
+ 
++
++def test_response_iter_content_socket_error():
++    """Socket errors while reading a response body are wrapped."""
++    class SocketErrorStream(object):
++        def stream(self, *args, **kwargs):
++            yield b'some data'
++            raise socket.error(104, 'Connection reset by peer')
++
++    response = requests.Response()
++    response.status_code = 200
++    response.raw = SocketErrorStream()
++
++    with pytest.raises(requests.exceptions.ConnectionError):
++        response.content
++
++
+ if __name__ == '__main__':
+     unittest.main()
+2026-11-19 14:03:35,167 - INFO - Git diff changed after running eval script
+2026-11-19 14:03:35,167 - INFO - Attempting to stop container exec.eval.x86_64.3a9417a9d4b5c62087edb6.3f8f53c274e85085f55f65.125556489967024...
+2026-11-19 14:03:50,388 - INFO - Attempting to remove container exec.eval.x86_64.3a9417a9d4b5c62087edb6.3f8f53c274e85085f55f65.125556489967024...
+2026-11-19 14:03:50,423 - INFO - Container exec.eval.x86_64.3a9417a9d4b5c62087edb6.3f8f53c274e85085f55f65.125556489967024 removed.
+2026-11-19 14:03:50,423 - WARNING - End of eval at 1795122230.423648

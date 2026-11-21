@@ -1,0 +1,21 @@
+diff --git a/testing/test_collection.py b/testing/test_collection.py
+index 259868357..99dc59ac1 100755
+--- a/testing/test_collection.py
++++ b/testing/test_collection.py
+@@ -1257,3 +1257,16 @@ def test_collector_respects_tbstyle(testdir):
+             "*= 1 error in *",
+         ]
+     )
++
++
++def test_collect_only_with_short_option(testdir):
++    """``--co`` is a shortcut for ``--collect-only``."""
++    testdir.makepyfile(
++        """
++        def test_collected():
++            assert False
++        """
++    )
++    result = testdir.runpytest("--co")
++    assert result.ret == ExitCode.OK
++    result.stdout.fnmatch_lines(["*test_collected*", "collected 1 item*"])

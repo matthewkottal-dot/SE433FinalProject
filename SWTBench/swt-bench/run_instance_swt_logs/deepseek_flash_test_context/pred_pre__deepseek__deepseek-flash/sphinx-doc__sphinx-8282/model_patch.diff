@@ -1,0 +1,63 @@
+diff --git a/tests/test_ext_autodoc.py b/tests/test_ext_autodoc.py
+index c0676f23f..81d834e8b 100755
+--- a/tests/test_ext_autodoc.py
++++ b/tests/test_ext_autodoc.py
+@@ -2149,3 +2149,58 @@ def test_name_mangling(app):
+         '      name of Foo',
+         '',
+     ]
++
++
++@pytest.mark.sphinx('html', testroot='ext-autodoc',
++                    confoverrides={'autodoc_typehints': 'none'})
++def test_overload_with_autodoc_typehints_none(app):
++    options = {"members": None}
++    actual = do_autodoc(app, 'module', 'target.overload', options)
++    assert list(actual) == [
++        '',
++        '.. py:module:: target.overload',
++        '',
++        '',
++        '.. py:class:: Bar(x, y)',
++        '              Bar(x, y)',
++        '   :module: target.overload',
++        '',
++        '   docstring',
++        '',
++        '',
++        '.. py:class:: Baz(x, y)',
++        '              Baz(x, y)',
++        '   :module: target.overload',
++        '',
++        '   docstring',
++        '',
++        '',
++        '.. py:class:: Foo(x, y)',
++        '              Foo(x, y)',
++        '   :module: target.overload',
++        '',
++        '   docstring',
++        '',
++        '',
++        '.. py:class:: Math()',
++        '   :module: target.overload',
++        '',
++        '   docstring',
++        '',
++        '',
++        '   .. py:method:: Math.sum(x, y)',
++        '                  Math.sum(x, y)',
++        '                  Math.sum(x, y)',
++        '      :module: target.overload',
++        '',
++        '      docstring',
++        '',
++        '',
++        '.. py:function:: sum(x, y)',
++        '                 sum(x, y)',
++        '                 sum(x, y)',
++        '   :module: target.overload',
++        '',
++        '   docstring',
++        '',
++    ]

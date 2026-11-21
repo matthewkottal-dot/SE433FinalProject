@@ -1,0 +1,15 @@
+diff --git a/sympy/simplify/tests/test_simplify.py b/sympy/simplify/tests/test_simplify.py
+index 6acf69000..94a8599f5 100755
+--- a/sympy/simplify/tests/test_simplify.py
++++ b/sympy/simplify/tests/test_simplify.py
+@@ -652,3 +652,10 @@ def test_clear_coefficients():
+     assert clear_coefficients(S.Infinity, x) == (S.Infinity, x)
+     assert clear_coefficients(-S.Pi, x) == (S.Pi, -x)
+     assert clear_coefficients(2 - S.Pi/3, x) == (pi, -3*x + 6)
++
++
++def test_simplify_float_power_cancellation():
++    x = Symbol('x')
++    expr1 = S(1)/2*x**2.5
++    expr2 = S(1)*x**(S(5)/2)/2
++    assert simplify((expr1 - expr2).evalf(5)) == 0

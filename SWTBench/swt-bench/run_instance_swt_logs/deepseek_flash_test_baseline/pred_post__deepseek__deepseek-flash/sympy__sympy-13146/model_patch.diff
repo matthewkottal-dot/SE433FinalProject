@@ -1,0 +1,15 @@
+diff --git a/sympy/simplify/tests/test_simplify.py b/sympy/simplify/tests/test_simplify.py
+index 6acf69000..2d4082dc4 100755
+--- a/sympy/simplify/tests/test_simplify.py
++++ b/sympy/simplify/tests/test_simplify.py
+@@ -652,3 +652,10 @@ def test_clear_coefficients():
+     assert clear_coefficients(S.Infinity, x) == (S.Infinity, x)
+     assert clear_coefficients(-S.Pi, x) == (S.Pi, -x)
+     assert clear_coefficients(2 - S.Pi/3, x) == (pi, -3*x + 6)
++
++
++def test_simplify_float_exponent_of_different_precision():
++    # simplify should recognize that the two numerically evaluated terms
++    # cancel even though their exponents have different Float precisions
++    res = S(1)/2*x**2.5 - S(1)*x**(S(5)/2)/2
++    assert simplify(res.evalf(5)) == 0

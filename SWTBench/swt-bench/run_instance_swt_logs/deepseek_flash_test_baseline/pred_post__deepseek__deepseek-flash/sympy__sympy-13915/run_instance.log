@@ -1,0 +1,47 @@
+2026-11-19 14:47:41,170 - WARNING - Starting evaluation at 1795124861.1706035
+2026-11-19 14:47:41,302 - INFO - Creating container for sympy__sympy-13915...
+2026-11-19 14:47:41,335 - INFO - Container for sympy__sympy-13915 created: 208217cbde4169ae4198736ae760e5e195280e80cbd042f6190f7a5702bd5227
+2026-11-19 14:47:41,474 - INFO - Container for sympy__sympy-13915 started: 208217cbde4169ae4198736ae760e5e195280e80cbd042f6190f7a5702bd5227
+2026-11-19 14:47:41,695 - INFO - Git diff before:
+
+2026-11-19 14:47:41,699 - INFO - Eval script for sympy__sympy-13915 written to eval.sh, now applying to container...
+2026-11-19 14:47:49,268 - INFO - Test output for sympy__sympy-13915 written to run_instance_swt_logs/deepseek_flash_test_baseline/pred_post__deepseek__deepseek-flash/sympy__sympy-13915/test_output.txt
+2026-11-19 14:47:49,309 - INFO - Git diff after:
+diff --git a/sympy/core/mul.py b/sympy/core/mul.py
+index 4f01eeedbd..29e6085ce3 100644
+--- a/sympy/core/mul.py
++++ b/sympy/core/mul.py
+@@ -423,6 +423,11 @@ def _gather(c_powers):
+             changed = False
+             for b, e in c_powers:
+                 if e.is_zero:
++                    # canceling out infinities yields NaN
++                    if (b.is_Add or b.is_Mul) and any(infty in b.args
++                        for infty in (S.ComplexInfinity, S.Infinity,
++                                      S.NegativeInfinity)):
++                        return [S.NaN], [], None
+                     continue
+                 if e is S.One:
+                     if b.is_Number:
+diff --git a/sympy/core/tests/test_subs.py b/sympy/core/tests/test_subs.py
+index 90abb9e374..4efa2e1ee2 100644
+--- a/sympy/core/tests/test_subs.py
++++ b/sympy/core/tests/test_subs.py
+@@ -779,3 +779,12 @@ def test_issue_12657():
+     reps = [(-oo, 2), (oo, 1)]
+     assert (x < oo).subs(reps) == (x < 1)
+     assert (x < oo).subs(list(reversed(reps))) == (x < 1)
++
++
++def test_subs_undefined():
++    # Substituting b = a makes both the numerator and denominator of this
++    # expression undefined.  The substitution must not incorrectly simplify
++    # the expression to 1.
++    a, b = symbols('a b')
++    r = (1/(a + b) + 1/(a - b))/(1/(a + b) - 1/(a - b))
++    assert r.subs(b, a) is not S.One
+2026-11-19 14:47:49,309 - INFO - Git diff changed after running eval script
+2026-11-19 14:47:49,310 - INFO - Attempting to stop container exec.eval.x86_64.deec2122407a414e380748.ef0c45e0de59e417b0ce7b.125556472320784...
+2026-11-19 14:48:04,506 - INFO - Attempting to remove container exec.eval.x86_64.deec2122407a414e380748.ef0c45e0de59e417b0ce7b.125556472320784...
+2026-11-19 14:48:04,542 - INFO - Container exec.eval.x86_64.deec2122407a414e380748.ef0c45e0de59e417b0ce7b.125556472320784 removed.
+2026-11-19 14:48:04,542 - WARNING - End of eval at 1795124884.5427334

@@ -1,0 +1,45 @@
+2026-11-19 15:28:11,448 - WARNING - Starting evaluation at 1795127291.448607
+2026-11-19 15:28:11,554 - INFO - Creating container for pytest-dev__pytest-5103...
+2026-11-19 15:28:11,589 - INFO - Container for pytest-dev__pytest-5103 created: 4cc73d8cb2361982b41cf4510a275c33b3113aa72304fa330865e148081286ac
+2026-11-19 15:28:11,709 - INFO - Container for pytest-dev__pytest-5103 started: 4cc73d8cb2361982b41cf4510a275c33b3113aa72304fa330865e148081286ac
+2026-11-19 15:28:11,853 - INFO - Git diff before:
+
+2026-11-19 15:28:11,856 - INFO - Eval script for pytest-dev__pytest-5103 written to eval.sh, now applying to container...
+2026-11-19 15:28:18,021 - INFO - Test output for pytest-dev__pytest-5103 written to run_instance_swt_logs/deepseek_flash_test_context/pred_pre__deepseek__deepseek-flash/pytest-dev__pytest-5103/test_output.txt
+2026-11-19 15:28:18,056 - INFO - Git diff after:
+diff --git a/testing/test_assertrewrite.py b/testing/test_assertrewrite.py
+index 87dada213..4072a503b 100644
+--- a/testing/test_assertrewrite.py
++++ b/testing/test_assertrewrite.py
+@@ -525,6 +525,26 @@ class TestAssertionRewrite(object):
+  +  where False = g(**{'a': 2})"""
+         )
+ 
++    def test_all_reports_failing_iteration(self):
++        def f():
++            def is_even(number):
++                return number % 2 == 0
++
++            assert all(is_even(number) for number in [1, 3, 5])
++
++        msg = getmsg(f)
++        assert "is_even(1)" in msg
++
++    def test_any_reports_failing_iteration(self):
++        def f():
++            def is_even(number):
++                return number % 2 == 0
++
++            assert any(is_even(number) for number in [1])
++
++        msg = getmsg(f)
++        assert "is_even(1)" in msg
++
+     def test_attribute(self):
+         class X(object):
+             g = 3
+2026-11-19 15:28:18,056 - INFO - Git diff changed after running eval script
+2026-11-19 15:28:18,057 - INFO - Attempting to stop container exec.eval.x86_64.af2fdc0080883ffbb82939.42c836ae870b042a29a774.131896724989008...
+2026-11-19 15:28:33,238 - INFO - Attempting to remove container exec.eval.x86_64.af2fdc0080883ffbb82939.42c836ae870b042a29a774.131896724989008...
+2026-11-19 15:28:33,280 - INFO - Container exec.eval.x86_64.af2fdc0080883ffbb82939.42c836ae870b042a29a774.131896724989008 removed.
+2026-11-19 15:28:33,281 - WARNING - End of eval at 1795127313.281315

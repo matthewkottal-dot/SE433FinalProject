@@ -1,0 +1,18 @@
+diff --git a/tests/user_commands/tests.py b/tests/user_commands/tests.py
+index 9262e2717a..ffe7498d29 100755
+--- a/tests/user_commands/tests.py
++++ b/tests/user_commands/tests.py
+@@ -54,6 +54,13 @@ class CommandTests(SimpleTestCase):
+         with self.assertRaisesMessage(CommandError, "Unknown command: 'explode'"):
+             management.call_command(('explode',))
+ 
++    @mock.patch('sys.argv', [None])
++    def test_management_utility_uses_custom_argv_prog_name(self):
++        out = StringIO()
++        with mock.patch('sys.stdout', out):
++            management.execute_from_command_line(['custom_prog', 'help'])
++        self.assertIn("Type 'custom_prog help <subcommand>'", out.getvalue())
++
+     def test_system_exit(self):
+         """ Exception raised in a command should raise CommandError with
+             call_command, but SystemExit when run from command line

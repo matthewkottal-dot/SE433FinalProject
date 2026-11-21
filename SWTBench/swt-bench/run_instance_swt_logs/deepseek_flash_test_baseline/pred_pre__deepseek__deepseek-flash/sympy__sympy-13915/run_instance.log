@@ -1,0 +1,31 @@
+2026-11-19 14:47:17,433 - WARNING - Starting evaluation at 1795124837.4333875
+2026-11-19 14:47:17,568 - INFO - Creating container for sympy__sympy-13915...
+2026-11-19 14:47:17,604 - INFO - Container for sympy__sympy-13915 created: a6a94a5ff3744782f7a6c3a0af3da35693bee71eec3149dd1c080d48adccfe53
+2026-11-19 14:47:17,735 - INFO - Container for sympy__sympy-13915 started: a6a94a5ff3744782f7a6c3a0af3da35693bee71eec3149dd1c080d48adccfe53
+2026-11-19 14:47:18,250 - INFO - Git diff before:
+
+2026-11-19 14:47:18,253 - INFO - Eval script for sympy__sympy-13915 written to eval.sh, now applying to container...
+2026-11-19 14:47:25,847 - INFO - Test output for sympy__sympy-13915 written to run_instance_swt_logs/deepseek_flash_test_baseline/pred_pre__deepseek__deepseek-flash/sympy__sympy-13915/test_output.txt
+2026-11-19 14:47:25,887 - INFO - Git diff after:
+diff --git a/sympy/core/tests/test_subs.py b/sympy/core/tests/test_subs.py
+index 90abb9e374..4efa2e1ee2 100644
+--- a/sympy/core/tests/test_subs.py
++++ b/sympy/core/tests/test_subs.py
+@@ -779,3 +779,12 @@ def test_issue_12657():
+     reps = [(-oo, 2), (oo, 1)]
+     assert (x < oo).subs(reps) == (x < 1)
+     assert (x < oo).subs(list(reversed(reps))) == (x < 1)
++
++
++def test_subs_undefined():
++    # Substituting b = a makes both the numerator and denominator of this
++    # expression undefined.  The substitution must not incorrectly simplify
++    # the expression to 1.
++    a, b = symbols('a b')
++    r = (1/(a + b) + 1/(a - b))/(1/(a + b) - 1/(a - b))
++    assert r.subs(b, a) is not S.One
+2026-11-19 14:47:25,888 - INFO - Git diff changed after running eval script
+2026-11-19 14:47:25,888 - INFO - Attempting to stop container exec.eval.x86_64.deec2122407a414e380748.ef0c45e0de59e417b0ce7b.125556472320784...
+2026-11-19 14:47:41,118 - INFO - Attempting to remove container exec.eval.x86_64.deec2122407a414e380748.ef0c45e0de59e417b0ce7b.125556472320784...
+2026-11-19 14:47:41,154 - INFO - Container exec.eval.x86_64.deec2122407a414e380748.ef0c45e0de59e417b0ce7b.125556472320784 removed.
+2026-11-19 14:47:41,155 - WARNING - End of eval at 1795124861.1552281

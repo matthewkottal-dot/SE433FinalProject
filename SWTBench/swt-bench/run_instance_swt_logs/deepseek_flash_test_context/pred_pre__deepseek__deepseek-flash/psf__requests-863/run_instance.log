@@ -1,0 +1,37 @@
+2026-11-19 15:25:32,350 - WARNING - Starting evaluation at 1795127132.3507776
+2026-11-19 15:25:32,456 - INFO - Creating container for psf__requests-863...
+2026-11-19 15:25:32,486 - INFO - Container for psf__requests-863 created: a8ad61e002db6e81ce383e94182dda031e4d100a71d73a9b0e4c8c67c6d57c96
+2026-11-19 15:25:32,611 - INFO - Container for psf__requests-863 started: a8ad61e002db6e81ce383e94182dda031e4d100a71d73a9b0e4c8c67c6d57c96
+2026-11-19 15:25:32,692 - INFO - Git diff before:
+
+2026-11-19 15:25:32,695 - INFO - Eval script for psf__requests-863 written to eval.sh, now applying to container...
+2026-11-19 15:25:49,875 - INFO - Test output for psf__requests-863 written to run_instance_swt_logs/deepseek_flash_test_context/pred_pre__deepseek__deepseek-flash/psf__requests-863/test_output.txt
+2026-11-19 15:25:49,911 - INFO - Git diff after:
+diff --git a/tests/test_requests.py b/tests/test_requests.py
+index f8a31f24..22172dcc 100755
+--- a/tests/test_requests.py
++++ b/tests/test_requests.py
+@@ -710,6 +710,18 @@ class RequestsTestSuite(TestSetup, TestBaseMixin, unittest.TestCase):
+ 
+             assert 'foo' in response.text
+ 
++    def test_multiple_hooks_are_parsed_from_hooks_dict(self):
++        def first_hook(args):
++            return args
++
++        def second_hook(args):
++            return args
++
++        request = requests.Request(
++            'http://example.com/', hooks={'args': [first_hook, second_hook]})
++
++        self.assertEqual(request.hooks['args'], [first_hook, second_hook])
++
+     def test_multiple_hooks(self):
+ 
+         def add_foo_header(args):
+2026-11-19 15:25:49,912 - INFO - Git diff changed after running eval script
+2026-11-19 15:25:49,912 - INFO - Attempting to stop container exec.eval.x86_64.3a9417a9d4b5c62087edb6.f9c825a48927a46fdbefc3.131896724999984...
+2026-11-19 15:26:05,111 - INFO - Attempting to remove container exec.eval.x86_64.3a9417a9d4b5c62087edb6.f9c825a48927a46fdbefc3.131896724999984...
+2026-11-19 15:26:05,138 - INFO - Container exec.eval.x86_64.3a9417a9d4b5c62087edb6.f9c825a48927a46fdbefc3.131896724999984 removed.
+2026-11-19 15:26:05,139 - WARNING - End of eval at 1795127165.139324

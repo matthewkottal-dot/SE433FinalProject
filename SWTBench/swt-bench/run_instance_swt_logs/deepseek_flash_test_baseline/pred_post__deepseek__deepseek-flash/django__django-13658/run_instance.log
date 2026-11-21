@@ -1,0 +1,62 @@
+2026-11-19 14:00:22,194 - WARNING - Starting evaluation at 1795122022.1941648
+2026-11-19 14:00:22,311 - INFO - Creating container for django__django-13658...
+2026-11-19 14:00:22,346 - INFO - Container for django__django-13658 created: 47ac7f610109ee5e91c65627b0434aa09860aff077d03aa18e21ffb025d9cc53
+2026-11-19 14:00:22,482 - INFO - Container for django__django-13658 started: 47ac7f610109ee5e91c65627b0434aa09860aff077d03aa18e21ffb025d9cc53
+2026-11-19 14:00:22,963 - INFO - Git diff before:
+
+2026-11-19 14:00:22,971 - INFO - Eval script for django__django-13658 written to eval.sh, now applying to container...
+2026-11-19 14:00:55,619 - INFO - Test output for django__django-13658 written to run_instance_swt_logs/deepseek_flash_test_baseline/pred_post__deepseek__deepseek-flash/django__django-13658/test_output.txt
+2026-11-19 14:00:55,662 - INFO - Git diff after:
+diff --git a/django/core/management/__init__.py b/django/core/management/__init__.py
+index 1ba093e51f..4e30a28f33 100644
+--- a/django/core/management/__init__.py
++++ b/django/core/management/__init__.py
+@@ -344,7 +344,12 @@ class ManagementUtility:
+         # Preprocess options to extract --settings and --pythonpath.
+         # These options could affect the commands that are available, so they
+         # must be processed early.
+-        parser = CommandParser(usage='%(prog)s subcommand [options] [args]', add_help=False, allow_abbrev=False)
++        parser = CommandParser(
++            prog=self.prog_name,
++            usage='%(prog)s subcommand [options] [args]',
++            add_help=False,
++            allow_abbrev=False,
++        )
+         parser.add_argument('--settings')
+         parser.add_argument('--pythonpath')
+         parser.add_argument('args', nargs='*')  # catch-all
+diff --git a/tests/admin_scripts/tests.py b/tests/admin_scripts/tests.py
+index 62c6f485aa..1ea8a68e3e 100644
+--- a/tests/admin_scripts/tests.py
++++ b/tests/admin_scripts/tests.py
+@@ -17,7 +17,7 @@ from unittest import mock
+ from django import conf, get_version
+ from django.conf import settings
+ from django.core.management import (
+-    BaseCommand, CommandError, call_command, color,
++    BaseCommand, CommandError, call_command, color, execute_from_command_line,
+ )
+ from django.core.management.commands.loaddata import Command as LoaddataCommand
+ from django.core.management.commands.runserver import (
+@@ -162,6 +162,16 @@ class AdminScriptTestCase(SimpleTestCase):
+         "Utility assertion: assert that the given message doesn't exist in the output"
+         self.assertNotIn(msg, stream, "'%s' matches actual output text '%s'" % (msg, stream))
+ 
++
++class ManagementUtilityTests(SimpleTestCase):
++    def test_program_name_from_argv(self):
++        argv = ['django-admin', 'version']
++        with mock.patch('sys.argv', [None]):
++            with mock.patch('sys.stdout', new_callable=StringIO) as stdout:
++                execute_from_command_line(argv)
++        self.assertEqual(stdout.getvalue(), get_version() + '\n')
++
++
+ ##########################################################################
+ # DJANGO ADMIN TESTS
+ # This first series of test classes checks the environment processing
+2026-11-19 14:00:55,663 - INFO - Git diff changed after running eval script
+2026-11-19 14:00:55,663 - INFO - Attempting to stop container exec.eval.x86_64.f904a9d2e0f61fc0d70077.17968096d520ad8b776daa.125556490018096...
+2026-11-19 14:01:10,852 - INFO - Attempting to remove container exec.eval.x86_64.f904a9d2e0f61fc0d70077.17968096d520ad8b776daa.125556490018096...
+2026-11-19 14:01:10,889 - INFO - Container exec.eval.x86_64.f904a9d2e0f61fc0d70077.17968096d520ad8b776daa.125556490018096 removed.
+2026-11-19 14:01:10,890 - WARNING - End of eval at 1795122070.8905914

@@ -1,0 +1,26 @@
+diff --git a/testing/test_skipping.py b/testing/test_skipping.py
+index 8fceb37aa..997885744 100755
+--- a/testing/test_skipping.py
++++ b/testing/test_skipping.py
+@@ -203,6 +203,21 @@ class TestXFail:
+         callreport = reports[1]
+         assert callreport.wasxfail
+ 
++    def test_xfail_set_during_call(self, testdir):
++        item = testdir.getitem(
++            """
++            import pytest
++            def test_func(request):
++                request.node.add_marker(pytest.mark.xfail(reason="xfail"))
++                assert 0
++        """
++        )
++        reports = runtestprotocol(item, log=False)
++        assert len(reports) == 3
++        callreport = reports[1]
++        assert callreport.skipped
++        assert callreport.wasxfail == "xfail"
++
+     def test_xfail_xpassed_strict(self, testdir):
+         item = testdir.getitem(
+             """

@@ -1,0 +1,41 @@
+2026-11-19 15:26:37,102 - WARNING - Starting evaluation at 1795127197.102204
+2026-11-19 15:26:37,210 - INFO - Creating container for pytest-dev__pytest-11143...
+2026-11-19 15:26:37,243 - INFO - Container for pytest-dev__pytest-11143 created: 42484ef0808db0bc3920e0759e73e3bae41eb27d7575786122ed68cf31b3a403
+2026-11-19 15:26:37,350 - INFO - Container for pytest-dev__pytest-11143 started: 42484ef0808db0bc3920e0759e73e3bae41eb27d7575786122ed68cf31b3a403
+2026-11-19 15:26:37,519 - INFO - Git diff before:
+
+2026-11-19 15:26:37,522 - INFO - Eval script for pytest-dev__pytest-11143 written to eval.sh, now applying to container...
+2026-11-19 15:26:46,276 - INFO - Test output for pytest-dev__pytest-11143 written to run_instance_swt_logs/deepseek_flash_test_context/pred_pre__deepseek__deepseek-flash/pytest-dev__pytest-11143/test_output.txt
+2026-11-19 15:26:46,312 - INFO - Git diff after:
+diff --git a/testing/test_assertrewrite.py b/testing/test_assertrewrite.py
+index d01803204..4369d0750 100644
+--- a/testing/test_assertrewrite.py
++++ b/testing/test_assertrewrite.py
+@@ -113,6 +113,22 @@ class TestAssertionRewrite:
+             assert imp.col_offset == 0
+         assert isinstance(m.body[3], ast.Expr)
+ 
++    @pytest.mark.parametrize("first_statement", ["42", "None", "True", "b'bytes'"])
++    def test_first_statement_is_not_a_docstring(
++        self, first_statement: str, pytester: Pytester
++    ) -> None:
++        """Non-string constants must not be treated as module docstrings."""
++        pytester.makepyfile(
++            f"""
++            {first_statement}
++
++            def test_rewritten():
++                assert 1 == 1
++            """
++        )
++        result = pytester.runpytest()
++        result.assert_outcomes(passed=1)
++
+     def test_location_is_set(self) -> None:
+         s = textwrap.dedent(
+             """
+2026-11-19 15:26:46,313 - INFO - Git diff changed after running eval script
+2026-11-19 15:26:46,313 - INFO - Attempting to stop container exec.eval.x86_64.0a53cb26c68560f276cb87.8b5a06a3ebdb128156a175.131896725004336...
+2026-11-19 15:27:01,486 - INFO - Attempting to remove container exec.eval.x86_64.0a53cb26c68560f276cb87.8b5a06a3ebdb128156a175.131896725004336...
+2026-11-19 15:27:01,534 - INFO - Container exec.eval.x86_64.0a53cb26c68560f276cb87.8b5a06a3ebdb128156a175.131896725004336 removed.
+2026-11-19 15:27:01,535 - WARNING - End of eval at 1795127221.5352361

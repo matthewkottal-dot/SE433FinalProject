@@ -1,0 +1,50 @@
+2026-11-19 15:02:43,900 - WARNING - Starting evaluation at 1795125763.900818
+2026-11-19 15:02:44,019 - INFO - Creating container for django__django-13658...
+2026-11-19 15:02:44,052 - INFO - Container for django__django-13658 created: ebc024da321ce2927688f7aa9c31dff77494bbfd6ec4007386a9db2d06300a49
+2026-11-19 15:02:44,169 - INFO - Container for django__django-13658 started: ebc024da321ce2927688f7aa9c31dff77494bbfd6ec4007386a9db2d06300a49
+2026-11-19 15:02:44,636 - INFO - Git diff before:
+
+2026-11-19 15:02:44,639 - INFO - Eval script for django__django-13658 written to eval.sh, now applying to container...
+2026-11-19 15:02:48,920 - INFO - Test output for django__django-13658 written to run_instance_swt_logs/deepseek_flash_test_context/pred_post__deepseek__deepseek-flash/django__django-13658/test_output.txt
+2026-11-19 15:02:48,960 - INFO - Git diff after:
+diff --git a/django/core/management/__init__.py b/django/core/management/__init__.py
+index 1ba093e51f..4e30a28f33 100644
+--- a/django/core/management/__init__.py
++++ b/django/core/management/__init__.py
+@@ -344,7 +344,12 @@ class ManagementUtility:
+         # Preprocess options to extract --settings and --pythonpath.
+         # These options could affect the commands that are available, so they
+         # must be processed early.
+-        parser = CommandParser(usage='%(prog)s subcommand [options] [args]', add_help=False, allow_abbrev=False)
++        parser = CommandParser(
++            prog=self.prog_name,
++            usage='%(prog)s subcommand [options] [args]',
++            add_help=False,
++            allow_abbrev=False,
++        )
+         parser.add_argument('--settings')
+         parser.add_argument('--pythonpath')
+         parser.add_argument('args', nargs='*')  # catch-all
+diff --git a/tests/user_commands/tests.py b/tests/user_commands/tests.py
+index 9262e2717a..ffe7498d29 100644
+--- a/tests/user_commands/tests.py
++++ b/tests/user_commands/tests.py
+@@ -54,6 +54,13 @@ class CommandTests(SimpleTestCase):
+         with self.assertRaisesMessage(CommandError, "Unknown command: 'explode'"):
+             management.call_command(('explode',))
+ 
++    @mock.patch('sys.argv', [None])
++    def test_management_utility_uses_custom_argv_prog_name(self):
++        out = StringIO()
++        with mock.patch('sys.stdout', out):
++            management.execute_from_command_line(['custom_prog', 'help'])
++        self.assertIn("Type 'custom_prog help <subcommand>'", out.getvalue())
++
+     def test_system_exit(self):
+         """ Exception raised in a command should raise CommandError with
+             call_command, but SystemExit when run from command line
+2026-11-19 15:02:48,960 - INFO - Git diff changed after running eval script
+2026-11-19 15:02:48,961 - INFO - Attempting to stop container exec.eval.x86_64.f904a9d2e0f61fc0d70077.17968096d520ad8b776daa.131896724528432...
+2026-11-19 15:03:04,174 - INFO - Attempting to remove container exec.eval.x86_64.f904a9d2e0f61fc0d70077.17968096d520ad8b776daa.131896724528432...
+2026-11-19 15:03:04,211 - INFO - Container exec.eval.x86_64.f904a9d2e0f61fc0d70077.17968096d520ad8b776daa.131896724528432 removed.
+2026-11-19 15:03:04,212 - WARNING - End of eval at 1795125784.2121897

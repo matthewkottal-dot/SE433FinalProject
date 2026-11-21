@@ -1,0 +1,175 @@
+2026-11-19 14:35:28,362 - WARNING - Starting evaluation at 1795124128.3620994
+2026-11-19 14:35:28,481 - INFO - Creating container for sphinx-doc__sphinx-8282...
+2026-11-19 14:35:28,517 - INFO - Container for sphinx-doc__sphinx-8282 created: d7f48e8c0e63257870de6f25875c29881c69f3e73c19833fe16c53d351a0386b
+2026-11-19 14:35:28,615 - INFO - Container for sphinx-doc__sphinx-8282 started: d7f48e8c0e63257870de6f25875c29881c69f3e73c19833fe16c53d351a0386b
+2026-11-19 14:35:29,025 - INFO - Git diff before:
+diff --git a/setup.py b/setup.py
+index 8505d2679..2571a3294 100644
+--- a/setup.py
++++ b/setup.py
+@@ -15,22 +15,22 @@ if sys.version_info < (3, 5):
+     sys.exit(1)
+ 
+ install_requires = [
+-    'sphinxcontrib-applehelp',
+-    'sphinxcontrib-devhelp',
++    'sphinxcontrib-applehelp<=1.0.7',
++    'sphinxcontrib-devhelp<=1.0.5',
+     'sphinxcontrib-jsmath',
+-    'sphinxcontrib-htmlhelp',
+-    'sphinxcontrib-serializinghtml',
+-    'sphinxcontrib-qthelp',
+-    'Jinja2>=2.3',
++    'sphinxcontrib-htmlhelp<=2.0.4',
++    'sphinxcontrib-serializinghtml<=1.1.9',
++    'sphinxcontrib-qthelp<=1.0.6',
++    'Jinja2<3.0',
+     'Pygments>=2.0',
+     'docutils>=0.12',
+     'snowballstemmer>=1.1',
+     'babel>=1.3',
+-    'alabaster>=0.7,<0.8',
++    'alabaster>=0.7,<0.7.12',
+     'imagesize',
+     'requests>=2.5.0',
+     'setuptools',
+-    'packaging',
++    'packaging', 'markupsafe<=2.0.1',
+ ]
+ 
+ extras_require = {
+diff --git a/tox.ini b/tox.ini
+index a61299979..e2baccc07 100644
+--- a/tox.ini
++++ b/tox.ini
+@@ -28,7 +28,7 @@ setenv =
+     PYTHONWARNINGS = all,ignore::ImportWarning:importlib._bootstrap_external,ignore::DeprecationWarning:site,ignore::DeprecationWarning:distutils
+     PYTEST_ADDOPTS = --color yes
+ commands=
+-    pytest --durations 25 {posargs}
++    pytest -rA --durations 25 {posargs}
+ 
+ [testenv:flake8]
+ basepython = python3
+2026-11-19 14:35:29,029 - INFO - Eval script for sphinx-doc__sphinx-8282 written to eval.sh, now applying to container...
+2026-11-19 14:35:36,250 - INFO - Test output for sphinx-doc__sphinx-8282 written to run_instance_swt_logs/deepseek_flash_test_baseline/pred_pre__deepseek__deepseek-flash/sphinx-doc__sphinx-8282/test_output.txt
+2026-11-19 14:35:36,290 - INFO - Git diff after:
+diff --git a/setup.py b/setup.py
+index 8505d2679..2571a3294 100644
+--- a/setup.py
++++ b/setup.py
+@@ -15,22 +15,22 @@ if sys.version_info < (3, 5):
+     sys.exit(1)
+ 
+ install_requires = [
+-    'sphinxcontrib-applehelp',
+-    'sphinxcontrib-devhelp',
++    'sphinxcontrib-applehelp<=1.0.7',
++    'sphinxcontrib-devhelp<=1.0.5',
+     'sphinxcontrib-jsmath',
+-    'sphinxcontrib-htmlhelp',
+-    'sphinxcontrib-serializinghtml',
+-    'sphinxcontrib-qthelp',
+-    'Jinja2>=2.3',
++    'sphinxcontrib-htmlhelp<=2.0.4',
++    'sphinxcontrib-serializinghtml<=1.1.9',
++    'sphinxcontrib-qthelp<=1.0.6',
++    'Jinja2<3.0',
+     'Pygments>=2.0',
+     'docutils>=0.12',
+     'snowballstemmer>=1.1',
+     'babel>=1.3',
+-    'alabaster>=0.7,<0.8',
++    'alabaster>=0.7,<0.7.12',
+     'imagesize',
+     'requests>=2.5.0',
+     'setuptools',
+-    'packaging',
++    'packaging', 'markupsafe<=2.0.1',
+ ]
+ 
+ extras_require = {
+diff --git a/tests/test_ext_autodoc_configs.py b/tests/test_ext_autodoc_configs.py
+index 7d51b7f0e..2728c2e36 100644
+--- a/tests/test_ext_autodoc_configs.py
++++ b/tests/test_ext_autodoc_configs.py
+@@ -610,6 +610,61 @@ def test_autodoc_typehints_none(app):
+     ]
+ 
+ 
++@pytest.mark.sphinx('html', testroot='ext-autodoc',
++                    confoverrides={'autodoc_typehints': "none"})
++def test_autodoc_typehints_none_for_overloads(app):
++    options = {"members": None}
++    actual = do_autodoc(app, 'module', 'target.overload', options)
++    assert list(actual) == [
++        '',
++        '.. py:module:: target.overload',
++        '',
++        '',
++        '.. py:class:: Bar(x, y)',
++        '              Bar(x, y)',
++        '   :module: target.overload',
++        '',
++        '   docstring',
++        '',
++        '',
++        '.. py:class:: Baz(x, y)',
++        '              Baz(x, y)',
++        '   :module: target.overload',
++        '',
++        '   docstring',
++        '',
++        '',
++        '.. py:class:: Foo(x, y)',
++        '              Foo(x, y)',
++        '   :module: target.overload',
++        '',
++        '   docstring',
++        '',
++        '',
++        '.. py:class:: Math()',
++        '   :module: target.overload',
++        '',
++        '   docstring',
++        '',
++        '',
++        '   .. py:method:: Math.sum(x, y)',
++        '                  Math.sum(x, y)',
++        '                  Math.sum(x, y)',
++        '      :module: target.overload',
++        '',
++        '      docstring',
++        '',
++        '',
++        '.. py:function:: sum(x, y)',
++        '                 sum(x, y)',
++        '                 sum(x, y)',
++        '   :module: target.overload',
++        '',
++        '   docstring',
++        '',
++    ]
++
++
+ @pytest.mark.sphinx('text', testroot='ext-autodoc',
+                     confoverrides={'autodoc_typehints': "description"})
+ def test_autodoc_typehints_description(app):
+diff --git a/tox.ini b/tox.ini
+index a61299979..e2baccc07 100644
+--- a/tox.ini
++++ b/tox.ini
+@@ -28,7 +28,7 @@ setenv =
+     PYTHONWARNINGS = all,ignore::ImportWarning:importlib._bootstrap_external,ignore::DeprecationWarning:site,ignore::DeprecationWarning:distutils
+     PYTEST_ADDOPTS = --color yes
+ commands=
+-    pytest --durations 25 {posargs}
++    pytest -rA --durations 25 {posargs}
+ 
+ [testenv:flake8]
+ basepython = python3
+2026-11-19 14:35:36,291 - INFO - Git diff changed after running eval script
+2026-11-19 14:35:36,291 - INFO - Attempting to stop container exec.eval.x86_64.77d82541416cab86d0d86a.ce2b44235b2f454f0cbd56.125556472319344...
+2026-11-19 14:35:51,512 - INFO - Attempting to remove container exec.eval.x86_64.77d82541416cab86d0d86a.ce2b44235b2f454f0cbd56.125556472319344...
+2026-11-19 14:35:51,585 - INFO - Container exec.eval.x86_64.77d82541416cab86d0d86a.ce2b44235b2f454f0cbd56.125556472319344 removed.
+2026-11-19 14:35:51,585 - WARNING - End of eval at 1795124151.585824

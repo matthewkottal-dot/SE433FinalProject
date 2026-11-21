@@ -1,0 +1,77 @@
+2026-11-19 14:01:11,005 - WARNING - Starting evaluation at 1795122071.0056288
+2026-11-19 14:01:11,122 - INFO - Creating container for pallets__flask-4045...
+2026-11-19 14:01:11,161 - INFO - Container for pallets__flask-4045 created: 232112c0e226244879069d8f5804853aa3725919978142e5823d374ac8e61e2e
+2026-11-19 14:01:11,294 - INFO - Container for pallets__flask-4045 started: 232112c0e226244879069d8f5804853aa3725919978142e5823d374ac8e61e2e
+2026-11-19 14:01:11,385 - INFO - Git diff before:
+
+2026-11-19 14:01:11,388 - INFO - Eval script for pallets__flask-4045 written to eval.sh, now applying to container...
+2026-11-19 14:01:24,098 - INFO - Test output for pallets__flask-4045 written to run_instance_swt_logs/deepseek_flash_test_baseline/pred_pre__deepseek__deepseek-flash/pallets__flask-4045/test_output.txt
+2026-11-19 14:01:24,136 - INFO - Git diff after:
+diff --git a/tests/test_basic.py b/tests/test_basic.py
+index d6ec3fe4..7c8cbf2b 100644
+--- a/tests/test_basic.py
++++ b/tests/test_basic.py
+@@ -1631,7 +1631,7 @@ def test_url_processors(app, client):
+ 
+ 
+ def test_inject_blueprint_url_defaults(app):
+-    bp = flask.Blueprint("foo.bar.baz", __name__, template_folder="template")
++    bp = flask.Blueprint("bp", __name__, template_folder="template")
+ 
+     @bp.url_defaults
+     def bp_defaults(endpoint, values):
+@@ -1644,12 +1644,12 @@ def test_inject_blueprint_url_defaults(app):
+     app.register_blueprint(bp)
+ 
+     values = dict()
+-    app.inject_url_defaults("foo.bar.baz.view", values)
++    app.inject_url_defaults("bp.view", values)
+     expected = dict(page="login")
+     assert values == expected
+ 
+     with app.test_request_context("/somepage"):
+-        url = flask.url_for("foo.bar.baz.view")
++        url = flask.url_for("bp.view")
+     expected = "/login"
+     assert url == expected
+ 
+diff --git a/tests/test_blueprints.py b/tests/test_blueprints.py
+index b986ca02..4e303936 100644
+--- a/tests/test_blueprints.py
++++ b/tests/test_blueprints.py
+@@ -253,9 +253,16 @@ def test_templates_list(test_apps):
+     assert templates == ["admin/index.html", "frontend/index.html"]
+ 
+ 
++@pytest.mark.parametrize("name", ["bp.name", ".bp", "bp.", "."])
++def test_blueprint_name_with_dot(name):
++    with pytest.raises(ValueError):
++        flask.Blueprint(name, __name__)
++
++
+ def test_dotted_names(app, client):
+-    frontend = flask.Blueprint("myapp.frontend", __name__)
+-    backend = flask.Blueprint("myapp.backend", __name__)
++    myapp = flask.Blueprint("myapp", __name__)
++    frontend = flask.Blueprint("frontend", __name__)
++    backend = flask.Blueprint("backend", __name__)
+ 
+     @frontend.route("/fe")
+     def frontend_index():
+@@ -269,8 +276,9 @@ def test_dotted_names(app, client):
+     def backend_index():
+         return flask.url_for("myapp.frontend.frontend_index")
+ 
+-    app.register_blueprint(frontend)
+-    app.register_blueprint(backend)
++    myapp.register_blueprint(frontend)
++    myapp.register_blueprint(backend)
++    app.register_blueprint(myapp)
+ 
+     assert client.get("/fe").data.strip() == b"/be"
+     assert client.get("/fe2").data.strip() == b"/fe"
+2026-11-19 14:01:24,137 - INFO - Git diff changed after running eval script
+2026-11-19 14:01:24,137 - INFO - Attempting to stop container exec.eval.x86_64.a76142573b3d6fbe711563.781a43cd59615fabd1befe.125556490122768...
+2026-11-19 14:01:39,343 - INFO - Attempting to remove container exec.eval.x86_64.a76142573b3d6fbe711563.781a43cd59615fabd1befe.125556490122768...
+2026-11-19 14:01:39,372 - INFO - Container exec.eval.x86_64.a76142573b3d6fbe711563.781a43cd59615fabd1befe.125556490122768 removed.
+2026-11-19 14:01:39,372 - WARNING - End of eval at 1795122099.3727143

@@ -1,0 +1,210 @@
+2026-11-19 14:35:51,599 - WARNING - Starting evaluation at 1795124151.5996091
+2026-11-19 14:35:51,718 - INFO - Creating container for sphinx-doc__sphinx-8282...
+2026-11-19 14:35:51,750 - INFO - Container for sphinx-doc__sphinx-8282 created: 19d912e834a531de4ead25a7916a0691f341417a62c3cfc634d8c177d8addb1c
+2026-11-19 14:35:51,852 - INFO - Container for sphinx-doc__sphinx-8282 started: 19d912e834a531de4ead25a7916a0691f341417a62c3cfc634d8c177d8addb1c
+2026-11-19 14:35:52,015 - INFO - Git diff before:
+diff --git a/setup.py b/setup.py
+index 8505d2679..2571a3294 100644
+--- a/setup.py
++++ b/setup.py
+@@ -15,22 +15,22 @@ if sys.version_info < (3, 5):
+     sys.exit(1)
+ 
+ install_requires = [
+-    'sphinxcontrib-applehelp',
+-    'sphinxcontrib-devhelp',
++    'sphinxcontrib-applehelp<=1.0.7',
++    'sphinxcontrib-devhelp<=1.0.5',
+     'sphinxcontrib-jsmath',
+-    'sphinxcontrib-htmlhelp',
+-    'sphinxcontrib-serializinghtml',
+-    'sphinxcontrib-qthelp',
+-    'Jinja2>=2.3',
++    'sphinxcontrib-htmlhelp<=2.0.4',
++    'sphinxcontrib-serializinghtml<=1.1.9',
++    'sphinxcontrib-qthelp<=1.0.6',
++    'Jinja2<3.0',
+     'Pygments>=2.0',
+     'docutils>=0.12',
+     'snowballstemmer>=1.1',
+     'babel>=1.3',
+-    'alabaster>=0.7,<0.8',
++    'alabaster>=0.7,<0.7.12',
+     'imagesize',
+     'requests>=2.5.0',
+     'setuptools',
+-    'packaging',
++    'packaging', 'markupsafe<=2.0.1',
+ ]
+ 
+ extras_require = {
+diff --git a/tox.ini b/tox.ini
+index a61299979..e2baccc07 100644
+--- a/tox.ini
++++ b/tox.ini
+@@ -28,7 +28,7 @@ setenv =
+     PYTHONWARNINGS = all,ignore::ImportWarning:importlib._bootstrap_external,ignore::DeprecationWarning:site,ignore::DeprecationWarning:distutils
+     PYTEST_ADDOPTS = --color yes
+ commands=
+-    pytest --durations 25 {posargs}
++    pytest -rA --durations 25 {posargs}
+ 
+ [testenv:flake8]
+ basepython = python3
+2026-11-19 14:35:52,019 - INFO - Eval script for sphinx-doc__sphinx-8282 written to eval.sh, now applying to container...
+2026-11-19 14:35:58,955 - INFO - Test output for sphinx-doc__sphinx-8282 written to run_instance_swt_logs/deepseek_flash_test_baseline/pred_post__deepseek__deepseek-flash/sphinx-doc__sphinx-8282/test_output.txt
+2026-11-19 14:35:58,994 - INFO - Git diff after:
+diff --git a/setup.py b/setup.py
+index 8505d2679..2571a3294 100644
+--- a/setup.py
++++ b/setup.py
+@@ -15,22 +15,22 @@ if sys.version_info < (3, 5):
+     sys.exit(1)
+ 
+ install_requires = [
+-    'sphinxcontrib-applehelp',
+-    'sphinxcontrib-devhelp',
++    'sphinxcontrib-applehelp<=1.0.7',
++    'sphinxcontrib-devhelp<=1.0.5',
+     'sphinxcontrib-jsmath',
+-    'sphinxcontrib-htmlhelp',
+-    'sphinxcontrib-serializinghtml',
+-    'sphinxcontrib-qthelp',
+-    'Jinja2>=2.3',
++    'sphinxcontrib-htmlhelp<=2.0.4',
++    'sphinxcontrib-serializinghtml<=1.1.9',
++    'sphinxcontrib-qthelp<=1.0.6',
++    'Jinja2<3.0',
+     'Pygments>=2.0',
+     'docutils>=0.12',
+     'snowballstemmer>=1.1',
+     'babel>=1.3',
+-    'alabaster>=0.7,<0.8',
++    'alabaster>=0.7,<0.7.12',
+     'imagesize',
+     'requests>=2.5.0',
+     'setuptools',
+-    'packaging',
++    'packaging', 'markupsafe<=2.0.1',
+ ]
+ 
+ extras_require = {
+diff --git a/sphinx/ext/autodoc/__init__.py b/sphinx/ext/autodoc/__init__.py
+index 978fd5df8..7343d41b6 100644
+--- a/sphinx/ext/autodoc/__init__.py
++++ b/sphinx/ext/autodoc/__init__.py
+@@ -1240,7 +1240,9 @@ class FunctionDocumenter(DocstringSignatureMixin, ModuleLevelDocumenter):  # typ
+ 
+     def format_signature(self, **kwargs: Any) -> str:
+         sigs = []
+-        if self.analyzer and '.'.join(self.objpath) in self.analyzer.overloads:
++        if (self.analyzer and
++                '.'.join(self.objpath) in self.analyzer.overloads and
++                self.env.config.autodoc_typehints == 'signature'):
+             # Use signatures for overloaded functions instead of the implementation function.
+             overloaded = True
+         else:
+@@ -1474,7 +1476,7 @@ class ClassDocumenter(DocstringSignatureMixin, ModuleLevelDocumenter):  # type:
+         sigs = []
+ 
+         overloads = self.get_overloaded_signatures()
+-        if overloads:
++        if overloads and self.env.config.autodoc_typehints == 'signature':
+             # Use signatures for overloaded methods instead of the implementation method.
+             method = safe_getattr(self._signature_class, self._signature_method_name, None)
+             __globals__ = safe_getattr(method, '__globals__', {})
+@@ -1882,7 +1884,9 @@ class MethodDocumenter(DocstringSignatureMixin, ClassLevelDocumenter):  # type:
+ 
+     def format_signature(self, **kwargs: Any) -> str:
+         sigs = []
+-        if self.analyzer and '.'.join(self.objpath) in self.analyzer.overloads:
++        if (self.analyzer and
++                '.'.join(self.objpath) in self.analyzer.overloads and
++                self.env.config.autodoc_typehints == 'signature'):
+             # Use signatures for overloaded methods instead of the implementation method.
+             overloaded = True
+         else:
+diff --git a/tests/test_ext_autodoc_configs.py b/tests/test_ext_autodoc_configs.py
+index 7d51b7f0e..2728c2e36 100644
+--- a/tests/test_ext_autodoc_configs.py
++++ b/tests/test_ext_autodoc_configs.py
+@@ -610,6 +610,61 @@ def test_autodoc_typehints_none(app):
+     ]
+ 
+ 
++@pytest.mark.sphinx('html', testroot='ext-autodoc',
++                    confoverrides={'autodoc_typehints': "none"})
++def test_autodoc_typehints_none_for_overloads(app):
++    options = {"members": None}
++    actual = do_autodoc(app, 'module', 'target.overload', options)
++    assert list(actual) == [
++        '',
++        '.. py:module:: target.overload',
++        '',
++        '',
++        '.. py:class:: Bar(x, y)',
++        '              Bar(x, y)',
++        '   :module: target.overload',
++        '',
++        '   docstring',
++        '',
++        '',
++        '.. py:class:: Baz(x, y)',
++        '              Baz(x, y)',
++        '   :module: target.overload',
++        '',
++        '   docstring',
++        '',
++        '',
++        '.. py:class:: Foo(x, y)',
++        '              Foo(x, y)',
++        '   :module: target.overload',
++        '',
++        '   docstring',
++        '',
++        '',
++        '.. py:class:: Math()',
++        '   :module: target.overload',
++        '',
++        '   docstring',
++        '',
++        '',
++        '   .. py:method:: Math.sum(x, y)',
++        '                  Math.sum(x, y)',
++        '                  Math.sum(x, y)',
++        '      :module: target.overload',
++        '',
++        '      docstring',
++        '',
++        '',
++        '.. py:function:: sum(x, y)',
++        '                 sum(x, y)',
++        '                 sum(x, y)',
++        '   :module: target.overload',
++        '',
++        '   docstring',
++        '',
++    ]
++
++
+ @pytest.mark.sphinx('text', testroot='ext-autodoc',
+                     confoverrides={'autodoc_typehints': "description"})
+ def test_autodoc_typehints_description(app):
+diff --git a/tox.ini b/tox.ini
+index a61299979..e2baccc07 100644
+--- a/tox.ini
++++ b/tox.ini
+@@ -28,7 +28,7 @@ setenv =
+     PYTHONWARNINGS = all,ignore::ImportWarning:importlib._bootstrap_external,ignore::DeprecationWarning:site,ignore::DeprecationWarning:distutils
+     PYTEST_ADDOPTS = --color yes
+ commands=
+-    pytest --durations 25 {posargs}
++    pytest -rA --durations 25 {posargs}
+ 
+ [testenv:flake8]
+ basepython = python3
+2026-11-19 14:35:58,995 - INFO - Git diff changed after running eval script
+2026-11-19 14:35:58,996 - INFO - Attempting to stop container exec.eval.x86_64.77d82541416cab86d0d86a.ce2b44235b2f454f0cbd56.125556472319344...
+2026-11-19 14:36:14,244 - INFO - Attempting to remove container exec.eval.x86_64.77d82541416cab86d0d86a.ce2b44235b2f454f0cbd56.125556472319344...
+2026-11-19 14:36:14,321 - INFO - Container exec.eval.x86_64.77d82541416cab86d0d86a.ce2b44235b2f454f0cbd56.125556472319344 removed.
+2026-11-19 14:36:14,321 - WARNING - End of eval at 1795124174.321659

@@ -1,0 +1,211 @@
+2026-11-19 14:30:56,950 - WARNING - Starting evaluation at 1795123856.950639
+2026-11-19 14:30:57,069 - INFO - Creating container for sphinx-doc__sphinx-7686...
+2026-11-19 14:30:57,105 - INFO - Container for sphinx-doc__sphinx-7686 created: e608ce790d4a9def21e46b1462e99f02f1632f3e396e1943998ec60826428eee
+2026-11-19 14:30:57,230 - INFO - Container for sphinx-doc__sphinx-7686 started: e608ce790d4a9def21e46b1462e99f02f1632f3e396e1943998ec60826428eee
+2026-11-19 14:30:57,393 - INFO - Git diff before:
+diff --git a/setup.py b/setup.py
+index a427d5493..978e3d8e0 100644
+--- a/setup.py
++++ b/setup.py
+@@ -15,22 +15,22 @@ if sys.version_info < (3, 5):
+     sys.exit(1)
+ 
+ install_requires = [
+-    'sphinxcontrib-applehelp',
+-    'sphinxcontrib-devhelp',
++    'sphinxcontrib-applehelp<=1.0.7',
++    'sphinxcontrib-devhelp<=1.0.5',
+     'sphinxcontrib-jsmath',
+-    'sphinxcontrib-htmlhelp',
+-    'sphinxcontrib-serializinghtml',
+-    'sphinxcontrib-qthelp',
+-    'Jinja2>=2.3',
++    'sphinxcontrib-htmlhelp<=2.0.4',
++    'sphinxcontrib-serializinghtml<=1.1.9',
++    'sphinxcontrib-qthelp<=1.0.6',
++    'Jinja2<3.0',
+     'Pygments>=2.0',
+     'docutils>=0.12',
+     'snowballstemmer>=1.1',
+     'babel>=1.3',
+-    'alabaster>=0.7,<0.8',
++    'alabaster>=0.7,<0.7.12',
+     'imagesize',
+     'requests>=2.5.0',
+     'setuptools',
+-    'packaging',
++    'packaging', 'markupsafe<=2.0.1',
+ ]
+ 
+ extras_require = {
+diff --git a/tox.ini b/tox.ini
+index d9f040544..bf39854b6 100644
+--- a/tox.ini
++++ b/tox.ini
+@@ -28,7 +28,7 @@ extras =
+ setenv =
+     PYTHONWARNINGS = all,ignore::ImportWarning:importlib._bootstrap_external,ignore::DeprecationWarning:site,ignore::DeprecationWarning:distutils
+ commands=
+-    pytest --durations 25 {posargs}
++    pytest -rA --durations 25 {posargs}
+ 
+ [testenv:flake8]
+ basepython = python3
+2026-11-19 14:30:57,396 - INFO - Eval script for sphinx-doc__sphinx-7686 written to eval.sh, now applying to container...
+2026-11-19 14:31:08,062 - INFO - Test output for sphinx-doc__sphinx-7686 written to run_instance_swt_logs/deepseek_flash_test_baseline/pred_post__deepseek__deepseek-flash/sphinx-doc__sphinx-7686/test_output.txt
+2026-11-19 14:31:08,102 - INFO - Git diff after:
+diff --git a/setup.py b/setup.py
+index a427d5493..978e3d8e0 100644
+--- a/setup.py
++++ b/setup.py
+@@ -15,22 +15,22 @@ if sys.version_info < (3, 5):
+     sys.exit(1)
+ 
+ install_requires = [
+-    'sphinxcontrib-applehelp',
+-    'sphinxcontrib-devhelp',
++    'sphinxcontrib-applehelp<=1.0.7',
++    'sphinxcontrib-devhelp<=1.0.5',
+     'sphinxcontrib-jsmath',
+-    'sphinxcontrib-htmlhelp',
+-    'sphinxcontrib-serializinghtml',
+-    'sphinxcontrib-qthelp',
+-    'Jinja2>=2.3',
++    'sphinxcontrib-htmlhelp<=2.0.4',
++    'sphinxcontrib-serializinghtml<=1.1.9',
++    'sphinxcontrib-qthelp<=1.0.6',
++    'Jinja2<3.0',
+     'Pygments>=2.0',
+     'docutils>=0.12',
+     'snowballstemmer>=1.1',
+     'babel>=1.3',
+-    'alabaster>=0.7,<0.8',
++    'alabaster>=0.7,<0.7.12',
+     'imagesize',
+     'requests>=2.5.0',
+     'setuptools',
+-    'packaging',
++    'packaging', 'markupsafe<=2.0.1',
+ ]
+ 
+ extras_require = {
+diff --git a/sphinx/ext/autosummary/generate.py b/sphinx/ext/autosummary/generate.py
+index a57c73fb7..473ac3db6 100644
+--- a/sphinx/ext/autosummary/generate.py
++++ b/sphinx/ext/autosummary/generate.py
+@@ -18,6 +18,7 @@
+ """
+ 
+ import argparse
++import inspect
+ import locale
+ import os
+ import pkgutil
+@@ -176,6 +177,56 @@ class AutosummaryRenderer:
+ # -- Generating output ---------------------------------------------------------
+ 
+ 
++class ModuleScanner:
++    def __init__(self, app: Any, obj: Any) -> None:
++        self.app = app
++        self.object = obj
++
++    def get_object_type(self, name: str, value: Any) -> str:
++        return get_documenter(self.app, value, self.object).objtype
++
++    def is_skipped(self, name: str, value: Any, objtype: str) -> bool:
++        try:
++            return self.app.emit_firstresult('autodoc-skip-member', objtype,
++                                             name, value, False, {})
++        except Exception as exc:
++            logger.warning(__('autosummary: failed to determine %r to be documented, '
++                              'the following exception was raised:\n%s'),
++                           name, exc, type='autosummary')
++            return False
++
++    def scan(self, imported_members: bool) -> List[str]:
++        members = []
++        for name in dir(self.object):
++            try:
++                value = safe_getattr(self.object, name)
++            except AttributeError:
++                value = None
++
++            objtype = self.get_object_type(name, value)
++            if self.is_skipped(name, value, objtype):
++                continue
++
++            try:
++                if inspect.ismodule(value):
++                    imported = True
++                elif safe_getattr(value, '__module__') != self.object.__name__:
++                    imported = True
++                else:
++                    imported = False
++            except AttributeError:
++                imported = False
++
++            if imported_members:
++                # list all members up
++                members.append(name)
++            elif imported is False:
++                # list not-imported members up
++                members.append(name)
++
++        return members
++
++
+ def generate_autosummary_content(name: str, obj: Any, parent: Any,
+                                  template: AutosummaryRenderer, template_name: str,
+                                  imported_members: bool, app: Any,
+@@ -246,7 +297,8 @@ def generate_autosummary_content(name: str, obj: Any, parent: Any,
+     ns.update(context)
+ 
+     if doc.objtype == 'module':
+-        ns['members'] = dir(obj)
++        scanner = ModuleScanner(app, obj)
++        ns['members'] = scanner.scan(imported_members)
+         ns['functions'], ns['all_functions'] = \
+             get_members(obj, {'function'}, imported=imported_members)
+         ns['classes'], ns['all_classes'] = \
+diff --git a/tests/test_ext_autosummary.py b/tests/test_ext_autosummary.py
+index 166029ccb..fe3436422 100644
+--- a/tests/test_ext_autosummary.py
++++ b/tests/test_ext_autosummary.py
+@@ -346,6 +346,18 @@ def test_autosummary_mock_imports(app, status, warning):
+         sys.modules.pop('foo', None)  # unload foo module
+ 
+ 
++@pytest.mark.sphinx('dummy', testroot='ext-autosummary-imported-members-disabled')
++def test_autosummary_imported_members_disabled(app, status, warning):
++    try:
++        app.build()
++
++        content = (app.srcdir / 'generated' / 'target.rst').read_text()
++        assert 'local_function' in content.splitlines()
++        assert 'os' not in content.splitlines()
++    finally:
++        sys.modules.pop('target', None)
++
++
+ @pytest.mark.sphinx('dummy', testroot='ext-autosummary-imported_members')
+ def test_autosummary_imported_members(app, status, warning):
+     try:
+diff --git a/tox.ini b/tox.ini
+index d9f040544..bf39854b6 100644
+--- a/tox.ini
++++ b/tox.ini
+@@ -28,7 +28,7 @@ extras =
+ setenv =
+     PYTHONWARNINGS = all,ignore::ImportWarning:importlib._bootstrap_external,ignore::DeprecationWarning:site,ignore::DeprecationWarning:distutils
+ commands=
+-    pytest --durations 25 {posargs}
++    pytest -rA --durations 25 {posargs}
+ 
+ [testenv:flake8]
+ basepython = python3
+2026-11-19 14:31:08,103 - INFO - Git diff changed after running eval script
+2026-11-19 14:31:08,103 - INFO - Attempting to stop container exec.eval.x86_64.77d82541416cab86d0d86a.d456d15a2269faedca8e21.125556472150400...
+2026-11-19 14:31:23,335 - INFO - Attempting to remove container exec.eval.x86_64.77d82541416cab86d0d86a.d456d15a2269faedca8e21.125556472150400...
+2026-11-19 14:31:23,408 - INFO - Container exec.eval.x86_64.77d82541416cab86d0d86a.d456d15a2269faedca8e21.125556472150400 removed.
+2026-11-19 14:31:23,409 - WARNING - End of eval at 1795123883.4093306

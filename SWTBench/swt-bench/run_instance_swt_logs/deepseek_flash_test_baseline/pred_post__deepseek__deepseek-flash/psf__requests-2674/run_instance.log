@@ -1,0 +1,75 @@
+2026-11-19 14:21:25,347 - WARNING - Starting evaluation at 1795123285.3475041
+2026-11-19 14:21:25,466 - INFO - Creating container for psf__requests-2674...
+2026-11-19 14:21:25,497 - INFO - Container for psf__requests-2674 created: 8c057256166f7938e242b7538606bed741b7045534fac7fb58965d6f8a41ced1
+2026-11-19 14:21:25,607 - INFO - Container for psf__requests-2674 started: 8c057256166f7938e242b7538606bed741b7045534fac7fb58965d6f8a41ced1
+2026-11-19 14:21:25,661 - INFO - Git diff before:
+
+2026-11-19 14:21:25,664 - INFO - Eval script for psf__requests-2674 written to eval.sh, now applying to container...
+2026-11-19 14:22:23,065 - INFO - Test output for psf__requests-2674 written to run_instance_swt_logs/deepseek_flash_test_baseline/pred_post__deepseek__deepseek-flash/psf__requests-2674/test_output.txt
+2026-11-19 14:22:23,104 - INFO - Git diff after:
+diff --git a/requests/adapters.py b/requests/adapters.py
+index 841cbbfe..cf468608 100644
+--- a/requests/adapters.py
++++ b/requests/adapters.py
+@@ -19,6 +19,7 @@ from .compat import urlparse, basestring
+ from .utils import (DEFAULT_CA_BUNDLE_PATH, get_encoding_from_headers,
+                     prepend_scheme_if_needed, get_auth_from_url, urldefragauth)
+ from .structures import CaseInsensitiveDict
++from .packages.urllib3.exceptions import ClosedPoolError
+ from .packages.urllib3.exceptions import ConnectTimeoutError
+ from .packages.urllib3.exceptions import HTTPError as _HTTPError
+ from .packages.urllib3.exceptions import MaxRetryError
+@@ -421,6 +422,9 @@ class HTTPAdapter(BaseAdapter):
+ 
+             raise ConnectionError(e, request=request)
+ 
++        except ClosedPoolError as e:
++            raise ConnectionError(e, request=request)
++
+         except _ProxyError as e:
+             raise ProxyError(e)
+ 
+diff --git a/test_requests.py b/test_requests.py
+index 5f4f472a..0eb9c29f 100755
+--- a/test_requests.py
++++ b/test_requests.py
+@@ -1518,6 +1518,36 @@ class TestTimeout:
+         assert r.ok
+ 
+ 
++class TestUrllib3ExceptionWrapping(object):
++    """urllib3 exceptions should not leak through Requests' public API."""
++
++    def _get_with_error(self, error):
++        class ErrorConnection(object):
++            def urlopen(self, *args, **kwargs):
++                raise error
++
++        class ErrorAdapter(HTTPAdapter):
++            def get_connection(self, *args, **kwargs):
++                return ErrorConnection()
++
++        session = requests.Session()
++        session.trust_env = False
++        session.mount('http://', ErrorAdapter())
++        return session.get('http://example.com/')
++
++    def test_decode_error_is_wrapped(self):
++        from requests.packages.urllib3.exceptions import DecodeError
++
++        with pytest.raises(requests.exceptions.RequestException):
++            self._get_with_error(DecodeError('bad response body'))
++
++    def test_timeout_error_is_wrapped(self):
++        from requests.packages.urllib3.exceptions import TimeoutError
++
++        with pytest.raises(requests.exceptions.RequestException):
++            self._get_with_error(TimeoutError('proxy timed out'))
++
++
+ SendCall = collections.namedtuple('SendCall', ('args', 'kwargs'))
+2026-11-19 14:22:23,105 - INFO - Git diff changed after running eval script
+2026-11-19 14:22:23,105 - INFO - Attempting to stop container exec.eval.x86_64.3a9417a9d4b5c62087edb6.95fb340b89798cc0c11b55.125556491296720...
+2026-11-19 14:22:38,312 - INFO - Attempting to remove container exec.eval.x86_64.3a9417a9d4b5c62087edb6.95fb340b89798cc0c11b55.125556491296720...
+2026-11-19 14:22:38,345 - INFO - Container exec.eval.x86_64.3a9417a9d4b5c62087edb6.95fb340b89798cc0c11b55.125556491296720 removed.
+2026-11-19 14:22:38,346 - WARNING - End of eval at 1795123358.3461027

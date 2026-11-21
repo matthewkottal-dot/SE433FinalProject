@@ -1,0 +1,42 @@
+2026-11-19 14:36:14,433 - WARNING - Starting evaluation at 1795124174.433868
+2026-11-19 14:36:14,552 - INFO - Creating container for sympy__sympy-11870...
+2026-11-19 14:36:14,590 - INFO - Container for sympy__sympy-11870 created: 40184e151a5eebd90e7573c78c83dfbf9e24f0b3c683e7388415cdff89eedddb
+2026-11-19 14:36:14,714 - INFO - Container for sympy__sympy-11870 started: 40184e151a5eebd90e7573c78c83dfbf9e24f0b3c683e7388415cdff89eedddb
+2026-11-19 14:36:15,192 - INFO - Git diff before:
+
+2026-11-19 14:36:15,196 - INFO - Eval script for sympy__sympy-11870 written to eval.sh, now applying to container...
+2026-11-19 14:37:20,735 - INFO - Test output for sympy__sympy-11870 written to run_instance_swt_logs/deepseek_flash_test_baseline/pred_pre__deepseek__deepseek-flash/sympy__sympy-11870/test_output.txt
+2026-11-19 14:37:20,774 - INFO - Git diff after:
+diff --git a/sympy/simplify/tests/test_trigsimp.py b/sympy/simplify/tests/test_trigsimp.py
+index 67694b477b..28319c4ef9 100644
+--- a/sympy/simplify/tests/test_trigsimp.py
++++ b/sympy/simplify/tests/test_trigsimp.py
+@@ -426,3 +426,23 @@ def test_Piecewise():
+     # trigsimp tries not to touch non-trig containing args
+     assert trigsimp(Piecewise((e1, e3 < e2), (e3, True))) == \
+         Piecewise((e1, e3 < s2), (e3, True))
++
++
++def test_exponential_to_trig():
++    k = Symbol('k')
++    f = S.Half*(-I*exp(I*k) + I*exp(-I*k))
++
++    # The expression should reduce to sin(k) using either the general
++    # trigonometric simplifier or the dedicated exponential/trig simplifier.
++    r = trigsimp(f)
++    if r != sin(k):
++        r = exptrigsimp(f)
++    assert r == sin(k)
++
++    # As in the issue, the same identity divided by k should reduce to
++    # sin(k)/k (possibly expressed as the equivalent sinc(k)).
++    f = f/k
++    r = trigsimp(f)
++    if r.rewrite(sin) != sin(k)/k:
++        r = exptrigsimp(f)
++    assert r.rewrite(sin) == sin(k)/k
+2026-11-19 14:37:20,775 - INFO - Git diff changed after running eval script
+2026-11-19 14:37:20,775 - INFO - Attempting to stop container exec.eval.x86_64.deec2122407a414e380748.e14f807b5e51d01559f8d7.125556472319584...
+2026-11-19 14:37:35,985 - INFO - Attempting to remove container exec.eval.x86_64.deec2122407a414e380748.e14f807b5e51d01559f8d7.125556472319584...
+2026-11-19 14:37:36,018 - INFO - Container exec.eval.x86_64.deec2122407a414e380748.e14f807b5e51d01559f8d7.125556472319584 removed.
+2026-11-19 14:37:36,018 - WARNING - End of eval at 1795124256.0188692

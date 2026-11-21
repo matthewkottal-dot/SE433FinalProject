@@ -1,0 +1,172 @@
+2026-11-19 15:36:02,652 - WARNING - Starting evaluation at 1795127762.6527643
+2026-11-19 15:36:02,760 - INFO - Creating container for sphinx-doc__sphinx-8282...
+2026-11-19 15:36:02,794 - INFO - Container for sphinx-doc__sphinx-8282 created: f768dc1433e5f0d173605c07c15ff2fce5bb1d1d9db24ab5d010346eb95fbae7
+2026-11-19 15:36:02,910 - INFO - Container for sphinx-doc__sphinx-8282 started: f768dc1433e5f0d173605c07c15ff2fce5bb1d1d9db24ab5d010346eb95fbae7
+2026-11-19 15:36:03,291 - INFO - Git diff before:
+diff --git a/setup.py b/setup.py
+index 8505d2679..2571a3294 100644
+--- a/setup.py
++++ b/setup.py
+@@ -15,22 +15,22 @@ if sys.version_info < (3, 5):
+     sys.exit(1)
+ 
+ install_requires = [
+-    'sphinxcontrib-applehelp',
+-    'sphinxcontrib-devhelp',
++    'sphinxcontrib-applehelp<=1.0.7',
++    'sphinxcontrib-devhelp<=1.0.5',
+     'sphinxcontrib-jsmath',
+-    'sphinxcontrib-htmlhelp',
+-    'sphinxcontrib-serializinghtml',
+-    'sphinxcontrib-qthelp',
+-    'Jinja2>=2.3',
++    'sphinxcontrib-htmlhelp<=2.0.4',
++    'sphinxcontrib-serializinghtml<=1.1.9',
++    'sphinxcontrib-qthelp<=1.0.6',
++    'Jinja2<3.0',
+     'Pygments>=2.0',
+     'docutils>=0.12',
+     'snowballstemmer>=1.1',
+     'babel>=1.3',
+-    'alabaster>=0.7,<0.8',
++    'alabaster>=0.7,<0.7.12',
+     'imagesize',
+     'requests>=2.5.0',
+     'setuptools',
+-    'packaging',
++    'packaging', 'markupsafe<=2.0.1',
+ ]
+ 
+ extras_require = {
+diff --git a/tox.ini b/tox.ini
+index a61299979..e2baccc07 100644
+--- a/tox.ini
++++ b/tox.ini
+@@ -28,7 +28,7 @@ setenv =
+     PYTHONWARNINGS = all,ignore::ImportWarning:importlib._bootstrap_external,ignore::DeprecationWarning:site,ignore::DeprecationWarning:distutils
+     PYTEST_ADDOPTS = --color yes
+ commands=
+-    pytest --durations 25 {posargs}
++    pytest -rA --durations 25 {posargs}
+ 
+ [testenv:flake8]
+ basepython = python3
+2026-11-19 15:36:03,294 - INFO - Eval script for sphinx-doc__sphinx-8282 written to eval.sh, now applying to container...
+2026-11-19 15:36:09,857 - INFO - Test output for sphinx-doc__sphinx-8282 written to run_instance_swt_logs/deepseek_flash_test_context/pred_pre__deepseek__deepseek-flash/sphinx-doc__sphinx-8282/test_output.txt
+2026-11-19 15:36:09,894 - INFO - Git diff after:
+diff --git a/setup.py b/setup.py
+index 8505d2679..2571a3294 100644
+--- a/setup.py
++++ b/setup.py
+@@ -15,22 +15,22 @@ if sys.version_info < (3, 5):
+     sys.exit(1)
+ 
+ install_requires = [
+-    'sphinxcontrib-applehelp',
+-    'sphinxcontrib-devhelp',
++    'sphinxcontrib-applehelp<=1.0.7',
++    'sphinxcontrib-devhelp<=1.0.5',
+     'sphinxcontrib-jsmath',
+-    'sphinxcontrib-htmlhelp',
+-    'sphinxcontrib-serializinghtml',
+-    'sphinxcontrib-qthelp',
+-    'Jinja2>=2.3',
++    'sphinxcontrib-htmlhelp<=2.0.4',
++    'sphinxcontrib-serializinghtml<=1.1.9',
++    'sphinxcontrib-qthelp<=1.0.6',
++    'Jinja2<3.0',
+     'Pygments>=2.0',
+     'docutils>=0.12',
+     'snowballstemmer>=1.1',
+     'babel>=1.3',
+-    'alabaster>=0.7,<0.8',
++    'alabaster>=0.7,<0.7.12',
+     'imagesize',
+     'requests>=2.5.0',
+     'setuptools',
+-    'packaging',
++    'packaging', 'markupsafe<=2.0.1',
+ ]
+ 
+ extras_require = {
+diff --git a/tests/test_ext_autodoc.py b/tests/test_ext_autodoc.py
+index c0676f23f..81d834e8b 100644
+--- a/tests/test_ext_autodoc.py
++++ b/tests/test_ext_autodoc.py
+@@ -2149,3 +2149,58 @@ def test_name_mangling(app):
+         '      name of Foo',
+         '',
+     ]
++
++
++@pytest.mark.sphinx('html', testroot='ext-autodoc',
++                    confoverrides={'autodoc_typehints': 'none'})
++def test_overload_with_autodoc_typehints_none(app):
++    options = {"members": None}
++    actual = do_autodoc(app, 'module', 'target.overload', options)
++    assert list(actual) == [
++        '',
++        '.. py:module:: target.overload',
++        '',
++        '',
++        '.. py:class:: Bar(x, y)',
++        '              Bar(x, y)',
++        '   :module: target.overload',
++        '',
++        '   docstring',
++        '',
++        '',
++        '.. py:class:: Baz(x, y)',
++        '              Baz(x, y)',
++        '   :module: target.overload',
++        '',
++        '   docstring',
++        '',
++        '',
++        '.. py:class:: Foo(x, y)',
++        '              Foo(x, y)',
++        '   :module: target.overload',
++        '',
++        '   docstring',
++        '',
++        '',
++        '.. py:class:: Math()',
++        '   :module: target.overload',
++        '',
++        '   docstring',
++        '',
++        '',
++        '   .. py:method:: Math.sum(x, y)',
++        '                  Math.sum(x, y)',
++        '                  Math.sum(x, y)',
++        '      :module: target.overload',
++        '',
++        '      docstring',
++        '',
++        '',
++        '.. py:function:: sum(x, y)',
++        '                 sum(x, y)',
++        '                 sum(x, y)',
++        '   :module: target.overload',
++        '',
++        '   docstring',
++        '',
++    ]
+diff --git a/tox.ini b/tox.ini
+index a61299979..e2baccc07 100644
+--- a/tox.ini
++++ b/tox.ini
+@@ -28,7 +28,7 @@ setenv =
+     PYTHONWARNINGS = all,ignore::ImportWarning:importlib._bootstrap_external,ignore::DeprecationWarning:site,ignore::DeprecationWarning:distutils
+     PYTEST_ADDOPTS = --color yes
+ commands=
+-    pytest --durations 25 {posargs}
++    pytest -rA --durations 25 {posargs}
+ 
+ [testenv:flake8]
+ basepython = python3
+2026-11-19 15:36:09,895 - INFO - Git diff changed after running eval script
+2026-11-19 15:36:09,895 - INFO - Attempting to stop container exec.eval.x86_64.77d82541416cab86d0d86a.ce2b44235b2f454f0cbd56.131896705813872...
+2026-11-19 15:36:25,089 - INFO - Attempting to remove container exec.eval.x86_64.77d82541416cab86d0d86a.ce2b44235b2f454f0cbd56.131896705813872...
+2026-11-19 15:36:25,158 - INFO - Container exec.eval.x86_64.77d82541416cab86d0d86a.ce2b44235b2f454f0cbd56.131896705813872 removed.
+2026-11-19 15:36:25,159 - WARNING - End of eval at 1795127785.15918

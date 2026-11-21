@@ -1,0 +1,54 @@
+2026-11-19 15:26:05,151 - WARNING - Starting evaluation at 1795127165.151291
+2026-11-19 15:26:05,251 - INFO - Creating container for psf__requests-863...
+2026-11-19 15:26:05,280 - INFO - Container for psf__requests-863 created: b1b5ead014b2060ce460be1c495f2ec328c09aaa8635b17daf2818923750bb4b
+2026-11-19 15:26:05,380 - INFO - Container for psf__requests-863 started: b1b5ead014b2060ce460be1c495f2ec328c09aaa8635b17daf2818923750bb4b
+2026-11-19 15:26:05,430 - INFO - Git diff before:
+
+2026-11-19 15:26:05,433 - INFO - Eval script for psf__requests-863 written to eval.sh, now applying to container...
+2026-11-19 15:26:21,735 - INFO - Test output for psf__requests-863 written to run_instance_swt_logs/deepseek_flash_test_context/pred_post__deepseek__deepseek-flash/psf__requests-863/test_output.txt
+2026-11-19 15:26:21,772 - INFO - Git diff after:
+diff --git a/requests/models.py b/requests/models.py
+index d8456375..f33c3c3e 100644
+--- a/requests/models.py
++++ b/requests/models.py
+@@ -462,8 +462,10 @@ class Request(object):
+ 
+     def register_hook(self, event, hook):
+         """Properly register a hook."""
+-
+-        self.hooks[event].append(hook)
++        if isinstance(hook, (list, tuple, set)):
++            self.hooks[event].extend(hook)
++        else:
++            self.hooks[event].append(hook)
+ 
+     def deregister_hook(self, event, hook):
+         """Deregister a previously registered hook.
+diff --git a/tests/test_requests.py b/tests/test_requests.py
+index f8a31f24..22172dcc 100755
+--- a/tests/test_requests.py
++++ b/tests/test_requests.py
+@@ -710,6 +710,18 @@ class RequestsTestSuite(TestSetup, TestBaseMixin, unittest.TestCase):
+ 
+             assert 'foo' in response.text
+ 
++    def test_multiple_hooks_are_parsed_from_hooks_dict(self):
++        def first_hook(args):
++            return args
++
++        def second_hook(args):
++            return args
++
++        request = requests.Request(
++            'http://example.com/', hooks={'args': [first_hook, second_hook]})
++
++        self.assertEqual(request.hooks['args'], [first_hook, second_hook])
++
+     def test_multiple_hooks(self):
+ 
+         def add_foo_header(args):
+2026-11-19 15:26:21,772 - INFO - Git diff changed after running eval script
+2026-11-19 15:26:21,773 - INFO - Attempting to stop container exec.eval.x86_64.3a9417a9d4b5c62087edb6.f9c825a48927a46fdbefc3.131896724999984...
+2026-11-19 15:26:36,972 - INFO - Attempting to remove container exec.eval.x86_64.3a9417a9d4b5c62087edb6.f9c825a48927a46fdbefc3.131896724999984...
+2026-11-19 15:26:36,999 - INFO - Container exec.eval.x86_64.3a9417a9d4b5c62087edb6.f9c825a48927a46fdbefc3.131896724999984 removed.
+2026-11-19 15:26:37,000 - WARNING - End of eval at 1795127197.0000713

@@ -1,0 +1,32 @@
+2026-11-19 15:02:22,194 - WARNING - Starting evaluation at 1795125742.194176
+2026-11-19 15:02:22,312 - INFO - Creating container for django__django-13658...
+2026-11-19 15:02:22,356 - INFO - Container for django__django-13658 created: 5db27c2e6caba6986f2ec8d4563a28adfa17caa068a96ea9c7b277d3af72e47d
+2026-11-19 15:02:22,491 - INFO - Container for django__django-13658 started: 5db27c2e6caba6986f2ec8d4563a28adfa17caa068a96ea9c7b277d3af72e47d
+2026-11-19 15:02:23,677 - INFO - Git diff before:
+
+2026-11-19 15:02:23,680 - INFO - Eval script for django__django-13658 written to eval.sh, now applying to container...
+2026-11-19 15:02:28,581 - INFO - Test output for django__django-13658 written to run_instance_swt_logs/deepseek_flash_test_context/pred_pre__deepseek__deepseek-flash/django__django-13658/test_output.txt
+2026-11-19 15:02:28,620 - INFO - Git diff after:
+diff --git a/tests/user_commands/tests.py b/tests/user_commands/tests.py
+index 9262e2717a..ffe7498d29 100644
+--- a/tests/user_commands/tests.py
++++ b/tests/user_commands/tests.py
+@@ -54,6 +54,13 @@ class CommandTests(SimpleTestCase):
+         with self.assertRaisesMessage(CommandError, "Unknown command: 'explode'"):
+             management.call_command(('explode',))
+ 
++    @mock.patch('sys.argv', [None])
++    def test_management_utility_uses_custom_argv_prog_name(self):
++        out = StringIO()
++        with mock.patch('sys.stdout', out):
++            management.execute_from_command_line(['custom_prog', 'help'])
++        self.assertIn("Type 'custom_prog help <subcommand>'", out.getvalue())
++
+     def test_system_exit(self):
+         """ Exception raised in a command should raise CommandError with
+             call_command, but SystemExit when run from command line
+2026-11-19 15:02:28,621 - INFO - Git diff changed after running eval script
+2026-11-19 15:02:28,621 - INFO - Attempting to stop container exec.eval.x86_64.f904a9d2e0f61fc0d70077.17968096d520ad8b776daa.131896724528432...
+2026-11-19 15:02:43,842 - INFO - Attempting to remove container exec.eval.x86_64.f904a9d2e0f61fc0d70077.17968096d520ad8b776daa.131896724528432...
+2026-11-19 15:02:43,882 - INFO - Container exec.eval.x86_64.f904a9d2e0f61fc0d70077.17968096d520ad8b776daa.131896724528432 removed.
+2026-11-19 15:02:43,882 - WARNING - End of eval at 1795125763.882818

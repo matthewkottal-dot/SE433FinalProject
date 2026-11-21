@@ -1,0 +1,41 @@
+diff --git a/test_requests.py b/test_requests.py
+index 5f4f472..0eb9c29 100755
+--- a/test_requests.py
++++ b/test_requests.py
+@@ -1518,6 +1518,36 @@ class TestTimeout:
+         assert r.ok
+ 
+ 
++class TestUrllib3ExceptionWrapping(object):
++    """urllib3 exceptions should not leak through Requests' public API."""
++
++    def _get_with_error(self, error):
++        class ErrorConnection(object):
++            def urlopen(self, *args, **kwargs):
++                raise error
++
++        class ErrorAdapter(HTTPAdapter):
++            def get_connection(self, *args, **kwargs):
++                return ErrorConnection()
++
++        session = requests.Session()
++        session.trust_env = False
++        session.mount('http://', ErrorAdapter())
++        return session.get('http://example.com/')
++
++    def test_decode_error_is_wrapped(self):
++        from requests.packages.urllib3.exceptions import DecodeError
++
++        with pytest.raises(requests.exceptions.RequestException):
++            self._get_with_error(DecodeError('bad response body'))
++
++    def test_timeout_error_is_wrapped(self):
++        from requests.packages.urllib3.exceptions import TimeoutError
++
++        with pytest.raises(requests.exceptions.RequestException):
++            self._get_with_error(TimeoutError('proxy timed out'))
++
++
+ SendCall = collections.namedtuple('SendCall', ('args', 'kwargs'))
+ 
+ 

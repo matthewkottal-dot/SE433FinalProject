@@ -1,0 +1,53 @@
+2026-11-19 15:27:01,547 - WARNING - Starting evaluation at 1795127221.5470634
+2026-11-19 15:27:01,656 - INFO - Creating container for pytest-dev__pytest-11143...
+2026-11-19 15:27:01,685 - INFO - Container for pytest-dev__pytest-11143 created: 20025ff9d44d0cd9e2c658c1dc15271d5788d308187e0bdc508c9cc19c45c773
+2026-11-19 15:27:01,816 - INFO - Container for pytest-dev__pytest-11143 started: 20025ff9d44d0cd9e2c658c1dc15271d5788d308187e0bdc508c9cc19c45c773
+2026-11-19 15:27:01,901 - INFO - Git diff before:
+
+2026-11-19 15:27:01,903 - INFO - Eval script for pytest-dev__pytest-11143 written to eval.sh, now applying to container...
+2026-11-19 15:27:09,065 - INFO - Test output for pytest-dev__pytest-11143 written to run_instance_swt_logs/deepseek_flash_test_context/pred_post__deepseek__deepseek-flash/pytest-dev__pytest-11143/test_output.txt
+2026-11-19 15:27:09,103 - INFO - Git diff after:
+diff --git a/src/_pytest/assertion/rewrite.py b/src/_pytest/assertion/rewrite.py
+index 157903faf..9bf79f1e1 100644
+--- a/src/_pytest/assertion/rewrite.py
++++ b/src/_pytest/assertion/rewrite.py
+@@ -676,6 +676,7 @@ class AssertionRewriter(ast.NodeVisitor):
+                 expect_docstring
+                 and isinstance(item, ast.Expr)
+                 and isinstance(item.value, ast.Constant)
++                and isinstance(item.value.value, str)
+             ):
+                 doc = item.value.value
+                 if self.is_rewrite_disabled(doc):
+diff --git a/testing/test_assertrewrite.py b/testing/test_assertrewrite.py
+index d01803204..4369d0750 100644
+--- a/testing/test_assertrewrite.py
++++ b/testing/test_assertrewrite.py
+@@ -113,6 +113,22 @@ class TestAssertionRewrite:
+             assert imp.col_offset == 0
+         assert isinstance(m.body[3], ast.Expr)
+ 
++    @pytest.mark.parametrize("first_statement", ["42", "None", "True", "b'bytes'"])
++    def test_first_statement_is_not_a_docstring(
++        self, first_statement: str, pytester: Pytester
++    ) -> None:
++        """Non-string constants must not be treated as module docstrings."""
++        pytester.makepyfile(
++            f"""
++            {first_statement}
++
++            def test_rewritten():
++                assert 1 == 1
++            """
++        )
++        result = pytester.runpytest()
++        result.assert_outcomes(passed=1)
++
+     def test_location_is_set(self) -> None:
+         s = textwrap.dedent(
+             """
+2026-11-19 15:27:09,103 - INFO - Git diff changed after running eval script
+2026-11-19 15:27:09,104 - INFO - Attempting to stop container exec.eval.x86_64.0a53cb26c68560f276cb87.8b5a06a3ebdb128156a175.131896725004336...
+2026-11-19 15:27:24,310 - INFO - Attempting to remove container exec.eval.x86_64.0a53cb26c68560f276cb87.8b5a06a3ebdb128156a175.131896725004336...
+2026-11-19 15:27:24,358 - INFO - Container exec.eval.x86_64.0a53cb26c68560f276cb87.8b5a06a3ebdb128156a175.131896725004336 removed.
+2026-11-19 15:27:24,358 - WARNING - End of eval at 1795127244.3588881

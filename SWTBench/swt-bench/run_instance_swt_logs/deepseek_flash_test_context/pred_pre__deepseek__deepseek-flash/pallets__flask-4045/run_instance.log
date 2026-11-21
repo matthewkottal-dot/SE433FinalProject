@@ -1,0 +1,54 @@
+2026-11-19 15:03:45,076 - WARNING - Starting evaluation at 1795125825.0765705
+2026-11-19 15:03:45,196 - INFO - Creating container for pallets__flask-4045...
+2026-11-19 15:03:45,232 - INFO - Container for pallets__flask-4045 created: 0acaceb2b39c1963ee719c211437aafb78b86aeb2749e560242c975f9c3780e7
+2026-11-19 15:03:45,364 - INFO - Container for pallets__flask-4045 started: 0acaceb2b39c1963ee719c211437aafb78b86aeb2749e560242c975f9c3780e7
+2026-11-19 15:03:45,455 - INFO - Git diff before:
+
+2026-11-19 15:03:45,458 - INFO - Eval script for pallets__flask-4045 written to eval.sh, now applying to container...
+2026-11-19 15:03:50,646 - INFO - Test output for pallets__flask-4045 written to run_instance_swt_logs/deepseek_flash_test_context/pred_pre__deepseek__deepseek-flash/pallets__flask-4045/test_output.txt
+2026-11-19 15:03:50,682 - INFO - Git diff after:
+diff --git a/tests/test_blueprints.py b/tests/test_blueprints.py
+index b986ca02..22961429 100644
+--- a/tests/test_blueprints.py
++++ b/tests/test_blueprints.py
+@@ -253,28 +253,15 @@ def test_templates_list(test_apps):
+     assert templates == ["admin/index.html", "frontend/index.html"]
+ 
+ 
+-def test_dotted_names(app, client):
+-    frontend = flask.Blueprint("myapp.frontend", __name__)
+-    backend = flask.Blueprint("myapp.backend", __name__)
++def test_dotted_names():
++    with pytest.raises(ValueError, match="may not contain a dot"):
++        flask.Blueprint("myapp.frontend", __name__)
+ 
+-    @frontend.route("/fe")
+-    def frontend_index():
+-        return flask.url_for("myapp.backend.backend_index")
+ 
+-    @frontend.route("/fe2")
+-    def frontend_page2():
+-        return flask.url_for(".frontend_index")
+-
+-    @backend.route("/be")
+-    def backend_index():
+-        return flask.url_for("myapp.frontend.frontend_index")
+-
+-    app.register_blueprint(frontend)
+-    app.register_blueprint(backend)
+-
+-    assert client.get("/fe").data.strip() == b"/be"
+-    assert client.get("/fe2").data.strip() == b"/fe"
+-    assert client.get("/be").data.strip() == b"/fe"
++@pytest.mark.parametrize("name", [".frontend", "frontend.", "my.app.frontend"])
++def test_blueprint_name_with_dot(name):
++    with pytest.raises(ValueError, match="may not contain a dot"):
++        flask.Blueprint(name, __name__)
+ 
+ 
+ def test_dotted_names_from_app(app, client):
+2026-11-19 15:03:50,683 - INFO - Git diff changed after running eval script
+2026-11-19 15:03:50,683 - INFO - Attempting to stop container exec.eval.x86_64.a76142573b3d6fbe711563.781a43cd59615fabd1befe.131896724633104...
+2026-11-19 15:04:05,886 - INFO - Attempting to remove container exec.eval.x86_64.a76142573b3d6fbe711563.781a43cd59615fabd1befe.131896724633104...
+2026-11-19 15:04:05,913 - INFO - Container exec.eval.x86_64.a76142573b3d6fbe711563.781a43cd59615fabd1befe.131896724633104 removed.
+2026-11-19 15:04:05,914 - WARNING - End of eval at 1795125845.9145923

@@ -1,0 +1,72 @@
+2026-11-19 14:02:07,818 - WARNING - Starting evaluation at 1795122127.818884
+2026-11-19 14:02:07,935 - INFO - Creating container for psf__requests-1963...
+2026-11-19 14:02:07,971 - INFO - Container for psf__requests-1963 created: 8386ca81de7eab3f02a0407875ffa03b661648a27924d6c8393661d4b666fc57
+2026-11-19 14:02:08,083 - INFO - Container for psf__requests-1963 started: 8386ca81de7eab3f02a0407875ffa03b661648a27924d6c8393661d4b666fc57
+2026-11-19 14:02:08,160 - INFO - Git diff before:
+
+2026-11-19 14:02:08,163 - INFO - Eval script for psf__requests-1963 written to eval.sh, now applying to container...
+2026-11-19 14:02:24,093 - INFO - Test output for psf__requests-1963 written to run_instance_swt_logs/deepseek_flash_test_baseline/pred_pre__deepseek__deepseek-flash/psf__requests-1963/test_output.txt
+2026-11-19 14:02:24,131 - INFO - Git diff after:
+diff --git a/test_requests.py b/test_requests.py
+index 17de8491..aa4f773e 100755
+--- a/test_requests.py
++++ b/test_requests.py
+@@ -122,6 +122,54 @@ class RequestsTestCase(unittest.TestCase):
+     #     r = requests.post(httpbin('status', '302'), data={'some': 'data'})
+     #     self.assertEqual(r.status_code, 200)
+ 
++    def test_redirect_after_303_preserves_get_method(self):
++        class FakeRaw(object):
++            _original_response = None
++
++            def read(self, *args, **kwargs):
++                return b''
++
++            def stream(self, *args, **kwargs):
++                return iter(())
++
++            def release_conn(self):
++                pass
++
++        class FakeAdapter(HTTPAdapter):
++            def __init__(self, responses):
++                self.responses = list(responses)
++                self.requests = []
++
++            def send(self, request, **kwargs):
++                self.requests.append(request)
++                response = self.responses.pop(0)
++                response.request = request
++                response.url = request.url
++                return response
++
++        def response(status_code, location=None):
++            response = requests.Response()
++            response.status_code = status_code
++            response.raw = FakeRaw()
++            if location is not None:
++                response.headers['location'] = location
++            return response
++
++        adapter = FakeAdapter([
++            response(303, '/new_thing_1513'),
++            response(307, '//failover.example.com/new_thing_1513'),
++            response(200),
++        ])
++        session = requests.Session()
++        session.mount('http://', adapter)
++
++        response = session.post('http://server.example.com/do_something')
++
++        assert [request.method for request in adapter.requests] == [
++            'POST', 'GET', 'GET']
++        assert response.request.method == 'GET'
++        assert [r.request.method for r in response.history] == ['POST', 'GET']
++
+     def test_HTTP_200_OK_GET_WITH_PARAMS(self):
+         heads = {'User-agent': 'Mozilla/5.0'}
+2026-11-19 14:02:24,131 - INFO - Git diff changed after running eval script
+2026-11-19 14:02:24,132 - INFO - Attempting to stop container exec.eval.x86_64.3a9417a9d4b5c62087edb6.741cb0e73865c12dd3290a.125556490410320...
+2026-11-19 14:02:39,340 - INFO - Attempting to remove container exec.eval.x86_64.3a9417a9d4b5c62087edb6.741cb0e73865c12dd3290a.125556490410320...
+2026-11-19 14:02:39,372 - INFO - Container exec.eval.x86_64.3a9417a9d4b5c62087edb6.741cb0e73865c12dd3290a.125556490410320 removed.
+2026-11-19 14:02:39,373 - WARNING - End of eval at 1795122159.37309

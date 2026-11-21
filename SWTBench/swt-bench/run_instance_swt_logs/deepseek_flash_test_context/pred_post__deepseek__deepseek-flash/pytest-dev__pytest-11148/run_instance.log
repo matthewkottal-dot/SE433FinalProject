@@ -1,0 +1,80 @@
+2026-11-19 15:27:47,987 - WARNING - Starting evaluation at 1795127267.987163
+2026-11-19 15:27:48,093 - INFO - Creating container for pytest-dev__pytest-11148...
+2026-11-19 15:27:48,123 - INFO - Container for pytest-dev__pytest-11148 created: 7400396bb0e11c4055674dac0fb5c11c61f365af98b7b166f64bd98a016043ab
+2026-11-19 15:27:48,261 - INFO - Container for pytest-dev__pytest-11148 started: 7400396bb0e11c4055674dac0fb5c11c61f365af98b7b166f64bd98a016043ab
+2026-11-19 15:27:48,344 - INFO - Git diff before:
+
+2026-11-19 15:27:48,347 - INFO - Eval script for pytest-dev__pytest-11148 written to eval.sh, now applying to container...
+2026-11-19 15:27:56,083 - INFO - Test output for pytest-dev__pytest-11148 written to run_instance_swt_logs/deepseek_flash_test_context/pred_post__deepseek__deepseek-flash/pytest-dev__pytest-11148/test_output.txt
+2026-11-19 15:27:56,120 - INFO - Git diff after:
+diff --git a/src/_pytest/pathlib.py b/src/_pytest/pathlib.py
+index e43310ef0..14fb2e3ae 100644
+--- a/src/_pytest/pathlib.py
++++ b/src/_pytest/pathlib.py
+@@ -523,6 +523,8 @@ def import_path(
+ 
+     if mode is ImportMode.importlib:
+         module_name = module_name_from_path(path, root)
++        with contextlib.suppress(KeyError):
++            return sys.modules[module_name]
+ 
+         for meta_importer in sys.meta_path:
+             spec = meta_importer.find_spec(module_name, [str(path.parent)])
+diff --git a/testing/test_doctest.py b/testing/test_doctest.py
+index f189e8645..47ae30e7b 100644
+--- a/testing/test_doctest.py
++++ b/testing/test_doctest.py
+@@ -135,6 +135,48 @@ class TestDoctests:
+         reprec = pytester.inline_run("--doctest-modules", "--import-mode=importlib")
+         reprec.assertoutcome(passed=1)
+ 
++    def test_importmode_importlib_module_imported_once(
++        self, pytester: Pytester
++    ) -> None:
++        """
++        Modules imported before doctest collection should not be imported again
++        by ``--import-mode=importlib``, otherwise references to the previous
++        module object become stale.
++        """
++        pytester.makeini(
++            """
++            [pytest]
++            pythonpath = .
++            """
++        )
++        pytester.makepyfile(
++            **{
++                "conftest.py": """
++                    import mypkg.mod
++                """,
++                "mypkg/__init__.py": "",
++                "mypkg/mod.py": '''
++                    def add(a, b):
++                        """
++                        >>> add(1, 2)
++                        3
++                        """
++                        return a + b
++                ''',
++                "test_identity.py": """
++                    import sys
++                    import mypkg.mod
++
++                    def test_identity():
++                        assert sys.modules["mypkg.mod"] is mypkg.mod
++                """,
++            }
++        )
++        result = pytester.runpytest(
++            "--doctest-modules", "--import-mode=importlib", "-v"
++        )
++        result.assert_outcomes(passed=2)
++
+     def test_new_pattern(self, pytester: Pytester):
+         p = pytester.maketxtfile(
+             xdoc="""
+2026-11-19 15:27:56,121 - INFO - Git diff changed after running eval script
+2026-11-19 15:27:56,121 - INFO - Attempting to stop container exec.eval.x86_64.0a53cb26c68560f276cb87.fa39195893122d674eb8da.131896724985680...
+2026-11-19 15:28:11,292 - INFO - Attempting to remove container exec.eval.x86_64.0a53cb26c68560f276cb87.fa39195893122d674eb8da.131896724985680...
+2026-11-19 15:28:11,345 - INFO - Container exec.eval.x86_64.0a53cb26c68560f276cb87.fa39195893122d674eb8da.131896724985680 removed.
+2026-11-19 15:28:11,346 - WARNING - End of eval at 1795127291.3462863

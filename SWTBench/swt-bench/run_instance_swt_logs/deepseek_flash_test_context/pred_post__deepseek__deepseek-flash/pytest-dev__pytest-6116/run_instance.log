@@ -1,0 +1,47 @@
+2026-11-19 15:29:17,062 - WARNING - Starting evaluation at 1795127357.0620384
+2026-11-19 15:29:17,171 - INFO - Creating container for pytest-dev__pytest-6116...
+2026-11-19 15:29:17,201 - INFO - Container for pytest-dev__pytest-6116 created: 130ce61a494baef7d681435451303616bdbe5e0a22533688b30e55f8b01ff934
+2026-11-19 15:29:17,301 - INFO - Container for pytest-dev__pytest-6116 started: 130ce61a494baef7d681435451303616bdbe5e0a22533688b30e55f8b01ff934
+2026-11-19 15:29:17,372 - INFO - Git diff before:
+
+2026-11-19 15:29:17,375 - INFO - Eval script for pytest-dev__pytest-6116 written to eval.sh, now applying to container...
+2026-11-19 15:29:23,618 - INFO - Test output for pytest-dev__pytest-6116 written to run_instance_swt_logs/deepseek_flash_test_context/pred_post__deepseek__deepseek-flash/pytest-dev__pytest-6116/test_output.txt
+2026-11-19 15:29:23,654 - INFO - Git diff after:
+diff --git a/src/_pytest/main.py b/src/_pytest/main.py
+index 843c5b5f7..b4261c188 100644
+--- a/src/_pytest/main.py
++++ b/src/_pytest/main.py
+@@ -109,6 +109,7 @@ def pytest_addoption(parser):
+     group.addoption(
+         "--collectonly",
+         "--collect-only",
++        "--co",
+         action="store_true",
+         help="only collect tests, don't execute them.",
+     ),
+diff --git a/testing/test_collection.py b/testing/test_collection.py
+index 259868357..99dc59ac1 100644
+--- a/testing/test_collection.py
++++ b/testing/test_collection.py
+@@ -1257,3 +1257,16 @@ def test_collector_respects_tbstyle(testdir):
+             "*= 1 error in *",
+         ]
+     )
++
++
++def test_collect_only_with_short_option(testdir):
++    """``--co`` is a shortcut for ``--collect-only``."""
++    testdir.makepyfile(
++        """
++        def test_collected():
++            assert False
++        """
++    )
++    result = testdir.runpytest("--co")
++    assert result.ret == ExitCode.OK
++    result.stdout.fnmatch_lines(["*test_collected*", "collected 1 item*"])
+2026-11-19 15:29:23,654 - INFO - Git diff changed after running eval script
+2026-11-19 15:29:23,655 - INFO - Attempting to stop container exec.eval.x86_64.bbbc4277fd8f648e693b98.81edf9e00f8a91f1a378b3.131896705634128...
+2026-11-19 15:29:38,829 - INFO - Attempting to remove container exec.eval.x86_64.bbbc4277fd8f648e693b98.81edf9e00f8a91f1a378b3.131896705634128...
+2026-11-19 15:29:38,874 - INFO - Container exec.eval.x86_64.bbbc4277fd8f648e693b98.81edf9e00f8a91f1a378b3.131896705634128 removed.
+2026-11-19 15:29:38,875 - WARNING - End of eval at 1795127378.8750596
