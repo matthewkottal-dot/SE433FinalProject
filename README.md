@@ -230,21 +230,39 @@ Recorded LLM inference costs and API call counts were obtained from the generati
 
 Generation-run execution time was measured for each configuration. These measurements include generation execution overhead but exclude initial dataset loading and subsequent SWT-Bench evaluation.
 
+
 ## Generated Artifacts
 
-The project includes the following categories of artifacts:
+The repository includes the baseline and experimental configurations, generated test patches, prediction files, generation logs, SWT-Bench evaluation results, and supporting computational cost records.
 
-- Baseline and experimental prompt configurations
-- Generated regression test patches
-- Prediction JSONL files
-- Agent generation logs
-- SWT-Bench evaluation results
-- Per-instance reproduction outcomes
-- Computational cost records
+### Test Generation Results
 
-Generation outputs are located under `mini-swe-agent/results/`.
+The generation outputs are located under `mini-swe-agent/results/`.
 
-The exact locations of the evaluation archives, per-instance comparison records, and other supporting artifacts should be documented here after their final repository locations are verified.
+| Artifact | Location |
+|---|---|
+| Baseline generation archive | `mini-swe-agent/results/baseline_generation.zip` |
+| Experimental generation archive | `mini-swe-agent/results/experiment_generation.zip` |
+| Baseline predictions | `mini-swe-agent/results/deepseek_flash_test_baseline/preds.jsonl` |
+| Experimental predictions | `mini-swe-agent/results/deepseek_flash_test_context/preds.jsonl` |
+
+### SWT-Bench Evaluation Results
+
+Evaluation artifacts are located under `SWTBench/swt-bench/run_instance_swt_logs/`.
+
+The `deepseek_flash_test_baseline/` and `deepseek_flash_test_context/` directories contain the corresponding evaluation results, including aggregate JSON summaries and per-instance execution reports.
+
+These records support the reported issue reproduction success rates, code coverage measurements, and coverage deltas.
+
+### Computational Cost and Execution Time
+
+Recorded LLM inference costs and generation execution times were obtained from the mini-SWE-agent generation outputs.
+
+The aggregate measurements and comparison are presented in the Results Summary section of this README.
+
+### Per-Instance Results
+
+Individual SWT-Bench evaluation reports are preserved for both configurations. These allow the reproduction outcome of each of the 24 instances to be inspected independently.
 
 ## Reproducibility Notes
 
@@ -254,7 +272,23 @@ Because LLM-generated outputs may vary between executions, rerunning the command
 
 The baseline and experimental configuration files preserve the prompt configurations used for comparison.
 
-**Additional reproducibility details to document:** the exact agent stopping rules, final candidate selection procedure, dependency versions, and any relevant execution limits.
+### Stop conditions of the experiment
+
+The conditions that will cause the experiment pre-maturly:
+1. 250 step limit for agent is exceeded
+2. $3.00 spend limit for agent is exceeded
+3. 60 second timeout threshold on command line exceutions is exceeded
+
+### Dependency Management
+
+The repository includes dependency manifests for both major project components:
+
+- `mini-swe-agent/pyproject.toml` — mini-SWE-agent project dependencies and package configuration.
+- `SWTBench/swt-bench/pyproject.toml` — SWT-Bench project dependencies and package configuration.
+- `SWTBench/swt-bench/uv.lock` — locked dependency resolution for SWT-Bench.
+- `SWTBench/swt-bench/src/auxillary_src/requirements_extraction.txt` — auxiliary extraction requirements.
+
+These files provide dependency information for reproducing the experiment. However, the mini-SWE-agent environment does not have a confirmed tracked lockfile, so exact dependency-version reproducibility has not been fully established.
 
 ## Threats to Validity
 
