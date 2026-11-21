@@ -304,8 +304,8 @@ Finally, all ten defect-pattern examples were introduced together. The experimen
 
 ## Contributions
 
-M. Kottal - Initial experiment design, experiment execution, evaluation, analysis, and report writing.
-K. Gacek - Initial experiment design
+M. Kottal - Initial experiment design, experiment execution, evaluation analysis, and report writing.
+K. Gacek - Initial experiment design, experiment execution, evaluation analysis, and report writing.
 
 ## References
 
